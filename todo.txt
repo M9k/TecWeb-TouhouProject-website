@@ -1,0 +1,23 @@
+﻿-stile per la stampa
+-stile per pagine admin, compreso il mobile, impedisco la stampa?
+-js sui form
+
+-span termini stranieri per popolarità e realizzazione
+-immagini decorative nelle pagine
+-abbreviazioni (es: RSS)
+
+-sviluppo e capitoli (fissi?) + personaggi (fissi?)+ home admin
+
+-tabindex e title
+-validazione xhtml strict, css e di usabilità + colori etc ec
+-ricontrollare tutti i form per l'accessibilità, i colori, etc etc (vedere accessibilita punti da controllare.txt)
+
+-news fake con commenti di test
+-qualche ip a caso bannato
+
+RELAZIONE!!!!!!
+
+-----QUANDO CARICATO SUL SITO-----
+-testare pagina 404
+-permessi sui file
+-controllare i mesi siano in italiano, essendo dipendenti dai "locale" presenti
