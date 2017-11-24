@@ -6,6 +6,7 @@ session_start();
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 		<link type="text/css" rel="stylesheet" href="../style/errorpage.css" media="handheld, screen"/>
+		<script type="text/javascript" src="../script/showback.js"></script>
 		<title>Errore! - Touhou Italia</title>
 	</head>
 	<body>
@@ -14,7 +15,7 @@ session_start();
 			<p><?php if(isset($_SESSION['error'])) echo $_SESSION['error']; else echo('Si è verificato un errore inatteso, per favore contatta il supporto tecnico'); $_SESSION['error'] = null;?></p>
 			<img id="imageerr" src="../images/err404.jpg" alt="Immagine di errore"/> <br/>
 			<a href="index.php">Torna alla pagina di amministrazione del sito</a> <br/>
-			<a href="javascript:history.back()">Ritorna alla pagina precedente</a>
+			<a id="backpage" href="javascript:history.back()">Ritorna alla pagina precedente</a>
 		</div>
 	</body>
 </html>
