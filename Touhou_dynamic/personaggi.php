@@ -18,10 +18,10 @@ require('locationbar.php');
 			<img src="./images/characters/remilia.jpg" alt="Immagine di Remilia Scarlet, con abiti gotici e ali da vampiro"/>
 			<ul>
 				<li><span class="charactervoice">Specie</span>: Vampiro</li>
-				<li><span class="charactervoice">Età</span>: circa 500 anni</li>
-				<li><span class="charactervoice">Occupazione</span>: amante delle Scarlet Devil Mansion</li>
+				<li><span class="charactervoice">Età</span>: Circa 500 anni</li>
+				<li><span class="charactervoice">Occupazione</span>: Governante delle Scarlet Devil Mansion</li>
 				<li><span class="charactervoice">Luogo</span>: Scarlet Devil Mansion</li>
-				<li>Remilia è la proprietaria e governate della Scarlet Devil Mansion, amante di Sakuya e Meiling, e sorella maggiore (e guardiana) di Flandre. Nonstante il suo aspetto ed il suo comportamento bambinesco la facciano	 	sembrare non spaventosa, è dotata di grande potere magico che la rendono degna della sua reputazione, Remilia è conosciuta per tutta Gensokyo come "Scarlet Devil".</li>
+				<li>Remilia è la proprietaria e governate della Scarlet Devil Mansion, padrona di Sakuya e Meiling, e sorella maggiore (e guardiana) di Flandre. Nonstante il suo aspetto ed il suo comportamento bambinesco la facciano	 	sembrare non spaventosa, è dotata di grande potere magico che la rendono degna della sua reputazione, Remilia è conosciuta per tutta Gensokyo come "<span xml:lang="en">Scarlet Devil</span>".</li>
 			</ul>
 			</dd>
 				
