@@ -2,7 +2,7 @@
 -stile per pagine admin, compreso il mobile, impedisco la stampa?
 -js sui form
 
--span termini stranieri per popolarità e realizzazione
+-span termini stranieri realizzazione
 -immagini decorative nelle pagine
 -abbreviazioni (es: RSS)
 
