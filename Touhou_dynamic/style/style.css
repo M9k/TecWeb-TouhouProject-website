@@ -181,10 +181,11 @@ div.data {
 #contenuto #personaggi img {
 	width: 25%;
 	float: left;
-	margin-top: 0em;
-	margin-left: 3%;
+	margin: 0 2% 0 2%;
 }
-
+#contenuto #personaggi .charactervoice {
+	font-weight: bold;
+}
 #contenuto ul {
 	list-style-type: none;
 }
