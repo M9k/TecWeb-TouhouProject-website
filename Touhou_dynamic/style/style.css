@@ -178,6 +178,17 @@ div.data {
 	margin-bottom: 0.3%;
 }
 
+#contenuto #personaggi img {
+	width: 25%;
+	float: left;
+	margin-top: 0em;
+	margin-left: 3%;
+}
+
+#contenuto ul {
+	list-style-type: none;
+}
+
 #sidebar {
 	float: right;
 	width: 27%;
@@ -201,6 +212,7 @@ div.data {
 	padding-left: 3%;
 	font-size: 1.1em;
 }
+
 #footer {
 	clear: both;
 	text-align: center;
