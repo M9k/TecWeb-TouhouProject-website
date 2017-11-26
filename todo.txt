@@ -6,7 +6,7 @@
 -immagini decorative nelle pagine
 -abbreviazioni (es: RSS)
 
--sviluppo e capitoli (fissi?) + personaggi (fissi?)+ home admin
+-sviluppo e capitoli (fissi?) + personaggi (fissi) + home admin
 Capitoli: prenderli da qui, magari saltare quelli con il .5 nel numero: https://en.touhouwiki.net/wiki/Touhou_Wiki
 Personaggi: buttarne dentro a caso da https://en.touhouwiki.net/wiki/Characters 
 	consiglio di prenderli tra: Reimu Hakurei, Marisa Kirisame, Cirno, Sakuya, Alice, Mima, Remilia, Reisen, Youmu, Flandre, Utsuho, Patchouli, Aya, Elly
