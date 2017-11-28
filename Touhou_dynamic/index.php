@@ -13,7 +13,7 @@ require('locationbar.php'); ;
 		<div id="contenuto">
 			<h2>Touhou Project</h2>
 <!-- introduzione -->
-			<p>Touhou Project (<ruby><rb><span xml:lang="ja">東方</span></rb><rp>(</rp><rt><span xml:lang="ja">とうほう</span></rt><rp>)</rp></ruby><span xml:lang="en">Project</span>) è una serie di videogiochi per <span xml:lang="en">PC-98</span> e <span xml:lang="en">Windows</span>, sviluppata a partire dal 1996 dalla casa produttrice giapponese <strong xml:lang="en">Team Shanghai Alice</strong>, il cui unico membro è <strong>ZUN</strong>.</p>
+			<p>Touhou Project (<ruby><rb><span xml:lang="ja">東方</span></rb><rp>(</rp><rt><span xml:lang="ja">とうほう</span></rt><rp>)</rp></ruby><span xml:lang="en">Project</span>) è una <strong>serie di videogiochi</strong> per <span xml:lang="en">PC-98</span> e <span xml:lang="en">Windows</span>, sviluppata a partire dal 1996 dalla casa produttrice giapponese <strong xml:lang="en">Team Shanghai Alice</strong>, il cui unico membro è <strong>ZUN</strong>.</p>
 <!-- breve descrizione di touhou -->
 <div class="withtotal2images">
 			<img src="images/gameplay1.jpg" alt="Immagine di una schermata di gioco, caratterizzata da una enorme quantità di proiettili da schivare" class="total2images"/>
@@ -26,12 +26,12 @@ require('locationbar.php'); ;
 			<img src="images/meme3.jpg" alt="Immagine satirica del creatore di TouHou, ZUN, che sfida il giocatore ad iniziare a giocare a difficoltà massima" class="total3images"/>
 			<img src="images/meme1.jpg" alt="Immagine di un gruppo di lettori di floppy che suonano Bad Apple" class="total3images"/>
 			<img src="images/meme2.jpg" alt="Immagine con caricatura di Marisa Kirisame" class="total3images"/>
-			<p>Touhou ha avuto un enorme successo anche al dì fuori del Giappone, soprattutto grazie ad internet e a svariati tormentoni ricorrenti, come i <span xml:lang="en">remix</span> di alcune canzoni presenti nel gioco (<a title="colonna sonora Bad Apple suonata con dei floppy drive, su YouTube" href="https://www.youtube.com/watch?v=hkZbAJHeu9w">alcuni fatti persino usando dei lettori di floppy disk, visibile su YouTube</a>), le caricature dei personaggi o le battute riguardandi la difficoltà, come ad esempio "<em>finendo Touhou a <span xml:lang="en">lunatic</span> si impara come correre sotto la pioggia senza bagnarsi</em>".
+			<p>Touhou ha avuto un enorme successo anche al dì fuori del Giappone, soprattutto grazie ad internet e a svariati tormentoni ricorrenti, come i <strong><span xml:lang="en">remix</span> di alcune canzoni</strong> presenti nel gioco (<a title="colonna sonora Bad Apple suonata con dei floppy drive, su YouTube" href="https://www.youtube.com/watch?v=hkZbAJHeu9w">alcuni fatti persino usando dei lettori di floppy disk, visibile su YouTube</a>), le <strong>caricature</strong> dei personaggi o le <strong>battute riguardandi la difficoltà</strong>, come ad esempio "<em>finendo Touhou a <span xml:lang="en">lunatic</span> si impara come correre sotto la pioggia senza bagnarsi</em>".
 			</p>
 <!-- obbiettivo del sito -->
 			<h2>Conferenze e raduni in Italia</h2>
 			<img src="images/cosplay.jpg" alt="Gruppo di persone che interpretano i personaggi di Touhou, chiamati anche cosplayer"/>
-			<p>Questo sito si pone l'obbiettivo di riuscire a collaborare con portali e fiere per la creazione di eventi, conferenze e raduni riguardanti Touhou, in modo da far incontrare e discurete i fan e magari realizzare qualche evento cosplay a tema!<br/>
+			<p>Questo sito si pone l'obbiettivo di riuscire a collaborare con portali e fiere per la creazione di <strong>eventi, conferenze e raduni</strong> riguardanti Touhou, in modo da far incontrare i fan e magari realizzare qualche <strong>evento cosplay a tema!</strong><br/>
 Rimanete sintonizzati sulla sezione <em xml:lang="en">News</em> per ricevere aggiornamenti a riguardo.
 </p>
 		</div>
