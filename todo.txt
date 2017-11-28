@@ -2,10 +2,13 @@
 -stile per pagine admin, compreso il mobile, impedisco la stampa?
 -js sui form
 
--span termini stranieri realizzazione
+-span termini stranieri (realizzazione)
+-controllare abbreviazioni (es: RSS)
 -immagini decorative nelle pagine
 -tasto torna su per mobile e screen reader
--abbreviazioni (es: RSS)
+
+-cambiare il motto sotto il titolo
+-titolo pagina "popolarità"
 
 -sviluppo e capitoli (fissi?) + personaggi (fissi) + home admin
 Capitoli: prenderli da qui, magari saltare quelli con il .5 nel numero: https://en.touhouwiki.net/wiki/Touhou_Wiki
