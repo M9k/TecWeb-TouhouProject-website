@@ -4,6 +4,7 @@
 
 -span termini stranieri realizzazione
 -immagini decorative nelle pagine
+-tasto torna su per mobile e screen reader
 -abbreviazioni (es: RSS)
 
 -sviluppo e capitoli (fissi?) + personaggi (fissi) + home admin
