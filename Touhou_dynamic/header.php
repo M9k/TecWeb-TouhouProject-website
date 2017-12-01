@@ -2,7 +2,7 @@
 <div id="header">
 	<div id="titolo">
 		<h1>Touhou Project</h1>
-		<div id="titoletto">Fan club italiano</div>
+		<div id="titoletto">Sito di informazione italiano</div>
 	</div>
 	<div id="skipmenu">
 		<a href="#contenuto">Vai al contenuto</a>
