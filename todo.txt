@@ -1,28 +1,24 @@
 ﻿-stile per la stampa
--stile per pagine admin, compreso il mobile, impedisco la stampa?
+-stile per pagine admin, compreso il mobile, e stile di stampa
 -js sui form
+-controllo sqinjection sui campi dalla pagina di amministrazione (magari involontari)
 
 -span termini stranieri (realizzazione)
--controllare abbreviazioni (es: RSS)
 -immagini decorative nelle pagine
--tasto torna su per mobile e screen reader
 
--cambiare il motto sotto il titolo
 -titolo pagina "popolarità"
 
--sviluppo e capitoli (fissi?) + personaggi (fissi) + home admin
-Capitoli: prenderli da qui, magari saltare quelli con il .5 nel numero: https://en.touhouwiki.net/wiki/Touhou_Wiki
-Personaggi: buttarne dentro a caso da https://en.touhouwiki.net/wiki/Characters 
-	consiglio di prenderli tra: Reimu Hakurei, Marisa Kirisame, Cirno, Sakuya, Alice, Mima, Remilia, Reisen, Youmu, Flandre, Utsuho, Patchouli, Aya, Elly
-	Se non trovate info saltateli, io non li conosco.
-
+-sviluppo e capitoli (dinamici) + personaggi (fissi)
+-caching personaggi
+-pulizia cache da pagina home di amministrazione ed introduzione alla parte amministrazione
+-eliminazione e aggiunta capitoli (no modifica)
+-news fake con commenti di test
+-qualche ip a caso bannato
 
 -tabindex e title
 -validazione xhtml strict, css e di usabilità + colori etc ec
 -ricontrollare tutti i form per l'accessibilità, i colori, etc etc (vedere accessibilita punti da controllare.txt)
-
--news fake con commenti di test
--qualche ip a caso bannato
+-controllare abbreviazioni (es: RSS)
 
 RELAZIONE!!!!!!
 
@@ -30,3 +26,10 @@ RELAZIONE!!!!!!
 -testare pagina 404
 -permessi sui file
 -controllare i mesi siano in italiano, essendo dipendenti dai "locale" presenti
+
+
+
+Capitoli: prenderli da qui, magari saltare quelli con il .5 nel numero: https://en.touhouwiki.net/wiki/Touhou_Wiki
+Personaggi: buttarne dentro a caso da https://en.touhouwiki.net/wiki/Characters 
+	consiglio di prenderli tra: Reimu Hakurei, Marisa Kirisame, Cirno, Sakuya, Alice, Mima, Remilia, Reisen, Youmu, Flandre, Utsuho, Patchouli, Aya, Elly
+	Se non trovate info saltateli, io non li conosco.
