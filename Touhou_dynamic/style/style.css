@@ -38,6 +38,7 @@ body {
 	width: 100%;
 	top: 20%;
 	left: 6%;
+	text-shadow: 1pt 0 0 #fff, -1pt 0 0 #fff, 0 1pt 0 #fff, 0 -1pt 0 #fff, 1pt 1pt #fff, -1pt -1pt 0 #fff, 1pt -1pt 0 #fff, -1pt 1pt 0 #fff;
 }
 h1 {
 	color: #000;
@@ -50,6 +51,7 @@ h1 {
 	color: #000;
 	font-size: 2em;
 	padding: 0% 6%;
+	text-shadow: 1pt 0 0 #fff, -1pt 0 0 #fff, 0 1pt 0 #fff, 0 -1pt 0 #fff, 1pt 1pt #fff, -1pt -1pt 0 #fff, 1pt -1pt 0 #fff, -1pt 1pt 0 #fff;
 }
 #skipmenu {
 	text-indent: 100%;
