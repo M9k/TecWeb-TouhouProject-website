@@ -16,12 +16,13 @@ require('head.php');
 	<body>
 		<?php require('header.php'); ?>
 		<div id="contenuto">
-			<div id="logoutbutton">
-				<?php require('logout.php'); ?>
+			<h2>Gestione news</h2>
+			<div id="newsadd">
+				<a href="newsadd.php">Aggiungi news</a>
 			</div>
-		<div id="newsadd">
-			<a href="newsadd.php">Aggiungi news</a>
-		</div>
+			<div id="newssiderefresh">
+				<a href="cleancache.php">Cancella le cache delle news per la sidebar</a>
+			</div>
 <?php
 require_once('../config.php');
 require_once('../getconnection.php');

@@ -16,9 +16,7 @@ require('head.php');
 	<body>
 		<?php require('header.php'); ?>
 		<div id="contenuto">
-			<div id="logoutbutton">
-				<?php require('logout.php'); ?>
-			</div>
+			<h2>Gestione immagini</h2>
 			<form action="imageupload.php" method="post" enctype="multipart/form-data">
 				<fieldset>
 					<p>Seleziona l'immagine da caricare (Massimo 5Mb, in formato comune):</p>

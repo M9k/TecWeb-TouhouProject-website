@@ -66,7 +66,7 @@ CREATE TABLE `chapters` (
 --
 
 INSERT INTO `chapters` (`number`, `year`, `title`, `image`, `imagedescr`, `titleeng`, `titleita`, `protagonists`, `plot`, `id`) VALUES
-('1', 1996, '東方靈異伝　～ The Highly Responsive to Prayers', '1.jpg', 'Copertina del gioco rappresentante Reimu', 'Highly Responsive to Prayers', 'Altamente sensibile alle preghiere', 'sd', 'Il tempio Hakurei è stato distrutto da forze misteriose, quini Reimu decide di attraversare un portale dimensionale per trovare il copevole e fargliela pagare.', 1);
+('1', 1996, '東方靈異伝　～ The Highly Responsive to Prayers', '1.jpg', 'Copertina del gioco rappresentante Reimu', 'Highly Responsive to Prayers', 'Altamente sensibile alle preghiere', 'sd', 'Il tempio Hakurei è stato distrutto da forze misteriose, quindi Reimu decide di attraversare un portale dimensionale per trovare il copevole e fargliela pagare.', 1);
 
 -- --------------------------------------------------------
 

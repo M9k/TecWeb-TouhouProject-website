@@ -5,22 +5,9 @@
 	position: relative;
 	min-height: 10em;
 }
-#logoutbutton {
-	position: absolute;
-	border: 3pt solid black;
-	margin: 1%;
-	right: 1%;
-	padding: 1%;
-	background-color: white;
-}
 
 @media handheld, screen and (max-width: 680px), only screen and (max-device-width:680px) {
 	#contenuto {
 		width: 100%;
-	}
-	#logoutbutton {
-		position: relative;
-		border-width: 1pt;
-		right: 0;
 	}
 }

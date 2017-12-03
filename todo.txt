@@ -9,9 +9,7 @@
 -titolo pagina "popolarità"
 
 -sviluppo e capitoli (dinamici) + personaggi (fissi)
--caching personaggi
--pulizia cache da pagina home di amministrazione ed introduzione alla parte amministrazione
--eliminazione e aggiunta capitoli (no modifica)
+-rivedere home di amministrazione, aggiungere qualche introduzione?
 -news fake con commenti di test
 -qualche ip a caso bannato
 

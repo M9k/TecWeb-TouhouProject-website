@@ -29,11 +29,11 @@ else
 				echo($wrongloginmessage);
 			if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 			{
-				echo ('<div id="logoutbutton">');
-				require('logout.php');
-				echo ('</div>');
-				echo ('<div id="motd">Benvenuto nella pagina di amministrazione!</div>');
-				echo('PANNELLO ADMIN');
+?>
+<h2>Benvenuto nella area di amministrazione</h2>
+<p>Da questa parte del sito potrai gestire le notizie, le immagini caricate, i commenti ed i capitoli.</p>
+
+			<?php
 			}
 			else
 				require('login.php'); ?>

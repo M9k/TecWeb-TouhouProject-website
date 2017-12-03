@@ -16,9 +16,7 @@ require('head.php');
 	<body>
 		<?php require('header.php'); ?>
 		<div id="contenuto">
-			<div id="logoutbutton">
-				<?php require('logout.php'); ?>
-			</div>
+			<h2>Gestione capitoli</h2>
 		<div id="chapteradd">
 			<a href="chapteradd.php">Aggiungi capitolo</a>
 		</div>

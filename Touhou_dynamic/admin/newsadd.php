@@ -9,16 +9,14 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	die;
 }
 
-$title = "Gestione news - Touhou Italia";
+$title = "Aggiunta news - Touhou Italia";
 
 require('head.php');
 ?>
 	<body>
 		<?php require('header.php'); ?>
 		<div id="contenuto">
-			<div id="logoutbutton">
-				<?php require('logout.php'); ?>
-			</div>
+			<h2>Aggiunta news</h2>
 			<div id="newsadd">
 <?php
 require_once('../getconnection.php');

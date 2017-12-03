@@ -40,6 +40,14 @@ $links = array(
 			array(
 				'nome'=>'Capitoli',
 				'link'=>'chapteradmin.php'
+			),
+			array(
+				'nome'=>'Torna al sito',
+				'link'=>'../'
+			),
+			array(
+				'nome'=>'Logout',
+				'link'=>'index.php?logout=true'
 			)
 			
 		);

@@ -15,9 +15,7 @@ require('head.php');
 	<body>
 		<?php require('header.php'); ?>
 		<div id="contenuto">
-			<div id="logoutbutton">
-				<?php require('logout.php'); ?>
-			</div>
+			<h2>Lista dei ban</h2>
 <?php
 require_once('../getconnection.php');
 
