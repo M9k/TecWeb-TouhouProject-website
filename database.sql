@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2017 at 10:21 PM
+-- Generation Time: Dec 03, 2017 at 04:12 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -41,6 +41,32 @@ CREATE TABLE `ban` (
 
 INSERT INTO `ban` (`id`, `ip`, `motivo`, `date`) VALUES
 (2, '53453', 'nope', '2017-11-07 17:20:38');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chapters`
+--
+
+CREATE TABLE `chapters` (
+  `number` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `year` int(11) NOT NULL,
+  `title` tinytext COLLATE utf8_unicode_ci NOT NULL,
+  `image` tinytext COLLATE utf8_unicode_ci NOT NULL,
+  `imagedescr` tinytext COLLATE utf8_unicode_ci NOT NULL,
+  `titleeng` tinytext COLLATE utf8_unicode_ci NOT NULL,
+  `titleita` tinytext COLLATE utf8_unicode_ci NOT NULL,
+  `protagonists` tinytext COLLATE utf8_unicode_ci NOT NULL,
+  `plot` text COLLATE utf8_unicode_ci NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `chapters`
+--
+
+INSERT INTO `chapters` (`number`, `year`, `title`, `image`, `imagedescr`, `titleeng`, `titleita`, `protagonists`, `plot`, `id`) VALUES
+('1', 1996, '東方靈異伝　～ The Highly Responsive to Prayers', '1.jpg', 'Copertina del gioco rappresentante Reimu', 'Highly Responsive to Prayers', 'Altamente sensibile alle preghiere', 'sd', 'Il tempio Hakurei è stato distrutto da forze misteriose, quini Reimu decide di attraversare un portale dimensionale per trovare il copevole e fargliela pagare.', 1);
 
 -- --------------------------------------------------------
 
@@ -108,6 +134,12 @@ ALTER TABLE `ban`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `chapters`
+--
+ALTER TABLE `chapters`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `comment`
 --
 ALTER TABLE `comment`
@@ -129,6 +161,11 @@ ALTER TABLE `news`
 --
 ALTER TABLE `ban`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `chapters`
+--
+ALTER TABLE `chapters`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `comment`
 --
