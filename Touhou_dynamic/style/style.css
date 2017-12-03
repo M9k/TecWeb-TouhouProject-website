@@ -190,7 +190,7 @@ div.data {
 	float: left;
 	margin: 0 2% 0 2%;
 }
-#contenuto #personaggi .charactervoice {
+#contenuto #personaggi .charactervoice, .chaptervoice {
 	font-weight: bold;
 }
 #contenuto ul {

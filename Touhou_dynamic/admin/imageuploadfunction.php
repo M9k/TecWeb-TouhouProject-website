@@ -9,13 +9,13 @@ function imageupload($folder, $file_temp)
 	{
 		$file_target = $folder.basename($file_temp["name"]);
 		$imageFileType = pathinfo($file_target,PATHINFO_EXTENSION);
-		// controllo la dimensione - impongo io stesso un limite se serve
-		if ($file_temp["size"] > 5000000)
-			$error = 'Il file è troppo pesante';
+		// controllo la dimensione
+		if ($file_temp["size"] > 5242880) //5Mb
+			$error = 'Il file è troppo pesante, non può superare i 5Mb';
 		// controllo sia una immagine
 		$check = getimagesize($file_temp["tmp_name"]);
 		if($check == false)
-			$error = 'Il file non è riconoscibile come immagini';
+			$error = 'Il file non è riconoscibile come immagine dal sistema';
 		// controllo il nome non sia già usato
 		if (file_exists($file_target))
 			$error = 'Il file è già presente';

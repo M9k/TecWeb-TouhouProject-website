@@ -47,7 +47,7 @@ if($risp)
 	echo '</dl>';
 }
 else
-	echo('<div id="nonews">Nessuna news inserita</div>');
+	echo('<div id="nodata">Nessuna news inserita</div>');
 ?>
 		</div>
 	</body>

@@ -16,15 +16,15 @@ require('locationbar.php');
 require_once('getconnection.php');
 //$conn = connessione al DB
 //
-$risp = $conn->query('Select * from capitoli order by year asc');
+$risp = $conn->query('Select * from chapters order by year asc');
 if($risp != false)
 {
 	echo '<dl>';
 	while($capitolo = $risp->fetch_assoc()) 
 	{
-		//ID CHIAVE PRIMARIA
+		//id CHIAVE PRIMARIA
 		//number (testo)
-		//anno
+		//year
 		//title
 		//image (nome)
 		//imagedescr
@@ -32,17 +32,17 @@ if($risp != false)
 		//titleita
 		//protagonists
 		//plot
-		echo '<dt>'.$capitolo['title'].'</a></dt>';
+		echo '<dt>'.$capitolo['number'].' - '.$capitolo['titleeng'].'</a></dt>';
 		echo '<dd>';
 		if(isset($capitolo['image']) && strcmp($capitolo['image'], "") != 0)
-			echo '<div class="newsimage"><img src="images\capitolo\\'.$capitolo['image'].'" alt="'.$capitolo['imgdescr'].'"/></div>';
+			echo '<div class="newsimage"><img src="images\chapters\\'.$capitolo['image'].'" alt="'.$capitolo['imagedescr'].'"/></div>';
 		echo '<ul>';
 		echo '		<li><span class="chaptervoice">Numero</span>: '.$capitolo['number'].'</li>';
 		echo '		<li><span class="chaptervoice">anno di pubblicazione</span>: '.$capitolo['year'].'</li>';
-		echo '		<li><span class="chaptervoice">Titolo in inglese</span>: '.$capitolo['titleeng'].'</li>';
+		echo '		<li><span class="chaptervoice">Titolo giapponese</span>: '.$capitolo['title'].'</li>';
 		echo '		<li><span class="chaptervoice">Titolo in italiano</span>: '.$capitolo['titleita'].'</li>';
-		echo '		<li><span class="chaptervoice">Protagoniste</span>: '.$capitolo['protagonists'].'</li>';
 		echo '</ul>';
+		echo '<span class="chaptervoice">Trama</span>:<br/>';
 		echo '<div class="trama">'.$capitolo['plot'];
 		echo '</div>';
 		echo '</dd>';

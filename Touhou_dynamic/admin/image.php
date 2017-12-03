@@ -21,7 +21,7 @@ require('head.php');
 			</div>
 			<form action="imageupload.php" method="post" enctype="multipart/form-data">
 				<fieldset>
-					<p>seleziona l'immagine da caricare: INDICARE SPECIFICHE</p>
+					<p>Seleziona l'immagine da caricare (Massimo 5Mb, in formato comune):</p>
 					<input type="file" name="fileupload" id="fileupload"/><br/>
 					<input type="submit" value="Carica" name="submit"/>
 				</fieldset>

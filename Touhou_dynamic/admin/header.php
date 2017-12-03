@@ -36,7 +36,12 @@ $links = array(
 			array(
 				'nome'=>'Lista ban',
 				'link'=>'banlist.php'
+			),
+			array(
+				'nome'=>'Capitoli',
+				'link'=>'chapteradmin.php'
 			)
+			
 		);
 $percorso = explode('/', $_SERVER['SCRIPT_NAME']);
 $pagina = end($percorso);

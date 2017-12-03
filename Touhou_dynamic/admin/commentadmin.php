@@ -38,7 +38,7 @@ if($risp)
 	echo '</dl>';
 }
 else
-	echo('<div id="nocomment">Nessun commento inserito</div>');
+	echo('<div id="nodata">Nessun commento inserito</div>');
 ?>
 
 		</div>
