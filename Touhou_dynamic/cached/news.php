@@ -32,7 +32,7 @@ else
 			$contenuto .= '<dt><a href="article?id='.$notizia['id'].'">'.$notizia['title'].'</a></dt>';
 			$contenuto .= '<dd>';
 			if(isset($notizia['image']) && strcmp($notizia['image'], "") != 0)
-				$contenuto .= '<img class="newsimageside" src="images\news\\'.$notizia['image'].'" alt="'.$notizia['imgdescr'].'"/>';
+				$contenuto .= '<img class="newsimageside" src="images/news/'.$notizia['image'].'" alt="'.$notizia['imgdescr'].'"/>';
 			$contenuto .= '<div class="newsdataside">'.strftime('%e %B %Y',strtotime($notizia['data'])).'</div><div class="newstextside">'.$notizia['text'].'</div></dd>';
 		}
 		$contenuto .= '</dl>';
