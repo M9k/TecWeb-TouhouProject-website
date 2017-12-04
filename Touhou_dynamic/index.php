@@ -13,7 +13,7 @@ require('locationbar.php'); ;
 		<div id="contenuto">
 			<h2>Touhou Project</h2>
 <!-- introduzione -->
-			<p>Touhou Project (<ruby><rb><span xml:lang="ja">東方</span></rb><rp>(</rp><rt><span xml:lang="ja">とうほう</span></rt><rp>)</rp></ruby><span xml:lang="en">Project</span>) è una <strong>serie di videogiochi</strong> per <span xml:lang="en">PC-98</span> e <span xml:lang="en">Windows</span>, sviluppata a partire dal 1996 dalla casa produttrice giapponese <strong xml:lang="en">Team Shanghai Alice</strong>, il cui unico membro è <strong>ZUN</strong>.</p>
+			<p>Touhou Project (<ruby xml:lang="ja"><rb>東方</rb><rp>(</rp><rt>とうほう</rt><rp>)</rp></ruby><span xml:lang="en">Project</span>) è una <strong>serie di videogiochi</strong> per <span xml:lang="en">PC-98</span> e <span xml:lang="en">Windows</span>, sviluppata a partire dal 1996 dalla casa produttrice giapponese <strong xml:lang="en">Team Shanghai Alice</strong>, il cui unico membro è <strong>ZUN</strong>.</p>
 <!-- breve descrizione di touhou -->
 <div class="withtotal2images">
 			<img src="images/gameplay1.jpg" alt="Immagine di una schermata di gioco, caratterizzata da una enorme quantità di proiettili da schivare" class="total2images"/>
