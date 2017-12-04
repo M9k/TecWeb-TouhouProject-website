@@ -66,7 +66,7 @@ require('locationbar.php');
 					<li><span class="charactervoice">Occupazione</span>: Governante delle <span xml:lang="en">Scarlet Devil Mansion</span></li>
 					<li><span class="charactervoice">Luogo</span>: <span xml:lang="en">Scarlet Devil Mansion</span></li>
 					<li><p>Remilia è la proprietaria e governate della <span xml:lang="en">Scarlet Devil Mansion</span>, padrona di Sakuya e Meiling, e sorella maggiore (e guardiana) di <span xml:lang="en">Flandre</span>. Nonstante il suo aspetto ed il suo comportamento bambinesco la facciano sembrare poco minacciosa, è dotata di grande potere magico che la rendono degna della sua reputazione, Remilia è conosciuta per tutta Gensokyo come "<span xml:lang="en">Scarlet Devil</span>". Come tutti i vampiri Remilia non riesce a rimanere alla luce del sole e quindi durante il giorno generalmente rimane nella sua villa, mentre esce durante la notte.
-<br/>La lancia che utilizza in combattimento si chiama <strong xml:lang="is">Gungnir<strong>, che secondo la mitologia norrena è stata creata dai nani per essere utilizzata da <em>Odino</em>.
+<br/>La lancia che utilizza in combattimento si chiama <strong xml:lang="is">Gungnir</strong>, che secondo la mitologia norrena è stata creata dai nani per essere utilizzata da <em>Odino</em>.
 <br/>Nonostante lei si nutra di sangue umano, il suo appetito facilmente saziabile fà si che raramente le sue vittime muoiano per le ferite.</p></li>
 				</ul>
 			</dd>
