@@ -59,7 +59,7 @@ require('locationbar.php');
 
 			<dt>Remilia Scarlet</dt>
 			<dd>
-				<img src="./images/characters/remilia.jpg" alt="Immagine di Remilia Scarlet, con abiti gotici rosso scarlatto e ali da vampiro"/>
+				<img src="./images/characters/Remilia.jpg" alt="Immagine di Remilia Scarlet, con abiti gotici rosso scarlatto e ali da vampiro"/>
 				<ul>
 					<li><span class="charactervoice">Specie</span>: Vampiro</li>
 					<li><span class="charactervoice">Età</span>: Circa 500 anni</li>
