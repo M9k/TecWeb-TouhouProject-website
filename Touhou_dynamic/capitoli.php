@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
 $title = "Capitoli - Touhou Italia";
@@ -35,7 +35,7 @@ if($risp != false)
 		echo '<dt>'.$capitolo['number'].' - '.$capitolo['titleeng'].'</dt>';
 		echo '<dd>';
 		if(isset($capitolo['image']) && strcmp($capitolo['image'], "") != 0)
-			echo '<div class="newsimage"><img src="images\chapters\\'.$capitolo['image'].'" alt="'.$capitolo['imagedescr'].'"/></div>';
+			echo '<div class="newsimage"><img src="images/chapters/'.$capitolo['image'].'" alt="'.$capitolo['imagedescr'].'"/></div>';
 		echo '<ul>';
 		echo '		<li><span class="chaptervoice">Numero</span>: '.$capitolo['number'].'</li>';
 		echo '		<li><span class="chaptervoice">anno di pubblicazione</span>: '.$capitolo['year'].'</li>';
