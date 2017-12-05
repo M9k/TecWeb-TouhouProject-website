@@ -28,8 +28,7 @@ I giochi successivi apportarono molti miglioramenti grafici al gioco, mantenendo
 </p></dd>
 			<dt>Terza e quarta generazione</dt>
 <dd><p>Le successive due generazioni sono caratterizzate rispettivamente da un nuovo motore grafico, a passo con i tempi e realizzato nel 2007 per il 10° capitolo, <em>Mountain of Faith</em> (風神録), e dalla distribuzione in digitale anche fuori dal Giappone, iniziata nel 2013 con il 14° capitolo, <em>Double Dealing Character</em> (輝針城)<br/>
-L'ultimo titolo, <em>Hidden Star in Four Seasons</em> (天空璋), il 16° della serie, è stato rilasciato in Giappone il 11 Agosto 2017, mentre una distribuzione globale, ma unicamente in lingua giapponese, è attesa per il 18 novembre attraverso la piattaforma di distribuzione digitale <em>Steam</em>.</dd>
-</p>
+L'ultimo titolo, <em>Hidden Star in Four Seasons</em> (天空璋), il 16° della serie, è stato rilasciato in Giappone il 11 Agosto 2017, mentre una distribuzione globale, ma unicamente in lingua giapponese, è attesa per il 18 novembre attraverso la piattaforma di distribuzione digitale <em>Steam</em>.</p></dd>
 </dl>	
 		</div>
 <?php 

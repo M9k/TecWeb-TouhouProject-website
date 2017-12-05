@@ -36,9 +36,9 @@ require('locationbar.php');
 			<h3>Bombe</h3>
 			<p>Le bombe sono un aiuto fornito al giocatore, in base alla difficoltà selezionata possono variare di numero e possono essere acquisite durante il gioco compiendo determinati obbiettivi.<br/>
 			Possono essere utilizzate in qualsiasi momento dal giocatore per pulire l'area di gioco dai nemici e dai proiettili avversari.<br/>
-			Sono molto utili per liberarsi da situazioni senza via d'uscita, in quanto se non si presta attenzione ai <span xml:lang="en">pattern</span> d'attacco dei nemici ci si può ritrovare circondati dai proiettili.</p></dd>
+			Sono molto utili per liberarsi da situazioni senza via d'uscita, in quanto se non si presta attenzione ai <span xml:lang="en">pattern</span> d'attacco dei nemici ci si può ritrovare circondati dai proiettili.</p>
 			<h3 xml:lang="en">Graze</h3>
-			<p>I "<span xml:lang="en">graze</span>", cioè gli sfioramenti, rappresentano l'azione di lasciare passare dei proiettili sul corpo della protagonista senza far colpire l'<span xml:lang="en">hitbox</span>, questa pratica risulta necessaria nelle difficoltà più avanzate in quanto il gran numero di proiettili rende impossibile schivarli con ampio margine.</br>
+			<p>I "<span xml:lang="en">graze</span>", cioè gli sfioramenti, rappresentano l'azione di lasciare passare dei proiettili sul corpo della protagonista senza far colpire l'<span xml:lang="en">hitbox</span>, questa pratica risulta necessaria nelle difficoltà più avanzate in quanto il gran numero di proiettili rende impossibile schivarli con ampio margine.<br/>
 			Questa azione fa aumentare il punteggio del giocatore, in questo modo anche alle difficoltà più facili si spinge il giocatore a correre dei rischi extra a beneficio del punteggio finale.</p>
 			<h3 xml:lang="en">Point of collection</h3>
 			<p>Introdotto dal sesto capitolo del <span xml:lang="en">brand</span>, indica la raccolta automatica di tutti i bonus presenti su schermo nel caso si porti la protagonista nella parte superiore dello schermo, questo ovviamente comporta un elevato rischio, in quanto ci si avvicina all'area nella quale appaiono i nemici.</p>

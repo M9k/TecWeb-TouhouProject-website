@@ -32,7 +32,7 @@ if($risp != false)
 		//titleita
 		//protagonists
 		//plot
-		echo '<dt>'.$capitolo['number'].' - '.$capitolo['titleeng'].'</a></dt>';
+		echo '<dt>'.$capitolo['number'].' - '.$capitolo['titleeng'].'</dt>';
 		echo '<dd>';
 		if(isset($capitolo['image']) && strcmp($capitolo['image'], "") != 0)
 			echo '<div class="newsimage"><img src="images\chapters\\'.$capitolo['image'].'" alt="'.$capitolo['imagedescr'].'"/></div>';
