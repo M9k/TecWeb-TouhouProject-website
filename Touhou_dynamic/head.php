@@ -20,6 +20,7 @@
 		<link rel="alternate" href="/feed/" title="My RSS feed" type="application/rss+xml"/>
 
 		<script type="text/javascript" src="script/menucollapse.js"></script>
+		<script type="text/javascript" src="script/zoomimage.js"></script>
 	<title><?php
 		if(isset($title))
 			echo $title;

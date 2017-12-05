@@ -130,7 +130,7 @@ h2:first-of-type {
 	margin-top: 0;	
 }
 #contenuto img {
-	width: 80%;
+	width: 70%;
 	display: block;
 	border: 2px solid #260101;
 	margin: 3% auto 2%;
@@ -284,7 +284,12 @@ div.data {
 #footer p {
     padding: 0 5% 2%;
 }
-
+.zoomable:hover {
+	cursor: zoom-in;
+}
+.zoomableout:hover {
+	cursor: zoom-out;
+}
 @media screen and (max-width: 900px) {
 	#menu li {
 		/* per quanto possibile evito al menu di andare a capo, che peggiora la grafica del sito*/
