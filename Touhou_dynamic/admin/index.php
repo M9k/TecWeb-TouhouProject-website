@@ -12,8 +12,11 @@ if(isset($_POST['email']) && isset($_POST['password']))
 	else
 		$wronglogin = true;
 if(isset($_GET['logout']) && $_GET['logout'] == "true")
-		$_SESSION['login'] = false;
-
+{
+	$_SESSION['login'] = false;
+	header("Location: ..");
+	die();
+}
 if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 	$title = "Pannello di amministrazione";
 
