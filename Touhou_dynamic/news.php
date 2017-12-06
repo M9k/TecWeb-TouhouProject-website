@@ -29,7 +29,7 @@ if($risp != false)
 	echo '<dl>';
 	while($notizia = $risp->fetch_assoc()) 
 	{
-		echo '<dt><a href="article?id='.$notizia['id'].'">'.$notizia['title'].'</a></dt>';
+		echo '<dt><a href="article.php?id='.$notizia['id'].'">'.$notizia['title'].'</a></dt>';
 		echo '<dd>';
 		if(isset($notizia['image']) && strcmp($notizia['image'], "") != 0)
 			echo '<div class="newsimage"><img src="images/news/'.$notizia['image'].'" alt="'.$notizia['imgdescr'].'"/></div>';

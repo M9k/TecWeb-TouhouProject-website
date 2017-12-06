@@ -1,6 +1,7 @@
 window.onload = function() {
 	[].forEach.call(document.getElementById("contenuto").getElementsByTagName("img"), makezoomable);
 }
+
 function makezoomable(image) {
 	image.classList.add('zoomable');
 	image.classList.remove('zoomableout');

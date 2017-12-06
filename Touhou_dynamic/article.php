@@ -46,7 +46,7 @@ else
 			</div>
 			<div id="commenti">
 				<div id="leavecomment">
-					<form action="commentadd.php" method="post" id="leavecommentform">
+					<form action="commentadd.php" method="post" id="leavecommentform" onsubmit="return validateForm()">
 						<fieldset id="leavecommentfields">
 							<label for="nameinput">Nome</label>: <input id="nameinput" name="name" type="text"/><br/>
 							<label for="emailinput"><span xml:lang="en">E-mail</span> (non sarà pubblicata)</label>: <input id="emailinput" name="email" type="text"/><br/>
