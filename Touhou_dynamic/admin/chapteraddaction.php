@@ -1,16 +1,11 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 $returnpage = $_SERVER['HTTP_REFERER'];
 
 $error = 'Utente non loggato!';
 if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 {
-
-	
-
-
-
 	require('../config.php');
 	require('../getconnection.php');
 	$risp = false;

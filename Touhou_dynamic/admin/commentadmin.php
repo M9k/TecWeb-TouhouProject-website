@@ -1,12 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
-session_start();
+if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 {
-	echo('<div id="wronglogin">Login invalido, sessione scaduta!</div>');
-	die;
+	$_SESSION['error'] = "Login invalido, sessione scaduta!";
+	header("Location: error.php");
+	die();
 }
 $title = "Moderazione commenti - Touhou Italia";
 
