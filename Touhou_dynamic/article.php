@@ -46,14 +46,15 @@ else
 			</div>
 			<div id="commenti">
 				<div id="leavecomment">
+					<h3>Lascia un commento</h3>
 					<form action="commentadd.php" method="post" id="leavecommentform" onsubmit="return validateForm()">
 						<fieldset id="leavecommentfields">
 							<div id="errorenome"></div>
-							<label for="nameinput">Nome</label>: <input id="nameinput" name="name" type="text" onfocusout="validateString('nome',document.getElementById('nameinput').value)"/><br/>
+							<label for="nameinput">Nome</label>: <input id="nameinput" name="name" type="text" onchange="validateString('nome',document.getElementById('nameinput').value)"/><br/>
 							<div id="erroreemail"></div>
-							<label for="emailinput"><span xml:lang="en">E-mail</span> (non sarà pubblicata)</label>: <input id="emailinput" name="email" type="text" onfocusout="validateEmail()" /><br/>
+							<label for="emailinput"><span xml:lang="en">E-mail</span> (non sarà pubblicata)</label>: <input id="emailinput" name="email" type="text" onchange="validateEmail()" /><br/>
 							<div id="errorecommento"></div>
-							<label for="commentoinput">Commento</label>: <textarea id="commentoinput" name="message" onfocusout="validateString('commento',document.getElementById('commentoinput').value)" cols="48" rows="4"></textarea><br/>
+							<label for="commentoinput">Commento</label>: <textarea id="commentoinput" name="message" onchange="validateString('commento',document.getElementById('commentoinput').value)" cols="48" rows="4"></textarea><br/>
 							<div id="erroreinvio"></div>
 							<input value="Invia" type="submit"/>
 							<input value="Cancella" type="reset"/>
@@ -61,6 +62,7 @@ else
 					</form>
 				</div>
 				<div id="listacommenti">
+					<h3>Commenti lasciati dagli utenti</h3>
 <?php
 if($ok==true)
 {
