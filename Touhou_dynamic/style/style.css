@@ -255,6 +255,12 @@ div.data {
 	font-size: 1.5em;
 	clear: both;
 }
+
+#errorenome,#erroreemail,#errorecommento {
+	float: right;
+	color: red;
+}
+
 #articleside dd {
 	font-size: 0.9em;
 	border-bottom-style: solid;

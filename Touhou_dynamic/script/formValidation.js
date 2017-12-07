@@ -2,48 +2,32 @@ function validateForm() {
         var nome = document.forms["leavecommentform"]["nameinput"].value;
 	var email = document.forms["leavecommentform"]["emailinput"].value;
 	var commento = document.forms["leavecommentform"]["commentoinput"].value;
-
-	return validateString("nome",nome) && validateString("commento",commento) && validateEmail(email); 
+	var validata = validateString("nome",nome) & validateString("commento",commento) & validateEmail(email);
+	return validata!=0 ? true : false;  
 }
 
 function validateString(tipo, stringa) {
+	var errore = "errore".concat(tipo);
+	document.getElementById(errore).innerHTML='';
 	if (stringa == "") {
-		alert("il "+ tipo + " non può essere vuoto");
+		document.getElementById(errore).innerHTML="*inserire un ".concat(tipo);
 		return false;
 	}
-	else
+	else 
 		return true;
 }
 
 
 function validateEmail(email) {
+	document.getElementById("erroreemail").innerHTML='';
 	var regExpMail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-	if(email.match(regExpMail)) {
-		alert("match");
-		return false;
-	}
+	if(email.match(regExpMail)) 
+		return true;
 	else {
-		alert("no match");
+		document.getElementById("erroreemail").innerHTML="*inserire un email valida";
 		return false;
 	}
 }
-
-/*
-function validateEmail(email) {
-	
-	if(email == "") {
-		alert("l'email non può essere vuota");
-		return false;
-	}
-	else if(!email.match()) {
-		alert("email non valida");
-		return false;
-	}
-	else
-		return true; 
-}
-*/
-
 
 
 
