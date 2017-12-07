@@ -49,11 +49,12 @@ else
 					<form action="commentadd.php" method="post" id="leavecommentform" onsubmit="return validateForm()">
 						<fieldset id="leavecommentfields">
 							<div id="errorenome"></div>
-							<label for="nameinput">Nome</label>: <input id="nameinput" name="name" type="text"/><br/>
+							<label for="nameinput">Nome</label>: <input id="nameinput" name="name" type="text" onfocusout="validateString('nome',document.getElementById('nameinput').value)"/><br/>
 							<div id="erroreemail"></div>
-							<label for="emailinput"><span xml:lang="en">E-mail</span> (non sarà pubblicata)</label>: <input id="emailinput" name="email" type="text"/><br/>
+							<label for="emailinput"><span xml:lang="en">E-mail</span> (non sarà pubblicata)</label>: <input id="emailinput" name="email" type="text" onfocusout="validateEmail()" /><br/>
 							<div id="errorecommento"></div>
-							<label for="commentoinput">Commento</label>: <textarea id="commentoinput" name="message" cols="48" rows="4"></textarea><br/>
+							<label for="commentoinput">Commento</label>: <textarea id="commentoinput" name="message" onfocusout="validateString('commento',document.getElementById('commentoinput').value)" cols="48" rows="4"></textarea><br/>
+							<div id="erroreinvio"></div>
 							<input value="Invia" type="submit"/>
 							<input value="Cancella" type="reset"/>
 						</fieldset>

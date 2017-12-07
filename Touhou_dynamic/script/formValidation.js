@@ -1,9 +1,13 @@
 function validateForm() {
         var nome = document.forms["leavecommentform"]["nameinput"].value;
-	var email = document.forms["leavecommentform"]["emailinput"].value;
 	var commento = document.forms["leavecommentform"]["commentoinput"].value;
-	var validata = validateString("nome",nome) & validateString("commento",commento) & validateEmail(email);
-	return validata!=0 ? true : false;  
+	var validata = validateString("nome",nome) & validateString("commento",commento) & validateEmail();
+	if(validata==0) {
+		document.getElementById("erroreinvio").innerHTML="*impossibile inviare";
+		return false;
+	}
+	else
+		return true;  
 }
 
 function validateString(tipo, stringa) {
@@ -18,7 +22,8 @@ function validateString(tipo, stringa) {
 }
 
 
-function validateEmail(email) {
+function validateEmail() {
+	var email = document.forms["leavecommentform"]["emailinput"].value;
 	document.getElementById("erroreemail").innerHTML='';
 	var regExpMail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 	if(email.match(regExpMail)) 
