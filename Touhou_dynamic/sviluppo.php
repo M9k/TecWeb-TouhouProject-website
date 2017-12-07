@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
 $location = 'Home &gt;&gt;&gt; Realizzazione';
-$title = 'Realizzazione - Touhou Italia';
+$title = 'Sviluppo - Touhou Italia';
 require('head.php');
 ?>
 	<body>
@@ -11,7 +11,7 @@ require('header.php');
 require('locationbar.php'); 
 ?>
 		<div id="contenuto">
-			<h2>Realizzazione</h2>
+			<h2>Sviluppo</h2>
 			<!-- TODO: span per termini inglesi, immagini -->
 <dl>
 			<dt>Prima generazione - PC-98</dt>

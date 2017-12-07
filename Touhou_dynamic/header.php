@@ -26,8 +26,8 @@ $links = array(
 				'link'=>'gameplay.php'
 			),
 			array(
-				'nome'=>'Realizzazione',
-				'link'=>'realizzazione.php'
+				'nome'=>'Sviluppo',
+				'link'=>'sviluppo.php'
 			),
 			array(
 				'nome'=>'Popolarità',
