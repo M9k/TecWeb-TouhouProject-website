@@ -1,399 +1,412 @@
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 
-	border: 0;
+    border: 0;
 }
 
 html, body {
-	width: 100%;
-	height:100%;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 1em;
+    width: 100%;
+    height: 100%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
 }
 
 html {
-	background-color: #efefef;
+    background-color: #efefef;
 }
 
 body {
-	width: 100%;
-	/*min-width: 65%;
+    width: 100%;
+    /*min-width: 65%;
     max-width: 1200px;*/
-	margin: auto;
+    margin: auto;
 }
 
 #wrapper {
-	/*background-image: url("../images/canvas.png");*/
-	position: relative;
+    /*background-image: url("../images/canvas.png");*/
+    position: relative;
 
-	max-width: 1200px;
-	width: 100%;
-	margin: auto;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
 
-	/*
-	background-repeat: no-repeat;
-	background-size: cover;*/
+    /*
+    background-repeat: no-repeat;
+    background-size: cover;*/
 
 }
 
 #header {
-	position: relative;
+    position: relative;
 
-	overflow: hidden;
+    overflow: hidden;
 
-	height: 40em;
-	min-height: 10em;
-	/*border-width: 2pt;
+    height: 40em;
+    min-height: 10em;
+    /*border-width: 2pt;
     border-style: solid;
     border-radius: 10pt;*/
 
-	background-color: #fff;
-	background-image: url("../images/headback.jpg");
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+    background-color: #fff;
+    background-image: url("../images/headback.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 #titolo {
-	position: relative;
-	top: 30%;
-	right: 0%;
-	bottom: 0%;
-	left: 0%;
+    position: relative;
+    top: 30%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
 
-	width: 70%;
-	margin: auto
+    width: 70%;
+    margin: auto
 }
 
 h1 {
-	width: auto;
-	padding: 2% 3.5% 0% 3.5%;
+    width: auto;
+    padding: 2% 3.5% 0% 3.5%;
 
-	color: #333;
+    color: #333;
 
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 4em !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4em !important;
 }
 
-
 #titoletto {
-	padding: 0% 6%;
+    padding: 0% 6%;
 
-	color: #000;
+    color: #000;
 
-	font-size: 2em;
+    font-size: 2em;
 }
 
 #skipmenu {
-	overflow: hidden;
+    overflow: hidden;
 
-	white-space: nowrap;
-	text-indent: 100%;
+    white-space: nowrap;
+    text-indent: 100%;
 }
 
 #menuvoice {
-	display: none;
+    display: none;
 }
 
 #menu {
-	position: absolute;
-	top: 0;
-	left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-	width: 100%;
-	margin: 0;
-	padding: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 
-	list-style-type: none;
+    list-style-type: none;
 
-	border-radius: inherit;
-	background-color: rgba(255,255,255,0.8);
+    border-radius: inherit;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 #menu li {
-	float: left;
+    float: left;
 
-	padding: 1.0% 1.2%;
+    padding: 1.0% 1.2%;
 
-	text-align: center;
+    text-align: center;
 
-	font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 #menu li a {
-	display: block;
+    display: block;
 
-	text-decoration: none;
+    text-decoration: none;
 
-	color: #333333;
+    color: #333333;
 }
 
 #menu li a:hover {
-	color: #2196F3;
+    color: #2196F3;
 }
 
 #menu li:hover {
-	/*background-color: #FF2400;*/
-	/* scarlatto - riferimento a Scarlet */
+    /*background-color: #FF2400;*/
+    /* scarlatto - riferimento a Scarlet */
 }
 
 #menu .disable {
-	color: #efefef;
-	background-color: #2196F3;
+    color: #efefef;
+    background-color: #2196F3;
 }
 
 #menu li.disable:hover {
-	background-color: #2196F3;
+    background-color: #2196F3;
 }
 
 #input {
-	font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 #contenuto {
-	margin: auto;
-	padding: 4%;
+    background: url("../images/canvas.png");
+    margin: auto;
+    padding: 4%;
 
 }
 
-h2 {
-	position: relative;
-	left: -0.6%;
+#wrapperMain {
+    width: 70%;
+    float: left;
 
-	margin-top: 2.5%;
-	margin-bottom: 1.5%;
-
-	font-size: 1.8em;
-}
-
-h3 {
-	position: relative;
-	left: -0.3%;
-
-	margin-top: 2%;
-	margin-bottom: 1%;
-
-	font-size: 1.4em;
-}
-
-h2:first-of-type {
-	margin-top: 0;
-}
-
-#contenuto img {
-	display: block;
-
-	width: 80%;
-	margin: 3% auto 2%;
-
-	border: 2px solid #260101;
-}
-
-#contenuto dd {
-	overflow: auto;
-
-	margin-bottom: 1.5%;
-	padding-bottom: 0.5%;
-
-	border-style: solid;
-	border-color: #b39494;
-	border-bottom-width: 3pt;
-
-	font-size: 1em;
-}
-
-#contenuto dt {
-	position: relative;
-	left: 3%;
-
-	max-width: 94%;
-	margin-top: 1%;
-	margin-bottom: 0.5%;
-
-	font-size: 1.8em;
-}
-
-div.data {
-	font-size: 0.8em;
-}
-
-
-#contenuto div.newsimage img {
-	display: inline;
-	float: left;
-
-	width: 30%;
-	margin: 2%;
-
-	border: 2pt solid #260101;
-}
-
-#contenuto img.immagine {
-	display: inline-block;
-
-	width: 100%;
-
-	vertical-align: middle;
-}
-
-#contenuto img.total3images {
-	display: inline-block;
-
-	width: 32%;
-
-	vertical-align: middle;
-}
-
-#contenuto div.containerImage {
-	width: 90%;
-	margin: auto;
-}
-
-#contenuto div.withtotal3images {
-	width: 90%;
-	margin: auto;
-}
-
-#contenuto div.newsimage img {
-	margin-top: 0;
-	margin-bottom: 0.3%;
-}
-
-#contenuto #personaggi img {
-	float: left;
-
-	width: 25%;
-	margin: 0 2% 0 2%;
-}
-
-#contenuto #personaggi .charactervoice {
-	font-weight: bold;
-}
-
-#contenuto ul {
-	list-style-type: none;
 }
 
 #sidebar {
-	float: right;
+    float: right;
 
-	width: 27%;
-	margin: 1%;
-	margin-left: 0;
-	padding: 1%;
+    width: 23%;
+    margin: 1%;
+    margin-left: 0;
+    padding: 1%;
 
-	border: 1pt solid #bbb;
-	border-radius: 4pt;
-	background-color: #ffe7e7;
+    border-left: 2pt solid #bbb;
+
+    background-color: transparent;
+}
+
+#articleside a {
+    text-decoration: none;
+    color: #2196f3;
+}
+
+h2 {
+    position: relative;
+
+    margin-top: 2.5%;
+    margin-bottom: 1.5%;
+
+    font-size: 1.8em;
+}
+
+
+
+h3 {
+    position: relative;
+    left: -0.3%;
+
+    margin-top: 2%;
+    margin-bottom: 1%;
+
+    font-size: 1.4em;
+}
+
+h2:first-of-type {
+    margin-top: 0;
+}
+
+#contenuto img {
+    display: block;
+
+    width: 80%;
+    margin: 3% auto 2%;
+
+    border: 2px solid #260101;
+}
+
+#contenuto dd {
+    overflow: auto;
+
+    margin-bottom: 1.5%;
+    padding-bottom: 0.5%;
+
+    border-style: solid;
+    border-color: #ccc;
+    border-bottom-width: 3pt;
+
+    font-size: 1em;
+}
+
+#contenuto dt {
+    position: relative;
+    left: 3%;
+
+    max-width: 94%;
+    margin-top: 1%;
+    margin-bottom: 4.5%;
+
+    font-size: 1.8em;
+}
+
+div.data {
+    font-size: 0.8em;
+}
+
+#contenuto div.newsimage img {
+    display: inline;
+    float: left;
+
+    width: 30%;
+    margin: 2%;
+
+    border: 2pt solid #260101;
+}
+
+#contenuto img.immagine {
+    display: inline-block;
+
+    width: 100%;
+
+    vertical-align: middle;
+}
+
+#contenuto img.total3images {
+    display: inline-block;
+
+    width: 32%;
+
+    vertical-align: middle;
+}
+
+#contenuto div.containerImage {
+    width: 90%;
+    margin: auto;
+}
+
+#contenuto div.withtotal3images {
+    width: 90%;
+    margin: auto;
+}
+
+#contenuto div.newsimage img {
+    margin-top: 0;
+    margin-bottom: 0.3%;
+}
+
+#contenuto #personaggi img {
+    float: left;
+
+    width: 25%;
+    margin: 0 2% 0 2%;
+}
+
+#contenuto #personaggi .charactervoice {
+    font-weight: bold;
+}
+
+#contenuto ul {
+    list-style-type: none;
 }
 
 #subheader {
-	border-top-left-radius: inherit;
-	border-top-right-radius: inherit;
-	/*background-color: #480000;*/
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    /*background-color: #480000;*/
 }
 
 #locationbar {
-	padding-left: 3%;
+    padding-left: 3%;
 
-	color: white;
-	/*border-bottom-right-radius: 20pt;*/
-	/*border-bottom-left-radius: 10pt;*/
-	background-color: #ccc;
+    color: white;
+    /*border-bottom-right-radius: 20pt;*/
+    /*border-bottom-left-radius: 10pt;*/
+    background-color: #ccc;
 
-	font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 #footer {
-	clear: both;
+    clear: both;
 
-	text-align: center;
+    text-align: center;
 
-	border-bottom-right-radius: inherit;
-	border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
 
-	font-size: 0.8em;
-	font-style: italic;
+    font-size: 0.8em;
+    font-style: italic;
 }
 
 #imgrss {
-	width: 8%;
-	margin-bottom: -2%;
+    width: 8%;
+    margin-bottom: -2%;
 }
 
 #titlerss {
-	display: inline;
+    display: inline;
 }
 
 .dtsidebar {
-	text-align: center;
+    text-align: center;
 
-	font-size: 1.4em;
-	font-weight: bold;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 .ddsidebar {
-	margin-bottom: 5%;
-	padding-bottom: 2%;
+    margin-bottom: 5%;
+    padding-bottom: 2%;
 
-	border-bottom-width: 3pt;
-	border-bottom-style: solid;
-	border-bottom-color: #b01414;
+    border-bottom-width: 3pt;
+    border-bottom-style: solid;
+    border-bottom-color: #b01414;
 
-	font-size: 0.8em;
+    font-size: 0.8em;
 }
 
 #articleside dt {
-	clear: both;
+    clear: both;
 
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 #articleside dd {
-	overflow: auto;
+    overflow: auto;
 
-	margin-bottom: 5%;
-	padding-bottom: 4%;
+    margin-bottom: 5%;
+    padding-bottom: 4%;
 
-	border-bottom-width: 2pt;
-	border-bottom-style: solid;
-	border-bottom-color: #cb8080;
+    border-bottom-width: 2pt;
+    border-bottom-style: solid;
+    border-bottom-color: #cccccc;
 
-	font-size: 0.9em;
+    font-size: 0.9em;
 }
 
 #articleside dd:last-child {
-	margin-bottom: 0;
-	padding-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
 
-	border-bottom-width: 0;
+    border-bottom-width: 0;
 }
 
 #articleside img {
-	float: left;
+    float: left;
 
-	max-width: 25%;
-	max-height: 25%;
-	margin: 2%;
+    max-width: 25%;
+    max-height: 25%;
+    margin: 2%;
 
-	border: 1pt solid #260101;
+    border: 1pt solid #260101;
 }
 
 #footer p {
-	padding: 0 5% 2%;
+    padding: 0 5% 2%;
 }
 
 @media screen and (max-width: 900px) {
-	#header {
-		/* riduco la dimensione della testata*/
-		height: 16em;
-	}
-	#titolo {
-		top: 25%;
-	}
-	#titoletto {
-		top: 25%;
-		font-size: 1.6em;
-	}
+    #header {
+        /* riduco la dimensione della testata*/
+        height: 16em;
+    }
+
+    #titolo {
+        top: 25%;
+    }
+
+    #titoletto {
+        top: 25%;
+        font-size: 1.6em;
+    }
 }

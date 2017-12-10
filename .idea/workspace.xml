@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6ce62129-e387-4f6a-bb56-dcc8028fae3b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/header.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/header.php" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/index.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/index.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/login.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/login.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/newsadd.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/newsadd.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Flandre.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Flandre.jpg" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/index.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/index.php" />
+      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/sidebar.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/sidebar.php" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/style/admin.css" afterPath="$PROJECT_DIR$/Touhou_dynamic/style/admin.css" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/style/style.css" afterPath="$PROJECT_DIR$/Touhou_dynamic/style/style.css" />
     </list>
@@ -21,17 +18,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/header.php">
+      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Touhou_dynamic/sidebar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="806">
-              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="11" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Touhou_dynamic/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="988">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="33" column="27" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Touhou_dynamic/style/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="184" column="4" lean-forward="true" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newsadd.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/newsadd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-312">
+              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <folding>
+                <marker date="1512921270722" expanded="true" signature="741:815" ph="Select id, t... news" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Touhou_dynamic/style/admin.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="119" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>wrapperM</find>
+      <find>dtsideba</find>
+      <find>dd</find>
+      <find>article</find>
+      <find>contenuto dd</find>
+      <find>contenuto</find>
+      <find>wrapper</find>
+      <find>conte</find>
+      <find>p</find>
+      <find>wrapp</find>
+      <find>text</find>
+      <find>h2</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,13 +115,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/database.sql" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/admin/login.php" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/admin/header.php" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/index.php" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/sidebar.php" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/admin/newsadd.php" />
         <option value="$PROJECT_DIR$/Touhou_dynamic/style/admin.css" />
         <option value="$PROJECT_DIR$/Touhou_dynamic/style/style.css" />
-        <option value="$PROJECT_DIR$/Touhou_dynamic/index.php" />
         <option value="$PROJECT_DIR$/Touhou_dynamic/admin/index.php" />
-        <option value="$PROJECT_DIR$/Touhou_dynamic/admin/login.php" />
-        <option value="$PROJECT_DIR$/Touhou_dynamic/admin/newsadd.php" />
-        <option value="$PROJECT_DIR$/Touhou_dynamic/admin/header.php" />
       </list>
     </option>
   </component>
@@ -113,6 +189,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -144,7 +221,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="856000" />
+    <option name="totallyTimeSpent" value="4369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
@@ -189,26 +266,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/style/style.css">
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="399" column="0" lean-forward="true" selection-start-line="399" selection-start-column="0" selection-end-line="399" selection-end-column="0" />
+        <state relative-caret-position="1274">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/style/admin.css">
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="214" column="0" lean-forward="true" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="234">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="11" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -223,26 +292,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/newsadd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="-312">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
           <folding>
-            <marker date="1512918623311" expanded="true" signature="741:815" ph="Select id, t... news" />
+            <marker date="1512921270722" expanded="true" signature="741:815" ph="Select id, t... news" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/style/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="119" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="184" column="4" lean-forward="true" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="650">
+          <caret line="33" column="27" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
           <folding />
         </state>
       </provider>

@@ -11,6 +11,7 @@ require('header.php');
 require('locationbar.php'); ;
 ?>
 <div id="contenuto">
+    <div id="wrapperMain">
     <h2>Touhou Project</h2>
     <!-- introduzione -->
     <p>Touhou Project (<ruby xml:lang="ja"><rb>東方</rb><rp>(</rp><rt>とうほう</rt><rp>)</rp></ruby><span xml:lang="en">Project</span>) è una <strong>serie di videogiochi</strong> per <span xml:lang="en">PC-98</span> e <span xml:lang="en">Windows</span>, sviluppata a partire dal 1996 dalla casa produttrice giapponese <strong xml:lang="en">Team Shanghai Alice</strong>, il cui unico membro è <strong>ZUN</strong>.</p>
@@ -34,9 +35,14 @@ require('locationbar.php'); ;
     <p>Questo sito si pone l'obbiettivo di riuscire a collaborare con portali e fiere per la creazione di <strong>eventi, conferenze e raduni</strong> riguardanti Touhou, in modo da far incontrare i fan e magari realizzare qualche <strong>evento cosplay a tema!</strong><br/>
         Rimanete sintonizzati sulla sezione <em xml:lang="en">News</em> per ricevere aggiornamenti a riguardo.
     </p>
-</div>
+    </div>
+
+
 <?php
 require('sidebar.php');
+?>
+</div>
+<?php
 require('footer.php');
 ?>
 </body>

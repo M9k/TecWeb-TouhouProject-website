@@ -7,6 +7,6 @@
 Clicka sull'icona ed aggiungilo ai tuoi segnalibri!</p></dd>
 	</dl>
 </div>
-<div id="jumptotop">
-	<a href="#header">Torna in cima</a>
-</div>
+<!--<div id="jumptotop">-->
+<!--	<a href="#header">Torna in cima</a>-->
+<!--</div>-->

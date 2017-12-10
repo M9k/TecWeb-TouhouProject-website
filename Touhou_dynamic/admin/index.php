@@ -23,15 +23,18 @@ require('head.php');
 ?>
 <body>
 <?php if (isset($_SESSION['login']) && $_SESSION['login'] == true) require('header.php'); ?>
-<div id="contenuto">
+<div id="contenutoLogin">
     <?php
     if ($wronglogin)
         echo($wrongloginmessage);
     if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
         ?>
-        <h2>Benvenuto nella area di amministrazione</h2>
+    <div id="contenuto">
+        <div id="wrapper">
+        <h2>Benvenuto nell' area di amministrazione</h2>
         <p>Da questa parte del sito potrai gestire le notizie, le immagini caricate, i commenti ed i capitoli.</p>
-
+    </div>
+</div>
         <?php
     } else
         require('login.php'); ?>
