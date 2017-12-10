@@ -13,7 +13,6 @@
 		<link type="text/css" rel="stylesheet" href="../style/print.css" media="print"/>
 
 		<script type="text/javascript" src="../script/menucollapse.js"></script>
-		<script type="text/javascript" src="../script/copyOnClick.js"></script>
 	<title><?php
 		if(isset($title))
 			echo $title;
