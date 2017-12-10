@@ -2,124 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ce62129-e387-4f6a-bb56-dcc8028fae3b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change beforePath="$PROJECT_DIR$/Relazione/Relazione.tex" afterPath="$PROJECT_DIR$/Relazione/Relazione.tex" />
-      <change beforePath="$PROJECT_DIR$/TMP/badapple_kage.png" afterPath="$PROJECT_DIR$/TMP/badapple_kage.png" />
-      <change beforePath="$PROJECT_DIR$/TMP/cosplay.jpg" afterPath="$PROJECT_DIR$/TMP/cosplay.jpg" />
-      <change beforePath="$PROJECT_DIR$/TMP/err404.jpg" afterPath="$PROJECT_DIR$/TMP/err404.jpg" />
-      <change beforePath="$PROJECT_DIR$/TMP/gray_polychromatic_remilia_scarlet_shingo__missing_link__touhou_vampire_vector_1920x1200.jpg" afterPath="$PROJECT_DIR$/TMP/gray_polychromatic_remilia_scarlet_shingo__missing_link__touhou_vampire_vector_1920x1200.jpg" />
-      <change beforePath="$PROJECT_DIR$/TMP/head2.jpg" afterPath="$PROJECT_DIR$/TMP/head2.jpg" />
-      <change beforePath="$PROJECT_DIR$/TMP/head3.jpg" afterPath="$PROJECT_DIR$/TMP/head3.jpg" />
-      <change beforePath="$PROJECT_DIR$/TMP/logo.jpg" afterPath="$PROJECT_DIR$/TMP/logo.jpg" />
-      <change beforePath="$PROJECT_DIR$/TMP/logo.psd" afterPath="$PROJECT_DIR$/TMP/logo.psd" />
-      <change beforePath="$PROJECT_DIR$/TMP/todo.txt" afterPath="$PROJECT_DIR$/TMP/todo.txt" />
-      <change beforePath="$PROJECT_DIR$/TMP/xdBgnUIK.png" afterPath="$PROJECT_DIR$/TMP/xdBgnUIK.png" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/.htaccess" afterPath="$PROJECT_DIR$/Touhou_dynamic/.htaccess" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/banlist.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/banlist.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/banremove.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/banremove.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/chapteradd.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/chapteradd.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/chapteraddaction.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/chapteraddaction.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/chapteradmin.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/chapteradmin.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/chapterdelete.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/chapterdelete.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/cleancache.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/cleancache.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/commentaction.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/commentaction.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/commentadmin.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/commentadmin.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/error.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/error.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/errordb.xhtml" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/errordb.xhtml" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/head.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/head.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/header.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/header.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/image.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/image.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/imagedelete.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/imagedelete.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/imageupload.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/imageupload.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/imageuploadfunction.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/imageuploadfunction.php" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/index.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/index.php" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/login.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/login.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/newsaction.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/newsaction.php" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/newsadd.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/newsadd.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/admin/newsadmin.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/admin/newsadmin.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/article.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/article.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/cached/news.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/cached/news.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/capitoli.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/capitoli.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/commentadd.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/commentadd.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/config.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/config.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/error.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/error.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/error404.html" afterPath="$PROJECT_DIR$/Touhou_dynamic/error404.html" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/errordb.xhtml" afterPath="$PROJECT_DIR$/Touhou_dynamic/errordb.xhtml" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/footer.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/footer.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/gameplay.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/gameplay.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/getconnection.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/getconnection.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/head.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/head.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/header.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/header.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/Cirno9_Windows.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/Cirno9_Windows.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/Ikaruga.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/Ikaruga.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/UNOwenWasHere.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/UNOwenWasHere.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/back.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/back.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/badapple.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/badapple.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/1.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/1.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/10.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/10.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/11.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/11.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/12.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/12.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/13.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/13.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/14.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/14.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/15.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/15.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/16.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/16.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/2.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/2.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/3.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/3.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/4.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/4.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/5.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/5.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/6.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/6.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/7.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/7.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/8.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/8.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/9.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/chapters/9.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Alice.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Alice.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Cirno.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Cirno.jpg" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Flandre.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Flandre.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Kirisame.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Kirisame.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Reimu.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Reimu.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Remilia.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Remilia.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Sakuya.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Sakuya.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Yakumo.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/characters/Yakumo.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/cosplay.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/cosplay.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/easymode.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/easymode.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/err404.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/err404.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/errdb.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/errdb.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/favicon.png" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/favicon.png" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/gameplay1.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/gameplay1.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/gameplay2.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/gameplay2.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/gensokyo.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/gensokyo.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/head.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/head.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/meme1.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/meme1.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/meme2.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/meme2.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/meme3.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/meme3.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/news/test.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/news/test.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/nuclearfusion.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/nuclearfusion.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/protagoniste.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/protagoniste.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/rain.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/rain.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/rss-icon.png" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/rss-icon.png" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/spaceinvaders.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/spaceinvaders.jpg" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/images/spellcard.jpg" afterPath="$PROJECT_DIR$/Touhou_dynamic/images/spellcard.jpg" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/index.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/index.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/locationbar.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/locationbar.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/news.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/news.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/personaggi.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/personaggi.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/popolarita.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/popolarita.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/rss.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/rss.php" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/script/formValidation.js" afterPath="$PROJECT_DIR$/Touhou_dynamic/script/formValidation.js" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/script/menucollapse.js" afterPath="$PROJECT_DIR$/Touhou_dynamic/script/menucollapse.js" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/script/showback.js" afterPath="$PROJECT_DIR$/Touhou_dynamic/script/showback.js" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/script/zoomimage.js" afterPath="$PROJECT_DIR$/Touhou_dynamic/script/zoomimage.js" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/sidebar.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/sidebar.php" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/style/admin.css" afterPath="$PROJECT_DIR$/Touhou_dynamic/style/admin.css" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/style/errorpage.css" afterPath="$PROJECT_DIR$/Touhou_dynamic/style/errorpage.css" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/style/mobile.css" afterPath="$PROJECT_DIR$/Touhou_dynamic/style/mobile.css" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/style/print.css" afterPath="$PROJECT_DIR$/Touhou_dynamic/style/print.css" />
       <change beforePath="$PROJECT_DIR$/Touhou_dynamic/style/style.css" afterPath="$PROJECT_DIR$/Touhou_dynamic/style/style.css" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/style/tablet.css" afterPath="$PROJECT_DIR$/Touhou_dynamic/style/tablet.css" />
-      <change beforePath="$PROJECT_DIR$/Touhou_dynamic/sviluppo.php" afterPath="$PROJECT_DIR$/Touhou_dynamic/sviluppo.php" />
-      <change beforePath="$PROJECT_DIR$/accessibilita punti da controllare.txt" afterPath="$PROJECT_DIR$/accessibilita punti da controllare.txt" />
-      <change beforePath="$PROJECT_DIR$/database.sql" afterPath="$PROJECT_DIR$/database.sql" />
-      <change beforePath="$PROJECT_DIR$/todo.txt" afterPath="$PROJECT_DIR$/todo.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -128,8 +19,36 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="806">
+              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/database.sql" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/style/admin.css" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/style/style.css" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/index.php" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/admin/index.php" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/admin/login.php" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/admin/newsadd.php" />
+        <option value="$PROJECT_DIR$/Touhou_dynamic/admin/header.php" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -172,6 +91,18 @@
               <item name="TouhouProject" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Touhou_dynamic" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="TouhouProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouhouProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Touhou_dynamic" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="TouhouProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouhouProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Touhou_dynamic" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="style" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -213,12 +144,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81000" />
+    <option name="totallyTimeSpent" value="856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -247,5 +179,73 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2288">
+          <caret line="88" column="2" lean-forward="false" selection-start-line="88" selection-start-column="2" selection-end-line="88" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="399" column="0" lean-forward="true" selection-start-line="399" selection-start-column="0" selection-end-line="399" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/style/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="214" column="0" lean-forward="true" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/newsadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <marker date="1512918623311" expanded="true" signature="741:815" ph="Select id, t... news" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Touhou_dynamic/admin/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
