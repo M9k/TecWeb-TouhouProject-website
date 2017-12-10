@@ -10,6 +10,7 @@ require('head.php');
 require('header.php');
 require('locationbar.php'); 
 ?>
+<div id="contenitore">
 		<div id="contenuto">
 			<h2>Capitoli</h2>
 <?php
@@ -39,7 +40,8 @@ if($risp != false)
 		echo '<ul>';
 		echo '		<li><span class="chaptervoice">Numero</span>: '.$capitolo['number'].'</li>';
 		echo '		<li><span class="chaptervoice">anno di pubblicazione</span>: '.$capitolo['year'].'</li>';
-		echo '		<li><span class="chaptervoice">Titolo giapponese</span>: '.$capitolo['title'].'</li>';
+		echo '		<li><span class="chaptervoice">Titolo giapponese</span>: <span xml:lang="ja">'.$capitolo['title'].'</span></li>';
+		echo '		<li><span class="chaptervoice">Titolo in inglese</span>: <span xml:lang="en">'.$capitolo['titleeng'].'</span></li>';
 		echo '		<li><span class="chaptervoice">Titolo in italiano</span>: '.$capitolo['titleita'].'</li>';
 		echo '</ul>';
 		echo '<span class="chaptervoice">Trama</span>:<br/>';

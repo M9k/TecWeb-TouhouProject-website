@@ -10,6 +10,7 @@ require('head.php');
 require('header.php');
 require('locationbar.php'); 
 ?>
+<div id="contenitore">
 		<div id="contenuto">
 			<h2>Popolarità</h2>
 				<p>Tuohou, grazie soprattutto ad internet, si è ampliamente diffuso in tutto il mondo, soprattutto grazie a piattaforme social come <span xml:lang="en">Youtube</span>, <span xml:lang="en">4chan</span> e <span xml:lang="en">forum</span>.<br/>

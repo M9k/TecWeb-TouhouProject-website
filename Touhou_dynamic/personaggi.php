@@ -10,6 +10,7 @@ require('head.php');
 require('header.php');
 require('locationbar.php'); 
 ?>
+<div id="contenitore">
 	<div id="contenuto">
 		<h2>Personaggi</h2>
 		<dl id="personaggi">
