@@ -9,6 +9,13 @@
     padding: 8% 0 0;
 }
 
+#loginWrapper h2 {
+    font-size: 2.3em;
+    display: block;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
 #loginform {
     padding: 26px 24px 46px;
     background: #fff;
@@ -26,6 +33,11 @@
     outline: 0;
     transition: 50ms border-color ease-in-out;
     background: #fbfbfb;
+}
+
+#linkHomeReturn a {
+    text-decoration: none;
+    color: #2196F3;
 }
 
 .resetBtn {
