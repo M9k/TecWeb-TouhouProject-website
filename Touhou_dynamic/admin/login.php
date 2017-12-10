@@ -9,4 +9,6 @@
         </fieldset>
     </form>
 </div>
-<div class=""
+<div id="linkHomeReturn">
+    <span><a href="../index.php">Torna alla Home</a> </span>
+</div>
