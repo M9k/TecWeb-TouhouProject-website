@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2017 at 04:12 PM
+-- Generation Time: Dec 10, 2017 at 06:10 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `newstest`
 --
+CREATE DATABASE IF NOT EXISTS `newstest` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `newstest`;
 
 -- --------------------------------------------------------
 
@@ -82,8 +84,6 @@ INSERT INTO `chapters` (`number`, `year`, `title`, `image`, `imagedescr`, `title
 ('15', 2015, '東方紺珠伝　～ Legacy of Lunatic Kingdom', '15.jpg', 'todo', 'Legacy of Lunatic Kingdom', 'Legacy of Lunatic Kingdom', 'Someone is causing havoc in the Lunar Capital, and evidently, Lunarians have come to purify Gensokyo to make it suitable for them to live there (as they have a thing against what they consider \"impurity\"). With the help of the Ultramarine Orb Elixir (or not), the girls must now set out to stop this invasion and find the perpetrator behind this incident. ', 15),
 ('16', 2017, '東方天空璋　～ Hidden Star in Four Seasons', '16.jpg', 'todo', 'Hidden Star in Four Seasons', 'Stella nascosta in quattro stagioni', 'Nonostante sia in piena estate, le stagioni in varie località sono completamente fuori pericolo. Il Santuario Hakurei è ricoperto di petali di ciliegio, la montagna Youkai si crogiola nel mezzo dell\'autunno, e la Foresta della Magia è ricoperta di neve ... e grazie ad una strana forza, le fate di Gensokyo stanno dilagando con forza insondabile. Nel bel mezzo di questo incidente innegabile, le ragazze hanno deciso di indagare e trovare dietro di sé il perpetratore.', 16);
 
---
-
 -- --------------------------------------------------------
 
 --
@@ -105,11 +105,9 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `news_id`, `nick`, `email`, `message`, `data`, `ip`) VALUES
-(1, 3, 'asdasd', 'asdasdasd@asd.it', 'asdasdasd', '2017-11-16 20:56:03', 'unknow'),
-(2, 3, 'asdasd', 'asdasdasd@asd.it', 'asdasd', '2017-11-16 20:56:13', 'unknow'),
-(3, 5, 'asd', 'asd@gmail.com', '<strong> TEST</strong>', '2017-11-19 16:41:44', 'unknow'),
-(4, 5, 'asd', 'asdasda@asd.it', 'asdasdasd', '2017-11-19 16:46:23', 'unknow'),
-(5, 5, 'sdfd@sdf.it', 'sdfd@sdf.it', 'sdfsdfsdf\r\n', '2017-11-19 16:48:07', 'unknow');
+(8, 18, 'Samuele', 'samu@samu.com', 'Sarebbe bello capire il giapponese...', '2017-12-10 18:05:00', 'unknow'),
+(9, 18, 'Matteo', 'mtodescato@tiscali.it', 'Sar&agrave; difficile finirlo anche ad easy &gt;_&lt;', '2017-12-10 18:07:57', 'unknow'),
+(10, 18, 'Mirco', 'mcailotto96@gmail.com', 'Mio al day one!!!', '2017-12-10 18:09:38', 'unknow');
 
 -- --------------------------------------------------------
 
@@ -132,12 +130,7 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `hidden`, `data`, `text`, `image`, `imgdescr`) VALUES
-(2, 'Test 2', 0, '2017-10-31 16:15:50', 'Wikipedia (pronuncia: asd vedi sotto) è un\'enciclopedia online a contenuto libero, collaborativa, multilingue e gratuita, nata nel 2001, sostenuta e ospitata dalla Wikimedia Foundation, un\'organizzazione non a scopo di lucro statunitense.\r\n\r\nLanciata da Jimmy Wales e Larry Sanger il 15 gennaio 2001, inizialmente nell\'edizione in lingua inglese, nei mesi successivi ha aggiunto edizioni in numerose altre lingue. Sanger ne suggerì il nome,[1] una parola macedonia nata dall\'unione della radice wiki al suffisso pedia (da enciclopedia).\r\n\r\nEtimologicamente, Wikipedia significa \"cultura veloce\", dal termine hawaiano wiki (veloce), con l\'aggiunta del suffisso -pedia (dal greco antico ???????, paideia, formazione). Con più di 45 milioni di voci in oltre 280 lingue[2], è l\'enciclopedia più grande mai scritta[3], tra i dieci siti web più visitati al mondo[4] e costituisce la maggiore e più consultata opera di riferimento generalista su Internet.[5][6][7]\r\n\r\nIndice ', '', NULL),
-(3, 'Test 3', 0, '2017-10-31 16:15:50', 'Pronuncia di Wikipedia\r\nIn italiano\r\n\r\nIl termine Wikipedia è formato dal prefisso wiki- (dall\'hawaiano wiki, veloce), e dal suffisso -pedia (dal greco antico paideia, formazione). Conformemente allo spirito costituzionalmente internazionalistico e linguisticamente democratico del progetto, non prevede una pronuncia ufficiale nelle varie lingue, lasciando libertà alle comunità dei parlanti di utilizzare le proprie regole linguistiche.\r\n\r\nConsiderando la pronuncia consolidata in lingua italiana del suffisso -pedìa (-pedìa /pe?dia/, come in enciclopedia)[20] e la pronuncia consolidata della lettera w (come in wafer o wc),[20][21] la pronuncia linguisticamente più appropriata è vikipedìa (IPA /vikipe?dia/). Secondo l\'Accademia della Crusca, infatti, la pronuncia di w- è vu[20][21][22] (e quindi vìki /?viki/), e quella di -pedia è -pedìa.[20]\r\n\r\nLe pronunce anglicizzanti (o inglesi italianizzate), meno integrate nel sistema linguistico dell\'italiano, sono tuttavia diffuse, benché poco conformi allo spirito costituzionalmente internazionalistico e linguisticamente democratico del progetto. Le rare varianti con /wai-/ o /vai-/, che presentano storpiature della stessa lingua inglese, sarebbero preferibilmente da evitare. Il Dizionario di pronuncia italiana di Luciano Canepari, uniformandosi alla pronuncia inglese, riporta /wiki?p?dja/ (uichipèdia) come forma primaria, /wiki?pidja/ (uichipìdia) come accettabile e /wikipe?dia/ (uichipedìa) come pronuncia intenzionale «per fare sfoggio»[23].\r\nIn inglese\r\n\r\nIn inglese si dice comunemente [?w?ki?pi?di?] o [?wi?ki?pi?di?], ma non esiste una pronuncia ufficiale.\r\nRedazione\r\nRealizzazione in 3D del logo di Wikipedia in uno sfondo contestuale\r\n\r\nWikipedia non è regolata da alcun comitato di redazione centrale: le sue voci sono scritte spontaneamente da centinaia di migliaia di volontari non remunerati né iscritti ad associazioni, che si organizzano autonomamente stabilendo da soli le regole interne e lo svolgimento degli argomenti nelle voci. Wikipedia, infatti, è costruita sulla convinzione che la collaborazione tra gli utenti possa nel tempo migliorare le voci, più o meno nello stesso spirito con cui viene sviluppato il software libero. Nel caso del software, se è libero, chiunque può prelevarne i sorgenti, modificarli e ridistribuirli, eppure solitamente i programmatori si limitano a proporre alcune modifiche agli autori, i quali le adottano oppure no a loro insindacabile giudizio.\r\n\r\nWikipedia mantiene un approccio ottimistico sulla bontà delle modifiche proposte: tutti coloro che visitano il sito di Wikipedia hanno la possibilità di creare o modificare una voce e vedere pubblicate all\'istante le loro modifiche. Gli autori delle voci, che non devono avere necessariamente alcuna competenza o qualifica formale sugli argomenti trattati ma devono basare le proprie pubblicazioni su fonti autorevoli, sono però avvertiti che i loro contributi possono essere cancellati, o a loro volta modificati e redistribuiti da chiunque, nei termini della licenza e delle linee guida interne a Wikipedia. Le voci sono controllate dalla comunità, con il supporto di un gruppo di amministratori che svolgono alcune azioni tecniche. Le decisioni da prendere sul contenuto e sulle politiche editoriali di Wikipedia sono ottenute di norma per consenso[24] e in alcuni casi per votazione, sebbene per alcuni anni Jimmy Wales si fosse riservato decisioni in alcuni casi nell\'edizione in inglese.\r\n\r\nData la natura aperta di Wikipedia, spesso si verificano delle discussioni prolungate quando i partecipanti alla stesura di una voce non raggiungono un accordo, o più raramente delle guerre di modifiche o di edizione (dall\'inglese edit war).[25] Alcuni membri delle comunità hanno descritto il processo di redazione in Wikipedia come un lavoro collaborativo, o un processo evolutivo di darwinismo sociale,[26] ma non tutti la ritengono una descrizione precisa del fenomeno. Le voci sono sempre aperte alle modifiche (tranne quando vengono protette a tempo determinato a causa di vandalis', 'test.jpg', NULL),
-(4, 'test 4 - titolo dasdfsdfdsf', 0, '2017-11-03 22:19:59', 'asdfasdfasdfxcvcvxcvfsd fsd fsd fsd fsd fs', '', NULL),
-(5, 'nuova news', 0, '2017-11-06 17:14:57', 'Prima news inserita dal sito', 'test.jpg', NULL),
-(12, 'dfsgsdfgdg', 1, '2017-11-06 18:23:28', 'dfdfsg', '', 'prova123'),
-(17, 'asdasd', 1, '2017-11-06 18:39:15', 'asd', '', NULL);
+(18, 'Pubblicato in nuovo Touhou su Steam!', 0, '2017-12-10 18:02:31', 'È appena uscito il nuovo capitolo di Touhou, il 16, su <span xml:lang=\"en\">Steam</span>, piattaforma digitale di distribuzione di videogiochi famosa in tutto il mondo.<br/>\r\nIl gioco, denominato <span xml:lang=\"en\">Hidden Star in Four Seasons</span>, purtroppo è disponibile unicamente in lingua inglese, ma non escluderemo una modifica del gioco che lo renderà disponibile anche in inglese realizzata da qualche fan.<br/>\r\nPurtroppo escludiamo una traduzione in italiano, in quanto tutti i precedenti titoli non sono mai stati localizzati.', 'touhou_steam.jpg', 'Immagine raffigurante la pagina di Steam che vende Touhou');
 
 --
 -- Indexes for dumped tables
@@ -181,17 +174,17 @@ ALTER TABLE `ban`
 -- AUTO_INCREMENT for table `chapters`
 --
 ALTER TABLE `chapters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- Constraints for dumped tables
 --

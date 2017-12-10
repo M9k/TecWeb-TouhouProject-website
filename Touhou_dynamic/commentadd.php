@@ -29,7 +29,7 @@
 			if($ip != 'unknow' && $conn->query('SELECT * FROM ban WHERE ip = '.$ip) >= 1)
 				//consiglio di contattare un amministratore se è stato bannato ma non ha fatto nulla, potrebbe essere a causa del NAT a livello ISP
 				$error = 'Il tuo indirizzo IP risulta bloccato a causa di precedenti messaggi inopportuni, se ritieni che questo messaggio sia un errore contattare un amministratore.';
-			$risp = $conn->query('INSERT INTO comment (nick, email, message, news_id, ip) VALUES (\''.$_POST['name'].'\',\''.$email.'\',\''.strip_tags($_POST['message']).'\','.$id.', "'.$ip.'");');
+			$risp = $conn->query('INSERT INTO comment (nick, email, message, news_id, ip) VALUES (\''.$_POST['name'].'\',\''.$email.'\',\''.htmlentities($_POST['message']).'\','.$id.', "'.$ip.'");');
 			if($risp != 1)
 				$error = 'Errore nell\'inserimento del commento, per favore contattare un amministratore.';
 			else

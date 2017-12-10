@@ -22,12 +22,12 @@ $links = array(
 				'link'=>'newsadmin.php'
 			),
 			array(
-				'nome'=>'Immagini',
-				'link'=>'image.php'
-			),
-			array(
 				'nome'=>'Aggiungi news',
 				'link'=>'newsadd.php'
+			),
+			array(
+				'nome'=>'Immagini',
+				'link'=>'image.php'
 			),
 			array(
 				'nome'=>'Commenti',

@@ -5,9 +5,8 @@ if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 {
-	$_SESSION['error'] = "Login invalido, sessione scaduta!";
-	header("Location: error.php");
-	die();
+	echo('<div id="wronglogin">Login invalido, sessione scaduta!</div>');
+	die;
 }
 
 $title = "Gestione immagini - Touhou Italia";
@@ -30,7 +29,7 @@ $immagini = scandir('../images/news/');
 foreach($immagini as $immagine)
 {
 	if($immagine != '..' && $immagine != '.')
-		echo '<div class="imagediv"><form class="imagedivform" action="imagedelete.php" method="post"><fieldset class="imagedescription"><div class="imageview"><img alt="immagine caricata di nome'.$immagine.'" src="../images/news/'.$immagine.'"/></div><div class="imagename">'.$immagine.'</div><div class="linkimage">TODO: - copyOnClick images/news/'.$immagine.'</div><button name="btnDelete" value="'.$immagine.'">Elimina</button></fieldset></form></div>';
+		echo '<div class="imagediv"><form class="imagedivform" action="imagedelete.php" method="post"><fieldset class="imagedescription"><div class="imageview"><img alt="immagine caricata di nome'.$immagine.'" src="../images/news/'.$immagine.'"/></div><div class="imagename">'.$immagine.'</div><div class="linkimage">Per utilizzare questa immagine inserire: images/news/'.$immagine.'</div><button name="btnDelete" value="'.$immagine.'">Elimina</button></fieldset></form></div>';
 }
 ?>
 
