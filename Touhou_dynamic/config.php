@@ -2,7 +2,7 @@
 $server = 'localhost';
 $user = 'root';
 $passwd = '';
-$database = 'NewsTest';
+$database = 'newstest';
 
 setlocale(LC_TIME, "it_IT");
 
