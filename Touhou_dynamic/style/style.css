@@ -168,6 +168,7 @@ h3 {
 #contenuto dd img {
 	float:left;
 	width: 30%;
+	margin-top: 2%;
 }
 
 #contenuto dt {
