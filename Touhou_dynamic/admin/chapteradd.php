@@ -40,5 +40,5 @@ require_once('../getconnection.php');
 		</div>
 	</body>
 </html>
-
+<?php require('../closeconnection.php');?>
 

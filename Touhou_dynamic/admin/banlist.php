@@ -38,9 +38,7 @@ if($risp)
 else
 	echo('<div id="nocomment">Nessun ban applicato</div>');
 ?>
-
 		</div>
 	</body>
 </html>
-
-
+<?php require('../closeconnection.php');?>

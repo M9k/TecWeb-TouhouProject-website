@@ -49,5 +49,5 @@ echo('<input name="id" style="position: absolute; visibility: hidden;" id="idfor
 		</div>
 	</body>
 </html>
-
+<?php require('../closeconnection.php');?>
 

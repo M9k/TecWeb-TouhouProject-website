@@ -53,6 +53,7 @@ if($index > 0)
 <?php 
 require('sidebar.php');
 require('footer.php');
+require('closeconnection.php');
 ?>
 	</body>
 </html>

@@ -35,6 +35,7 @@ L'ultimo titolo, <em>Hidden Star in Four Seasons</em> (天空璋), il 16° della
 <?php 
 require('sidebar.php');
 require('footer.php');
+require('closeconnection.php');
 ?>
 	</body>
 </html>

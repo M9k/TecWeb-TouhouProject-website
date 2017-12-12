@@ -36,5 +36,5 @@ foreach($immagini as $immagine)
 		</div>
 	</body>
 </html>
-
+<?php require('../closeconnection.php');?>
 

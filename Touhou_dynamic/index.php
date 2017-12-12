@@ -39,6 +39,7 @@ Rimanete sintonizzati sulla sezione <em xml:lang="en">News</em> per ricevere agg
 <?php 
 require('sidebar.php');
 require('footer.php');
+require('closeconnection.php');
 ?>
 	</body>
 </html>

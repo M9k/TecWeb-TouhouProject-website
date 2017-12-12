@@ -135,6 +135,7 @@ Come si può intuire dal suo aspetto, Cirno possiede l'abilità di manipolare il
 <?php 
 require('sidebar.php');
 require('footer.php');
+require('closeconnection.php');
 ?>
 	</body>
 </html>
