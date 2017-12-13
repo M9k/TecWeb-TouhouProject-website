@@ -19,9 +19,6 @@ require('head.php');
 		<div id="contenuto">
 			<h2>Aggiunta capitolo</h2>
 			<div id="newsadd">
-<?php
-require_once('../getconnection.php');
-?>
 				<form id="addchapterform" action="chapteraddaction.php" method="post" enctype="multipart/form-data">
 					<fieldset id="addchapterdiv">
 						<label for="titleform">Titolo giapponese</label>: <input name="title" type="text" id="title"/><br/>
@@ -40,5 +37,3 @@ require_once('../getconnection.php');
 		</div>
 	</body>
 </html>
-<?php require('../closeconnection.php');?>
-

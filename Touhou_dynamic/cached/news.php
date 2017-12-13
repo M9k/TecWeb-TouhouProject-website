@@ -2,7 +2,7 @@
 
 $contenuto = '';
 $update = false;
-$path_lastRefreshSidebar = 'cached'.DIRECTORY_SEPARATOR.'sidebar';
+$path_lastRefreshSidebar = 'cached'.DIRECTORY_SEPARATOR.'lastrefreshsidebar';
 $path_sidebar = 'cached'.DIRECTORY_SEPARATOR.'sidebar';
 $lastrefresh = @fopen($path_lastRefreshSidebar, 'r');
 if(file_exists($path_sidebar))

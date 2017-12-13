@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php";
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 $returnpage = $_SERVER['HTTP_REFERER'];
@@ -10,12 +11,14 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 		$error = 'Non è stato indicato l\'ip';
 	else
 	{
-		require_once('../getconnection.php');
+		$dbConnection = new DBAccess();
+		$dbConnection->openDBConnection();
 		//elimino il ban
-		$risp = $conn->query('DELETE FROM ban where ip='.$_POST['banremove']);
-
+		$risp = $dbConnection->removeBan($_POST['banremove']);
+		//se non è stata eliminata esattamente una riga
 		if($risp != 1)
 			$error ='Errore durante la richiesta al database';
+		$dbConnection->closeDBConnection();
 	}
 }
 else

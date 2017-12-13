@@ -15,16 +15,21 @@ class DBAccess {
 		else
 			mysqli_query($this->connection, 'SET NAMES utf8');	
 	}
+
 	private function showError()
 	{
 		header('Location: errordb.xhtml');
 		die();
 	}
 
-	public function getListChapters() {
-		$query = 'Select * from chapters order by year';
-		$result = mysqli_query($this->connection, $query) or showError();
+	private function runQueryAndGetAll($query)
+	{
+		$result = mysqli_query($this->connection, $query) or $this->showError();
 		return mysqli_fetch_all($result, MYSQLI_ASSOC);
+	}
+
+	public function getListChapters() {
+		return $this->runQueryAndGetAll('Select * from chapters order by year');
 	}
 
 	public function getListNews($withHidden = false, $charLimit = false, $entryLimit = false, $fromEntry = false ) {
@@ -41,29 +46,34 @@ class DBAccess {
 			$query.= ' LIMIT '.$entryLimit;
 		if($entryLimit != false && $fromEntry != false) //prendo da TOT per TOT		
 			$query.= ' LIMIT '.$fromEntry.', '.$entryLimit;
-		$result = mysqli_query($this->connection, $query) or showError();
-		return mysqli_fetch_all($result, MYSQLI_ASSOC);
+		return $this->runQueryAndGetAll($query);
 	}
 	
 	public function getListComments($idNews, $limit=false) {
 		$query = 'Select nick, message from comment where news_id='.$idNews;
 		if($limit != false)
 			$query.= ' limit '.$limit;
-		$result = mysqli_query($this->connection, $query) or showError();
-		return mysqli_fetch_all($result, MYSQLI_ASSOC);
+		return $this->runQueryAndGetAll($query);
+	}
+
+	public function getListBan() {
+		return $this->runQueryAndGetAll('Select * from ban order by date desc');
 	}
 
 	public function getNumberNews($withHidden = false) {
 		$query = 'Select * from news ';
 	   	if(!$withHidden)
 			$query.= 'where hidden = false';
-		$result = mysqli_query($this->connection, $query) or showError();
+		$result = mysqli_query($this->connection, $query) or $this->showError();
 		return mysqli_num_rows($result);
 	}
 	public function getArticle($id) {
-		$query = 'Select id, title, image, imgdescr, data, text from news where id='.$id;
-		$result = mysqli_query($this->connection, $query) or showError();
-		return mysqli_fetch_array($result, MYSQLI_ASSOC);
+		return $this->runQueryAndGetAll('Select id, title, image, imgdescr, data, text from news where id='.$id);
+	}
+	
+	public function removeBan($id) {
+		$query = 'delete from ban where id='.$id;
+		return mysqli_query($this->connection, $query) or $this->showError();
 	}
 
 	public function closeDBConnection() {
