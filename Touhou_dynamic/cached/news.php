@@ -1,10 +1,12 @@
-<?php
+<?php require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php";
 
 $contenuto = '';
 $update = false;
-$lastrefresh = @fopen('cached/lastrefreshsidebar', 'r');
-if(file_exists('cached/sidebar'))
-	$contenuto = file_get_contents('cached/sidebar');
+$path_lastRefreshSidebar = 'cached'.DIRECTORY_SEPARATOR.'sidebar';
+$path_sidebar = 'cached'.DIRECTORY_SEPARATOR.'sidebar';
+$lastrefresh = @fopen($path_lastRefreshSidebar, 'r');
+if(file_exists($path_sidebar))
+	$contenuto = file_get_contents($path_sidebar);
 $seconds = 0;
 if($lastrefresh == false || strcmp($contenuto, '') == 0)
 	$update = true;
@@ -20,14 +22,14 @@ if(!$update)
 	echo($contenuto);
 else
 {
-	require_once('getconnection.php');
-	//$conn = connessione al DB
-
-	$risp = $conn->query('Select id, title, image, imgdescr, data, hidden, CONCAT(SUBSTRING(text, 1, 300), "...") as text from news where hidden=false ORDER BY data desc LIMIT 4');
-	if($risp != false)
+	$dbConnection = new DBAccess();
+	$dbConnection->openDBConnection();
+	$news = $dbConnection->getListNews(false, 300, 3);
+	if($news != null)
 	{
 		$contenuto = '<dl id="articleside">';
-		while($notizia = $risp->fetch_assoc()) 
+
+		foreach($news as $notizia)
 		{
 			$contenuto .= '<dt><a href="article.php?id='.$notizia['id'].'">'.$notizia['title'].'</a></dt>';
 			$contenuto .= '<dd>';
@@ -39,10 +41,15 @@ else
 	}
 	else
 		$contenuto = '<p id="errorarticleside">Nessun articolo disponibile</p>';
+
+	$dbConnection->closeDBConnection();
+	
+	//stampo a video
 	echo($contenuto);
-	//salvo sul file
-	file_put_contents('cached/sidebar', $contenuto);
+
+	//salvo sul file - uso " per le path con gli spazi
+	file_put_contents($path_sidebar, $contenuto);
 	//aggiorno la data
-	file_put_contents('cached/lastrefreshsidebar', time());
+	file_put_contents($path_lastRefreshSidebar, time());
 }
 ?>

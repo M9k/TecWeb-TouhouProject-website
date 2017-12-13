@@ -1,4 +1,5 @@
- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<?php require_once __DIR__.DIRECTORY_SEPARATOR."dbConnection.php"; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
 $title = "Capitoli - Touhou Italia";
@@ -14,15 +15,15 @@ require('locationbar.php');
 		<div id="contenuto">
 			<h2>Capitoli</h2>
 <?php
-require_once('getconnection.php');
-//$conn = connessione al DB
-//
-$risp = $conn->query('Select * from chapters order by year asc');
-if($risp != false)
+$dbConnection = new DBAccess();
+$dbConnection->openDBConnection();
+$chapters = $dbConnection->getListChapters();
+if($chapters != null)
 {
 	echo '<dl>';
-	while($capitolo = $risp->fetch_assoc()) 
+	foreach($chapters as $chapter)
 	{
+
 		//id CHIAVE PRIMARIA
 		//number (testo)
 		//year
@@ -33,32 +34,33 @@ if($risp != false)
 		//titleita
 		//protagonists
 		//plot
-		echo '<dt>'.$capitolo['number'].' - '.$capitolo['titleeng'].'</dt>';
+		echo '<dt>'.$chapter['number'].' - '.$chapter['titleeng'].'</dt>';
 		echo '<dd>';
-		if(isset($capitolo['image']) && strcmp($capitolo['image'], "") != 0)
-			echo '<div class="newsimage"><img src="images/chapters/'.$capitolo['image'].'" alt="'.$capitolo['imagedescr'].'"/></div>';
+		if(isset($chapter['image']) && strcmp($chapter['image'], "") != 0)
+			echo '<div class="newsimage"><img src="images/chapters/'.$chapter['image'].'" alt="'.$chapter['imagedescr'].'"/></div>';
 		echo '<ul>';
-		echo '		<li><span class="chaptervoice">Numero</span>: '.$capitolo['number'].'</li>';
-		echo '		<li><span class="chaptervoice">anno di pubblicazione</span>: '.$capitolo['year'].'</li>';
-		echo '		<li><span class="chaptervoice">Titolo giapponese</span>: <span xml:lang="ja">'.$capitolo['title'].'</span></li>';
-		echo '		<li><span class="chaptervoice">Titolo in inglese</span>: <span xml:lang="en">'.$capitolo['titleeng'].'</span></li>';
-		echo '		<li><span class="chaptervoice">Titolo in italiano</span>: '.$capitolo['titleita'].'</li>';
+		echo '		<li><span class="chaptervoice">Numero</span>: '.$chapter['number'].'</li>';
+		echo '		<li><span class="chaptervoice">anno di pubblicazione</span>: '.$chapter['year'].'</li>';
+		echo '		<li><span class="chaptervoice">Titolo giapponese</span>: <span xml:lang="ja">'.$chapter['title'].'</span></li>';
+		echo '		<li><span class="chaptervoice">Titolo in inglese</span>: <span xml:lang="en">'.$chapter['titleeng'].'</span></li>';
+		echo '		<li><span class="chaptervoice">Titolo in italiano</span>: '.$chapter['titleita'].'</li>';
 		echo '</ul>';
 		echo '<span class="chaptervoice">Trama</span>:<br/>';
-		echo '<div class="trama">'.$capitolo['plot'];
+		echo '<div class="trama">'.$chapter['plot'];
 		echo '</div>';
 		echo '</dd>';
+
 	}
 	echo '</dl>';
 }
 else
-	echo '<p>Nessun capitolo inserito!</p>';
+	echo '<div id="no data">Nessun capitolo presente</div>';
+$dbConnection->closeDBConnection();
 ?>
 		</div>
 <?php 
 require('sidebar.php');
 require('footer.php');
-require('closeconnection.php');
 ?>
 	</body>
 </html>

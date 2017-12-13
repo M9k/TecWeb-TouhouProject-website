@@ -51,7 +51,6 @@ Uno dei più popolari è sicuramente <strong>Koumajou Densetsu <span xml:lang="e
 <?php 
 require('sidebar.php');
 require('footer.php');
-require('closeconnection.php');
 ?>
 	</body>
 </html>
