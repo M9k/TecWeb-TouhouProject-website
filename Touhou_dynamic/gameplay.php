@@ -31,7 +31,7 @@ require('locationbar.php');
 			Anche i nemici affrontati non sono aerei o alieni, ma bensì vampiri, fate, demoni ed altre creature del folklore giapponese.</p>
 			<h3>Trama</h3>
 			<p>I <span xml:lang="en">Shoot'em up</span> sono rinomati per non avere nessuna trama, ci si ritrova a comandare una navicella spaziale e si prosegue sparando a tutto quello che sembra minaccioso e cattivo, ignorando totalmente le motivazioni delle proprie azioni.<br/>
-			<img src="images/Gensokyo.jpg" alt=""/>
+			<img src="images/gensokyo.jpg" alt=""/>
 			Touhou invece presenta delle storie, ambientate nella terra di "<em xml:lang="en">Gensokyo</em>" (<ruby><rb><span xml:lang="ja">幻想郷</span></rb><rp>(</rp><rt><span xml:lang="ja">げんそきょ</span></rt><rp></ruby>, letteralmente "Terra dell'illusione"), regione inizialmente appartenente al Giappone, ma successivamente sigillata in quanto gli spiriti presenti stavano iniziando a minacciare le aree vicine.<br/>
 			Le protagoniste si ritroveranno in svariate occasioni a dover difendere il sigillo che impedisce di fuggire dalla regione oppure di preservare gli equilibri interni, impedendo a qualche spirito di prevalere sugli altri oppure di distruggere la regione.</p>
 			<h3 xml:lang="en">Spellcard</h3>
