@@ -1,3 +1,4 @@
+<?php require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php"; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
@@ -22,26 +23,25 @@ require('head.php');
 			<a href="chapteradd.php">Aggiungi capitolo</a>
 		</div>
 <?php
-require_once('../config.php');
-require_once('../getconnection.php');
 
-$risp = $conn->query('Select * from chapters order by year asc');
-if($risp)
+$dbConnection = new DBAccess();
+$dbConnection->openDBConnection();
+$chapters = $dbConnection->getListChapters();
+if($chapters != null)
 {
-	echo '<form class="optionsnewsform" action="chapterdelete.php" method="post"><fieldset id="chapterlist">';
-	echo '<ul>';
-	while($capitolo = $risp->fetch_assoc()) 
-	{
-		echo '<li>'.$capitolo['number']." ".$capitolo['titleeng']." - ".$capitolo['year'].' <button name="btnDelete" value="'.$capitolo['id'].'">Elimina</button></li>';
-	}
-	echo '</ul>';
-	echo '</filedset></form>';
+	echo '<form class="optionsnewsform" action="chapterdelete.php" method="post"><fieldset id="chapterlist">'.
+		'<ul>';
+	foreach($chapters as $capter)
+		echo '<li>'.$capter['number']." ".$capter['titleeng']." - ".
+			$capter['year'].' <button name="btnDelete" value="'.$capter['id'].'">Elimina</button></li>';
+	echo '</ul>'.
+		'</filedset></form>';
 }
 else
-	echo('<div id="nodata">Nessuna capitolo inserito</div>');
+	echo '<div id="nodata">Nessuna capitolo inserito</div>' ;
+$dbConnection->closeDBConnection();
 ?>
 		</div>
 	</body>
 </html>
-<?php require('../closeconnection.php');?>
 

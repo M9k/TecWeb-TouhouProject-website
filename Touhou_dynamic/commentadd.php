@@ -1,8 +1,9 @@
-<?php 
+<?php
+	require_once __DIR__.DIRECTORY_SEPARATOR."dbConnection.php";
 	$returnpage = $_SERVER['HTTP_REFERER'];
 	$addrarray = explode("=",$returnpage);
 	$id = end($addrarray);
-	$error = "";
+	$error = null;
 	if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']) &&
 		strcmp($_POST['name'], "") != 0 && strcmp($_POST['email'], "") != 0 && strcmp($_POST['message'], "") != 0)
 	{
@@ -20,19 +21,21 @@
 		}
 		if(strcmp($error, "") == 0)
 		{
-			require('getconnection.php');
+			$dbConnection = new DBAccess();
+			$dbConnection->openDBConnection();
 
 			$ip = 'unknow';
 			//evito di bannare il local host
 			if (array_key_exists('HTTP_CLIENT_IP', $_SERVER))
 				$ip = $_SERVER['HTTP_CLIENT_IP'];
-			if($ip != 'unknow' && $conn->query('SELECT * FROM ban WHERE ip = '.$ip) >= 1)
-				//consiglio di contattare un amministratore se è stato bannato ma non ha fatto nulla, potrebbe essere a causa del NAT a livello ISP
+			if($ip != 'unknow' && $dbConnection->checkBannedIp($ip))
 				$error = 'Il tuo indirizzo IP risulta bloccato a causa di precedenti messaggi inopportuni, se ritieni che questo messaggio sia un errore contattare un amministratore.';
-			$risp = $conn->query('INSERT INTO comment (nick, email, message, news_id, ip) VALUES (\''.$_POST['name'].'\',\''.$email.'\',\''.htmlentities($_POST['message']).'\','.$id.', "'.$ip.'");');
-			if($risp != 1)
-				$error = 'Errore nell\'inserimento del commento, per favore contattare un amministratore.';
 			else
+				$risp = $dbConnection->insertComment($_POST['name'], $email, $_POST['message'], $id, $ip);
+			if(!$risp)
+				$error = 'Errore nell\'inserimento del commento, per favore contattare un amministratore.';
+			$dbConnection->closeDBConnection();
+			if($error == null)
 			{
 				header("Location: ".$returnpage);
 				die();

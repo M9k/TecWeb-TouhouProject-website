@@ -39,7 +39,7 @@ $links = array(
 			),
 			array(
 				'nome'=>'Capitoli',
-				'link'=>'chapteradmin.php'
+				'link'=>'chapters.php'
 			),
 			array(
 				'nome'=>'Torna al sito',

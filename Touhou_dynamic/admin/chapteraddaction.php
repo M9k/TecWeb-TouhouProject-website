@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php";
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 $returnpage = $_SERVER['HTTP_REFERER'];
@@ -27,22 +28,16 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 				$imagedescr  = mysqli_real_escape_string($conn, $_POST['imagedescr']);
 			else
 				$imagedescr = "";
-
-			$risp = $conn->query('INSERT INTO chapters (number, year, title, image, imagedescr, titleeng, titleita, plot) VALUES ("'
-				.mysqli_real_escape_string($conn, $_POST['number']).'", "'
-				.(1*mysqli_real_escape_string($conn, $_POST['year'])).'", "'
-				.mysqli_real_escape_string($conn, $_POST['title']).'", "'
-				.$image.'", "'
-				.$imagedescr.'", "'
-				.mysqli_real_escape_string($conn, $_POST['titleeng']).'", "'
-				.mysqli_real_escape_string($conn, $_POST['titleita']).'", "'
-				.mysqli_real_escape_string($conn, $_POST['plot']).'")');
-
+			
+			$dbConnection = new DBAccess();
+			$dbConnection->openDBConnection();
+			$risp = $dbConnection->insertChapter($_POST['number'], $_POST['year'], $_POST['title'], $image, $imagedescr, $_POST['titleeng'], $_POST['titleita'], $_POST['plot']);
 			if(!$risp)
 			{
 				$error = "Errore durante il collegamento al database, contattare un amministratore";
 				unlink("../images/chapters/".$image);
 			}
+			$dbConnection->closeDBConnection();
 		}
 		else
 			$error = $ris['text'];
@@ -51,7 +46,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 		$error = "Errore durante l'inserimento, controllare di avere compilato tutti i campi";
 	if($risp != false)
 	{
-		header("Location: chapteradmin.php");
+		header("Location: chapters.php");
 		die();
 	}
 }
