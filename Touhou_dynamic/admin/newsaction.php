@@ -37,9 +37,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 	}
 	if(isset($_POST['btnEdit']))
 	{
-		$returnpage = explode("/",$returnpage);
-		array_pop($returnpage);
-		$returnpage = implode("/", $returnpage).'/newsadd.php?id='.mysqli_real_escape_string($conn, $_POST['btnEdit']);
+		$returnpage = 'news.php';
 		$risp = 1;
 	}
 	if(isset($_POST['btnDelete']))

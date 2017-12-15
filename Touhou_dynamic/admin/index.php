@@ -43,6 +43,4 @@ else
 		</div>
 	</body>
 </html>
-<?php require('../closeconnection.php');?>
-
 

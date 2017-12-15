@@ -19,7 +19,7 @@ $links = array(
 			),
 			array(
 				'nome'=>'News',
-				'link'=>'newsadmin.php'
+				'link'=>'news.php'
 			),
 			array(
 				'nome'=>'Aggiungi news',

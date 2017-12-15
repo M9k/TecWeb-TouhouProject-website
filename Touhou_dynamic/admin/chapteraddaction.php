@@ -7,8 +7,6 @@ $returnpage = $_SERVER['HTTP_REFERER'];
 $error = 'Utente non loggato!';
 if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 {
-	require('../config.php');
-	require('../getconnection.php');
 	$risp = false;
 
 	if(isset($_POST['number']) && isset($_POST['year']) && isset($_POST['title']) && isset($_POST['titleeng']) && isset($_POST['titleita']) && isset($_POST['plot']))

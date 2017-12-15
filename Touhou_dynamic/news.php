@@ -20,9 +20,8 @@ require('locationbar.php');
 	$index = 0;			// di default prendo le news più recenti
 	$newsnumber = 10;	// numero di news per pagina
 	if(isset($_GET['index']))
-		if(is_numeric($_GET['index'])) //evito SQLI
-			if($_GET['index']>=0)
-				$index = $_GET['index']*1;
+		if($_GET['index']>=0)
+			$index = $_GET['index'];
 	$news = $dbConnection->getListNews(false, 1000, $newsnumber, $index*$newsnumber);
 
 	//numero totale dei post

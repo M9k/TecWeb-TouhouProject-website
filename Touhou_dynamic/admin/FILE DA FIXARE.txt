@@ -1,0 +1,4 @@
+commentaction
+commentadmin
+newsaction
+newsadd
