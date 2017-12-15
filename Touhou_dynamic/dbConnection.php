@@ -31,6 +31,10 @@ class DBAccess {
 		$result = mysqli_query($this->connection, $query) or $this->showError();
 		return mysqli_fetch_all($result, MYSQLI_ASSOC);
 	}
+	private function runQueryAndGetAssoc($query)
+	{
+		return mysqli_fetch_assoc(mysqli_query($this->connection, $query));
+	}
 
 	public function getListChapters() {
 		return $this->runQueryAndGetAll('Select * from chapters order by year');
@@ -72,7 +76,7 @@ class DBAccess {
 		return mysqli_num_rows($result);
 	}
 	public function getArticle($id) {
-		return mysqli_fetch_assoc(mysqli_query($this->connection, 'Select id, title, image, imgdescr, data, text from news where id='.$this->removeSQLI($id)));
+		return $this->runQueryAndGetAssoc('Select id, title, image, hidden, imgdescr, data, text from news where id='.$this->removeSQLI($id));
 	}
 	
 	public function removeBan($id) {

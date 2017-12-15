@@ -1,3 +1,4 @@
+<?php require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php"; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
@@ -10,7 +11,20 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	die();
 }
 
-$title = "Aggiunta news - Touhou Italia";
+if(isset($_GET['id']))
+{
+	$edit = true;
+	$dbConnection = new DBAccess();
+	$dbConnection->openDBConnection();
+	$news = $dbConnection->getArticle($_GET['id']);
+	$dbConnection->closeDBConnection();
+	$title = "Inserimento news - Touhou Italia";
+}
+else
+{
+	$edit = false;
+	$title = "Modifica news - Touhou Italia";
+}
 
 require('head.php');
 ?>
@@ -19,16 +33,6 @@ require('head.php');
 		<div id="contenuto">
 			<h2>Aggiunta news</h2>
 			<div id="newsadd">
-<?php
-require_once('../getconnection.php');
-if(isset($_GET['id']))
-{
-	$edit = true;
-	$news = $conn->query('Select id, title, image, data, imgdescr, hidden, text from news where id ='.$_GET['id'])->fetch_assoc();
-}
-else
-	$edit = false;
-?>
 				<form id="addnewsform" action="newsaction.php" method="post" enctype="multipart/form-data">
 					<fieldset id="addnewsdiv">
 <?php if($edit)

@@ -12,9 +12,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 	if(isset($_POST['title']) && isset($_POST['text']))
 	{
 		//EDIT o MODIFICA da effettuare
-		$returnpage = explode("/",$returnpage);
-		array_pop($returnpage);
-		$returnpage = implode("/", $returnpage)."/newsadmin.php";
+		$returnpage = "news.php";
 
 		if(isset($_POST['hidden']) && $_POST['hidden'] == true)	//evito SQLI
 			$hidden = 1;
@@ -37,7 +35,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 	}
 	if(isset($_POST['btnEdit']))
 	{
-		$returnpage = 'news.php';
+		$returnpage = 'newsadd.php?id='.$_POST['btnEdit'];
 		$risp = 1;
 	}
 	if(isset($_POST['btnDelete']))
