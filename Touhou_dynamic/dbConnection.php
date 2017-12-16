@@ -87,24 +87,65 @@ class DBAccess {
 		$query = 'delete from chapters where id='.$this->removeSQLI($id);
 		return mysqli_query($this->connection, $query) == 1;
 	}
+	public function removeNews($id) {
+		$query = 'delete from news where id='.$this->removeSQLI($id);
+		return mysqli_query($this->connection, $query) == 1;
+	}
 
 	public function insertComment($name, $email, $message, $id, $ip) {
-		$query = 'INSERT INTO comment (nick, email, message, news_id, ip) VALUES (\''.htmlentities($this->removeSQLI($_POST['name'])).'\',\''.htmlentities($this->removeSQLI($email)).'\',\''.htmlentities($this->removeSQLI($_POST['message'])).'\','.$this->removeSQLI($id).', "'.$this->removeSQLI($ip).'");';
+		$query = 'INSERT INTO comment (nick, email, message, news_id, ip) VALUES (\''.
+			htmlentities($this->removeSQLI($_POST['name'])).'\',\''.
+			htmlentities($this->removeSQLI($email)).'\',\''.
+			htmlentities($this->removeSQLI($_POST['message'])).'\','.
+			$this->removeSQLI($id).', "'.
+			$this->removeSQLI($ip).'");';
 		return (mysqli_query($this->connection, $query) == 1);
 	}
 
 	public function insertChapter($number, $year, $title, $image, $imagedescr, $titleeng, $titleita, $plot) {
-		$query = 'INSERT INTO chapters (number, year, title, image, imagedescr, titleeng, titleita, plot) VALUES ("'.$this->removeSQLI($number).'", "'
-				.$this->removeSQLI($year).'", "'
-				.$this->removeSQLI($title).'", "'
-				.$image.'", "'
-				.$imagedescr.'", "'
-				.$this->removeSQLI($titleeng).'", "'
-				.$this->removeSQLI($titleita).'", "'
-				.$this->removeSQLI($plot).'")';
+		$query = 'INSERT INTO chapters (number, year, title, image, imagedescr, titleeng, titleita, plot) VALUES ("'.
+			$this->removeSQLI($number).'", "'.
+			$this->removeSQLI($year).'", "'.
+			$this->removeSQLI($title).'", "'.
+			$image.'", "'.
+			$imagedescr.'", "'.
+			$this->removeSQLI($titleeng).'", "'.
+			$this->removeSQLI($titleita).'", "'.
+			$this->removeSQLI($plot).'")';
 		return mysqli_query($this->connection, $query);
 	}
 
+	public function insertNews($title, $image, $hidden, $text, $imgdescr) {
+		$query = 'INSERT INTO news (title, image, hidden, text, imgdescr) VALUES ("'.
+			$this->removeSQLI($title).'", "'.
+			$image.'", '.
+			$hidden.', "'.
+			$this->removeSQLI($text).'", "'.
+			$this->removeSQLI($imgdescr).'")';
+		return mysqli_query($this->connection, $query) == 1;
+	}
+
+	public function updateNewsVisibility($id, $hidden) {
+		if($hidden == true)
+			$hiddenbinary = 1;
+		else
+			$hiddenbinary = 0;
+		$query = 'UPDATE news SET hidden='.
+			$hiddenbinary.' WHERE id='.
+			$this->removeSQLI($id);
+		return mysqli_query($this->connection, $query) == 1;
+	}
+
+	public function updateNews($title, $image, $hidden, $text, $imgdescr, $id) {
+		$query = 'UPDATE news set title="'.
+			$title.'", image="'.
+			$image.'", hidden="'.
+			$hidden.'", imgdescr ="'.
+			$this->removeSQLI($imgdescr).'", text="'.
+			$this->removeSQLI($text).'" WHERE id='.
+			$this->removeSQLI($id);
+		return mysqli_query($this->connection, $query) == 1;
+	}
 
 	public function checkBannedIp($ip) {
 		return (mysqli_query($this->connection, 'SELECT * FROM ban WHERE ip = '.$this->removeSQLI($ip)) >= 1);

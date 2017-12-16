@@ -1,3 +1,2 @@
 commentaction
 commentadmin
-newsaction
