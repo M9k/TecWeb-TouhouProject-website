@@ -14,7 +14,7 @@ $wronglogin = true;
 if(isset($_GET['logout']) && $_GET['logout'] == "true")
 {
 	$_SESSION['login'] = false;
-	header("Location: ..");
+	header("Location: ../index.php");
 	die();
 }
 if(isset($_SESSION['login']) && $_SESSION['login'] == true)
