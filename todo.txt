@@ -1,6 +1,5 @@
 ﻿-stile per la stampa
 -fixare la lista index admin, magari qualche immagine decorativa?
--span pagina admin
 -notizie (MATTEO)
 -finire i capitoli, trama, alt e span (SAMU)
 -news fake con commenti di test (MIRCO + MATTEO)
