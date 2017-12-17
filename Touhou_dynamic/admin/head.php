@@ -6,6 +6,7 @@
 		<meta name="language" content="ïtalian it"/>
 		<meta name="Author" content="Cailotto Mirco"/>
 
+		<link rel="icon" type="image/png" href="../images/favicon.png"/>
 		<link type="text/css" rel="stylesheet" href="../style/style.css" media="handheld, screen"/>
 		<link type="text/css" rel="stylesheet" href="../style/admin.css" media="handheld, screen"/>
 		<link type="text/css" rel="stylesheet" href="../style/tablet.css" media="handheld, screen and (max-width: 1024px), only screen and (max-device-width:1024px)"/>

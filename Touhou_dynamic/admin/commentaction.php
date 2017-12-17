@@ -1,44 +1,50 @@
 <?php
+require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php";
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 $returnpage = $_SERVER['HTTP_REFERER'];
-$error = '';
+$error = null;
 
-if(isset($_SESSION['login']) && $_SESSION['login'] == true)
+if(!isset($_SESSION['login']) || $_SESSION['login'] != true)
+	$error = 'Utente non loggato!';
+else
 {
-	require_once('../getconnection.php');
-	$risp = false;
+	$dbConnection = new DBAccess();
+	$dbConnection->openDBConnection();
 	$idpost = -1;
-	if(isset($_POST['delete']) && is_numeric($_POST['delete']))
-		$idpost = $_POST['delete']*1;
-	if(isset($_POST['ban']) && is_numeric($_POST['ban']))
-		$idpost = $_POST['ban']*1;
+	$del = true;
+	$add = true;
+	if(isset($_POST['delete']))
+		$idpost = $_POST['delete'];
+	if(isset($_POST['ban']))
+		$idpost = $_POST['ban'];
 	if($idpost == -1)
-		$error = 'post invalido';
+		$error = 'Il post indicato è invalido!';
 	else
 	{
+		//ottengo l'ip
+		$ip = $dbConnection->getIpFromComment($idpost);
 		//banno
-		$motivo = 'non specificato';
-		if(isset($_POST['reason']))
-			$motivo = mysqli_real_escape_string($conn, $_POST['reason']);
 		if(isset($_POST['ban']))
-		{
-			$checkip = $conn->query('SELECT ip FROM comment where id = '.$idpost);
-			if(isset($checkip) && strcmp($checkip->fetch_assoc()['ip'],'unknow') != 0)
-				$risp = $conn->query('INSERT INTO ban (ip, motivo) SELECT ip, \''.$motivo.'\' FROM comment where id = '.$idpost);
+		{	
+			if(isset($_POST['reason']))
+				$reason = $_POST['reason'];
+			else
+				$reason = 'non specificato';
+			if(isset($ip) && $ip != null && strcmp($ip,'unknow') != 0)
+				$add = $dbConnection->insertBan($ip, $reason);
 		}
 
 		//elimino il commento
 		if(isset($_POST['delete']) || isset($_POST['ban']))
-			$risp = $conn->query('DELETE FROM comment where id='.$idpost);
-
-		if($risp != 1)
+			$del = $dbConnection->removeComment($idpost);
+		if(!$del || !$add)
 			$error ='Errore durante la richiesta al database';
 	}
+	$dbConnection->closeDBConnection();
 }
-else
-	$error = 'Utente non loggato!';
-if(strcmp('', $error) == 0)
+
+if($error == null)
 {
 	header("Location: ".$returnpage);
 	die();

@@ -31,7 +31,7 @@ $links = array(
 			),
 			array(
 				'nome'=>'Commenti',
-				'link'=>'commentadmin.php'
+				'link'=>'comments.php'
 			),
 			array(
 				'nome'=>'Lista ban',

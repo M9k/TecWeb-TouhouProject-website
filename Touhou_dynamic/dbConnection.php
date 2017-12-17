@@ -1,4 +1,5 @@
 <?php
+setlocale(LC_TIME, "it_IT");
 
 class DBAccess {
 
@@ -57,8 +58,14 @@ class DBAccess {
 		return $this->runQueryAndGetAll($query);
 	}
 	
-	public function getListComments($idNews, $limit=false) {
-		$query = 'Select nick, message from comment where news_id='.$this->removeSQLI($idNews);;
+	public function getListComments($idNews, $limit=false, $reverseOrder=false) {
+		$query = 'Select * from comment';
+		if($idNews != null)
+			$query .= ' where news_id = '.$this->removeSQLI($idNews);
+		if($limit != false)
+			$query.= ' order by data asc';
+		else
+			$query.= ' order by data desc';
 		if($limit != false)
 			$query.= ' limit '.$limit;
 		return $this->runQueryAndGetAll($query);
@@ -75,8 +82,17 @@ class DBAccess {
 		$result = mysqli_query($this->connection, $query) or $this->showError();
 		return mysqli_num_rows($result);
 	}
+	
+	public function getIpFromComment($idpost) {
+		$query = 'SELECT ip FROM comment where id = '.
+			$this->removeSQLI($idpost);
+		$result = $this->runQueryAndGetAssoc($query) or $this->showError();
+		return $result['ip'];
+	}
+
+
 	public function getArticle($id) {
-		return $this->runQueryAndGetAssoc('Select id, title, image, hidden, imgdescr, data, text from news where id='.$this->removeSQLI($id));
+		return $this->runQueryAndGetAssoc('Select * from news where id='.$this->removeSQLI($id));
 	}
 	
 	public function removeBan($id) {
@@ -89,6 +105,10 @@ class DBAccess {
 	}
 	public function removeNews($id) {
 		$query = 'delete from news where id='.$this->removeSQLI($id);
+		return mysqli_query($this->connection, $query) == 1;
+	}
+	public function removeComment($id) {
+		$query = 'delete from comment where id='.$this->removeSQLI($id);
 		return mysqli_query($this->connection, $query) == 1;
 	}
 
@@ -122,6 +142,13 @@ class DBAccess {
 			$hidden.', "'.
 			$this->removeSQLI($text).'", "'.
 			$this->removeSQLI($imgdescr).'")';
+		return mysqli_query($this->connection, $query) == 1;
+	}
+
+	public function insertBan($ip, $reason) {
+		$query = 'INSERT INTO ban (ip, motivo) VALUES (\''.
+			$this->removeSQLI($ip).'\', \''.
+			$this->removeSQLI($reason).'\')';
 		return mysqli_query($this->connection, $query) == 1;
 	}
 
