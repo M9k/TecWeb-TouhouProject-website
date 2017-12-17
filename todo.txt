@@ -1,13 +1,9 @@
 ﻿-stile per la stampa
+-fixare la lista index admin, magari qualche immagine decorativa?
+-notizie (MATTEO)
 -finire i capitoli, trama, alt e span (SAMU)
--rivedere home di amministrazione (SAMU)
 -news fake con commenti di test (MIRCO + MATTEO)
--qualche ip a caso bannato (MIRCO)
-
--sviluppo - immagini e span (MATTEO)
--js sui form parte admin dove utili (?????????)
-
--controllo sqinjection sui campi dalla pagina di amministrazione (magari involontari)
+-js sui form parte admin dove utili
 
 -titolo pagina "popolarità"
 
@@ -21,6 +17,7 @@ RELAZIONE!!!!!!
 
 
 -----QUANDO CARICATO SUL SITO-----
--testare pagina 404
 -permessi sui file
--controllare i mesi siano in italiano, essendo dipendenti dai "locale" presenti
+
+-testare pagina 404 - NON FUNZIONANTE
+-controllare i mesi siano in italiano, essendo dipendenti dai "locale" presenti - NON FUNZIONANTE!
