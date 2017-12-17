@@ -26,11 +26,16 @@ require('head.php');
 			</form>
 <?php
 $immagini = scandir('../images/news/');
+echo '<dl>';
 foreach($immagini as $immagine)
 {
 	if($immagine != '..' && $immagine != '.')
-		echo '<div class="imagediv"><form class="imagedivform" action="imagedelete.php" method="post"><fieldset class="imagedescription"><div class="imageview"><img alt="immagine caricata di nome'.$immagine.'" src="../images/news/'.$immagine.'"/></div><div class="imagename">'.$immagine.'</div><div class="linkimage">Per utilizzare questa immagine inserire: images/news/'.$immagine.'</div><button name="btnDelete" value="'.$immagine.'">Elimina</button></fieldset></form></div>';
+	{
+		echo '<dt>'.$immagine.'</dt>';
+		echo '<dd><div class="imagediv"><form class="imagedivform" action="imagedelete.php" method="post"><fieldset class="imagedescription"><div class="imageview"><img alt="immagine caricata di nome'.$immagine.'" src="../images/news/'.$immagine.'"/></div><div class="linkimage">Per utilizzare questa immagine inserire: images/news/'.$immagine.'</div><button name="btnDelete" value="'.$immagine.'">Elimina</button></fieldset></form></div></dd>';
+	}
 }
+echo '</dl>';
 ?>
 
 		</div>
