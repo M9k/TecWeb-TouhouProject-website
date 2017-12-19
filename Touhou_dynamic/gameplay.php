@@ -22,17 +22,17 @@ require('locationbar.php');
 			Pietre miliari di questo genere sono <span xml:lang="en">Space Invaders</span> e <span xml:lang="en">Space Impact</span>, rispettivamente a schermata fissa ed a scorrimento orizzontale.<br/>
 			</p>
 			<p>
-			<img class="odd" src="images/Ikaruga.jpg" alt=""/>Verso gli anni 90, soprattutto in Giappone e in Asia, si sviluppò un nuovo sottogenere, definito "<strong xml:lang="en">Bullet Hell</strong>" o "<strong xml:lang="en">Danmaku</strong>" (<ruby><rb><span xml:lang="ja">弾幕</span></rb><rp>(</rp><rt><span xml:lang="ja">だんま</span>く</rt><rp></ruby>, "sbarramento"), che si basano su un elevato numero di proiettili a schermo di dimensione solitamente ridotta da evitare con precisione millimetrica.<br/>
+			<img class="odd" src="images/Ikaruga.jpg" alt=""/>Verso gli anni 90, soprattutto in Giappone e in Asia, si sviluppò un nuovo sottogenere, definito "<strong xml:lang="en">Bullet Hell</strong>" o "<strong xml:lang="en">Danmaku</strong>" (<ruby><rb><span xml:lang="ja">弾幕</span></rb><rp>(</rp><rt><span xml:lang="ja">だんまく</span></rt><rp>)</rp></ruby>, "sbarramento"), che si basano su un elevato numero di proiettili a schermo di dimensione solitamente ridotta da evitare con precisione millimetrica.<br/>
 			Una particolarità di questo sottogenere è l'<strong xml:lang="en">hitbox</strong> della navicella, cioè la porzione della navicella che non si deve lasciar colpire dai proiettili, molto ridotta rispetto gli altri giochi e spesso invisibile, che non coincide con le dimensioni della navicella che viene controllata, in modo tale da consentire ai giocatori più abili di far passare indenne la navicella tra due proiettili nemici molto ravvicinati tra loro.
 			</p>
-			<p>Touhou, oltre a queste caratteristiche, ne ha introdotte altre, alcune riprese da altri titoli mentre altre originali:
+			<p>Touhou, oltre a queste caratteristiche, ne ha introdotte altre, alcune riprese da altri titoli mentre altre originali:</p>
 			<h3>Protagoniste</h3>
 			<p><img class="even" src="images/protagoniste.jpg" alt=""/>Al posto delle classiche navicelle spaziali od aerei si andranno a controllare delle ragazze, le principali sono <em xml:lang="en">Marisa Kirisame</em> e <em xml:lang="en">Reimu Hakurei</em>, sacerdotesse di un tempio shintoista.<br/>
 			Anche i nemici affrontati non sono aerei o alieni, ma bensì vampiri, fate, demoni ed altre creature del folklore giapponese.</p>
 			<h3>Trama</h3>
 			<p>I <span xml:lang="en">Shoot'em up</span> sono rinomati per non avere nessuna trama, ci si ritrova a comandare una navicella spaziale e si prosegue sparando a tutto quello che sembra minaccioso e cattivo, ignorando totalmente le motivazioni delle proprie azioni.<br/>
 			<img src="images/gensokyo.jpg" alt=""/>
-			Touhou invece presenta delle storie, ambientate nella terra di "<em xml:lang="en">Gensokyo</em>" (<ruby><rb><span xml:lang="ja">幻想郷</span></rb><rp>(</rp><rt><span xml:lang="ja">げんそきょ</span></rt><rp></ruby>, letteralmente "Terra dell'illusione"), regione inizialmente appartenente al Giappone, ma successivamente sigillata in quanto gli spiriti presenti stavano iniziando a minacciare le aree vicine.<br/>
+			Touhou invece presenta delle storie, ambientate nella terra di "<em xml:lang="en">Gensokyo</em>" (<ruby><rb><span xml:lang="ja">幻想郷</span></rb><rp>(</rp><rt><span xml:lang="ja">げんそきょ</span></rt><rp>)</rp></ruby>, letteralmente "Terra dell'illusione"), regione inizialmente appartenente al Giappone, ma successivamente sigillata in quanto gli spiriti presenti stavano iniziando a minacciare le aree vicine.<br/>
 			Le protagoniste si ritroveranno in svariate occasioni a dover difendere il sigillo che impedisce di fuggire dalla regione oppure di preservare gli equilibri interni, impedendo a qualche spirito di prevalere sugli altri oppure di distruggere la regione.</p>
 			<h3 xml:lang="en">Spellcard</h3>
 			<p>

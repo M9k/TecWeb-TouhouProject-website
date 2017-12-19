@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
 $location = 'Home &gt;&gt;&gt; Personaggi';
@@ -16,7 +16,7 @@ require('locationbar.php');
 			
 			<dt>Reimu Hakurei</dt>
 			<dd>
-				<img src="./images/characters/Reimu.jpg" alt="Immagine di Reimu Hakurei, vestita con un abito rosso e bianco da sacerdotessa giapponese"/>
+				<img src="./images/characters/Reimu.jpg" alt="Immagine di Reimu, con un abito rosso e bianco da sacerdotessa giapponese"/>
 				<ul>
 					<li><span class="charactervoice">Specie</span>: Umana</li>
 					<li><span class="charactervoice">Età</span>: Almeno 15 anni</li>
@@ -35,7 +35,7 @@ require('locationbar.php');
 					<li><span class="charactervoice">Specie</span>: Umana</li>
 					<li><span class="charactervoice">Età</span>: Almeno 16 anni</li>
 					<li><span class="charactervoice">Occupazione</span>: Proprietaria del Kirisame Magic Shop </li>
-					<li><span class="charactervoice">Luogo</span>: Gensokyo, Foresta della magia (<ruby xml:lang="ja"><rb>魔法の森</rb><rp>(</rp><rt>げんそきょ</rt><rp>)</rp></ruby>)
+					<li><span class="charactervoice">Luogo</span>: Gensokyo, Foresta della magia (<ruby xml:lang="ja"><rb>魔法の森</rb><rp>(</rp><rt>げんそきょ</rt><rp>)</rp></ruby>)</li>
 					<li><p>Marisa è una maga umana, è uno dei personaggi più importanti(secondo le parole del produttore della serie ZUN).
 <br/>La sua personalità è a volte descritta come sgradevole, passa la maggior parte del tempo a gestire il suo negozio di magia e come lavoro <span xml:lang="en">part-time</span> va a caccia di spiriti, detti <em>Youkai</em>.
 <br/>È conosciuta per essere una gran lavoratrice, è sta cercando di raggiungere l'abiblità di Reimu allenandosi e e preseguendo lo studio della magia. Questo crea un contrasto rispetto agli altri umani che appaiono nella serie, visto che la maggior parte di loro ha un talento innata (Reimu) o una abilità speciale (Sakuya).</p></li>
@@ -49,7 +49,7 @@ require('locationbar.php');
 					<li><span class="charactervoice">Specie</span>: Youkai</li>
 					<li><span class="charactervoice">Età</span>: Sconosciuta</li>
 					<li><span class="charactervoice">Occupazione</span>: Maga</li>
-					<li><span class="charactervoice">Luogo</span>: Gensokyo, Foresta della magia (<ruby xml:lang="ja"><rb>魔法の森</rb><rp>(</rp><rt>げんそきょ</rt><rp>)</rp></ruby>)
+					<li><span class="charactervoice">Luogo</span>: Gensokyo, Foresta della magia (<ruby xml:lang="ja"><rb>魔法の森</rb><rp>(</rp><rt>げんそきょ</rt><rp>)</rp></ruby>)</li>
 					<li><p>Alice Margatroid è una delle poche persone che abitano a Gensokyo. &Eacute; una maga conosciuta per le sue abilità magiche che fanno uso di bambole e per il suo essere solitaria.
 <br/>Ha combattuto spesso con Marisa Kirisame nonstante siano solo delle conoscenti che condividono svariati interessi comuni, hanno anche fatto squadra durante svariati avvenimenti. Alice è più interessata alla strategia rispetto a Marisa ed odia dover vincere gli scontri con la forza bruta.</p>
 					</li>
@@ -73,11 +73,11 @@ require('locationbar.php');
 
 			<dt>Flandre Scarlet</dt>
 			<dd>
-				<img src="./images/characters/Flandre.jpg" alt="Immagine di Flandre Scarlet, con abiti gotici rosso scarlatto e ali costituite da 8 cristalli per ala, di svariati colori"/>
+				<img src="./images/characters/Flandre.jpg" alt="Immagine di Flandre, con abiti gotici rosso scarlatto e ali di 8 cristalli di svariati colori"/>
 				<ul>
 					<li><span class="charactervoice">Specie</span>: Vampiro</li>
 					<li><span class="charactervoice">Età</span>: Circa 495 anni</li>
-					<li><span class="charactervoice">Occupazione</span>: Sconosciuta</span></li>
+					<li><span class="charactervoice">Occupazione</span>: Sconosciuta</li>
 					<li><span class="charactervoice">Luogo</span>: <span xml:lang="en">Scarlet Devil Mansion</span></li>
 					<li><p>Flandre è la sorella minore di Remilia Scarlet e vive da oltre 495 anni nella <span xml:lang="en">Scarlet Devil Mansion</span> assieme alla sorella. Flandre non ha praticamente mai lasciato i confini della villa, e non ha mi provato ad uscire da essa per il rispetto che prova verso la sorella.
 <br/>È stata cresciuta non conoscendo nulla al dì fuori del confini della villa, ma nonstante questo lei ha il desiderio di esplorare il mondo.<br/> Normalmente Flandre è cortese e tranquilla, raramente si arrabbia, ma è abbastanza strana, cosa che rende difficile agli atri comprenderla.<br/>Possiede abilità sovraumane come che le permettono ad esempio di utilizzare un enorme spada, la <strong xml:lang="is">Lævateinn</strong>, menzionata nella Edda Poetica di <em xml:lang="is">Snorri Sturluson</em> appartente a <em>Loki</em>, ed è inoltre capace di clonare se stessa.</p></li>
@@ -86,7 +86,7 @@ require('locationbar.php');
 
 			<dt>Sakuya Izayoi</dt>
 			<dd>
-				<img src="./images/characters/Sakuya.jpg" alt="Immagine di Sakuya Izayoi, con un abito da cameriera, un orologio da polso e dei coltelli"/>
+				<img src="./images/characters/Sakuya.jpg" alt="Immagine di Sakuya, con un abito da cameriera, un orologio e dei coltelli"/>
 				<ul>
 					<li><span class="charactervoice">Specie</span>: Umano</li>
 					<li><span class="charactervoice">Età</span>: Circa 16-20 anni</li>
@@ -106,7 +106,7 @@ require('locationbar.php');
 				<ul>
 					<li><span class="charactervoice">Specie</span>: Fata</li>
 					<li><span class="charactervoice">Età</span>: Oltre 60 anni</li>
-					<li><span class="charactervoice">Occupazione</span>: Sconosciuta</span></li>
+					<li><span class="charactervoice">Occupazione</span>: Sconosciuta</li>
 					<li><span class="charactervoice">Luogo</span>: Lago Nebbioso</li>
 					<li><p>Cirno è una fata di ghiaccio, con una personalità bambinesca e incompetente.
 <br/>&Eacute; molto più potente rispetto alle sue simili ma nonstante questo a Gensokyo non è temuta.<br/>
@@ -129,8 +129,7 @@ Come si può intuire dal suo aspetto, Cirno possiede l'abilità di manipolare il
 <br/>Anche se Yukari sembra inaffidabile per la maggior parte del tempo, non esiterebbe ad entrare in combattimento nel caso la sicurezza di Gensokyo fosse in pericolo.</li>
 				</ul>
 			</dd>
-
-		</div>
+		</dl>
 <?php 
 require('sidebar.php');
 require('footer.php');
