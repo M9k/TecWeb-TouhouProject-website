@@ -134,6 +134,25 @@ CREATE TABLE `news` (
 INSERT INTO `news` (`id`, `title`, `hidden`, `data`, `text`, `image`, `imgdescr`) VALUES
 (18, 'Pubblicato il nuovo Touhou su Steam!', 0, '2017-12-10 18:02:31', 'È appena uscito il nuovo capitolo di Touhou, il 16, su <span xml:lang=\"en\">Steam</span>, piattaforma digitale di distribuzione di videogiochi famosa in tutto il mondo.<br/>\r\nIl gioco, denominato <span xml:lang=\"en\">Hidden Star in Four Seasons</span>, purtroppo è disponibile unicamente in lingua inglese, ma non escluderemo una modifica del gioco che lo renderà disponibile anche in inglese realizzata da qualche fan.<br/>\r\nPurtroppo escludiamo una traduzione in italiano, in quanto tutti i precedenti titoli non sono mai stati localizzati.', 'touhou_steam.jpg', 'Immagine raffigurante la pagina di Steam che vende Touhou');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(150) DEFAULT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+INSERT INTO `admins` (`id`, `username`, `email`, `password`) VALUES
+('0', 'admin','admin@gmail.com','admin');
+
+
 --
 -- Indexes for dumped tables
 --
