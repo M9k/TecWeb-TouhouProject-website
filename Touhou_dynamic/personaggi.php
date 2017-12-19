@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
 $location = 'Home &gt;&gt;&gt; Personaggi';
@@ -10,11 +10,10 @@ require('head.php');
 require('header.php');
 require('locationbar.php'); 
 ?>
-<div id="contenitore">
 	<div id="contenuto">
 		<h2>Personaggi</h2>
 		<dl id="personaggi">
-
+			
 			<dt>Reimu Hakurei</dt>
 			<dd>
 				<img src="./images/characters/Reimu.jpg" alt="Immagine di Reimu Hakurei, vestita con un abito rosso e bianco da sacerdotessa giapponese"/>
@@ -78,7 +77,7 @@ require('locationbar.php');
 				<ul>
 					<li><span class="charactervoice">Specie</span>: Vampiro</li>
 					<li><span class="charactervoice">Età</span>: Circa 495 anni</li>
-					<li><span class="charactervoice">Occupazione</span>: Sconosciuta</li>
+					<li><span class="charactervoice">Occupazione</span>: Sconosciuta</span></li>
 					<li><span class="charactervoice">Luogo</span>: <span xml:lang="en">Scarlet Devil Mansion</span></li>
 					<li><p>Flandre è la sorella minore di Remilia Scarlet e vive da oltre 495 anni nella <span xml:lang="en">Scarlet Devil Mansion</span> assieme alla sorella. Flandre non ha praticamente mai lasciato i confini della villa, e non ha mi provato ad uscire da essa per il rispetto che prova verso la sorella.
 <br/>È stata cresciuta non conoscendo nulla al dì fuori del confini della villa, ma nonstante questo lei ha il desiderio di esplorare il mondo.<br/> Normalmente Flandre è cortese e tranquilla, raramente si arrabbia, ma è abbastanza strana, cosa che rende difficile agli atri comprenderla.<br/>Possiede abilità sovraumane come che le permettono ad esempio di utilizzare un enorme spada, la <strong xml:lang="is">Lævateinn</strong>, menzionata nella Edda Poetica di <em xml:lang="is">Snorri Sturluson</em> appartente a <em>Loki</em>, ed è inoltre capace di clonare se stessa.</p></li>
@@ -107,7 +106,7 @@ require('locationbar.php');
 				<ul>
 					<li><span class="charactervoice">Specie</span>: Fata</li>
 					<li><span class="charactervoice">Età</span>: Oltre 60 anni</li>
-					<li><span class="charactervoice">Occupazione</span>: Sconosciuta</li>
+					<li><span class="charactervoice">Occupazione</span>: Sconosciuta</span></li>
 					<li><span class="charactervoice">Luogo</span>: Lago Nebbioso</li>
 					<li><p>Cirno è una fata di ghiaccio, con una personalità bambinesca e incompetente.
 <br/>&Eacute; molto più potente rispetto alle sue simili ma nonstante questo a Gensokyo non è temuta.<br/>
@@ -130,12 +129,11 @@ Come si può intuire dal suo aspetto, Cirno possiede l'abilità di manipolare il
 <br/>Anche se Yukari sembra inaffidabile per la maggior parte del tempo, non esiterebbe ad entrare in combattimento nel caso la sicurezza di Gensokyo fosse in pericolo.</li>
 				</ul>
 			</dd>
-			</dl>
+
 		</div>
 <?php 
 require('sidebar.php');
 require('footer.php');
-require('closeconnection.php');
 ?>
 	</body>
 </html>
