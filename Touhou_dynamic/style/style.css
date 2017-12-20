@@ -36,7 +36,7 @@ body {
 }
 p {
 	margin-top: 2%;
-	overflow: auto;
+/*	overflow: auto;*/
 }
 
 input[type="text"], textarea {
@@ -66,18 +66,22 @@ h2 {
 	position: relative;
 	left: -0.6%;
 	font-size: 1.8em;
+	text-align: center;
 }
 h2:first-of-type {
 	margin-top: 0;	
 }
-h3 {
+h3, dt {
 	margin-top: 0.5%;
 	margin-bottom: 1%;
 	left: -0.3%;
 	position: relative;
 	font-size: 1.4em;
 }
-
+#contenuto dt {
+	clear: both;
+	font-weight: bold;
+}
 #titolo {
 	width: 100%;
 	top: 20%;
@@ -116,21 +120,26 @@ h3 {
 }
 #menu li {
 	float: left;
-	border: 2pt solid #bbb;
+	border: 2pt solid #838383;;
 	text-align: center;
-	background-color:#ddd;
-	padding: 1.0% 1.8%;
 	font-size: 1.2em;
 }
-#menu li a {
+#menu a {
 	display: block;
-	color: black;
+	color: #000000;
+	background-color: #DDDDDD;
+	padding: 10pt 15pt;
 	text-decoration: none;
 }
-#menu li:hover {
+#menu a:hover {
 	background-color: #FF2400; /* scarlatto - riferimento a Scarlet */
 }
+#menu a:visited {
+	background-color: #BDBDBD;
+}
 #menu .disable {
+	display: block;
+	padding: 10pt 15pt;
 	background-color: #980000;
 	color: #eee;
 }
@@ -171,14 +180,7 @@ h3 {
 	margin-top: 2%;
 }
 
-#contenuto dt {
-	font-size: 1.8em;
-	margin-top: 1%;
-	margin-bottom: 0.5%;
-	position: relative;
-	left: 3%;
-	max-width: 94%;
-}
+
 div.data {
 	font-size: 0.8em;
 }

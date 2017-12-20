@@ -22,8 +22,12 @@ if(!$update)
 	echo($contenuto);
 else
 {
-	$dbConnection = new DBAccess();
-	$dbConnection->openDBConnection();
+	if(!isset($dbConnection))
+	{
+		$dbConnection = new DBAccess();
+		$dbConnection->openDBConnection();
+		$closeDB = true;
+	}
 	$news = $dbConnection->getListNews(false, 300, 3);
 	if($news != null)
 	{
@@ -42,7 +46,8 @@ else
 	else
 		$contenuto = '<p id="errorarticleside">Nessun articolo disponibile</p>';
 
-	$dbConnection->closeDBConnection();
+	if(isset($close) && $close == true)
+		$dbConnection->closeDBConnection();
 	
 	//stampo a video
 	echo($contenuto);

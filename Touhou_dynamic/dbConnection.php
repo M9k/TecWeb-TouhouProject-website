@@ -122,9 +122,9 @@ class DBAccess {
 
 	public function insertComment($name, $email, $message, $id, $ip) {
 		$query = 'INSERT INTO comment (nick, email, message, news_id, ip) VALUES (\''.
-			htmlentities($this->removeSQLI($_POST['name'])).'\',\''.
+			htmlentities($this->removeSQLI($name).'\',\''.
 			htmlentities($this->removeSQLI($email)).'\',\''.
-			htmlentities($this->removeSQLI($_POST['message'])).'\','.
+			htmlentities($this->removeSQLI($message).'\','.
 			$this->removeSQLI($id).', "'.
 			$this->removeSQLI($ip).'");';
 		return (mysqli_query($this->connection, $query) == 1);

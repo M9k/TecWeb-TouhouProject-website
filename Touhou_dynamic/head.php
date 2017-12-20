@@ -1,5 +1,5 @@
 <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 		<meta name="title" content="<?php
 		if(isset($title))
@@ -17,7 +17,7 @@
 		<link type="text/css" rel="stylesheet" href="style/mobile.css" media="handheld, screen and (max-width: 680px), only screen and (max-device-width:600px)"/>
 		<link type="text/css" rel="stylesheet" href="style/print.css" media="print"/>
 
-		<link rel="alternate" href="/feed/" title="My RSS feed" type="application/rss+xml"/>
+		<link rel="alternate" href="rss.php" title="Ricevi le notizie tramite RSS" type="application/rss+xml"/>
 
 		<script type="text/javascript" src="script/menucollapse.js"></script>
 		<script type="text/javascript" src="script/zoomimage.js"></script>

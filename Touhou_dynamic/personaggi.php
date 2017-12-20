@@ -10,14 +10,13 @@ require('head.php');
 require('header.php');
 require('locationbar.php'); 
 ?>
-<div id="contenitore">
 	<div id="contenuto">
 		<h2>Personaggi</h2>
 		<dl id="personaggi">
-
+			
 			<dt>Reimu Hakurei</dt>
 			<dd>
-				<img src="./images/characters/Reimu.jpg" alt="Immagine di Reimu Hakurei, vestita con un abito rosso e bianco da sacerdotessa giapponese"/>
+				<img src="./images/characters/Reimu.jpg" alt="Immagine di Reimu, con un abito rosso e bianco da sacerdotessa giapponese"/>
 				<ul>
 					<li><span class="charactervoice">Specie</span>: Umana</li>
 					<li><span class="charactervoice">Età</span>: Almeno 15 anni</li>
@@ -36,7 +35,7 @@ require('locationbar.php');
 					<li><span class="charactervoice">Specie</span>: Umana</li>
 					<li><span class="charactervoice">Età</span>: Almeno 16 anni</li>
 					<li><span class="charactervoice">Occupazione</span>: Proprietaria del Kirisame Magic Shop </li>
-					<li><span class="charactervoice">Luogo</span>: Gensokyo, Foresta della magia (<ruby xml:lang="ja"><rb>魔法の森</rb><rp>(</rp><rt>げんそきょ</rt><rp>)</rp></ruby>)
+					<li><span class="charactervoice">Luogo</span>: Gensokyo, Foresta della magia (<ruby xml:lang="ja"><rb>魔法の森</rb><rp>(</rp><rt>げんそきょ</rt><rp>)</rp></ruby>)</li>
 					<li><p>Marisa è una maga umana, è uno dei personaggi più importanti(secondo le parole del produttore della serie ZUN).
 <br/>La sua personalità è a volte descritta come sgradevole, passa la maggior parte del tempo a gestire il suo negozio di magia e come lavoro <span xml:lang="en">part-time</span> va a caccia di spiriti, detti <em>Youkai</em>.
 <br/>È conosciuta per essere una gran lavoratrice, è sta cercando di raggiungere l'abiblità di Reimu allenandosi e e preseguendo lo studio della magia. Questo crea un contrasto rispetto agli altri umani che appaiono nella serie, visto che la maggior parte di loro ha un talento innata (Reimu) o una abilità speciale (Sakuya).</p></li>
@@ -50,7 +49,7 @@ require('locationbar.php');
 					<li><span class="charactervoice">Specie</span>: Youkai</li>
 					<li><span class="charactervoice">Età</span>: Sconosciuta</li>
 					<li><span class="charactervoice">Occupazione</span>: Maga</li>
-					<li><span class="charactervoice">Luogo</span>: Gensokyo, Foresta della magia (<ruby xml:lang="ja"><rb>魔法の森</rb><rp>(</rp><rt>げんそきょ</rt><rp>)</rp></ruby>)
+					<li><span class="charactervoice">Luogo</span>: Gensokyo, Foresta della magia (<ruby xml:lang="ja"><rb>魔法の森</rb><rp>(</rp><rt>げんそきょ</rt><rp>)</rp></ruby>)</li>
 					<li><p>Alice Margatroid è una delle poche persone che abitano a Gensokyo. &Eacute; una maga conosciuta per le sue abilità magiche che fanno uso di bambole e per il suo essere solitaria.
 <br/>Ha combattuto spesso con Marisa Kirisame nonstante siano solo delle conoscenti che condividono svariati interessi comuni, hanno anche fatto squadra durante svariati avvenimenti. Alice è più interessata alla strategia rispetto a Marisa ed odia dover vincere gli scontri con la forza bruta.</p>
 					</li>
@@ -74,7 +73,7 @@ require('locationbar.php');
 
 			<dt>Flandre Scarlet</dt>
 			<dd>
-				<img src="./images/characters/Flandre.jpg" alt="Immagine di Flandre Scarlet, con abiti gotici rosso scarlatto e ali costituite da 8 cristalli per ala, di svariati colori"/>
+				<img src="./images/characters/Flandre.jpg" alt="Immagine di Flandre, con abiti gotici rosso scarlatto e ali di 8 cristalli di svariati colori"/>
 				<ul>
 					<li><span class="charactervoice">Specie</span>: Vampiro</li>
 					<li><span class="charactervoice">Età</span>: Circa 495 anni</li>
@@ -87,7 +86,7 @@ require('locationbar.php');
 
 			<dt>Sakuya Izayoi</dt>
 			<dd>
-				<img src="./images/characters/Sakuya.jpg" alt="Immagine di Sakuya Izayoi, con un abito da cameriera, un orologio da polso e dei coltelli"/>
+				<img src="./images/characters/Sakuya.jpg" alt="Immagine di Sakuya, con un abito da cameriera, un orologio e dei coltelli"/>
 				<ul>
 					<li><span class="charactervoice">Specie</span>: Umano</li>
 					<li><span class="charactervoice">Età</span>: Circa 16-20 anni</li>
@@ -130,12 +129,10 @@ Come si può intuire dal suo aspetto, Cirno possiede l'abilità di manipolare il
 <br/>Anche se Yukari sembra inaffidabile per la maggior parte del tempo, non esiterebbe ad entrare in combattimento nel caso la sicurezza di Gensokyo fosse in pericolo.</li>
 				</ul>
 			</dd>
-			</dl>
-		</div>
+		</dl>
 <?php 
 require('sidebar.php');
 require('footer.php');
-require('closeconnection.php');
 ?>
 	</body>
 </html>
