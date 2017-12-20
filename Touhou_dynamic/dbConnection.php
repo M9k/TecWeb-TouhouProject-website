@@ -37,6 +37,14 @@ class DBAccess {
 		return mysqli_fetch_assoc(mysqli_query($this->connection, $query));
 	}
 
+	public function adminLogIn($username, $password) {
+		$query = 'SELECT username FROM admins WHERE ';
+		$query.= 'username = "'.$this->removeSQLI($username).'"';
+		$query.= 'AND password= "'.$this->removeSQLI($password).'"';
+		$result = mysqli_query($this->connection, $query) or $this->showError();
+		return mysqli_num_rows($result)==1;
+	}
+       	 
 	public function getListChapters() {
 		return $this->runQueryAndGetAll('Select * from chapters order by year');
 	}
