@@ -1,14 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php
+
+require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php"; 
+
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 $wronglogin = false;
 $wrongloginmessage = '<div id="wronglogin">Dati errati!</div>';
 
+$dbConnection = new DBAccess();
+$dbConnection->openDBConnection();
+
 if(isset($_POST['email']) && isset($_POST['password']))
-if(strcmp($_POST['email'],'admin') == 0 && strcmp($_POST['password'],'admin') == 0 )
-$_SESSION['login'] = true;
+if($dbConnection->adminLogIn( $_POST['email'], $_POST['password'])) //linea dove avviene il controllo accesso
+	$_SESSION['login'] = true;
 else
 $wronglogin = true;
 if(isset($_GET['logout']) && $_GET['logout'] == "true")
