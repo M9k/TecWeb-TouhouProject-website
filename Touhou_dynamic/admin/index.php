@@ -1,8 +1,7 @@
+<?php require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php"; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php
-
-require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php"; 
 
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
@@ -16,7 +15,10 @@ if(isset($_POST['email']) && isset($_POST['password']))
 if($dbConnection->adminLogIn( $_POST['email'], $_POST['password'])) //linea dove avviene il controllo accesso
 	$_SESSION['login'] = true;
 else
-$wronglogin = true;
+	$wronglogin = true;
+
+$dbConnection->closeDBConnection();
+
 if(isset($_GET['logout']) && $_GET['logout'] == "true")
 {
 	$_SESSION['login'] = false;
@@ -35,7 +37,7 @@ require('head.php');
 	<div id="contenuto">
 		<?php
 		if($wronglogin)
-		echo($wrongloginmessage);
+			echo($wrongloginmessage);
 		if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 		{
 			?>
@@ -66,7 +68,7 @@ require('head.php');
 			<?php
 		}
 		else
-		require('login.php'); ?>
+			require('login.php'); ?>
 	</div>
 </body>
 </html>

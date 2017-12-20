@@ -4,9 +4,9 @@ setlocale(LC_TIME, "it_IT");
 class DBAccess {
 
 	const HOST_DB = 'localhost';
-	const USER = 'root';
-	const PASSWD = '';
-	const DATABASE = 'newstest';
+	const USER = 'mcailott';
+	const PASSWD = 'iT8phoo0Oosheipi';
+	const DATABASE = 'mcailott';
 
 	public $connection;
 	public function openDBConnection() {
@@ -37,14 +37,6 @@ class DBAccess {
 		return mysqli_fetch_assoc(mysqli_query($this->connection, $query));
 	}
 
-	public function adminLogIn($username, $password) {
-		$query = 'SELECT username FROM admins WHERE '.
-			'username = "'.$this->removeSQLI($username).'"'.
-			'AND password= "'.$this->removeSQLI($password).'"';
-		$result = mysqli_query($this->connection, $query) or $this->showError();
-		return mysqli_num_rows($result) == 1;
-	}
-       	 
 	public function getListChapters() {
 		return $this->runQueryAndGetAll('Select * from chapters order by year');
 	}
@@ -122,12 +114,12 @@ class DBAccess {
 
 	public function insertComment($name, $email, $message, $id, $ip) {
 		$query = 'INSERT INTO comment (nick, email, message, news_id, ip) VALUES (\''.
-			htmlentities($this->removeSQLI($name)).'\',\''.
+			htmlentities($this->removeSQLI($_POST['name'])).'\',\''.
 			htmlentities($this->removeSQLI($email)).'\',\''.
-			htmlentities($this->removeSQLI($message)).'\','.
+			htmlentities($this->removeSQLI($_POST['message'])).'\','.
 			$this->removeSQLI($id).', "'.
-			$this->removeSQLI($ip).'")';
-		return mysqli_query($this->connection, $query) == 1;
+			$this->removeSQLI($ip).'");';
+		return (mysqli_query($this->connection, $query) == 1);
 	}
 
 	public function insertChapter($number, $year, $title, $image, $imagedescr, $titleeng, $titleita, $plot) {
