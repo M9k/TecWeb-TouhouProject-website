@@ -114,12 +114,12 @@ class DBAccess {
 
 	public function insertComment($name, $email, $message, $id, $ip) {
 		$query = 'INSERT INTO comment (nick, email, message, news_id, ip) VALUES (\''.
-			htmlentities($this->removeSQLI($name).'\',\''.
+			htmlentities($this->removeSQLI($name)).'\',\''.
 			htmlentities($this->removeSQLI($email)).'\',\''.
-			htmlentities($this->removeSQLI($message).'\','.
+			htmlentities($this->removeSQLI($message)).'\','.
 			$this->removeSQLI($id).', "'.
-			$this->removeSQLI($ip).'");';
-		return (mysqli_query($this->connection, $query) == 1);
+			$this->removeSQLI($ip).'")';
+		return mysqli_query($this->connection, $query) == 1;
 	}
 
 	public function insertChapter($number, $year, $title, $image, $imagedescr, $titleeng, $titleita, $plot) {
