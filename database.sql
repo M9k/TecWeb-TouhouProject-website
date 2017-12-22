@@ -144,7 +144,7 @@ CREATE TABLE `admins` (
   `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(50) NOT NULL,
   `email` varchar(150) DEFAULT NULL,
-  `password` varchar(50) NOT NULL
+  `password` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

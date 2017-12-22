@@ -38,11 +38,11 @@ class DBAccess {
 	}
 
 	public function adminLogIn($username, $password) {
-		$query = 'SELECT username FROM admins WHERE '.
-			'username = "'.$this->removeSQLI($username).'"'.
-			'AND password= "'.$this->removeSQLI($password).'"';
+		$query = 'SELECT password FROM admins WHERE '.
+			'username = "'.$this->removeSQLI($username).'"';
 		$result = mysqli_query($this->connection, $query) or $this->showError();
-		return mysqli_num_rows($result) == 1;
+		$dataDB = mysqli_fetch_row($result);
+		return password_verify($dataDB[0], password_hash($password,PASSWORD_DEFAULT));
 	}
        	 
 	public function getListChapters() {
