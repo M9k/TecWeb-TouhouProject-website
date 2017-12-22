@@ -141,16 +141,15 @@ INSERT INTO `news` (`id`, `title`, `hidden`, `data`, `text`, `image`, `imgdescr`
 --
 
 CREATE TABLE `admins` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `username` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL PRIMARY KEY,
   `email` varchar(150) DEFAULT NULL,
   `password` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
-INSERT INTO `admins` (`id`, `username`, `email`, `password`) VALUES
-('0', 'admin','admin@gmail.com','$2y$10$F0B3IE4vRA0kXt74LkCcBO4qOOKnjSbQXxWT8LNMdswo6N7W8OGWi');
+INSERT INTO `admins` (`username`, `email`, `password`) VALUES
+('admin','admin@gmail.com','$2y$10$F0B3IE4vRA0kXt74LkCcBO4qOOKnjSbQXxWT8LNMdswo6N7W8OGWi');
 
 
 --
