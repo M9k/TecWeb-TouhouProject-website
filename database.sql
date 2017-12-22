@@ -150,7 +150,7 @@ CREATE TABLE `admins` (
 -- --------------------------------------------------------
 
 INSERT INTO `admins` (`id`, `username`, `email`, `password`) VALUES
-('0', 'admin','admin@gmail.com','admin');
+('0', 'admin','admin@gmail.com','$2y$10$F0B3IE4vRA0kXt74LkCcBO4qOOKnjSbQXxWT8LNMdswo6N7W8OGWi');
 
 
 --

@@ -42,7 +42,7 @@ class DBAccess {
 			'username = "'.$this->removeSQLI($username).'"';
 		$result = mysqli_query($this->connection, $query) or $this->showError();
 		$dataDB = mysqli_fetch_row($result);
-		return password_verify($dataDB[0], password_hash($password,PASSWORD_DEFAULT));
+		return password_verify($password, $dataDB[0]);
 	}
        	 
 	public function getListChapters() {
