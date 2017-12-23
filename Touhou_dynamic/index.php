@@ -41,6 +41,7 @@ Rimanete sintonizzati sulla sezione <em xml:lang="en">News</em> per ricevere agg
 require('sidebar.php');
 require('footer.php');
 ?>
+		</div>
 	</body>
 </html>
 

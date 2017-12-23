@@ -44,7 +44,7 @@ require('head.php');
 			<h2>Benvenuto nell’area di amministrazione</h2>
 			<p>In quest’ area potrai gestire, aggiornare e monitorare alcune parti del sito.</p>
 
-			<h2 xml:lang="en">News</h2>
+			<h3 xml:lang="en">News</h3>
 			<p>In questa pagina si ha la possibilità di:</p>
 			<ul>
 				<li>aggiungere <span xml:lang="en">news</span></li>
@@ -54,14 +54,14 @@ require('head.php');
 				<li>impostare le <span xml:lang="en">news</span> come bozza o pubblicarle</li>
 			</ul>
 
-			<h2>Immagini</h2>
+			<h3>Immagini</h3>
 			<p>In questa sezione è possibile fare l’<span lang="en">upload</span> di nuove immagini o rimuoverle dal sito.</p>
 
-			<h2>Commenti e Lista Ban</h2>
+			<h3>Commenti e Lista Ban</h3>
 			<p>Nella sezione commenti è presente una lista di tutti i commenti presenti nel sito. E’ possibile bannare un utente, specificandone il motivo (se desiderato) e conseguentemente eliminare il commento oppure eliminare solo il commento.</p>
 			<p>Nella pagina Lista Ban invece troviamo un elenco di tutti i Ban e la possibilità di eliminarli</p>
 
-			<h2>Capitoli</h2>
+			<h3>Capitoli</h3>
 			<p>La pagina dei capitoli elenca tutti i capitoli presenti, permette di aggiungerne di nuovi o di eliminare singolarmente un capitolo.</p>
 
 			<p>Infine puoi ritornare al sito rimanendo loggato all’Area amministrativa o fare <span xml:lang="en">Logout</span>.</p>

@@ -55,5 +55,6 @@ if($index > 0)
 require('sidebar.php');
 require('footer.php');
 ?>
+		</div>
 	</body>
 </html>

@@ -62,5 +62,6 @@ $dbConnection->closeDBConnection();
 require('sidebar.php');
 require('footer.php');
 ?>
+		</div>
 	</body>
 </html>

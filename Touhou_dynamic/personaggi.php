@@ -130,10 +130,12 @@ Come si può intuire dal suo aspetto, Cirno possiede l'abilità di manipolare il
 				</ul>
 			</dd>
 		</dl>
+	</div>
 <?php 
 require('sidebar.php');
 require('footer.php');
 ?>
+		</div>
 	</body>
 </html>
 

@@ -41,6 +41,7 @@ L'ultimo titolo, <em xml:lang="en">Hidden Star in Four Seasons</em> (<span xml:l
 require('sidebar.php');
 require('footer.php');
 ?>
+		</div>
 	</body>
 </html>
 
