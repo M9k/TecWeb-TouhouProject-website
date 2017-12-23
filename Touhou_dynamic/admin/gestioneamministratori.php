@@ -23,27 +23,40 @@ require('head.php');
 
 $dbConnection = new DBAccess();
 $dbConnection->openDBConnection();
-//Restituisce username e email di tutti gli utenti tranne il corrente, parametro = username corrente -> per consentire cancellazione
-//Cancellazione dato un username se non è l'ultimo rimasto
-//Recupero email dell'utente attuale
-//Funzione che accetta utente, email e password e aggiorna email + la password se non vuota
-//Aggiunta utente
-
-
-$chapters = $dbConnection->getListChapters();
-if($chapters != null)
+?>
+<h3>Eliminazione amministratori</h3>
+<?php
+$administrators = $dbConnection->getListAdminsData($_SESSION['username']);
+if($administrators != null)
 {
-	echo '<form class="optionsnewsform" action="chapterdelete.php" method="post"><fieldset id="chapterlist">'.
+	echo '<form class="listadmins" action="gestioneamministratoriaction.php" method="post"><fieldset class="listadminsfield">'.
 		'<ul>';
-	foreach($chapters as $capter)
-		echo '<li>'.$capter['number']." ".$capter['titleeng']." - ".
-			$capter['year'].' <button name="btnDelete" value="'.$capter['id'].'">Elimina</button></li>';
+	foreach($administrators as $administrator)
+		echo '<li>'.$administrator['username']." - ".$administrator['email'].' <button name="btnDelete" value="'.$administrator['username'].'">Elimina</button></li>';
 	echo '</ul>'.
 		'</filedset></form>';
 }
 else
-	echo '<div id="nodata">Nessuna capitolo inserito</div>' ;
-
+	echo '<div id="nodata">Nessun amministratore aggiuntivo presente</div>';
+?>
+<h3>Inserimento amministratore</h3>
+<form id="addadmin" action="gestioneamministratoriaction.php" method="post">
+	<fieldset id="addadminfield">
+		<label for="usernameinput">Nome utente:</label> <input name="username" type="text" id="usernameinput"/><br/>
+		<label for="emailinput">Email:</label> <input name="email" type="text" id="emailinput"/><br/>
+		<label for="passwordinput">Password:</label> <input name="password" type="text" id="passwordinput"/><br/>
+		<input type="submit" value="Aggiungi" name="submit"/> <input type="reset" value="Cancella i campi" name="reset"/>
+	</fieldset>
+</form>
+<h3>Modifica propri dati</h3>
+<form id="editaccountinfo" action="gestioneamministratoriaction.php" method="post">
+	<fieldset id="editaccountinfofield">
+	<label for="newemailinput">Email:</label> <input value="<?php $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput"/><br/>
+		<label for="newpasswordinput">Nuova password:</label> <input name="newpassword" type="text" id="newpasswordinput"/><br/>
+		<input type="submit" value="Modifica" name="submit"/> <input type="reset" value="Cancella i campi" name="reset"/>
+	</fieldset>
+</form>
+<?php
 $dbConnection->closeDBConnection();
 ?>
 		</div>

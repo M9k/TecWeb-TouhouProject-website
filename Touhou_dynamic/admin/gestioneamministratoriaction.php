@@ -9,6 +9,16 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 {
 	$risp = false;
 
+
+/*
+insertAdmin($user, $email, $password) 
+removeAdmin($username) 
+changeAdminData($user, $newEmail, $newPassword)
+getAdminEmail($user)
+getListAdminsData($excludeUser)
+ */
+
+
 	if(isset($_POST['number']) && isset($_POST['year']) && isset($_POST['title']) && isset($_POST['titleeng']) && isset($_POST['titleita']) && isset($_POST['plot']))
 	{		//INSERT
 		$image = false;
