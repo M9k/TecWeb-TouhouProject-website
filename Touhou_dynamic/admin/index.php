@@ -44,14 +44,14 @@ require('head.php');
 			<h2>Benvenuto nell’area di amministrazione</h2>
 			<p>In quest’ area potrai gestire, aggiornare e monitorare alcune parti del sito.</p>
 
-			<h2><span lang="en">News</span> e Aggiungi <span lang="en">News</span></h2>
+			<h2 xml:lang="en">News</h2>
 			<p>In queste due pagine si ha la possibilità di:</p>
 			<ul>
-				<li>aggiungere <span lang="en">news</span></li>
-				<li>cancellare la <span lang="en">cache</span> delle <span lang="en">news</span> per la <span lang="en">sidebar</span></li>
-				<li>cancellare la <span lang="en">news</span></li>
-				<li>modificare la <span lang="en">news</span></li>
-				<li>impostare la <span lang="en">news</span> come bozza</li>
+				<li>aggiungere <span xml:lang="en">news</span></li>
+				<li>cancellare la <span xml:lang="en">cache</span> delle <span xml:lang="en">news</span> per la <span xml:lang="en">sidebar</span></li>
+				<li>cancellare la <span xml:lang="en">news</span></li>
+				<li>modificare la <span xml:lang="en">news</span></li>
+				<li>impostare la <span xml:lang="en">news</span> come bozza</li>
 			</ul>
 
 			<h2>Immagini</h2>
@@ -64,7 +64,7 @@ require('head.php');
 			<h2>Capitoli</h2>
 			<p>La pagina dei capitoli elenca tutti i capitoli presenti, permette di aggiungerne di nuovi o di eliminare singolarmente un capitolo.</p>
 
-			<p>Infine puoi ritornare al sito rimanendo loggato all’Area amministrativa o fare <span lang="en">Logout</span>.</p>
+			<p>Infine puoi ritornare al sito rimanendo loggato all’Area amministrativa o fare <span xml:lang="en">Logout</span>.</p>
 			<?php
 		}
 		else
