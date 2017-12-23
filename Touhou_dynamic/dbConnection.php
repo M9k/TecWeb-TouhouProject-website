@@ -74,20 +74,21 @@ class DBAccess {
 
 	//Ritorna l'email dell'amministratore passato
 	public function getAdminEmail($admin) {
-		$query = 'SELECT email FROM admins WHERE '.'username = "'.$this->removeSQLI($admin).'"';
-		return $this->mysqli_fetch_row(mysqli_query($this->connection, $query) or $this->showError())[0];
+  		$query = 'SELECT email FROM admins WHERE username = "'.$this->removeSQLI($admin).'"';
+  		return mysqli_fetch_row(mysqli_query($this->connection, $query))[0];
 	}
 
 	//data una nuova email e una password, l'email viene aggiornata e la password viene modificata solamente se non vuota, ritorna true se non ci sono stati problemi
 	public function changeAdminData($admin, $newEmail, $newPassword) {
 		if($admin!=null && $newEmail!=null && $newEmail!=null) {
-			$query = 'UPDATE admins set ';
+			$query = 'UPDATE admins SET ';
 			if(strcmp($newEmail, '') != 0)
 				$query.= 'email = "'.$this->removeSQLI($newEmail).'"';
 			if(strcmp($newPassword, '') != 0)
-				$query.='password = "'.$this->removeSQLI(password_hash($newPassword, PASSWORD_DEFAULT)).'"';
-			$query.='WHERE username = "'.$this->mysqli_query($admin).'"';
-			return mysqli_fetch_row(mysqli_query($this->connection, $query) or $this->showError())==1;
+				$query.=', password = "'.$this->removeSQLI(password_hash($newPassword, PASSWORD_DEFAULT)).'"';
+			$query.=' WHERE username = "'.$this->removeSQLI($admin).'"';
+		//	die($query);
+			return mysqli_query($this->connection, $query) == 1;
 		}
 				 
 	}
@@ -148,8 +149,8 @@ class DBAccess {
 
 	//Rimuovi l'amministratore indicato, se è l'ultimo rimasto non rimuoverlo e ritorna false, se è andato tutto bene ritorna true
 	public function removeAdmin($username) {
-		if(mysqli_fetch_row(mysqli_query($this->connection, 'SELECT * FROM admins') or $this->showError())>=2) {
-			$query = 'delete from admins where id='.$this->removeSQLI($username);
+		if(mysqli_num_rows(mysqli_query($this->connection, 'SELECT * FROM admins')) > 1) {
+			$query = 'delete from admins where username = '.$this->removeSQLI($username);
 			return mysqli_query($this->connection, $query) == 1;
 		}	
 	}
@@ -190,12 +191,16 @@ class DBAccess {
 	//date le informazioni inserisce un nuovo admin, se qualcosa va storto (ad esempio username doppio) ritorna false, altrimenti true
 	public function insertAdmin($admin, $email, $password) {
 		$query = 'SELECT * FROM admins WHERE username= "'.$this->removeSQLI($admin).'"';
-		if(mysqli_fetch_row(mysqli_query($this->connection, $query) or $this->showError())!=1) {
-			$insert = 'INSERT INTO admins (admin, email, password) VALUES ("'.
+		if(mysqli_num_rows(mysqli_query($this->connection, $query)) == 0)
+		{
+			$insert = 'INSERT INTO admins (username, email, password) VALUES ("'.
 				$this->removeSQLI($admin).'", "'.
 				$this->removeSQLI($email).'", "'.
-				$this->removeSQLI(password_hash($Password, PASSWORD_DEFAULT)).'")';
-		return mysqli_query($this->connection, $query) == 1;
+				$this->removeSQLI(password_hash($password, PASSWORD_DEFAULT)).'")';
+			return mysqli_query($this->connection, $insert) == 1;
+		}
+		else
+			return false;
 	}
 
 	public function insertBan($ip, $reason) {

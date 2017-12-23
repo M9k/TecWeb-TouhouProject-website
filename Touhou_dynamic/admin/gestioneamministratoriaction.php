@@ -7,16 +7,6 @@ $error = null;
 	{
 		$risp = false;
 
-
-/*
-insertAdmin($user, $email, $password) 
-removeAdmin($username) 
-changeAdminData($user, $newEmail, $newPassword)
-getAdminEmail($user)
-getListAdminsData($excludeUser)
- */
-
-
 		$dbConnection = new DBAccess();
 		$dbConnection->openDBConnection();
 
@@ -29,12 +19,8 @@ getListAdminsData($excludeUser)
 		 			$error = 'L\'<span xml:lang="en">e-mail</span> non è nel formato corretto, si prega di ricontrollarla.';
 				else
 				{
-					if(! $dbConnection->insertAdmin($_POST['username'], $_POST['email'], $_POST['password']))
-					{
+					if(!$dbConnection->insertAdmin($_POST['username'], $_POST['email'], $_POST['password']))
 						$error = "Errore durante l'inserimento dell'utente, controllare che l'username sia univoco";
-					}
-					else
-					$error = "Alcuni campi indicati sono stati lasciati vuoti!";
 				}
 			}
 		}
@@ -47,12 +33,8 @@ getListAdminsData($excludeUser)
 				else
 				{
 					//MODIFICA
-					if(! $dbConnection->changeAdminData($_SESSION['username'], $_POST['newemail'], $_POST['newpassword']))
-					{
+					if(!$dbConnection->changeAdminData($_SESSION['username'], $_POST['newemail'], $_POST['newpassword']))
 						$error = "Errore durante la modifica dei dati, per favore contattare un amministratore!";
-					}
-					else
-						$error = "Alcuni campi indicati sono stati lasciati vuoti!";
 				}
 			}
 		}
@@ -60,6 +42,7 @@ getListAdminsData($excludeUser)
 		{
 			//ELIMINAZIONE
 			//TODO
+			// removeAdmin($username) 
 
 		}
 
