@@ -2,12 +2,10 @@
 require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php";
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
-$returnpage = $_SERVER['HTTP_REFERER'];
-
-$error = 'Utente non loggato!';
-if(isset($_SESSION['login']) && $_SESSION['login'] == true)
-{
-	$risp = false;
+$error = null;
+	if(isset($_SESSION['login']) && $_SESSION['login'] == true)
+	{
+		$risp = false;
 
 
 /*
@@ -19,45 +17,62 @@ getListAdminsData($excludeUser)
  */
 
 
-	if(isset($_POST['number']) && isset($_POST['year']) && isset($_POST['title']) && isset($_POST['titleeng']) && isset($_POST['titleita']) && isset($_POST['plot']))
-	{		//INSERT
-		$image = false;
-		$ris = false;
-		if(isset($_FILES["fileupload"])) //se c'è una immagine provo a caricarla e a impostarla
+		$dbConnection = new DBAccess();
+		$dbConnection->openDBConnection();
+
+		if(isset($_POST['submit']) && $_POST['submit'] == "Aggiungi")
 		{
-			require('imageuploadfunction.php');
-			$ris = imageupload("../images/chapters/", $_FILES["fileupload"]);
-			if($ris['result'])
-				$image = $ris['text'];
-		}
-		if($image != false)
-		{
-			if(isset($_POST['imagedescr']))
-				$imagedescr  = mysqli_real_escape_string($conn, $_POST['imagedescr']);
-			else
-				$imagedescr = "";
-			
-			$dbConnection = new DBAccess();
-			$dbConnection->openDBConnection();
-			$risp = $dbConnection->insertChapter($_POST['number'], $_POST['year'], $_POST['title'], $image, $imagedescr, $_POST['titleeng'], $_POST['titleita'], $_POST['plot']);
-			if(!$risp)
+			//AGGIUNTA
+			if(isset($_POST['username']) && strcmp($_POST['username'],"") != 0 && isset($_POST['email']) && strcmp($_POST['email'],"") != 0 && isset($_POST['password']) && strcmp($_POST['password'],"") != 0)
 			{
-				$error = "Errore durante il collegamento al database, contattare un amministratore";
-				unlink("../images/chapters/".$image);
+				if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+		 			$error = 'L\'<span xml:lang="en">e-mail</span> non è nel formato corretto, si prega di ricontrollarla.';
+				else
+				{
+					if(! $dbConnection->insertAdmin($_POST['username'], $_POST['email'], $_POST['password']))
+					{
+						$error = "Errore durante l'inserimento dell'utente, controllare che l'username sia univoco";
+					}
+					else
+					$error = "Alcuni campi indicati sono stati lasciati vuoti!";
+				}
 			}
-			$dbConnection->closeDBConnection();
+		}
+		else if(isset($_POST['submit']) && $_POST['submit'] == "Modifica")
+		{
+			if(isset($_POST['newemail']) && strcmp($_POST['newemail'],"") != 0 && isset($_POST['newpassword']))
+			{
+				if(!filter_var($_POST['newemail'], FILTER_VALIDATE_EMAIL))
+		 			$error = 'L\'<span xml:lang="en">e-mail</span> non è nel formato corretto, si prega di ricontrollarla.';
+				else
+				{
+					//MODIFICA
+					if(! $dbConnection->changeAdminData($_SESSION['username'], $_POST['newemail'], $_POST['newpassword']))
+					{
+						$error = "Errore durante la modifica dei dati, per favore contattare un amministratore!";
+					}
+					else
+						$error = "Alcuni campi indicati sono stati lasciati vuoti!";
+				}
+			}
 		}
 		else
-			$error = $ris['text'];
+		{
+			//ELIMINAZIONE
+			//TODO
+
+		}
+
+		$dbConnection->closeDBConnection();
 	}
 	else
-		$error = "Errore durante l'inserimento, controllare di avere compilato tutti i campi";
-	if($risp != false)
-	{
-		header("Location: chapters.php");
-		die();
-	}
+		$error = "Utente non loggato o sessione scaduta, per favore riesegui il login!";
+if($error == null)
+{
+	header("Location: gestioneamministratori.php");
+	die();
 }
+
 //trasferisco alla pagina di errore
 $_SESSION['error'] = $error;
 header("Location: error.php");

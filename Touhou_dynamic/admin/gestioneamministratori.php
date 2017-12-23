@@ -51,7 +51,7 @@ else
 <h3>Modifica propri dati</h3>
 <form id="editaccountinfo" action="gestioneamministratoriaction.php" method="post">
 	<fieldset id="editaccountinfofield">
-	<label for="newemailinput">Email:</label> <input value="<?php $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput"/><br/>
+	<label for="newemailinput">Email:</label> <input value="<?php echo $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput"/><br/>
 		<label for="newpasswordinput">Nuova password:</label> <input name="newpassword" type="text" id="newpasswordinput"/><br/>
 		<input type="submit" value="Modifica" name="submit"/> <input type="reset" value="Cancella i campi" name="reset"/>
 	</fieldset>
