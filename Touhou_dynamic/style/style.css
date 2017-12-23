@@ -360,11 +360,6 @@ div.data {
     margin-left: 2%;
 }
 @media screen and (max-width: 900px) {
-	#menu li {
-		/* per quanto possibile evito al menu di andare a capo, che peggiora la grafica del sito*/
-		padding: 0.8% 0.9%;
-		font-size: 1.1em;
-	}
 	#header {
 		/* riduco la dimensione della testata*/
 		height: 16em;
