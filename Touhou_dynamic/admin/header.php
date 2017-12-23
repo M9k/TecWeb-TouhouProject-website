@@ -22,10 +22,6 @@ $links = array(
 				'link'=>'news.php'
 			),
 			array(
-				'nome'=>'Aggiungi news',
-				'link'=>'newsadd.php'
-			),
-			array(
 				'nome'=>'Immagini',
 				'link'=>'image.php'
 			),

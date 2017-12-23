@@ -25,6 +25,7 @@ require('head.php');
 			<div id="newssiderefresh">
 				<a href="cleancache.php">Cancella le cache delle news per la sidebar</a>
 			</div>
+			<h3>News presenti nel sito:</h3>
 <?php
 	$dbConnection = new DBAccess();
 	$dbConnection->openDBConnection();
