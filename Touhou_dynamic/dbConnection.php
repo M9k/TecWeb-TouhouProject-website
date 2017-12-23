@@ -75,7 +75,7 @@ class DBAccess {
 	//Ritorna l'email dell'amministratore passato
 	public function getAdminEmail($admin) {
 		$query = 'SELECT email FROM admins WHERE '.'username = "'.$this->removeSQLI($admin).'"';
-		return $this->runQueryAndGetAll($query);
+		return $this->mysqli_fetch_row(mysqli_query($this->connection, $query) or $this->showError())[0];
 	}
 
 	//data una nuova email e una password, l'email viene aggiornata e la password viene modificata solamente se non vuota, ritorna true se non ci sono stati problemi
@@ -86,6 +86,7 @@ class DBAccess {
 				$query.= 'email = "'.$this->removeSQLI($newEmail).'"';
 			if(strcmp($newPassword, '') != 0)
 				$query.='password = "'.$this->removeSQLI(password_hash($newPassword, PASSWORD_DEFAULT)).'"';
+			$query.='WHERE username = "'.$this->mysqli_query($admin).'"';
 			return mysqli_fetch_row(mysqli_query($this->connection, $query) or $this->showError())==1;
 		}
 				 
@@ -147,8 +148,10 @@ class DBAccess {
 
 	//Rimuovi l'amministratore indicato, se è l'ultimo rimasto non rimuoverlo e ritorna false, se è andato tutto bene ritorna true
 	public function removeAdmin($username) {
-	//	$query = 'delete from comment where id='.$this->removeSQLI($id);
-	//	return mysqli_query($this->connection, $query) == 1;
+		if(mysqli_fetch_row(mysqli_query($this->connection, 'SELECT * FROM admins') or $this->showError())>=2) {
+			$query = 'delete from admins where id='.$this->removeSQLI($username);
+			return mysqli_query($this->connection, $query) == 1;
+		}	
 	}
 
 	public function insertComment($name, $email, $message, $id, $ip) {
@@ -185,14 +188,14 @@ class DBAccess {
 	}
 
 	//date le informazioni inserisce un nuovo admin, se qualcosa va storto (ad esempio username doppio) ritorna false, altrimenti true
-	public function insertAdmin($user, $email, $password) {
-	/*	$query = 'INSERT INTO news (title, image, hidden, text, imgdescr) VALUES ("'.
-			$this->removeSQLI($title).'", "'.
-			$image.'", '.
-			$hidden.', "'.
-			$this->removeSQLI($text).'", "'.
-			$this->removeSQLI($imgdescr).'")';
-	return mysqli_query($this->connection, $query) == 1;*/
+	public function insertAdmin($admin, $email, $password) {
+		$query = 'SELECT * FROM admins WHERE username= "'.$this->removeSQLI($admin).'"';
+		if(mysqli_fetch_row(mysqli_query($this->connection, $query) or $this->showError())!=1) {
+			$insert = 'INSERT INTO admins (admin, email, password) VALUES ("'.
+				$this->removeSQLI($admin).'", "'.
+				$this->removeSQLI($email).'", "'.
+				$this->removeSQLI(password_hash($Password, PASSWORD_DEFAULT)).'")';
+		return mysqli_query($this->connection, $query) == 1;
 	}
 
 	public function insertBan($ip, $reason) {
