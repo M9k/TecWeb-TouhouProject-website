@@ -45,13 +45,13 @@ require('head.php');
 			<p>In quest’ area potrai gestire, aggiornare e monitorare alcune parti del sito.</p>
 
 			<h2 xml:lang="en">News</h2>
-			<p>In queste due pagine si ha la possibilità di:</p>
+			<p>In questa pagina si ha la possibilità di:</p>
 			<ul>
 				<li>aggiungere <span xml:lang="en">news</span></li>
 				<li>cancellare la <span xml:lang="en">cache</span> delle <span xml:lang="en">news</span> per la <span xml:lang="en">sidebar</span></li>
-				<li>cancellare la <span xml:lang="en">news</span></li>
-				<li>modificare la <span xml:lang="en">news</span></li>
-				<li>impostare la <span xml:lang="en">news</span> come bozza</li>
+				<li>cancellare le <span xml:lang="en">news</span></li>
+				<li>modificare le <span xml:lang="en">news</span></li>
+				<li>impostare le <span xml:lang="en">news</span> come bozza o pubblicarle</li>
 			</ul>
 
 			<h2>Immagini</h2>
