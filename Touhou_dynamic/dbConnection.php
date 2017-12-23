@@ -67,21 +67,28 @@ class DBAccess {
 	}
 
 	//ritorna username e email di tutti gli utenti tranne quelli esclusi
-	public function getListAdminsData($excludeUser)
-	{
-
+	public function getListAdminsData($excludeAdmin) {
+		$query = 'SELECT username, email FROM admins WHERE '.'username <> "'.$this->removeSQLI($excludeAdmin).'"';
+		return $this->runQueryAndGetAll($query);
 	}
 
 	//Ritorna l'email dell'amministratore passato
-	public function getAdminEmail($user)
-	{
-
+	public function getAdminEmail($admin) {
+		$query = 'SELECT email FROM admins WHERE '.'username = "'.$this->removeSQLI($admin).'"';
+		return $this->runQueryAndGetAll($query);
 	}
 
 	//data una nuova email e una password, l'email viene aggiornata e la password viene modificata solamente se non vuota, ritorna true se non ci sono stati problemi
-	public function changeAdminData($user, $newEmail, $newPassword)
-	{
-
+	public function changeAdminData($admin, $newEmail, $newPassword) {
+		if($admin!=null && $newEmail!=null && $newEmail!=null) {
+			$query = 'UPDATE admins set ';
+			if(strcmp($newEmail, '') != 0)
+				$query.= 'email = "'.$this->removeSQLI($newEmail).'"';
+			if(strcmp($newPassword, '') != 0)
+				$query.='password = "'.$this->removeSQLI(password_hash($newPassword, PASSWORD_DEFAULT)).'"';
+			return mysqli_fetch_row(mysqli_query($this->connection, $query) or $this->showError())==1;
+		}
+				 
 	}
 
 	public function getListComments($idNews, $limit=false, $reverseOrder=false) {
