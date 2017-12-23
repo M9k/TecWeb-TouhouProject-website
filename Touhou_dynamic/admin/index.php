@@ -11,9 +11,12 @@ $wrongloginmessage = '<div id="wronglogin">Dati errati!</div>';
 $dbConnection = new DBAccess();
 $dbConnection->openDBConnection();
 
-if(isset($_POST['email']) && isset($_POST['password']))
-if($dbConnection->adminLogIn( $_POST['email'], $_POST['password'])) //linea dove avviene il controllo accesso
-	$_SESSION['login'] = true;
+if(isset($_POST['username']) && isset($_POST['password']))
+	if($dbConnection->adminLogIn( $_POST['username'], $_POST['password'])) //linea dove avviene il controllo accesso
+	{
+		$_SESSION['login'] = true;
+		$_SESSION['username'] = $_POST['username'];
+	}
 else
 	$wronglogin = true;
 
@@ -22,6 +25,7 @@ $dbConnection->closeDBConnection();
 if(isset($_GET['logout']) && $_GET['logout'] == "true")
 {
 	$_SESSION['login'] = false;
+	$_SESSION['username'] = null;
 	header("Location: ../index.php");
 	die();
 }
@@ -63,6 +67,10 @@ require('head.php');
 
 			<h3>Capitoli</h3>
 			<p>La pagina dei capitoli elenca tutti i capitoli presenti, permette di aggiungerne di nuovi o di eliminare singolarmente un capitolo.</p>
+
+			<h3>Amministratori</h3>
+			<!-- TODO -->
+				<h1>TODO</h1>
 
 			<p>Infine puoi ritornare al sito rimanendo loggato all’Area amministrativa o fare <span xml:lang="en">Logout</span>.</p>
 			<?php

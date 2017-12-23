@@ -38,6 +38,10 @@ $links = array(
 				'link'=>'chapters.php'
 			),
 			array(
+				'nome'=>'Amministratori',
+				'link'=>'gestioneamministratori.php'
+			),
+			array(
 				'nome'=>'Torna al sito',
 				'link'=>'../'
 			),

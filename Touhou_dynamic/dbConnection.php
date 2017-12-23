@@ -65,7 +65,22 @@ class DBAccess {
 			$query.= ' LIMIT '.$this->removeSQLI($fromEntry).', '.$this->removeSQLI($entryLimit);
 		return $this->runQueryAndGetAll($query);
 	}
-	
+
+	public function getListAdminsData($excludeUser)
+	{
+
+	}
+
+	public function getAdminEmail($user)
+	{
+
+	}
+
+	public function changeAdminData($user, $newEmail, $newPassword)
+	{
+
+	}
+
 	public function getListComments($idNews, $limit=false, $reverseOrder=false) {
 		$query = 'Select * from comment';
 		if($idNews != null)
@@ -119,6 +134,10 @@ class DBAccess {
 		$query = 'delete from comment where id='.$this->removeSQLI($id);
 		return mysqli_query($this->connection, $query) == 1;
 	}
+	public function removeAdmin($username) {
+	//	$query = 'delete from comment where id='.$this->removeSQLI($id);
+	//	return mysqli_query($this->connection, $query) == 1;
+	}
 
 	public function insertComment($name, $email, $message, $id, $ip) {
 		$query = 'INSERT INTO comment (nick, email, message, news_id, ip) VALUES (\''.
@@ -151,6 +170,15 @@ class DBAccess {
 			$this->removeSQLI($text).'", "'.
 			$this->removeSQLI($imgdescr).'")';
 		return mysqli_query($this->connection, $query) == 1;
+	}
+	public function insertAdmin($user, $email, $password) {
+	/*	$query = 'INSERT INTO news (title, image, hidden, text, imgdescr) VALUES ("'.
+			$this->removeSQLI($title).'", "'.
+			$image.'", '.
+			$hidden.', "'.
+			$this->removeSQLI($text).'", "'.
+			$this->removeSQLI($imgdescr).'")';
+	return mysqli_query($this->connection, $query) == 1;*/
 	}
 
 	public function insertBan($ip, $reason) {
