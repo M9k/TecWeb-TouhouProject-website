@@ -9,9 +9,7 @@ html, body {
 	width: 100%;
 }
 html {
-	background-color: #7e7e7e;
-	background-image: url("../images/back.jpg");
-	background-repeat: repeat;
+	background: #7e7e7e url("../images/back.jpg") fixed repeat;
 }
 body {
 	margin: auto;
@@ -48,7 +46,7 @@ input[type="submit"], input[type="reset"], button[type="submit"], button {
     background-color: #ffbebe;
     padding: 0.5pt;
     text-align: center;
-    min-width: 5em;
+    min-width: 5em;http://localhost/tecweb/index.php
     border: 1pt #2c2c2c solid;
     font-size: 1.0em;
 }
@@ -77,9 +75,9 @@ h3, dt {
 	left: -0.3%;
 	position: relative;
 	font-size: 1.4em;
+	clear: both;
 }
 #contenuto dt {
-	clear: both;
 	font-weight: bold;
 }
 #titolo {

@@ -27,7 +27,7 @@ require('locationbar.php');
 			</p>
 			<p>Touhou, oltre a queste caratteristiche, ne ha introdotte altre, alcune riprese da altri titoli mentre altre originali:</p>
 			<h3>Protagoniste</h3>
-			<p><img class="even" src="images/protagoniste.jpg" alt=""/>Al posto delle classiche navicelle spaziali od aerei si andranno a controllare delle ragazze, le principali sono <em xml:lang="en">Marisa Kirisame</em> e <em xml:lang="en">Reimu Hakurei</em>, sacerdotesse di un tempio shintoista.<br/>
+			<p><img src="images/protagoniste.jpg" alt=""/>Al posto delle classiche navicelle spaziali od aerei si andranno a controllare delle ragazze, le principali sono <em xml:lang="en">Marisa Kirisame</em> e <em xml:lang="en">Reimu Hakurei</em>, sacerdotesse di un tempio shintoista.<br/>
 			Anche i nemici affrontati non sono aerei o alieni, ma bensì vampiri, fate, demoni ed altre creature del folklore giapponese.</p>
 			<h3>Trama</h3>
 			<p>I <span xml:lang="en">Shoot'em up</span> sono rinomati per non avere nessuna trama, ci si ritrova a comandare una navicella spaziale e si prosegue sparando a tutto quello che sembra minaccioso e cattivo, ignorando totalmente le motivazioni delle proprie azioni.<br/>
