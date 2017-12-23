@@ -66,16 +66,19 @@ class DBAccess {
 		return $this->runQueryAndGetAll($query);
 	}
 
+	//ritorna username e email di tutti gli utenti tranne quelli esclusi
 	public function getListAdminsData($excludeUser)
 	{
 
 	}
 
+	//Ritorna l'email dell'amministratore passato
 	public function getAdminEmail($user)
 	{
 
 	}
 
+	//data una nuova email e una password, l'email viene aggiornata e la password viene modificata solamente se non vuota, ritorna true se non ci sono stati problemi
 	public function changeAdminData($user, $newEmail, $newPassword)
 	{
 
@@ -134,6 +137,8 @@ class DBAccess {
 		$query = 'delete from comment where id='.$this->removeSQLI($id);
 		return mysqli_query($this->connection, $query) == 1;
 	}
+
+	//Rimuovi l'amministratore indicato, se è l'ultimo rimasto non rimuoverlo e ritorna false, se è andato tutto bene ritorna true
 	public function removeAdmin($username) {
 	//	$query = 'delete from comment where id='.$this->removeSQLI($id);
 	//	return mysqli_query($this->connection, $query) == 1;
@@ -171,6 +176,8 @@ class DBAccess {
 			$this->removeSQLI($imgdescr).'")';
 		return mysqli_query($this->connection, $query) == 1;
 	}
+
+	//date le informazioni inserisce un nuovo admin, se qualcosa va storto (ad esempio username doppio) ritorna false, altrimenti true
 	public function insertAdmin($user, $email, $password) {
 	/*	$query = 'INSERT INTO news (title, image, hidden, text, imgdescr) VALUES ("'.
 			$this->removeSQLI($title).'", "'.
