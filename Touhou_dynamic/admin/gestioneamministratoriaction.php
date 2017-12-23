@@ -38,13 +38,21 @@ $error = null;
 				}
 			}
 		}
-		else
+		else if(isset($_POST['btnDelete']))
 		{
 			//ELIMINAZIONE
-			//TODO
-			// removeAdmin($username) 
-
+		
+			if(strcmp($_POST['btnDelete'], "") != 0)
+			{
+				if(!$dbConnection->removeAdmin($_POST['btnDelete']))
+					$error = "Errore durante l'eliminazione dell'account, per favore contattare un amministratore!";
+			}
+			else
+				$error = "Non è stato specificato nessun utente";
 		}
+		else
+			//RICHIESTA NON RICONOSCIUTA
+			$error = "Richiesta non comprensibile";
 
 		$dbConnection->closeDBConnection();
 	}

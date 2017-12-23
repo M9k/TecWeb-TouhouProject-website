@@ -150,7 +150,7 @@ class DBAccess {
 	//Rimuovi l'amministratore indicato, se è l'ultimo rimasto non rimuoverlo e ritorna false, se è andato tutto bene ritorna true
 	public function removeAdmin($username) {
 		if(mysqli_num_rows(mysqli_query($this->connection, 'SELECT * FROM admins')) > 1) {
-			$query = 'delete from admins where username = '.$this->removeSQLI($username);
+			$query = 'delete from admins where username = "'.$this->removeSQLI($username).'"';
 			return mysqli_query($this->connection, $query) == 1;
 		}	
 	}
