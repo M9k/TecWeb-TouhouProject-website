@@ -117,22 +117,22 @@
 	Non sono state utilizzate librerie esterne, come ad esempio jQuery, per non appesantire il sito web, visto che comunque il suo uso sarebbe stato marginale e non avrebbe aumentato sensibilmente la qualità dell'usufruizione da parte dell'utenza.
 	
 	\section{Suddivisione di struttura, presentazione e comportamento}
-	\subsection{Parte utente}
-	\subsubsection{Struttura}
-	dire che è separata e dire in quali file
-	\subsubsection{Presentazione}
-	stile ed immagini
-	\subsubsection{Comportamento}
-	JavaScript e PHP
-	\subsubsection{Caching}
+		\subsection{Parte utente}
+			\subsubsection{Struttura}
+			dire che è separata e dire in quali file
+			\subsubsection{Presentazione}
+			stile ed immagini
+			\subsubsection{Comportamento}
+			Il comportamento della pagina è stato gestito primia tramite JavaScript per gestire il controllo delle form per i commenti e per fornire la possibilità di ingrandire le immagini all'interno della pagina, dopo di che sono presenti i controlli tramite php per fare in modo che in caso della mancanza dell'interprete JavaScript il sito continui a funzionare corretamente. 
+			\subsubsection{Caching}
 	
 	\subsection{Parte amministratore}
-	\subsubsection{Struttura}
-	generazione di visualizzazione dei dati nel db
-	\subsubsection{Presentazione}
-	stile modificato rispetto alla parte utente, rimossi elementi inutili, niente immagini extra
-	\subsubsection{Comportamento}
-	PHP a manetta
+		\subsubsection{Struttura}
+		generazione di visualizzazione dei dati nel db
+		\subsubsection{Presentazione}
+		Lo stile delle pagine per l'amministrazione differisce rispetto alla parte utente per il fatto che sono stati rimossi gli elementi inutili in modo da renderla più veloce e fare spazio alle utilità necessarie all'amministrazione della pagina.
+		\subsubsection{Comportamento}
+		il comportamento delle pagine che conpongono la parte di amministrazione del sito è completamente gestita tramite php. E stato scelto di gestire l'intera sezione di amministrazione tramite php,questo perché in questa parte del sito accederà solo un numero limitato di persone che si presuppone siano dotati di conoscenze maggiori rispetto agli utenti della pagina, quindi si è deciso di preferire una maggiore compatibilità invece di inserire controlli in JavaScript che l'avrebbero ridotta.
 	
 	\chapter{Validazione e test}
 	\section{Descrizione della sessione}
