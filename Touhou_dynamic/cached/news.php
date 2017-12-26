@@ -22,39 +22,49 @@ if(!$update)
 	echo($contenuto);
 else
 {
+	$closeConnection = false;
 	if(!isset($dbConnection))
 	{
 		$dbConnection = new DBAccess();
-		$dbConnection->openDBConnection();
-		$closeDB = true;
+		$dbConnection->openDBConnection(true);
+		$closeConnection = true;
 	}
-	$news = $dbConnection->getListNews(false, 300, 3);
-	if($news != null)
+	if($dbConnection->failedConnection)
 	{
-		$contenuto = '<dl id="articleside">';
-
-		foreach($news as $notizia)
-		{
-			$contenuto .= '<dt><a href="article.php?id='.$notizia['id'].'">'.$notizia['title'].'</a></dt>';
-			$contenuto .= '<dd>';
-			if(isset($notizia['image']) && strcmp($notizia['image'], "") != 0)
-				$contenuto .= '<img class="newsimageside" src="images/news/'.$notizia['image'].'" alt="'.$notizia['imgdescr'].'"/>';
-			$contenuto .= '<div class="newsdataside">'.strftime('%e %B %Y',strtotime($notizia['data'])).'</div><div class="newstextside">'.$notizia['text'].'</div></dd>';
-		}
-		$contenuto .= '</dl>';
+		echo('<div id="errorarticleside">Problema di connessione al database, impossibile ottenere gli articoli</div>');
 	}
 	else
-		$contenuto = '<p id="errorarticleside">Nessun articolo disponibile</p>';
+	{
+		$news = $dbConnection->getListNews(false, 300, 3);
+		if($news != null)
+		{
+			$contenuto = '<dl id="articleside">';
 
-	if(isset($close) && $close == true)
+			foreach($news as $notizia)
+			{
+				$contenuto .= '<dt><a href="article.php?id='.$notizia['id'].'">'.$notizia['title'].'</a></dt>';
+				$contenuto .= '<dd>';
+				if(isset($notizia['image']) && strcmp($notizia['image'], "") != 0)
+					$contenuto .= '<img class="newsimageside" src="images/news/'.$notizia['image'].'" alt="'.$notizia['imgdescr'].'"/>';
+				$contenuto .= '<div class="newsdataside">'.strftime('%e %B %Y',strtotime($notizia['data'])).'</div><div class="newstextside">'.$notizia['text'].'</div></dd>';
+			}
+			$contenuto .= '</dl>';
+		}
+		else
+			$contenuto = '<p id="errorarticleside">Nessun articolo disponibile</p>';
+
+		if(isset($close) && $close == true)
+			$dbConnection->closeDBConnection();
+		
+		//stampo a video
+		echo($contenuto);
+
+		//salvo sul file - uso " per le path con gli spazi
+		file_put_contents($path_sidebar, $contenuto);
+		//aggiorno la data
+		file_put_contents($path_lastRefreshSidebar, time());
+	}
+	if($closeConnection)
 		$dbConnection->closeDBConnection();
-	
-	//stampo a video
-	echo($contenuto);
-
-	//salvo sul file - uso " per le path con gli spazi
-	file_put_contents($path_sidebar, $contenuto);
-	//aggiorno la data
-	file_put_contents($path_lastRefreshSidebar, time());
 }
 ?>

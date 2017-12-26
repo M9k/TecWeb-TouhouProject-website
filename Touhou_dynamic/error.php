@@ -12,7 +12,7 @@ if (session_status() == PHP_SESSION_NONE) { session_start(); }
 		<div id="contenuto">
 			<h2>Errore!</h2>
 			<p><?php if(isset($_SESSION['error'])) echo $_SESSION['error']; else echo('Si è verificato un errore inatteso, per favore contatta il supporto tecnico'); $_SESSION['error'] = null;?></p>
-			<img id="imageerr" src="images/err404.jpg" alt="Immagine di errore"/> <br/>
+			<img id="imageerr" src="images/err404.jpg" alt=""/> <br/>
 			<a href="index.php">Torna alla <span xml:lang="en">home</span> del sito</a> <br/>
 			<a href="javascript:history.back()">Ritorna alla pagina precedente</a>
 		</div>

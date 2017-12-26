@@ -1,9 +1,9 @@
-﻿-stile per la stampa
--fixare la lista index admin, magari qualche immagine decorativa?
+﻿-fixare la lista index admin, magari qualche immagine decorativa?
 -notizie (MATTEO)
 -finire i capitoli, trama, alt e span (SAMU)
 -news fake con commenti di test (MIRCO + MATTEO)
 -js sui form parte admin dove utili
+-rimuovere errore404 che non serve a niente
 
 -titolo pagina "popolarità"
 

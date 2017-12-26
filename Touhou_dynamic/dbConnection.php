@@ -6,15 +6,27 @@ class DBAccess {
 	const HOST_DB = 'localhost';
 	const USER = 'root';
 	const PASSWD = '';
-	const DATABASE = 'newstest';
+	const DATABASE = 'touhou';
+	public $connectionErrorPage = 'tecweb/errordb.xhtml';
 
-	public $connection;
-	public function openDBConnection() {
-		$this->connection = mysqli_connect(static::HOST_DB, static::USER, static::PASSWD, static::DATABASE);
+	private $connectionOpen = false;
+	public $failedConnection = false;
+	private $connection;
+
+	public function openDBConnection($ignoreError = false) {
+		if($this->failedConnection)
+			return false;
+		$this->connection = @mysqli_connect(static::HOST_DB, static::USER, static::PASSWD, static::DATABASE);
 		if(!$this->connection)
-			showError();
-		else
-			mysqli_query($this->connection, 'SET NAMES utf8');	
+		{
+			$this->failedConnection = true;
+			if(!$ignoreError)
+				$this->showError();
+			return false;
+		}
+		$this->connectionOpen = true;
+		mysqli_query($this->connection, 'SET NAMES utf8');
+		return true;
 	}
 
 	private function removeSQLI($string) {
@@ -23,7 +35,7 @@ class DBAccess {
 
 	private function showError()
 	{
-		header('Location: errordb.xhtml');
+		header('Location: /'.$this->connectionErrorPage);
 		die();
 	}
 
@@ -237,7 +249,9 @@ class DBAccess {
 	}
 
 	public function closeDBConnection() {
-		mysqli_close($this->connection);
+		if($this->connectionOpen)
+			mysqli_close($this->connection);
+		$this->connectionOpen = false;
 	}
 }
 

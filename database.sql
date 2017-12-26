@@ -107,9 +107,9 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `news_id`, `nick`, `email`, `message`, `data`, `ip`) VALUES
-(8, 18, 'Samuele', 'samu@samu.com', 'Sarebbe bello capire il giapponese...', '2017-12-10 18:05:00', 'unknow'),
-(9, 18, 'Matteo', 'mtodescato@tiscali.it', 'Sar&agrave; difficile finirlo anche ad easy &gt;_&lt;', '2017-12-10 18:07:57', 'unknow'),
-(10, 18, 'Mirco', 'mcailotto96@gmail.com', 'Mio al day one!!!', '2017-12-10 18:09:38', 'unknow');
+(8, 0, 'Samuele', 'samu@samu.com', 'Sarebbe bello capire il giapponese...', '2017-12-10 18:05:00', 'unknow'),
+(9, 0, 'Matteo', 'mtodescato@tiscali.it', 'Sar&agrave; difficile finirlo anche ad easy &gt;_&lt;', '2017-12-10 18:07:57', 'unknow'),
+(10, 0, 'Mirco', 'mcailotto96@gmail.com', 'Mio al day one!!!', '2017-12-10 18:09:38', 'unknow');
 
 -- --------------------------------------------------------
 
@@ -132,7 +132,7 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `hidden`, `data`, `text`, `image`, `imgdescr`) VALUES
-(18, 'Pubblicato il nuovo Touhou su Steam!', 0, '2017-12-10 18:02:31', 'È appena uscito il nuovo capitolo di Touhou, il 16, su <span xml:lang=\"en\">Steam</span>, piattaforma digitale di distribuzione di videogiochi famosa in tutto il mondo.<br/>\r\nIl gioco, denominato <span xml:lang=\"en\">Hidden Star in Four Seasons</span>, purtroppo è disponibile unicamente in lingua inglese, ma non escluderemo una modifica del gioco che lo renderà disponibile anche in inglese realizzata da qualche fan.<br/>\r\nPurtroppo escludiamo una traduzione in italiano, in quanto tutti i precedenti titoli non sono mai stati localizzati.', 'touhou_steam.jpg', 'Immagine raffigurante la pagina di Steam che vende Touhou');
+(0, 'Pubblicato il nuovo Touhou su Steam!', 0, '2017-12-10 18:02:31', 'È appena uscito il nuovo capitolo di Touhou, il 16, su <span xml:lang=\"en\">Steam</span>, piattaforma digitale di distribuzione di videogiochi famosa in tutto il mondo.<br/>\r\nIl gioco, denominato <span xml:lang=\"en\">Hidden Star in Four Seasons</span>, purtroppo è disponibile unicamente in lingua inglese, ma non escluderemo una modifica del gioco che lo renderà disponibile anche in inglese realizzata da qualche fan.<br/>\r\nPurtroppo escludiamo una traduzione in italiano, in quanto tutti i precedenti titoli non sono mai stati localizzati.', 'touhou_steam.jpg', 'Immagine raffigurante la pagina di Steam che vende Touhou');
 
 -- --------------------------------------------------------
 
