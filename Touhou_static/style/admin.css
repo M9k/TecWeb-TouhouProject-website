@@ -1,0 +1,22 @@
+#contenuto {
+	margin: auto;
+	width: 98%;
+	padding: 1%;
+	position: relative;
+	min-height: 10em;
+}
+
+#contenuto div.imageview img {
+	width: 30%;
+	max-height: 60%;
+	margin: 2pt 4pt;
+}
+#contenuto ul {
+    list-style: inside;
+}
+
+@media handheld, screen and (max-width: 680px), only screen and (max-device-width:680px) {
+	#contenuto {
+		width: 100%;
+	}
+}
