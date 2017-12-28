@@ -9,7 +9,7 @@ class DBAccess {
 	const DATABASE = 'touhou';
 	public $connectionErrorPage = 'tecweb/errordb.xhtml';
 
-	private $connectionOpen = false;
+	public $connectionOpen = false;
 	public $failedConnection = false;
 	private $connection;
 

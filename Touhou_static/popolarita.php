@@ -84,31 +84,31 @@ Successivamente si mostrano personaggi principali del sesto videogioco, in ordin
 			<p>Essendo la licenza di Touhou molto permissiva riguardo il riutilizzo delle tematiche del gioco, sono stati sviluppati <strong>moltissimi giochi non ufficiali riguardanti Touhou</strong>, di quasi tutti i generi, compresi <span xml:lang="en">action</span>, giochi di corse, giochi di carte, picchiaduro, <acronym xml:lang="en" title="Role Play Gaming">rpg</acronym> e <span xml:lang="en">puzzle</span>.<br/>
 Uno dei più popolari è sicuramente <strong>Koumajou Densetsu <span xml:lang="en">Scarlet Symphony</span></strong>, reinterpretazione del gioco <em xml:lang="en">Castlevania</em> del 1986, anch'esso famoso per la sua difficoltà, che mantiene un <span xml:lang="en">gameplay</span> abbastanza fedele all'originale ma adatta ambientazioni e trama a quella di Touhou, con uno stile grafico particolarmente gotico. 
 			</p>
-			</div>
-			<div id="sidebar">
-				<dl title="barra laterale">
-					<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
-					<dd class="ddsidebar"><?php include('cached/news.php'); ?></dd>
-					<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
-					<dd class="ddsidebar">
-			<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
-			<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>
-			Clicka sull'icona ed aggiungilo ai tuoi segnalibri!</p></dd>
-				</dl>
-			</div>
-			<div id="jumptotop">
-				<a href="#header">Torna in cima</a>
-			</div>
-			<div id="footer">
-				<p>
-					Sito web creato da Bisello Samuele, Cailotto Mirco, Todescato Matteo.<br/>
-					Tutti i diritti riservati ai rispettivi proprietari, tutti i diritti sui contenuti appartengono ai rispettivi proprietari.<br/>
-					Il sito non si prefigge nessun reale obbiettivo e la pubblicazione è da ritenere finalizzata unicamente come esempio di sito <span xml:lang="en">web</span> sviluppato per il corso di tecnologie <span xml:lang="en">web</span>.<br/>
-					<a id="linkadmin" href="admin/">Clicka qui per accedere all'area di amministrazione</a>.
-				</p>
-			</div>
 		</div>
-	</body>
+		<div id="sidebar">
+			<dl title="barra laterale">
+				<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
+				<dd class="ddsidebar"><?php include('cached/news.php'); ?></dd>
+				<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
+				<dd class="ddsidebar">
+					<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
+					<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>
+					Clicka sull'icona ed aggiungilo ai tuoi segnalibri!</p>
+				</dd>
+			</dl>
+		</div>
+		<div id="jumptotop">
+			<a href="#header">Torna in cima</a>
+		</div>
+	</div>
+	<div id="footer">
+		<p>
+			Sito web creato da Bisello Samuele, Cailotto Mirco, Todescato Matteo.<br/>
+			Tutti i diritti riservati ai rispettivi proprietari, tutti i diritti sui contenuti appartengono ai rispettivi proprietari.<br/>
+			Il sito non si prefigge nessun reale obbiettivo e la pubblicazione è da ritenere finalizzata unicamente come esempio di sito <span xml:lang="en">web</span> sviluppato per il corso di tecnologie <span xml:lang="en">web</span>.<br/>
+			<a id="linkadmin" href="admin/">Clicka qui per accedere all'area di amministrazione</a>.
+		</p>
+	</div>
+</body>
 </html>
-
 

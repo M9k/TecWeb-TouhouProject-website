@@ -47,7 +47,7 @@
 	<div id="locationbar">
 		Home &gt;&gt;&gt; Gameplay
 	</div>
-<div id="contenitore">
+	<div id="contenitore">
 		<div id="contenuto">
 			<h2>Gameplay</h2>
 
@@ -83,31 +83,34 @@
 			I "<span xml:lang="en">graze</span>", cioè gli sfioramenti, rappresentano l'azione di lasciare passare dei proiettili sul corpo della protagonista senza far colpire l'<span xml:lang="en">hitbox</span>, questa pratica risulta necessaria nelle difficoltà più avanzate in quanto il gran numero di proiettili rende impossibile schivarli con ampio margine.<br/>
 			Questa azione fa aumentare il punteggio del giocatore, in questo modo anche alle difficoltà più facili si spinge il giocatore a correre dei rischi extra a beneficio del punteggio finale.</p>
 			<h3 xml:lang="en">Point of collection</h3>
-			<p>Introdotto dal sesto capitolo del <span xml:lang="en">brand</span>, indica la raccolta automatica di tutti i bonus presenti su schermo nel caso si porti la protagonista nella parte superiore dello schermo, questo ovviamente comporta un elevato rischio, in quanto ci si avvicina all'area nella quale appaiono i nemici.</p>
+			<p>Introdotto dal sesto capitolo del <span xml:lang="en">brand</span>, indica la raccolta automatica di tutti i bonus presenti su schermo nel caso si porti la protagonista nella parte superiore dello schermo, questo ovviamente comporta un elevato rischio, in quanto ci si avvicina all'area nella quale appaiono i nemici.
+			</p>
 		</div>
-			<div id="sidebar">
-				<dl title="barra laterale">
-					<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
-					<dd class="ddsidebar"><?php include('cached/news.php'); ?></dd>
-					<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
-					<dd class="ddsidebar">
-			<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
-			<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>
-			Clicka sull'icona ed aggiungilo ai tuoi segnalibri!</p></dd>
-				</dl>
-			</div>
-			<div id="jumptotop">
-				<a href="#header">Torna in cima</a>
-			</div>
-			<div id="footer">
-				<p>
-					Sito web creato da Bisello Samuele, Cailotto Mirco, Todescato Matteo.<br/>
-					Tutti i diritti riservati ai rispettivi proprietari, tutti i diritti sui contenuti appartengono ai rispettivi proprietari.<br/>
-					Il sito non si prefigge nessun reale obbiettivo e la pubblicazione è da ritenere finalizzata unicamente come esempio di sito <span xml:lang="en">web</span> sviluppato per il corso di tecnologie <span xml:lang="en">web</span>.<br/>
-					<a id="linkadmin" href="admin/">Clicka qui per accedere all'area di amministrazione</a>.
-				</p>
-			</div>
+		<div id="sidebar">
+			<dl title="barra laterale">
+				<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
+				<dd class="ddsidebar"><?php include('cached/news.php'); ?></dd>
+				<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
+				<dd class="ddsidebar">
+					<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
+					<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>
+					Clicka sull'icona ed aggiungilo ai tuoi segnalibri!</p>
+				</dd>
+			</dl>
 		</div>
-	</body>
+		<div id="jumptotop">
+			<a href="#header">Torna in cima</a>
+		</div>
+	</div>
+	<div id="footer">
+		<p>
+			Sito web creato da Bisello Samuele, Cailotto Mirco, Todescato Matteo.<br/>
+			Tutti i diritti riservati ai rispettivi proprietari, tutti i diritti sui contenuti appartengono ai rispettivi proprietari.<br/>
+			Il sito non si prefigge nessun reale obbiettivo e la pubblicazione è da ritenere finalizzata unicamente come esempio di sito <span xml:lang="en">web</span> sviluppato per il corso di tecnologie <span xml:lang="en">web</span>.<br/>
+			<a id="linkadmin" href="admin/">Clicka qui per accedere all'area di amministrazione</a>.
+		</p>
+	</div>
+</body>
 </html>
+
 

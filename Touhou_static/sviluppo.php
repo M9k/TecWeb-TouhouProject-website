@@ -72,32 +72,32 @@
 				<img src="images/MountainofFaith.jpg" class="even" alt=""/>
 				<p>Le successive due generazioni sono caratterizzate rispettivamente da un nuovo motore grafico, a passo con i tempi e realizzato nel 2007 per il 10° capitolo, <em xml:lang="en">Mountain of Faith</em> (<span xml:lang="ja">風神録</span>), e dalla distribuzione in digitale anche fuori dal Giappone, iniziata nel 2013 con il 14° capitolo, <em xml:lang="en">Double Dealing Character</em> (<span xml:lang="ja">輝針城</span>)<br/>
 	L'ultimo titolo, <em xml:lang="en">Hidden Star in Four Seasons</em> (<span xml:lang="ja">天空璋</span>), il 16° della serie, è stato rilasciato in Giappone il 11 Agosto 2017, mentre una distribuzione globale, ma unicamente in lingua giapponese, è attesa per il 18 novembre attraverso la piattaforma di distribuzione digitale <em xml:lang="en">Steam</em>.</p></dd>
-				</dl>	
-			</div>
-			<div id="sidebar">
-				<dl title="barra laterale">
-					<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
-					<dd class="ddsidebar"><?php include('cached/news.php'); ?></dd>
-					<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
-					<dd class="ddsidebar">
-			<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
-			<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>
-			Clicka sull'icona ed aggiungilo ai tuoi segnalibri!</p></dd>
-				</dl>
-			</div>
-			<div id="jumptotop">
-				<a href="#header">Torna in cima</a>
-			</div>
-			<div id="footer">
-				<p>
-					Sito web creato da Bisello Samuele, Cailotto Mirco, Todescato Matteo.<br/>
-					Tutti i diritti riservati ai rispettivi proprietari, tutti i diritti sui contenuti appartengono ai rispettivi proprietari.<br/>
-					Il sito non si prefigge nessun reale obbiettivo e la pubblicazione è da ritenere finalizzata unicamente come esempio di sito <span xml:lang="en">web</span> sviluppato per il corso di tecnologie <span xml:lang="en">web</span>.<br/>
-					<a id="linkadmin" href="admin/">Clicka qui per accedere all'area di amministrazione</a>.
-				</p>
-			</div>
+			</dl>	
 		</div>
-	</body>
+		<div id="sidebar">
+			<dl title="barra laterale">
+				<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
+				<dd class="ddsidebar"><?php include('cached/news.php'); ?></dd>
+				<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
+				<dd class="ddsidebar">
+					<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
+					<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>
+					Clicka sull'icona ed aggiungilo ai tuoi segnalibri!</p>
+				</dd>
+			</dl>
+		</div>
+		<div id="jumptotop">
+			<a href="#header">Torna in cima</a>
+		</div>
+	</div>
+	<div id="footer">
+		<p>
+			Sito web creato da Bisello Samuele, Cailotto Mirco, Todescato Matteo.<br/>
+			Tutti i diritti riservati ai rispettivi proprietari, tutti i diritti sui contenuti appartengono ai rispettivi proprietari.<br/>
+			Il sito non si prefigge nessun reale obbiettivo e la pubblicazione è da ritenere finalizzata unicamente come esempio di sito <span xml:lang="en">web</span> sviluppato per il corso di tecnologie <span xml:lang="en">web</span>.<br/>
+			<a id="linkadmin" href="admin/">Clicka qui per accedere all'area di amministrazione</a>.
+		</p>
+	</div>
+</body>
 </html>
-
 

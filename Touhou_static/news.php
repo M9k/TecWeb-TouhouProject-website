@@ -1,16 +1,53 @@
 <?php require_once __DIR__.DIRECTORY_SEPARATOR."dbConnection.php"; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<?php 
-$title = "News - Touhou Italia";
-$location = 'Home &gt;&gt;&gt; News';
-require('head.php');
-?>
-	<body>
-<?php
-require('header.php');
-require('locationbar.php'); 
-?>
+<head>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+		<meta name="title" content="News - Touhou Italia"/>
+		<meta name="description" content="Fan club italiano di Touhou"/>
+		<meta name="keywords" content="Touhou, Tou Hou, fan club, fanclub, italia, italiano, bullethell, bullet hell"/>
+		<meta name="language" content="ïtalian it"/>
+		<meta name="Author" content="Cailotto Mirco"/>
+
+		<link rel="icon" type="image/png" href="images/favicon.png"/>
+		<link type="text/css" rel="stylesheet" href="style/style.css" media="handheld, screen"/>
+		<link type="text/css" rel="stylesheet" href="style/tablet.css" media="handheld, screen and (max-width: 1024px), only screen and (max-device-width:1024px)"/>
+		<link type="text/css" rel="stylesheet" href="style/mobile.css" media="handheld, screen and (max-width: 680px), only screen and (max-device-width:600px)"/>
+		<link type="text/css" rel="stylesheet" href="style/print.css" media="print"/>
+
+		<link rel="alternate" href="rss.php" title="Ricevi le notizie tramite RSS" type="application/rss+xml"/>
+
+		<script type="text/javascript" src="script/script.js"></script>
+	<title>News - Touhou Italia</title>
+</head>
+<body>
+	<div id="subheader">
+		<div id="header">
+			<div id="titolo">
+				<h1>Touhou Project</h1>
+				<div id="titoletto">Sito di informazione italiano</div>
+			</div>
+			<div id="skipmenu">
+				<a href="#contenuto">Vai al contenuto</a>
+			</div>
+			<div id="menudiv">
+				<ul id="menu">
+					<li id="menuvoice">Menu</li>
+					<li><a href="index.php"><span xml:lang="en">Home</span></a></li>
+					<li class="disable"><span xml:lang="en">News</span></li>
+					<li><a href="gameplay.php"><span xml:lang="en">Gameplay</span></a></li>
+					<li><a href="sviluppo.php">Sviluppo</a></li>
+					<li><a href="popolarita.php">Popolarità</a></li>
+					<li><a href="personaggi.php">Personaggi</a></li>
+					<li><a href="capitoli.php">Capitoli</a></li>
+				</ul> 
+			</div>
+		</div>
+	</div>
+	<div id="locationbar">
+		Home &gt;&gt;&gt; News
+	</div>
 		<div id="contenitore">
 			<div id="contenuto">
 				<h2>News</h2>
@@ -51,10 +88,30 @@ if($index > 0)
 ?>
 			</div>
 		</div>
-<?php 
-require('sidebar.php');
-require('footer.php');
-?>
+		<div id="sidebar">
+			<dl title="barra laterale">
+				<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
+				<dd class="ddsidebar"><?php include('cached/news.php'); ?></dd>
+				<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
+				<dd class="ddsidebar">
+					<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
+					<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>
+					Clicka sull'icona ed aggiungilo ai tuoi segnalibri!</p>
+				</dd>
+			</dl>
 		</div>
-	</body>
+		<div id="jumptotop">
+			<a href="#header">Torna in cima</a>
+		</div>
+	</div>
+	<div id="footer">
+		<p>
+			Sito web creato da Bisello Samuele, Cailotto Mirco, Todescato Matteo.<br/>
+			Tutti i diritti riservati ai rispettivi proprietari, tutti i diritti sui contenuti appartengono ai rispettivi proprietari.<br/>
+			Il sito non si prefigge nessun reale obbiettivo e la pubblicazione è da ritenere finalizzata unicamente come esempio di sito <span xml:lang="en">web</span> sviluppato per il corso di tecnologie <span xml:lang="en">web</span>.<br/>
+			<a id="linkadmin" href="admin/">Clicka qui per accedere all'area di amministrazione</a>.
+		</p>
+	</div>
+<?php $dbConnection->closeDBConnection(); ?>
+</body>
 </html>

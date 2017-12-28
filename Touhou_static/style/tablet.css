@@ -16,12 +16,14 @@ h1 {
 	text-indent: 0;
 	white-space: normal;
 	overflow: visible;
-	font-size: 1.2em;
-	text-align: center;
-	background-color: #980000;
-	border: 2pt solid #bbb;
-	padding: 0.8% 0.9%;
 }
 #jumptotop a {
-	color: #eee;
+	display: block;
+	color: #000;
+	text-decoration: none;
+	background-color: #ff0000;
+	border: 2pt solid #838383;
+	padding: 10pt 15pt;
+	text-align: center;
+	font-size: 1.2em;
 }
