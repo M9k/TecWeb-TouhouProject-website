@@ -71,8 +71,8 @@
 		\subsection{Utente che cerca approfondimenti}
 		Gli utenti che ricercano approfondimenti riguardo al franchise usualmente conoscono e giocano già a Touhou, quindi solitamente navigano utilizzando un pc, ma dato che Touhou è un videogioco 2D che non richiede un hardware potente non si può presupporre l'utilizzo di un pc di ultima generazione.\\
 		Usualmente questi utenti hanno una buona conoscenza della lingua inglese e una conoscenza basilare del giapponese, ad esempio riescono a leggere i caratteri hiragana e riconoscono alcuni termini.\\
-		Questi utenti cercheranno soprattutto degli approfondimenti riguardanti i molteplici personaggi, dettagli su alcuni capitoli della serie oppure delle informazioni recenti riguardanti il franchise.\\
-		A questa tipologia utente è mirata l'ultima parte della home del sito, in quanto sicuramente sarebbero interessati a degli eventi riguardanti Touhou e quindi gli si informa di questa intenzione.
+		Questi utenti cercheranno soprattutto degli approfondimenti riguardanti i molteplici personaggi oppure delle informazioni recenti riguardanti i capitoli del franchise.\\
+		A questa tipologia utente è dedicata anche l'ultima parte della home del sito, in quanto sicuramente sarebbero interessati a degli eventi riguardanti Touhou e quindi gli si informa di questa intenzione.
 	
 	\section{Progettazione della base informativa}
 		Il sito web si pone l'obbiettivo di veicolare diversi contenuti, alcuni statici ed altri dinamici.
@@ -95,12 +95,14 @@
 		
 		\subsubsection{Capitoli}
 		L'ultima parte del sito elencherà i capitoli ufficiali del videogioco, correlati dall'immagine di copertina, il titolo tradotto in inglese in italiano ed altre informazioni che possono risultare interessanti agli utenti del sito.\\
-		Questa parte sarà statica perché tra un capitolo e l'altro solitamente non trascorre molto tempo, quindi si vuole lasciare all'amministratore la possibilità di inserirne di nuovi, o di cancellare quelli che presentavano informazioni errate.
+		Questa parte sarà dinamica in quanto i capitoli escono relativamente di frequente, quindi si vuole lasciare all'amministratore la possibilità di inserirne di nuovi, o di cancellare quelli che presentano informazioni errate o non aggiornate.
 	
 	\section{Strutturazione del sito}
 	\subsection{Impaginazione}
-	Il sito utlizza un layout a tre pannelli,la sidebar è posizionata sul destro lato perché secondaria, quindi nella lettura europea da sinistra a destra sarà notata dopo il contenuto. Vista la sua importanza secondaria nella versione mobile del sito la sidebar viene spostata al di sotto del contenuto. IL menu del sito presenta un interfaccia a schede, che nella vesione per dispositivi mobili viene sostituita da un menu ad hamburgher. Nel footer del sito sono presenti i crediti e la licenza del sito con l'accesso per l'area di amministrazione.
-	
+	Il sito utlizza un layout a tre pannelli nella versione per dispositivi desktop.\\
+	La sidebar, che contiene informazioni aggiuntive, è posizionata sul destro lato perché secondaria, quindi nella lettura europea da sinistra a destra sarà notata dopo il contenuto, e nella versione tablet o mobile sarà posizionata sotto il contenuto.\\
+	Il menu del sito presenta un navigazione a schede, che nella versione per dispositivi mobili viene sostituita da un menu ad hamburger.\\
+	Nel footer del sito sono presenti i crediti, la licenza dei contenuti del sito con l'accesso per l'area di amministrazione.
 	
 	\chapter{Realizzazione}
 	\section{Descrizione della sessione}
@@ -123,9 +125,13 @@
 			\subsubsection{Presentazione}
 			stile ed immagini
 			\subsubsection{Comportamento}
-			Il comportamento della pagina è stato gestito primia tramite JavaScript per gestire il controllo delle form per i commenti e per fornire la possibilità di ingrandire le immagini all'interno della pagina, dopo di che sono presenti i controlli tramite php per fare in modo che in caso della mancanza dell'interprete JavaScript il sito continui a funzionare corretamente. 
+			Il comportamento della pagina è stato gestito primia tramite JavaScript per gestire il controllo delle form per i commenti e per fornire la possibilità di ingrandire le immagini all'interno della pagina, dopo di che sono presenti i controlli tramite php per fare in modo che in caso della mancanza dell'interprete JavaScript il sito continui a funzionare corretamente.
+			Tutto il codice PHP dedito alla esecuzioni di azioni, cioè l'aggiunta dei commenti, è stato completamente diviso da quello utilizzato per la visualizzazione dei contenuti.\\
 			\subsubsection{Caching}
-			parlare del caching
+			L'elenco delle notizie presenti sulla sidebar, limitate a 3 e con un breve inizio del relativo testo, vengono gestite attraverso un semplice sistema di cache.\\
+			Il codice HTML generato attraverso la query al database viene salvato su un file per essere riutilizzato alle successive richieste, se la versione salvata risulta troppo poco recente viene rigenerata.\\
+			Questo sistema è stato implementato per ridurre l'accesso al database, in quanto ogni pagina mostra la sidebar, che comporterebbe a un numero elevato di richieste inutili, e fornire una informazioni datata di qualche minuto non compromette le funzionalità.\\
+			In aggiunta nella parte di amministrazione è possibili richiedere la pulizia della cache, per forzare il sito a rigenerarla alla successiva richiesta, da utilizzare ad esempio all'aggiunta di una nuova notizia se la si desidera far apparire subito.
 	
 	\subsection{Parte amministratore}
 		\subsubsection{Struttura}
@@ -134,8 +140,10 @@
 		Lo stile delle pagine per l'amministrazione differisce rispetto alla parte utente per il fatto che sono stati rimossi gli elementi inutili in modo da renderla più veloce e fare spazio alle utilità necessarie all'amministrazione della pagina.
 		\subsubsection{Comportamento}
 		La parte admin si caratterizza per un minore utilizzo dei controlli da parte di JavaScript e PHP sui form, in quanto l'amministratore ha la possibilità di inserire tag html o lasciare dei campi vuoti se lo desidera.\\
-		Questo è per fare fronte ad una mancanza di un editor integrato di testo che consenta una scrittura semplificata dei file html, in quanto svilupparlo sarebbe stato troppo oneroso per il progetto.\\
-		Ovviamente tutti i controlli relativi al SQLInjection sono presenti, per evitare che l'amministratore inconsapevolmente generi errori all'interno del database.
+		Questo è per fare fronte ad una mancanza di un editor integrato di testo che consenta una scrittura semplificata dei file HTML, in quanto svilupparlo sarebbe stato troppo oneroso per il progetto.\\
+		Ovviamente tutti i controlli relativi al SQLInjection sono presenti, per evitare che l'amministratore inconsapevolmente generi errori all'interno del database.\\
+		Tutto il codice PHP dedito alla esecuzioni di azioni è stato completamente diviso da quello utilizzato per la visualizzazione dei contenuti, tranne per l'index della pagina di amministrazione.\\
+		La pagina che richiede il login della parte di amministrazione e la visualizzazione della pagina introduttiva è la medesima, questo per consentire il salvataggio di un segnalibro da parte degli amministratori, che verranno portati alla pagina di login nel caso non siano stati autenticati o, in caso contrario, direttamente alla pagina principale di amministrazione, senza bisogno di ulteriori redirect.
 	
 	\chapter{Validazione e test}
 		\section{Descrizione della sessione}
@@ -153,10 +161,15 @@
 					\item Waterfox
 					\item Edge
 					\item Chromium 64
-					\item Firefox 3
+					\item Mozilla Firefox 3
 					\item Internet Explorer 11
 				\end{itemize}
-
+				Mozilla Firefox 3 non visualizza correttamente lo sfondo nero in semitrasparenza del menu, quindi seleziona il precedente stile che ritiene valido che è uno sfondo nero opaco, questo peggiora il rendimento grafico del sito ma non ne compromette l'uso.\\
+				Altri problemi riscontrati in Firefox 3 sono una dimensione errata dell'immagine nella testata e l'assenza dei bordi arrotondati, anche questi aspetti rovinano leggermente il rendimento grafico ma non compromettono le funzionalità, in quanto tutti i contenuti risultano perfettamente fruibili dall'utente.\\
+				Un ultimo appunto riguardante Firefox 3 è l'incompatibilità con parte del codice JavaScript, solamente il controllo della compilazione dei campi di testo funziona correttamente.\\
+				Internet Explorer 11, con la modalità Explorer 7, riscontra lo stesso problema dei bordi e dello sfondo del menu, mentre renderizza correttamente l'immagine nella testata.\\
+				Non sono stati rilevati altri problemi o incompatibilità con i browser sopra menzionati, nemmeno al variare della grandezza del font, dello zoom della pagina, della dimensione della finestra e nella disattivazione di JavaScript.
+				
 				\subsection{GNU/Linux Fedora 27}
 				Sono state testate le risoluzioni di 1800p e 2160p con i browsers:
 				\begin{itemize}
@@ -175,15 +188,19 @@
 				\end{itemize}
 
 				\subsection{FreeBSD 11}
-				\`{E} stata testata con il browser Lynx utilizzando la console.
+				\`{E} stata testata con il browser Lynx utilizzando la console senza x11, quindi da terminale, e con x11, quindi da una finestra di emulazione del terminale di dimensione variabile.
 
 				\subsection{Dispositivi mobili}
 				Di seguito sono elencati i vari dispositivi mobili sui quali il sito è stato testo
 				\begin{itemize}
 				\item Testato su Xiaomi Redmi 4x con Miui browser, Firefox Rocket e Waterfox con una risoluzione di 720p
-				\item Kindle touch 7' generazione con una risoluzione di 800x600 e con il browser sperimentale presente all'interno di esso.
+				\item Kindle touch 7' generazione con schermo e-ink in bianco e nero, con una risoluzione di 800x600 e con il browser sperimentale fornito di default.
 				\end{itemize} 
 		\section{Test con diverse impostazioni utente}
+			\subsection{Nome Sottosezione}
+		\section{Colori vari etc etc}
+			\subsection{Nome Sottosezione}
+		\section{Lynx e come potrebbe essere se letto}
 			\subsection{Nome Sottosezione}
 		\section{Test automatici di accessibilità}
 			\subsection{Nome Sottosezione}
@@ -193,13 +210,13 @@
 			In questa parte del documento sono elencati tutte le decisioni prese per quanto riguarda gli aspetti ambigui presenti nel sito\\
 		\section{Utilizzo della lingua straniera}
 			\subsection{Furigana}
-				A supporto dei termini scritti in kanji, come si è soliti fare nei siti che presentano termini giapponesi mirati ad adolescenti o a stranieri che potrebbero avere una discreta conoscenza del giapponese, sono stati inseriti i furigana, cioè la pronuncia del termine in caratteri hiragana.
-				Questo avviene anche in Giappone in quanto i kanji sono molteplici (si calcola circa 18'000), quindi è frequente che i lettori ne trovino di sconosciuti, quindi li si aiuta inserendo a lato la pronuncia nel sillabario utilizzato per i termini giapponesi, cioè l'hiragana.
+				A supporto dei termini scritti in kanji, come si è soliti fare nei siti che presentano termini giapponesi mirati ad adolescenti o a stranieri che potrebbero avere una discreta conoscenza del giapponese, sono stati inseriti i furigana, cioè la pronuncia del termine in caratteri hiragana.\\
+				Questo avviene anche in Giappone in quanto i kanji sono molteplici (si calcola circa 18'000), quindi è frequente che i lettori ne trovino di sconosciuti, quindi li si aiuta inserendo a lato la pronuncia nel sillabario utilizzato per i termini giapponesi, cioè l'hiragana.\\
 				A volte, se il termine è di origine straniera, il furigana potrebbe presentarsi con caratteri del sillabario katanaka, ma questo avviene di rado e non è presente nel nostro sito, in quanto preferiamo presentare le parole inglesi direttamente in alfabeto latino. 
 			\subsection{Traslitterazioni}
-				Le traslitterazioni dalla lingua giapponese sono spesso imprecise e ci sono controversie sulla pronuncia persino nella stessa lingua giapponese, quindi si è scelto, in caso di screen reader, di lasciare leggere le parole traslitterate usando l'alfabeto italiano, che si rivela anche più preciso rispetto all'inglese nella lettura dei termini.
-				Alcune parole giapponesi, che si rilevano essere lette più fedelmente dalla pronuncia inglese, sono state marcate come tali.
-				Se le parole traslitterate fossero state marcate come lingua giapponese i termini sarebbero stati considerati in alfabeto romaji (romano, cioè l'alfabeto latino), e quindi traslitterati nuovamente in katakana per poi essere letti usando la lingua giapponese, che avrebbe portato a pronunce errate.
+				Le traslitterazioni dalla lingua giapponese sono spesso imprecise e ci sono controversie sulla pronuncia persino nella stessa lingua giapponese, quindi si è scelto, in caso di screen reader, di lasciare leggere le parole traslitterate usando l'alfabeto italiano, che si rivela anche più preciso rispetto all'inglese nella lettura dei termini.\\
+				Alcune parole giapponesi, che si rivelano essere lette più fedelmente dalla pronuncia inglese, sono state marcate come tali.\\
+				Se le parole traslitterate fossero state marcate come lingua giapponese i termini sarebbero stati considerati in alfabeto "romaji" (romano, cioè l'alfabeto latino), e quindi traslitterati nuovamente in katakana per poi essere letti usando la lingua giapponese, che avrebbe portato a pronunce errate, in quanto non c'è una corrispondenza precisa tra l'alfabeto e il sillabario.
 			\subsection{Termini errati}
 				Nel sito appaiono termini con delle lettere maiuscole poste senza rispettare la grammatica inglese, in quei casi si è trascritto il termine esattamente come appare nella documentazione ufficiale, all'interno del videogioco o nei file dello stesso, alcuni esempi sono "Nights of Night" o "U.N. Owen Was Her", in questo ultimo caso non ci è dato sapere cosa significhi U.N., si pensa sia un riferimento a Una Nancy Owen, ma non essendoci conferme ufficiali è stato preferito ometterlo.\\
 			

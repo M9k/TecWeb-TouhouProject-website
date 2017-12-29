@@ -114,6 +114,7 @@ h3, dt {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	background-color: #000; 
 	background-color: #0009;
 }
 #menu li {

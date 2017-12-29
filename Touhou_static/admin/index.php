@@ -12,7 +12,7 @@ $dbConnection = new DBAccess();
 $dbConnection->openDBConnection();
 
 if(isset($_POST['username']) && isset($_POST['password']))
-	if($dbConnection->adminLogIn( $_POST['username'], $_POST['password'])) //linea dove avviene il controllo accesso
+	if($dbConnection->adminLogIn( $_POST['username'], $_POST['password'])) //linea dove avviene il controllo dell'accesso
 	{
 		$_SESSION['login'] = true;
 		$_SESSION['username'] = $_POST['username'];
