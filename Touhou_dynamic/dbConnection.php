@@ -56,7 +56,7 @@ class DBAccess {
 		$dataDB = mysqli_fetch_row($result);
 		return password_verify($password, $dataDB[0]);
 	}
-       	 
+
 	public function getListChapters() {
 		return $this->runQueryAndGetAll('Select * from chapters order by year');
 	}
@@ -71,9 +71,9 @@ class DBAccess {
 	   	if(!$withHidden)
 			$query.= 'where hidden = false ';
 		$query.= ' ORDER BY data desc ';
-		if($entryLimit != false && $fromEntry == false) //prendo i primi TOT		
+		if($entryLimit != false && $fromEntry == false) //prendo i primi TOT
 			$query.= ' LIMIT '.$this->removeSQLI($entryLimit);
-		if($entryLimit != false && $fromEntry != false) //prendo da TOT per TOT		
+		if($entryLimit != false && $fromEntry != false) //prendo da TOT per TOT
 			$query.= ' LIMIT '.$this->removeSQLI($fromEntry).', '.$this->removeSQLI($entryLimit);
 		return $this->runQueryAndGetAll($query);
 	}
@@ -102,7 +102,7 @@ class DBAccess {
 		//	die($query);
 			return mysqli_query($this->connection, $query) == 1;
 		}
-				 
+
 	}
 
 	public function getListComments($idNews, $limit=false, $reverseOrder=false) {
@@ -129,7 +129,7 @@ class DBAccess {
 		$result = mysqli_query($this->connection, $query) or $this->showError();
 		return mysqli_num_rows($result);
 	}
-	
+
 	public function getIpFromComment($idpost) {
 		$query = 'SELECT ip FROM comment where id = '.
 			$this->removeSQLI($idpost);
@@ -141,7 +141,7 @@ class DBAccess {
 	public function getArticle($id) {
 		return $this->runQueryAndGetAssoc('Select * from news where id='.$this->removeSQLI($id));
 	}
-	
+
 	public function removeBan($id) {
 		$query = 'delete from ban where id='.$this->removeSQLI($id);
 		return mysqli_query($this->connection, $query) or $this->showError();
@@ -164,7 +164,7 @@ class DBAccess {
 		if(mysqli_num_rows(mysqli_query($this->connection, 'SELECT * FROM admins')) > 1) {
 			$query = 'delete from admins where username = "'.$this->removeSQLI($username).'"';
 			return mysqli_query($this->connection, $query) == 1;
-		}	
+		}
 	}
 
 	public function insertComment($name, $email, $message, $id, $ip) {

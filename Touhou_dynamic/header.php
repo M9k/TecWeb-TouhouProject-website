@@ -51,7 +51,7 @@ foreach ($links as $link)
 	else
 		echo '<li><a href="'.$link['link'].'">'.$link['nome'].'</a></li> ';
 					?>
-		</ul> 
+		</ul>
 	</div>
 </div>
 </div>

@@ -22,6 +22,9 @@
 		<script type="text/javascript" src="script/menucollapse.js"></script>
 		<script type="text/javascript" src="script/zoomimage.js"></script>
 		<script type="text/javascript" src="script/formValidation.js"></script>
+		<script type="text/javascript" src="script/fixedHeader.js">
+
+		</script>
 	<title><?php
 		if(isset($title))
 			echo $title;

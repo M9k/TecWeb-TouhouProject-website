@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<?php 
+<?php
 $location = 'Home';
 $title = 'Home - Touhou Italia';
 require('head.php');
@@ -37,11 +37,10 @@ require('locationbar.php'); ;
 Rimanete sintonizzati sulla sezione <em xml:lang="en">News</em> per ricevere aggiornamenti a riguardo.
 </p>
 		</div>
-<?php 
+<?php
 require('sidebar.php');
 require('footer.php');
 ?>
 		</div>
 	</body>
 </html>
-
