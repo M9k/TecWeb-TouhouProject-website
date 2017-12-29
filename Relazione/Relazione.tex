@@ -125,6 +125,7 @@
 			\subsubsection{Comportamento}
 			Il comportamento della pagina è stato gestito primia tramite JavaScript per gestire il controllo delle form per i commenti e per fornire la possibilità di ingrandire le immagini all'interno della pagina, dopo di che sono presenti i controlli tramite php per fare in modo che in caso della mancanza dell'interprete JavaScript il sito continui a funzionare corretamente. 
 			\subsubsection{Caching}
+			parlare del caching
 	
 	\subsection{Parte amministratore}
 		\subsubsection{Struttura}
@@ -132,7 +133,9 @@
 		\subsubsection{Presentazione}
 		Lo stile delle pagine per l'amministrazione differisce rispetto alla parte utente per il fatto che sono stati rimossi gli elementi inutili in modo da renderla più veloce e fare spazio alle utilità necessarie all'amministrazione della pagina.
 		\subsubsection{Comportamento}
-		il comportamento delle pagine che conpongono la parte di amministrazione del sito è completamente gestita tramite php. E stato scelto di gestire l'intera sezione di amministrazione tramite php,questo perché in questa parte del sito accederà solo un numero limitato di persone che si presuppone siano dotati di conoscenze maggiori rispetto agli utenti della pagina, quindi si è deciso di preferire una maggiore compatibilità invece di inserire controlli in JavaScript che l'avrebbero ridotta.
+		La parte admin si caratterizza per un minore utilizzo dei controlli da parte di JavaScript e PHP sui form, in quanto l'amministratore ha la possibilità di inserire tag html o lasciare dei campi vuoti se lo desidera.\\
+		Questo è per fare fronte ad una mancanza di un editor integrato di testo che consenta una scrittura semplificata dei file html, in quanto svilupparlo sarebbe stato troppo oneroso per il progetto.\\
+		Ovviamente tutti i controlli relativi al SQLInjection sono presenti, per evitare che l'amministratore inconsapevolmente generi errori all'interno del database.
 	
 	\chapter{Validazione e test}
 		\section{Descrizione della sessione}
@@ -150,12 +153,11 @@
 					\item Waterfox
 					\item Edge
 					\item Chromium 64
-					\item Netscape 7
 					\item Firefox 3
-					\item Internet Explore 3
+					\item Internet Explorer 11
 				\end{itemize}
 
-				\subsection{Linux Fedora 27}
+				\subsection{GNU/Linux Fedora 27}
 				Sono state testate le risoluzioni di 1800p e 2160p con i browsers:
 				\begin{itemize}
 					\item Firefox Quantum
@@ -173,13 +175,13 @@
 				\end{itemize}
 
 				\subsection{FreeBSD 11}
-				\MakeUppercase{<è>} stata testata la risoluzione 1080p con il browser lynx.
+				\`{E} stata testata con il browser Lynx utilizzando la console.
 
 				\subsection{Dispositivi mobili}
 				Di seguito sono elencati i vari dispositivi mobili sui quali il sito è stato testo
 				\begin{itemize}
 				\item Testato su Xiaomi Redmi 4x con Miui browser, Firefox Rocket e Waterfox con una risoluzione di 720p
-				\item Kindle touch 7° generazione con una risoluzione di 800x600 e con il browser sperimentale presente all'interno di esso.
+				\item Kindle touch 7' generazione con una risoluzione di 800x600 e con il browser sperimentale presente all'interno di esso.
 				\end{itemize} 
 		\section{Test con diverse impostazioni utente}
 			\subsection{Nome Sottosezione}
