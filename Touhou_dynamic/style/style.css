@@ -105,6 +105,9 @@ h3, dt {
 #menuvoice {
 	display: none;
 }
+#menudiv {
+	z-index: 10;
+}
 #menu {
 	position: absolute;
 	bottom: 0;
@@ -115,6 +118,7 @@ h3, dt {
 	margin: 0;
 	padding: 0;
 	background-color: #0009;
+
 }
 #menu li {
 	float: left;

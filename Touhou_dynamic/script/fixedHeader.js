@@ -1,11 +1,11 @@
 
 window.onscroll = function() {
-  var header = document.getElementById("menudiv");
-  var sticky = 10;
-
-  if (window.pageYOffset >= sticky) {
-    header.classList.add("sticky");
+  let menudiv = document.getElementById("menudiv");
+  let header = document.getElementById("header");
+  let menu = document.getElementById("menu");
+  if (window.pageYOffset > 1 + header.clientHeight - menu.clientHeight ) {
+    menudiv.classList.add("sticky");
   } else {
-    header.classList.remove("sticky");
+    menudiv.classList.remove("sticky");
   }
 }
