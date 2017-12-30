@@ -109,6 +109,39 @@ Uno dei più popolari è sicuramente <strong>Koumajou Densetsu <span xml:lang="e
 			<a id="linkadmin" href="admin/">Clicka qui per accedere all'area di amministrazione</a>.
 		</p>
 	</div>
+<!--
+                                             .+ssss+:-`                                             
+                                           -dMMMMMMMMMMMmho-                                        
+                                          /MMMMMMMMMMMMMMMMMd-                                      
+                                         .NMMMMMMMMMMMMMMMMMMM:                                     
+                                         /MMMMMMMMMMMMMMMMMMMMh`/oso-                               
+                                     :++hMMMMMMMMMMMMMMMMMMMMMMMMMMMM-                              
+                                    .mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo                              
+                                     `oNmMMMMMMMMMMMMMMMMMMMMMMMMMMMM-                              
+                                        :MMMMMMMMMMMMMMMMMMMMNdMMMMN/                               
+                                       :yMMMMMMMMMMMMMMMMMMMh.yMMMMm`           `-                  
+                 -/.                    :oNMMMNhNMMMMMMMMMMM- mMMMMh        `:odMNms/`              
+              -smmmMms+-                 `/ymdMNhhmNMMMMMMms.`MMMMMM.    .+hNMNs- .sMMdo-           
+           :sNMN-  -hMmmms:`                -o/mMMMmhNoNm: .  NMMMMM/`:odmo-/MMNo` :MMMMNNy/`       
+       `:yNNMMMM. -dMMm `/hNds+/:://+oo     `-yMMMMMh:`+   `ymNMMMMMhdmMh`  oMMMMs :MMMMd`sMMdo-    
+    `/yNMh.mMMMN` dMMMN` `oNN+////sMNdMh`-smMMMMMMMMMMMms..dMyyMMMMo  mMMN:  sMMMh  .yMMM+/MMMMmmy/`
+ `/hNMMMMs:MMNo`  NMMm. `mMMMy   sMMN.:mMMMMMMMMMMMMMMMMMMNN: mMMMm  .MMMMd   :mMN    .yMN/MMMMh`oMM
+hMM+:MMMMyhMy.    NMh`  `MMMMo  /MMMMyyMMMMMMMMMMMMMMMMMMMMMNsNMMMd   :NMMd    `yM.     .so.sMMM/+MM
+MMM-yMMm/.d-     `My     MMMs   -MMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMy    :NMd      /-          .sNm/NM
+MMM/MNo`         `+      NMs    `MMM:dMMMMMMMMMMMMMMMMMMMMMMMN:+MMo     -Nd                    `s/`s
+Md-oy.                   dy      mM+oNMMMMMMMMMMMMMMMMMMMMMMMMs`yM+      .y                         
+/  `                     /       hy :MMMMMMMMMMMMMMMMMMMMMMMMMs `h-                                 
+                                 . `NMMMMMMMMMMMMMMMMMMMMMMMMMM-                                    
+                                   oMMMMMMMMMMMMMMMMMMMMMMMMMMMd                                    
+                                   NMMMMyNMMMMMMMMMMMMMMMMmNMMMM-                                   
+                                 -sMMMMy yMMMMMMMMMMMMMMMMs/MMMMd+.           `.                    
+            `/     /my-      `/yNMMMMMd` yMMMMMMMMMMMMMMMMy oMMMMMMms:`      yMy.    .h`            
+            yM+.:/+/hMMh: `/hNMMMMMMNs`  dMMMMMMMMMMMMMMMMm  /mMMMMMMMNh+. +mMMhosso+mMy            
+            /NMMMMMMMMMMMdNMMMMMMNy/`    dMMMMMMMMMMMMMMMMd    .+hMMMMMMMMmMMMMMMMMMMMm-            
+             .mMNMMMMMMMMMMMMMho-       oMMMMMMMMMMMMMMMMMMy      `:smMMMMMMMMMMMMMMmM+             
+                `+- .:+shddo:`         +MMMMMMMMMMMMMMMMMMMMs         `/sdmmdhyo/+yy``              
+									  :NMMMMMMMMMMMMMMMMMMMMM/                        
+ -->
 </body>
 </html>
 
