@@ -60,6 +60,9 @@ class DBAccess {
 	public function getListChapters() {
 		return $this->runQueryAndGetAll('Select * from chapters order by year');
 	}
+	public function getChapterImage($id) {
+		return $this->runQueryAndGetAssoc('SELECT * FROM chapters where ID = '.$this->removeSQLI($id));
+	}
 
 	public function getListNews($withHidden = false, $charLimit = false, $entryLimit = false, $fromEntry = false ) {
 		$query = 'Select id, title, image, imgdescr, data, hidden, ';
