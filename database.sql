@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2017 at 06:10 PM
+-- Generation Time: Dec 31, 2017 at 01:51 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -12,17 +12,30 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+--
+-- Database: `touhou`
+--
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+-- --------------------------------------------------------
 
 --
--- Database: `newstest`
+-- Table structure for table `admins`
 --
-CREATE DATABASE IF NOT EXISTS `newstest` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `newstest`;
+
+CREATE TABLE `admins` (
+  `username` varchar(50) NOT NULL,
+  `email` varchar(150) DEFAULT NULL,
+  `password` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`username`, `email`, `password`) VALUES
+('admin', 'admin@gmail.com', '$2y$10$F0B3IE4vRA0kXt74LkCcBO4qOOKnjSbQXxWT8LNMdswo6N7W8OGWi'),
+('M9k', 'mcailotto96@gmail.com', '$2y$10$vsZT2KVSPN2dSVPAMr.pvOKXdIsQoumGwWgOdPs.12PKh4mPZXQJu'),
+('pippo', 'pippo@pippo.it', '$2y$10$ThGe3o3apT/YrJhW70p0me.6tIkWBY5ke90Rhoz4208GOLFgTcpv6');
 
 -- --------------------------------------------------------
 
@@ -42,7 +55,7 @@ CREATE TABLE `ban` (
 --
 
 INSERT INTO `ban` (`id`, `ip`, `motivo`, `date`) VALUES
-(2, '53453', 'nope', '2017-11-07 17:20:38');
+(0, '14.64.26.127', 'Spam', '2017-11-07 17:20:38');
 
 -- --------------------------------------------------------
 
@@ -66,14 +79,13 @@ CREATE TABLE `chapters` (
 -- Dumping data for table `chapters`
 --
 
-
 INSERT INTO `chapters` (`number`, `year`, `title`, `image`, `imagedescr`, `titleeng`, `titleita`, `plot`, `id`) VALUES
 ('1', 1996, '東方靈異伝　～ The Highly Responsive to Prayers', '1.jpg', '', 'Highly Responsive to Prayers', 'Altamente sensibile alle preghiere', 'Il tempio Hakurei è stato distrutto da forze misteriose, quindi Reimu decide di attraversare un portale\n  dimensionale per trovare il copevole e fargliela pagare.', 1),
 ('2', 1997, '東方封魔録　～ The Story of Eastern Wonderland', '2.jpg', '', 'Story of Eastern Wonderland', 'Storia del Paese Orientale delle Meraviglie', 'Determinata a trovare chi ha mandato dei mostri al suo santuario, Reimu inizia un nuovo viaggio,\r\n  questa volta accompagnata da Genjii, la sua tartaruga volante. Incontra prima Rika, che affermava di aver creato i mostri al Santuario Hakurei. Dopo numerose avventure Reimu sconfigge definitivamente Rika e si dirige a casa scoprendo che i mostri al suo santuario sono scomparsi.', 2),
 ('3', 1997, '東方夢時空　～ Phantasmagoria of Dim. Dream', '3.jpg', '', 'Phantasmagoria of Dim. Dream', 'Dimensioni Orientali del Sogno', 'Mentre si godono una tranquilla passeggiata mattutina, la fanciulla del luogo, Reimu Hakurei, si imbatte in alcune curiose rovine a poca distanza dalla porta del Santuario Hakurei. Poiché solo una persona è ammessa nelle rovine e sarà ben ricompensata per farlo, sette personaggi si impegneranno in una grande battaglia.', 3),
 ('4', 1998, '東方幻想郷　～ Lotus Land Story', '4.jpg', '', 'Lotus Land Story', 'Storia di terra di loto', 'Seguendo gli eventi dei precedenti giochi, Youkai inizierà presto a sciamare nel Santuario Hakurei, spingendo Reimu Hakurei e Marisa Kirisame a dirigersi separatamente verso un lago in montagna, che sembra essere la fonte di una tremenda ondata di energia. I due raggiungono l\'ingresso sotto il lago, che li teletrasporta in uno strano mondo di fantasia, in cui esiste la villa Mugenkan, dove si suppone che la mente sia.', 4),
 ('5', 1998, '東方怪綺談　～ Mystic Square', '5.jpg', '', 'Mystic Square', 'Fantastiche Storie Romantiche d\'Oriente', 'Dopo gli eventi di Storia della terra del loto, un\'enorme quantità di esseri demoniaci si riversano da una grotta, ancora una volta sepolti tra le montagne. Cercando la fonte di questa invasione, Reimu Hakurei e gli altri personaggi giocabili, Marisa Kirisame, Mima e Yuuka Kazami devono viaggiare fino a Makai e dirigersi verso la fortezza Pandemonium per affrontare quello che sta dietro al problema, Shinki.', 5),
-('6', 2002, '東方紅魔郷　～ the Embodiment of Scarlet Devil ', '6.jpg', '', 'The Embodiment of Scarlet Devil ', 'L\'Incarnazione del Diavolo Scarlatto', 'Durante un\'estate pacifica a Gensokyo, una nebbia innaturale e scarlatta appare senza preavviso e copre gran parte della terra. È abbastanza forte da bloccare il sole, facendo diventare le zone colpite oscure e fredde. Reimu Hakurei, una fanciulla del santuario che lavorava nel Santuario Hakurei, e Marisa Kirisame, un mago, si misero alla ricerca della fonte della nebbia. La loro ricerca li condurrà alla <span xml:lang="en">Scarlet Devil Mansion</span> e ai suoi eccentrici proprietari.', 6),
+('6', 2002, '東方紅魔郷　～ the Embodiment of Scarlet Devil ', '6.jpg', '', 'The Embodiment of Scarlet Devil ', 'L\'Incarnazione del Diavolo Scarlatto', 'Durante un\'estate pacifica a Gensokyo, una nebbia innaturale e scarlatta appare senza preavviso e copre gran parte della terra. È abbastanza forte da bloccare il sole, facendo diventare le zone colpite oscure e fredde. Reimu Hakurei, una fanciulla del santuario che lavorava nel Santuario Hakurei, e Marisa Kirisame, un mago, si misero alla ricerca della fonte della nebbia. La loro ricerca li condurrà alla <span xml:lang=\"en\">Scarlet Devil Mansion</span> e ai suoi eccentrici proprietari.', 6),
 ('7', 2003, '東方妖々夢　～ Perfect Cherry Blossom', '7.jpg', '', 'Perfect Cherry Blossom', 'Una Perfetta Fioritura di Ciliegio', 'L\'inverno trascina la sua data di scadenza a Gensokyo, spingendo infine i tre personaggi principali - Reimu Hakurei, Marisa Kirisame e Sakuya Izayoi - a indagare sulla causa. I loro viaggi li portano negli inferi, dove scoprono che certe persone stanno tentando di raccogliere l\'essenza della primavera per se stessi, per una causa sconosciuta.', 7),
 ('8', 2004, '東方永夜抄　～ Imperishable Night', '8.jpg', '', 'Imperishable Night', 'Notte Imperitura', 'È la vigilia del Festival del raccolto Lunare a Gensokyo quando Youkai capisce che c\'è qualcosa di sbagliato nella luna. Sembra che la luna sia stata sostituita da una luna finta. I personaggi principali fermano il tempo e si mettono alla ricerca del colpevole per cercare di garantire la luna piena per il festival. Il loro viaggio li conduce nella Foresta di bambù dei Lost, abitata da esseri provenienti dalla Luna stessa.', 8),
 ('9', 2005, '東方花映塚　～ Phantasmagoria of Flower View', '9.jpg', '', 'Phantasmagoria of Flower View', 'Fantasmagoria di Flower View', 'Questo gioco si svolge nella mistica terra di Gensokyo. La primavera è arrivata, ma qualcosa non va. I fiori stanno fiorendo e le fate stanno diventando attive come al solito, ma la quantità di fiori e fate è innaturale; anche i fiori non primaverili stanno fiorendo.', 9),
@@ -86,7 +98,6 @@ INSERT INTO `chapters` (`number`, `year`, `title`, `image`, `imagedescr`, `title
 ('16', 2017, '東方天空璋　～ Hidden Star in Four Seasons', '16.jpg', '', 'Hidden Star in Four Seasons', 'Stella nascosta in quattro stagioni', 'Nonostante sia piena estate, le stagioni in varie località sono completamente fuori pericolo. Il Santuario Hakurei è ricoperto di petali di ciliegio, la montagna Youkai si crogiola nel mezzo dell\'autunno, e la Foresta della Magia è ricoperta di neve ... e grazie ad una strana forza, le fate di Gensokyo stanno dilagando con forza insondabile. Nel bel mezzo di questo incidente innegabile, le ragazze hanno deciso di indagare e trovare dietro di sé il perpetratore.', 16);
 
 -- --------------------------------------------------------
-
 
 --
 -- Table structure for table `comment`
@@ -132,29 +143,18 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `hidden`, `data`, `text`, `image`, `imgdescr`) VALUES
-(0, 'Pubblicato il nuovo Touhou su Steam!', 0, '2017-12-10 18:02:31', 'È appena uscito il nuovo capitolo di Touhou, il 16, su <span xml:lang=\"en\">Steam</span>, piattaforma digitale di distribuzione di videogiochi famosa in tutto il mondo.<br/>\r\nIl gioco, denominato <span xml:lang=\"en\">Hidden Star in Four Seasons</span>, purtroppo è disponibile unicamente in lingua inglese, ma non escluderemo una modifica del gioco che lo renderà disponibile anche in inglese realizzata da qualche fan.<br/>\r\nPurtroppo escludiamo una traduzione in italiano, in quanto tutti i precedenti titoli non sono mai stati localizzati.', 'touhou_steam.jpg', 'Immagine raffigurante la pagina di Steam che vende Touhou');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admins`
---
-
-CREATE TABLE `admins` (
-  `username` varchar(50) NOT NULL PRIMARY KEY,
-  `email` varchar(150) DEFAULT NULL,
-  `password` varchar(256) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
-INSERT INTO `admins` (`username`, `email`, `password`) VALUES
-('admin','admin@gmail.com','$2y$10$F0B3IE4vRA0kXt74LkCcBO4qOOKnjSbQXxWT8LNMdswo6N7W8OGWi');
-
+(0, 'Pubblicato il nuovo Touhou su Steam!', 0, '2017-12-10 18:02:31', 'È appena uscito il nuovo capitolo di Touhou, il 16, su <span xml:lang=\"en\">Steam</span>, piattaforma digitale di distribuzione di videogiochi famosa in tutto il mondo.<br/>\r\nIl gioco, denominato <span xml:lang=\"en\">Hidden Star in Four Seasons</span>, purtroppo è disponibile unicamente in lingua inglese, ma non escluderemo una modifica del gioco che lo renderà disponibile anche in inglese realizzata da qualche fan.<br/>\r\nPurtroppo escludiamo una traduzione in italiano, in quanto tutti i precedenti titoli non sono mai stati localizzati.', 'touhou_steam.jpg', 'Immagine raffigurante la pagina di Steam che vende Touhou'),
+(1, 'Un nuovo virus, a tema Touhou!', 0, '2017-12-31 13:48:22', 'Non di rado si sente parlare di <span xml:lang=\"en\">ramsonware</span>, quei virus che criptano i file dell\'utente e richiedono un riscatto per riaverli.<br/>\r\nUno degli ultimi virus di questo genere è chiamato \"Rensenware\", e si distanzia dagli altri in quanto non richiede un pagamento di un riscatto, ma che siano raggiunti i 200 milioni di punti in Touhou <span xml:lang=\"en\">Undefined Fantastic Object</span>, l\'undicesimo capitolo della serie Touhou Project.<br/>\r\nIl nome è un evidente gioco di parole, che mescola il termine <span xml:lang=\"en\">ramsonware</span> con il nome Reisen, nome del leggendario coniglio della luna della serie Touhou.<br/>\r\nOvviamente questo virus è uno scherzo e non è stato diffuso, ma se qualcuno dovesse malauguratamente venire infettato è stato reso disponibile un <span xml:lang=\"en\">tool</span> per riavere i propri file.', 'ransenware.png', 'Immagine con screen del virus');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`username`);
 
 --
 -- Indexes for table `ban`
@@ -204,7 +204,7 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --
@@ -215,7 +215,3 @@ ALTER TABLE `news`
 ALTER TABLE `comment`
   ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`news_id`) REFERENCES `news` (`id`);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
