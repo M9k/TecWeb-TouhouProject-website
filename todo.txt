@@ -1,15 +1,10 @@
 ﻿-fixare la lista index admin, magari qualche immagine decorativa?
 -notizie (MATTEO)
--finire i capitoli, trama, alt e span (SAMU)
 -news fake con commenti di test (MIRCO + MATTEO)
 -js sui form parte admin dove utili
--rimuovere errore404 che non serve a niente
-
--titolo pagina "popolarità"
 
 RELAZIONE!!!!!!
 
--unificare js utenti
 -tabindex e title
 -validazione xhtml 1.1, css e di usabilità + colori etc etc
 -ricontrollare tutti i form per l'accessibilità, i colori, etc etc (vedere accessibilita punti da controllare.txt)
@@ -17,7 +12,6 @@ RELAZIONE!!!!!!
 
 
 -----QUANDO CARICATO SUL SITO-----
+-configurare i file di errore/connessione
 -permessi sui file
-
--testare pagina 404 - NON FUNZIONANTE
 -controllare i mesi siano in italiano, essendo dipendenti dai "locale" presenti - NON FUNZIONANTE!
