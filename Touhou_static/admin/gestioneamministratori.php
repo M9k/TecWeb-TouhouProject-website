@@ -72,7 +72,7 @@ if($administrators != null)
 	foreach($administrators as $administrator)
 		echo '<li>'.$administrator['username']." - ".$administrator['email'].' <button name="btnDelete" value="'.$administrator['username'].'">Elimina</button></li>';
 	echo '</ul>'.
-		'</filedset></form>';
+		'</fieldset></form>';
 }
 else
 	echo '<div id="nodata">Nessun amministratore aggiuntivo presente</div>';

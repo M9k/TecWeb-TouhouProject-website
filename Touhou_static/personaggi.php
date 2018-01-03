@@ -185,9 +185,6 @@
 		<div id="jumptotop">
 			<a href="#header">Torna in cima</a>
 		</div>
-		<div id="jumptotop">
-			<a href="#header">Torna in cima</a>
-		</div>
 	</div>
 	<div id="footer">
 		<p>

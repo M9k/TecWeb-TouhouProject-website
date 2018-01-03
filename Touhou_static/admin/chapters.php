@@ -71,7 +71,7 @@ if($chapters != null)
 		echo '<li>'.$capter['number']." ".$capter['titleeng']." - ".
 			$capter['year'].' <button name="btnDelete" value="'.$capter['id'].'">Elimina</button></li>';
 	echo '</ul>'.
-		'</filedset></form>';
+		'</fieldset></form>';
 }
 else
 	echo '<div id="nodata">Nessuna capitolo inserito</div>' ;

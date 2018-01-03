@@ -87,7 +87,7 @@ echo('<input name="id" style="position: absolute; visibility: hidden;" id="idfor
 					<label for="imgdescrform">Descrizione breve dell'immagine</label>: <input name="imgdescr" type="text" id="imgdescrform" value="<?php if($edit) echo ($news['imgdescr'])?>"/><br/>
 					Nota: utilizzare <a href="image.php">gestione immagini</a> per caricare nuove immagini<br/>
 					<label for="hiddenform">Bozza</label>: <input name="hidden" id="hiddenform" type="checkbox" <?php if($edit) if($news['hidden'] == true) echo('checked="checked"');?>/><br/>
-					<label for="textform">Testo</label>: <br/><textarea name="text" id="textform" cols="100" rows="10"><?php if($edit) echo($news['text'])?></textarea><br/>	
+					<label for="textform">Testo</label>: <br/><textarea name="text" id="textform" cols="100" rows="10"><?php if($edit) echo(htmlentities($news['text']))?></textarea><br/>	
 					<input type="submit" value="Salva" name="submit"/>
 				</fieldset>
 			</form>

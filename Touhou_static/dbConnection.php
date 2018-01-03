@@ -198,7 +198,7 @@ class DBAccess {
 			$this->removeSQLI($title).'", "'.
 			$image.'", '.
 			$hidden.', "'.
-			$this->removeSQLI($text).'", "'.
+			html_entity_decode($this->removeSQLI($text)).'", "'.
 			$this->removeSQLI($imgdescr).'")';
 		return mysqli_query($this->connection, $query) == 1;
 	}
@@ -242,7 +242,7 @@ class DBAccess {
 			$image.'", hidden="'.
 			$hidden.'", imgdescr ="'.
 			$this->removeSQLI($imgdescr).'", text="'.
-			$this->removeSQLI($text).'" WHERE id='.
+			html_entity_decode($this->removeSQLI($text)).'" WHERE id='.
 			$this->removeSQLI($id);
 		return mysqli_query($this->connection, $query) == 1;
 	}

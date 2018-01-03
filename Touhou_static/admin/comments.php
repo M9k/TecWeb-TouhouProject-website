@@ -54,8 +54,8 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 				</ul> 
 			</div>
 		</div>
-	<div id="contenuto">
-		<h2>Moderazione commenti</h2>
+		<div id="contenuto">
+			<h2>Moderazione commenti</h2>
 <?php
 
 $dbConnection = new DBAccess();
@@ -64,6 +64,7 @@ $comments = $dbConnection->getListComments(null, false, true);
 if($comments != null)
 {
 	echo '<dl>';
+	$inc = 1;
 	foreach($comments as $comment) 
 	{
 		echo '<dt>'.$comment['nick'].' - '.$comment['email'].'</dt>'.
@@ -72,13 +73,14 @@ if($comments != null)
 			'<div class="message"><p>'.$comment['message'].'</p></div>'.
 			'<div class="ip">'.$comment['ip'].'</div>'.
 			'<form class="commentaction" action="commentaction.php" method="post">'.
-			'<fieldset id="commentactionsformcontent">'.
-			'<label for="reasonform">Motivo del ban</label>: <input id="reasonform" type="text" maxlength="255" name="reason"/> '.
+			'<fieldset class="commentactionsformcontent">'.
+			'<label for="reasonform'.$inc.'">Motivo del ban</label>: <input id="reasonform'.$inc.'" type="text" maxlength="255" name="reason"/> '.
 			'<button name="ban" value="'.$comment['id'].'">Banna l\'utente ed elimina il commento</button>'.
 			' <button name="delete" value="'.$comment['id'].'">Elimina il commento</button>'.
 			'</fieldset>'.
 			'</form>'.
 			'</dd>';
+		$inc += 1;
 	}
 	echo '</dl>';
 }
@@ -86,6 +88,7 @@ else
 	echo('<div id="nodata">Nessun commento inserito</div>');
 $dbConnection->closeDBConnection();
 ?>
+		</div>
 	</div>
 </body>
 </html>
