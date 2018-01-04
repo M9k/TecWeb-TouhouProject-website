@@ -5,7 +5,7 @@ $location = 'Home';
 $title = 'Home - Touhou Italia';
 ?>
 <head>
-		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 		<meta name="title" content="<?php
 if(isset($title))
