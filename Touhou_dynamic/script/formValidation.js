@@ -1,5 +1,5 @@
 function validateForm() {
-        var nome = document.forms["leavecommentform"]["nameinput"].value;
+	var nome = document.forms["leavecommentform"]["nameinput"].value;
 	var commento = document.forms["leavecommentform"]["commentoinput"].value;
 	var validata = validateString("nome",nome) & validateString("commento",commento) & validateEmail();
 	if(validata==0) {
@@ -11,12 +11,13 @@ function validateForm() {
 }
 
 function validateFormAddNews() {
-  var titolo = document.forms["addnewsform"]["titleform"].value;
+	var titolo = document.forms["addnewsform"]["titleform"].value;
 	var imgCopertina = document.forms["addnewsform"]["imageform"].value;
-  var descrizione = document.forms["addnewsform"]["imgdescrform"].value;
-  var testo = document.forms["addnewsform"]["textform"].value;
-	var validate = validateString("titolo",titolo) & validateStringc("titolo", "immagine", imgCopertina) & validateString("descrizione", descrizione) & validateString("testo", testo);
-	if(validate==0) {
+	var imgUploadCopertina = document.getElementById("fileupload").files.length;
+	var descrizione = document.forms["addnewsform"]["imgdescrform"].value;
+	var testo = document.forms["addnewsform"]["textform"].value;
+	var validate = validateString("titolo", titolo) & validateStringImage(imgCopertina, imgUploadCopertina) & validateString("descrizione", descrizione) & validateString("testo", testo);
+	if(validate == false) {
 		document.getElementById("erroreAdd").innerHTML="*impossibile inviare";
 		return false;
 	}
@@ -29,16 +30,16 @@ function validateString(tipo, stringa) {
 	var errore = "errore".concat(tipo);
 	document.getElementById(errore).innerHTML='';
 	if (stringa == "") {
-    switch (tipo) {
-      case "descrizione":
-        document.getElementById(errore).innerHTML="*inserire una ".concat(tipo);
-        break;
-        case "testo":
-          document.getElementById(errore).innerHTML="*inserire del ".concat(tipo);
-          break;
-      default:
-          document.getElementById(errore).innerHTML="*inserire un ".concat(tipo);
-    }
+		switch (tipo) {
+			case "descrizione":
+				document.getElementById(errore).innerHTML="*inserire una ".concat(tipo);
+				break;
+			case "testo":
+				document.getElementById(errore).innerHTML="*inserire del ".concat(tipo);
+				break;
+			default:
+				document.getElementById(errore).innerHTML="*inserire un ".concat(tipo);
+		}
 		return false;
 	}
 	else
@@ -50,6 +51,16 @@ function validateStringc(tipo1, tipo2, stringa) {
 	document.getElementById(errore).innerHTML='';
 	if (stringa == "") {
 		document.getElementById(errore).innerHTML="*inserire un ".concat(tipo1, " per l' ", tipo2);
+		return false;
+	}
+	else
+		return true;
+}
+
+function validateStringImage(stringa, upload) {
+	document.getElementById("erroretitoloimmagine").innerHTML='';
+	if (upload == 0 && stringa == "") {
+		document.getElementById("erroretitoloimmagine").innerHTML="*inserire il nome di una immagine o caricarne una nuova";
 		return false;
 	}
 	else

@@ -40,16 +40,16 @@ echo('<input name="id" style="position: absolute; visibility: hidden;" id="idfor
 				<div id="erroretitolo"></div>
 				<label for="titleform">Titolo</label>: <input name="title" id="titleform" type="text" onchange="validateString('titolo',document.getElementById('titleform').value)" value="<?php if($edit) echo($news['title'])?>"/><br/>
 				<div id="erroretitoloimmagine"></div>
-				<label for="imageform">Titolo immagine di copertina</label>: <input name="image" id="imageform" type="text" onchange="validateStringc('titolo','immagine',document.getElementById('imageform').value)" value="<?php if($edit) echo($news['image'])?>"/><br/>
+				<label for="imageform">Titolo con relativa estensione dell'immagine da usare in copertina</label>: <input name="image" id="imageform" type="text" onchange="validateStringImage(document.getElementById('imageform').value, document.getElementById('fileupload').files.length)" value="<?php if($edit) echo($news['image'])?>"/><br/>
 				Oppure<br/>
 				<label for="fileupload">Carica nuova immagine, ignorando il box di input precedente</label>: <br/>
-				<input type="file" name="fileupload" id="fileupload"/><br/>
+				<input type="file" name="fileupload" id="fileupload" onchange="validateStringImage(document.getElementById('imageform').value, document.getElementById('fileupload').files.length)" /><br/>
 				<div id="erroredescrizione"></div>
 				<label for="imgdescrform">Descrizione breve dell'immagine</label>: <input name="imgdescr" type="text" id="imgdescrform" onchange="validateString('descrizione',document.getElementById('imgdescrform').value)" value="<?php if($edit) echo ($news['imgdescr'])?>"/><br/>
 				Nota: utilizzare <a href="image.php">gestione immagini</a> per caricare nuove immagini<br/>
 				<label for="hiddenform">Bozza</label>: <input name="hidden" id="hiddenform" type="checkbox" <?php if($edit) if($news['hidden'] == true) echo('checked="checked"');?>/><br/>
 				<div id="erroretesto"></div>
-				<label for="textform">Testo</label>: <br/><textarea name="text" id="textform" cols="100" rows="10" onchange="validateString('testo',document.getElementById('textform').value)"><?php if($edit) echo($news['text'])?> </textarea><br/>
+				<label for="textform">Testo</label>: <br/><textarea name="text" id="textform" cols="100" rows="10" onchange="validateString('testo',document.getElementById('textform').value)" ><?php if($edit) echo($news['text']);?></textarea><br/>
 				<div id="erroreAdd"></div>
 				<input type="submit" value="Salva" name="submit"/>
 			</fieldset>

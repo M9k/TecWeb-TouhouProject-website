@@ -104,6 +104,21 @@ function validateForm() {
 		return true;  
 }
 
+function validateFormAddNews() {
+	var titolo = document.forms["addnewsform"]["titleform"].value;
+	var imgCopertina = document.forms["addnewsform"]["imageform"].value;
+	var imgUploadCopertina = document.getElementById("fileupload").files.length;
+	var descrizione = document.forms["addnewsform"]["imgdescrform"].value;
+	var testo = document.forms["addnewsform"]["textform"].value;
+	var validate = validateString("titolo", titolo) & validateStringImage(imgCopertina, imgUploadCopertina) & validateString("descrizione", descrizione) & validateString("testo", testo);
+	if(validate == false) {
+		document.getElementById("erroreAdd").innerHTML="*impossibile inviare";
+		return false;
+	}
+	else
+		return true;
+}
+
 function validateString(tipo, stringa) {
 	var errore = "errore".concat(tipo);
 	document.getElementById(errore).innerHTML='';
@@ -115,6 +130,26 @@ function validateString(tipo, stringa) {
 		return true;
 }
 
+function validateStringc(tipo1, tipo2, stringa) {
+	var errore = "errore".concat(tipo1,tipo2);
+	document.getElementById(errore).innerHTML='';
+	if (stringa == "") {
+		document.getElementById(errore).innerHTML="*inserire un ".concat(tipo1, " per l' ", tipo2);
+		return false;
+	}
+	else
+		return true;
+}
+
+function validateStringImage(stringa, upload) {
+	document.getElementById("erroretitoloimmagine").innerHTML='';
+	if (upload == 0 && stringa == "") {
+		document.getElementById("erroretitoloimmagine").innerHTML="*inserire il nome di una immagine o caricarne una nuova";
+		return false;
+	}
+	else
+		return true;
+}
 
 function validateEmail() {
 	var email = document.forms["leavecommentform"]["emailinput"].value;
