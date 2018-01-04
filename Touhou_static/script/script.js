@@ -130,25 +130,34 @@ function validateEmail() {
 
 window.onscroll = changeHeader;
 
+var menuIsFixed = false;
 function changeHeader() {
 	if(fixedHeader) {
 		if (window.pageYOffset > 2 + header.clientHeight - menu.clientHeight ) {
-			menudiv.style.position = "fixed";
-			menudiv.style.top = "0";
-			menudiv.style.bottom = "auto";
-			menudiv.style.width = header.clientWidth + "px";
-			menu.style.top = "0";
-			menu.style.bottom = "auto";
-			header.style.borderWidth = "0";
+			if(!menuIsFixed)
+			{
+				header.style.borderWidth = "0";
+				menudiv.style.position = "fixed";
+				menudiv.style.top = "0";
+				menudiv.style.bottom = "auto";
+				menudiv.style.width = header.clientWidth + "px";
+				menu.style.top = "0";
+				menu.style.bottom = "auto";
+				menuIsFixed = true;
+			}
 		}
 		else {
-			menudiv.style.position = "absolute";
-			menudiv.style.top = "auto";
-			menudiv.style.bottom = "0";
-			menudiv.style.width = "100%";
-			menu.style.top = "auto";
-			menu.style.bottom = "0";
-			header.style.borderWidth = "2pt";
+			if(menuIsFixed)
+			{
+				header.style.borderWidth = "2pt";
+				menudiv.style.position = "absolute";
+				menudiv.style.top = "auto";
+				menudiv.style.bottom = "0";
+				menudiv.style.width = "100%";
+				menu.style.top = "auto";
+				menu.style.bottom = "0";
+				menuIsFixed = false;
+			}
 		}
 	}
 }
