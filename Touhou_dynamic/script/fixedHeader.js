@@ -1,5 +1,6 @@
 
 window.onscroll = function() {
+  if(screen.width >= "900") {
   let menudiv = document.getElementById("menudiv");
   let header = document.getElementById("header");
   let menu = document.getElementById("menu");
@@ -8,4 +9,6 @@ window.onscroll = function() {
   } else {
     menudiv.classList.remove("sticky");
   }
+}
+
 }
