@@ -29,17 +29,17 @@ body {
   background-position: right bottom;
   background-size: auto 20em;
   height: 20em;
-  /* border-radius: 10pt; */
+  border-radius: 10pt;
   position: relative;
-  /* border-style: solid;
-	border-width: 2pt; */
+  border-style: solid;
+  border-width: 2pt;
   overflow: hidden;
   min-height: 10em;
 }
 
 p {
   margin-bottom: 2%;
-  /*	overflow: auto;*/
+  overflow: auto;
 }
 
 input[type="text"], textarea {
@@ -282,8 +282,8 @@ div.data {
 
 #locationbar {
   background-color: #480000;
-  /* border-bottom-left-radius: 10pt;
-	border-bottom-right-radius: 10pt; */
+  border-bottom-left-radius: 10pt;
+  border-bottom-right-radius: 10pt;
   color: white;
   padding: 0.4em 0 0.4em 3%;
   font-size: 1.1em;
