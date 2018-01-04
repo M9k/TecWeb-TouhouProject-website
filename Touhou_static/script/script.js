@@ -1,3 +1,5 @@
+var fixedHeader;
+
 window.onload = function() {
 	//immagini zoommabili
 	[].forEach.call(document.getElementById("contenuto").getElementsByTagName("img"), makezoomable);
@@ -45,6 +47,17 @@ window.onload = function() {
 			}
 		}
 	}
+
+	//per il menu fixed
+	var menudiv = document.getElementById("menudiv");
+	var header = document.getElementById("header");
+	var menu = document.getElementById("menu");
+	mq.addListener(CheckFixedHeader);
+	function CheckFixedHeader() {
+		fixedHeader = !mq.matches;
+		changeHeader();
+	}
+	fixedHeader = !mq.matches;
 }
 
 function makezoomable(image) {
@@ -115,5 +128,23 @@ function validateEmail() {
 	}
 }
 
+window.onscroll = changeHeader;
 
-
+function changeHeader() {
+	if(fixedHeader) {
+		if (window.pageYOffset > 2 + header.clientHeight - menu.clientHeight ) {
+			menu.style.position = "fixed";
+			menu.style.top = "0";
+			menu.style.bottom = "auto";
+			menu.style.paddingLeft = (window.innerWidth - header.clientWidth)/2 + "px";
+			header.style.borderWidth = "0";
+		}
+		else {
+			menu.style.position = "absolute";
+			menu.style.top = "auto";
+			menu.style.bottom = "0";
+			menu.style.paddingLeft = "0px";
+			header.style.borderWidth = "2pt";
+		}
+	}
+}
