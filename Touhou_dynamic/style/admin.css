@@ -15,6 +15,15 @@
     list-style: inside;
 }
 
+#errorecommento, #erroretitolo, #erroretitoloimmagine, #erroredescrizione, #erroretesto {
+	float: right;
+  color: red;
+}
+
+#erroreAdd {
+  color: red;
+}
+
 @media handheld, screen and (max-width: 680px), only screen and (max-device-width:680px) {
 	#contenuto {
 		width: 100%;
