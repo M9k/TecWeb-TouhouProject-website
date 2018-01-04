@@ -73,11 +73,11 @@ if($comments != null)
 			'<div class="message"><p>'.$comment['message'].'</p></div>'.
 			'<div class="ip">'.$comment['ip'].'</div>'.
 			'<form class="commentaction" action="commentaction.php" method="post">'.
-			'<fieldset class="commentactionsformcontent">'.
+			'<div class="commentactionsformcontent">'.
 			'<label for="reasonform'.$inc.'">Motivo del ban</label>: <input id="reasonform'.$inc.'" type="text" maxlength="255" name="reason"/> '.
 			'<button name="ban" value="'.$comment['id'].'">Banna l\'utente ed elimina il commento</button>'.
 			' <button name="delete" value="'.$comment['id'].'">Elimina il commento</button>'.
-			'</fieldset>'.
+			'</div>'.
 			'</form>'.
 			'</dd>';
 		$inc += 1;

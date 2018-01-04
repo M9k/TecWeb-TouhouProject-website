@@ -72,7 +72,7 @@ else
 		echo '<dd>';
 		if(strcmp($ban['motivo'], '') != 0)
 			echo '<div class="data">Motivazione: '.$ban['motivo'].'</div>';
-		echo '<form class="commentaction" action="banremove.php" method="post"><fieldset id="banform"><button name="banremove" value="'.$ban['id'].'">Rimuovi il ban</button></fieldset></form>';
+		echo '<form class="commentaction" action="banremove.php" method="post"><div id="banform"><button name="banremove" value="'.$ban['id'].'">Rimuovi il ban</button></div></form>';
 		echo '</dd>';
 	}
 	echo '</dl>';

@@ -65,7 +65,7 @@ $dbConnection->openDBConnection();
 $chapters = $dbConnection->getListChapters();
 if($chapters != null)
 {
-	echo '<form class="optionsnewsform" action="chapterdelete.php" method="post"><fieldset id="chapterlist">'.
+	echo '<form class="optionsnewsform" action="chapterdelete.php" method="post"><fieldset id="chapterlist"><legend>Lista dei capitoli presenti:</legend>'.
 		'<ul>';
 	foreach($chapters as $capter)
 		echo '<li>'.$capter['number']." ".$capter['titleeng']." - ".

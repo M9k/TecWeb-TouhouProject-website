@@ -1,6 +1,7 @@
 \documentclass[openany, a4paper, 12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
+\usepackage{hyperref}
 
 \begin{document}
 
@@ -149,13 +150,24 @@
 	\chapter{Validazione e test}
 		\section{Descrizione della sessione}
 			Questa sezione si occupa di metodo e strumenti con i quali si sono svolti i processi di verica e validazione delle componenti del sito.
-		\section{Validazione secondo gli standard}
+		\section{Validazione con test automatici}
 			\subsection{Markup Validation Service w3.org}
 				Tutte le pagine sono state testate con il validatore fornito da w3.org, la verifica non ha segnalato nessun problema in nessuna pagina, con l'eccezione di un warning "Using Direct Input mode: UTF-8 character encoding assumed" a causa dell'utilizzo della modalità di input diretto del codice HTML.\\
 				Sono state testate anche la pagina di login, la pagina di database non raggiungibile e la pagina di errore di input, tutte con esito positivo.
-			\subsection{Nome Sottosezione}
-			\subsection{Nome Sottosezione}
-			\subsection{Nome Sottosezione}
+			\subsection{W3C CSS Validator w3.org}
+				Tutti gli stili css sono stati testati con il validatore fornito da w3.org, compreso quelli di stampa, e non sono stati rilevati errori.
+			\subsection{Vamola validator}
+				Uno strumento utilizzato per la verifica automatica dell'accessibilità è stato Vamola, presente all'indirizzo \url{www.validatore.it/vamola_validator/checker/index.php}.\\
+				Come impostazione è stato utilizzato "WCAG 2.0 (Level AAA)", tutti i potenziali problemi che vengono segnalati raccolgono tutti elementi che il validatore non sa come controllare e quindi viene richiesta una supervisione umana, come ad esempio ogni alt.\\
+				Nessun errore è stato segnalato.
+			\subsection{WAVE Accessibility Extension}
+				Un altro strumento utilizzato per la verifica dell'accessibilità è stato WAVE, disponibile per il browser Firefox all'indirizzo \url{https://addons.mozilla.org/it/firefox/addon/wave-accessibility-tool/}, del quale esiste anche una versione per Google Chrome sul relativo store.\\
+				Il plugin ha segnalato alcuni warning riguardanti gli alt, che richiedevano un controllo manuale, e alcuni warning relativi ai furigana rappresentati con una font non molto grande, ma che secondo una nostra analisi manuale è ritenuto sufficientemente grande in quanto supplementare alla lettura.\\
+				Un errore segnalato riguarda una label mancante per un input nella pagina di aggiunta delle news, ma in quel caso l'input è nascosto dall'utente essendo l'indicazione di quale articolo si sta modificando, quindi anche nel caso di uno screen reader non verrebbe visualizzato, per queste motivazioni una label risulterebbe inappropriata.
+			\subsection{Web Accessibility Toolbar (WAT)}
+			
+			\subsection{Total Validator}
+			
 		\section{Test su diversi dispositivi}
 			Il sito è stato testato su varie macchine e sistemi operativi. Nelle sezioni seguenti verranno elencati assieme ai browser e alle risoluzioni testate.
 				\subsection{Windows 10}

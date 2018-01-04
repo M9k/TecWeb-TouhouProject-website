@@ -57,8 +57,9 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 		<h2>Gestione immagini</h2>
 		<form action="imageupload.php" method="post" enctype="multipart/form-data">
 			<fieldset>
+				<legend>Upload nuova immagine</legend>
 				<p>Seleziona l'immagine da caricare (Massimo 5Mb, in formato comune):</p>
-				<input type="file" name="fileupload" id="fileupload"/><br/>
+				<label for="fileupload" xml:lang="en">File:</label> <input type="file" name="fileupload" id="fileupload"/><br/>
 				<input type="submit" value="Carica" name="submit"/>
 			</fieldset>
 		</form>
@@ -70,7 +71,7 @@ foreach($immagini as $immagine)
 	if($immagine != '..' && $immagine != '.')
 	{
 		echo '<dt>'.$immagine.'</dt>';
-		echo '<dd><div class="imagediv"><form class="imagedivform" action="imagedelete.php" method="post"><fieldset class="imagedescription"><div class="imageview"><img alt="immagine caricata di nome'.$immagine.'" src="../images/news/'.$immagine.'"/></div><div class="linkimage">Per utilizzare questa immagine inserire: images/news/'.$immagine.'</div><button name="btnDelete" value="'.$immagine.'">Elimina</button></fieldset></form></div></dd>';
+		echo '<dd><div class="imagediv"><form class="imagedivform" action="imagedelete.php" method="post"><div class="imagedescription"><div class="imageview"><img alt="immagine con nome'.$immagine.'" src="../images/news/'.$immagine.'"/></div><div class="linkimage">Per utilizzare questa immagine inserire: images/news/'.$immagine.'</div><button name="btnDelete" value="'.$immagine.'">Elimina</button></div></form></div></dd>';
 	}
 }
 echo '</dl>';
