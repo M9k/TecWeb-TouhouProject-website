@@ -1,6 +1,6 @@
 <?php require_once __DIR__.DIRECTORY_SEPARATOR."dbConnection.php"; ?>
 <?php 
-	$website = "localhost/tecweb/Touhou2";
+	$website = "localhost/tecwebs/";
 	 header("Content-Type: application/rss+xml; charset=UTF-8");
 ?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">

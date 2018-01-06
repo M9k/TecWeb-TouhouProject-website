@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<?php header('Content-type: application/xhtml+xml'); ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <head>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
@@ -55,7 +56,7 @@
 
 				<dt>Reimu Hakurei</dt>
 				<dd>
-					<img src="./images/characters/Reimu.jpg" alt="Immagine di Reimu, con un abito rosso e bianco da sacerdotessa giapponese"/>
+					<img src="./images/characters/Reimu.jpg" alt="Reimu, con un abito rosso e bianco da sacerdotessa giapponese"/>
 					<ul>
 						<li><span class="charactervoice">Specie</span>: Umana</li>
 						<li><span class="charactervoice">Età</span>: Almeno 15 anni</li>
@@ -69,7 +70,7 @@
 
 				<dt>Marisa Kirisame</dt>
 				<dd>
-					<img src="./images/characters/Kirisame.jpg" alt="Immagine di Marisa Kirisame, con i suoi abiti da negoziante"/>
+					<img src="./images/characters/Kirisame.jpg" alt="Marisa, con i suoi abiti da negoziante"/>
 					<ul>
 						<li><span class="charactervoice">Specie</span>: Umana</li>
 						<li><span class="charactervoice">Età</span>: Almeno 16 anni</li>
@@ -83,7 +84,7 @@
 
 				<dt>Alice Margatroid</dt>
 				<dd>
-					<img src="./images/characters/Alice.jpg" alt="Immagine di Alice Margatroid, con abiti gotici e la sua bambola"/>
+					<img src="./images/characters/Alice.jpg" alt="Alice, con abiti gotici e la sua bambola"/>
 					<ul>
 						<li><span class="charactervoice">Specie</span>: Youkai</li>
 						<li><span class="charactervoice">Età</span>: Sconosciuta</li>
@@ -98,7 +99,7 @@
 
 				<dt>Remilia Scarlet</dt>
 				<dd>
-					<img src="./images/characters/Remilia.jpg" alt="Immagine di Remilia Scarlet, con abiti gotici rosso scarlatto e ali da vampiro"/>
+					<img src="./images/characters/Remilia.jpg" alt="Remilia Scarlet, con abiti gotici scarlatti e ali da vampiro"/>
 					<ul>
 						<li><span class="charactervoice">Specie</span>: Vampiro</li>
 						<li><span class="charactervoice">Età</span>: Circa 500 anni</li>
@@ -112,7 +113,7 @@
 
 				<dt>Flandre Scarlet</dt>
 				<dd>
-					<img src="./images/characters/Flandre.jpg" alt="Immagine di Flandre, con abiti gotici rosso scarlatto e ali di 8 cristalli di svariati colori"/>
+					<img src="./images/characters/Flandre.jpg" alt="Flandre, con abiti gotici scarlatti e ali di 8 cristalli color arcobaleno"/>
 					<ul>
 						<li><span class="charactervoice">Specie</span>: Vampiro</li>
 						<li><span class="charactervoice">Età</span>: Circa 495 anni</li>
@@ -125,7 +126,7 @@
 
 				<dt>Sakuya Izayoi</dt>
 				<dd>
-					<img src="./images/characters/Sakuya.jpg" alt="Immagine di Sakuya, con un abito da cameriera, un orologio e dei coltelli"/>
+					<img src="./images/characters/Sakuya.jpg" alt="Sakuya, con un abito da cameriera, un orologio e dei coltelli"/>
 					<ul>
 						<li><span class="charactervoice">Specie</span>: Umano</li>
 						<li><span class="charactervoice">Età</span>: Circa 16-20 anni</li>
@@ -141,7 +142,7 @@
 
 				<dt>Cirno</dt>
 				<dd>
-					<img src="./images/characters/Cirno.jpg" alt="Immagine di Cirno con un abito bianco ed azzurro e ali composte da 6 cristalli di ghiaccio"/>
+					<img src="./images/characters/Cirno.jpg" alt="Cirno con abito bianco ed azzurro e ali composte da 6 cristalli"/>
 					<ul>
 						<li><span class="charactervoice">Specie</span>: Fata</li>
 						<li><span class="charactervoice">Età</span>: Oltre 60 anni</li>
@@ -156,7 +157,7 @@
 
 				<dt>Yukari Yakumo</dt>
 				<dd>
-					<img src="./images/characters/Yakumo.jpg" alt="Immagine di Yukari Yakumo, avvolta da un'aura di mistero"/>
+					<img src="./images/characters/Yakumo.jpg" alt="Yukari Yakumo, avvolta da un'aura di mistero"/>
 					<ul>
 						<li><span class="charactervoice">Specie</span>: Youkai</li>
 						<li><span class="charactervoice">Età</span>: Almeno 1200 anni</li>
