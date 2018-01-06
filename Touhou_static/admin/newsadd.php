@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
+header('Content-type: application/xhtml+xml');
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
@@ -29,7 +30,7 @@ else
 }
 ?>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 	<meta name="description" content="Fan club italiano di Touhou"/>
 	<meta name="keywords" content="Touhou, Tou Hou, fan club, fanclub, italia, italiano, bullethell, bullet hell"/>
@@ -43,6 +44,7 @@ else
 	<link type="text/css" rel="stylesheet" href="../style/mobile.css" media="handheld, screen and (max-width: 680px), only screen and (max-device-width:680px)"/>
 	<link type="text/css" rel="stylesheet" href="../style/print.css" media="print"/>
 
+	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
 	<script type="text/javascript" src="../script/script.js"></script>
 <title><?php echo $title; ?></title>
 </head>
@@ -90,7 +92,7 @@ echo('<input name="id" style="position: absolute; visibility: hidden;" id="idfor
 					<div id="erroredescrizione"></div>
 					<label for="imgdescrform">Descrizione breve dell'immagine</label>: <input name="imgdescr" type="text" id="imgdescrform" onchange="validateString('descrizione',document.getElementById('imgdescrform').value)" value="<?php if($edit) echo ($news['imgdescr'])?>"/><br/>
 					Nota: utilizzare <a href="image.php">gestione immagini</a> per caricare nuove immagini<br/>
-					<label for="hiddenform">Bozza</label>: <input name="hidden" id="hiddenform" type="checkbox" <?php if($edit) if($news['hidden'] == true) echo('checked="checked"');?>/><br/>
+					<input name="hidden" id="hiddenform" type="checkbox" <?php if($edit) if($news['hidden'] == true) echo('checked="checked"');?>/><label for="hiddenform"> Bozza</label><br/>
 					<div id="erroretesto"></div>
 					<label for="textform">Testo</label>: <br/><textarea name="text" id="textform" cols="100" rows="10" onchange="validateString('testo',document.getElementById('textform').value)" ><?php if($edit) echo($news['text']);?></textarea><br/>
 					<div id="erroreAdd"></div>

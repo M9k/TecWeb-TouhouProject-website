@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
+header('Content-type: application/xhtml+xml');
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
@@ -11,7 +12,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 }
 ?>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 	<meta name="description" content="Fan club italiano di Touhou"/>
 	<meta name="keywords" content="Touhou, Tou Hou, fan club, fanclub, italia, italiano, bullethell, bullet hell"/>
@@ -58,7 +59,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 		<h2>Aggiunta capitolo</h2>
 		<div id="newsadd">
 			<form id="addchapterform" action="chapteraddaction.php" method="post" enctype="multipart/form-data">
-				<fieldset id="addchapterdiv">
+				<div id="addchapterdiv">
 					<label for="title">Titolo giapponese</label>: <input name="title" type="text" id="title"/><br/>
 					<label for="titleeng">Titolo inglese</label>: <input name="titleeng" type="text" id="titleeng"/><br/>
 					<label for="titleita">Titolo italiano</label>: <input name="titleita" type="text" id="titleita"/><br/>
@@ -69,7 +70,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 					<label for="year">Anno</label>: <input name="year" type="text" id="year"/><br/>
 					<label for="plot">Trama</label>: <br/><textarea name="plot" id="plot" cols="100" rows="10"></textarea><br/>	
 					<input type="submit" value="Aggiungi" name="submit"/>
-				</fieldset>
+				</div>
 			</form>
 		</div>
 	</div>

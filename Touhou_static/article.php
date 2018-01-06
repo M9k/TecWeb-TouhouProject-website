@@ -1,4 +1,5 @@
-<?php require_once __DIR__.DIRECTORY_SEPARATOR."dbConnection.php"; ?>
+<?php require_once __DIR__.DIRECTORY_SEPARATOR."dbConnection.php"; 
+header('Content-type: application/xhtml+xml'); ?>
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
@@ -39,6 +40,7 @@ else
 
 		<link rel="alternate" href="rss.php" title="Ricevi le notizie tramite RSS" type="application/rss+xml"/>
 
+		<meta http-equiv="Content-Script-Type" content="text/javascript"/>
 		<script type="text/javascript" src="script/script.js"></script>
 	<title><?php echo $title; ?></title>
 </head>

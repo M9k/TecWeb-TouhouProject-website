@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
+header('Content-type: application/xhtml+xml');
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
@@ -10,7 +11,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 }
 ?>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 	<meta name="description" content="Fan club italiano di Touhou"/>
 	<meta name="keywords" content="Touhou, Tou Hou, fan club, fanclub, italia, italiano, bullethell, bullet hell"/>
@@ -71,7 +72,7 @@ foreach($immagini as $immagine)
 	if($immagine != '..' && $immagine != '.')
 	{
 		echo '<dt>'.$immagine.'</dt>';
-		echo '<dd><div class="imagediv"><form class="imagedivform" action="imagedelete.php" method="post"><div class="imagedescription"><div class="imageview"><img alt="immagine con nome'.$immagine.'" src="../images/news/'.$immagine.'"/></div><div class="linkimage">Per utilizzare questa immagine inserire: images/news/'.$immagine.'</div><button name="btnDelete" value="'.$immagine.'">Elimina</button></div></form></div></dd>';
+		echo '<dd><div class="imagediv"><form class="imagedivform" action="imagedelete.php" method="post"><div class="imagedescription"><div class="imageview"><img alt="immagine con nome'.$immagine.'" src="../images/news/'.$immagine.'"/></div><div class="linkimage">Per utilizzare questa immagine inserire: images/news/'.$immagine.'</div><button name="btnDelete" value="'.$immagine.'">Elimina '.$immagine.'</button></div></form></div></dd>';
 	}
 }
 echo '</dl>';

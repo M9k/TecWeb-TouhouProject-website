@@ -45,7 +45,7 @@
 	else
 		$error ="Alcuni campi sono stati lasciati vuoti, per favore compilare tutti i campi.";
 	
-	if (session_status() == PHP_SESSION_NONE) { session_start(); }
+	header('Content-type: application/xhtml+xml'); if (session_status() == PHP_SESSION_NONE) { session_start(); }
 	//trasferisco alla pagina di errore
 	$_SESSION['error'] = $error;
 	header('Location: error.php');

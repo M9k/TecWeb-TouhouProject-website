@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
+header('Content-type: application/xhtml+xml');
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
@@ -12,7 +13,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 }
 ?>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 	<meta name="description" content="Fan club italiano di Touhou"/>
 	<meta name="keywords" content="Touhou, Tou Hou, fan club, fanclub, italia, italiano, bullethell, bullet hell"/>
@@ -67,16 +68,16 @@ if($comments != null)
 	$inc = 1;
 	foreach($comments as $comment) 
 	{
-		echo '<dt>'.$comment['nick'].' - '.$comment['email'].'</dt>'.
+		echo '<dt>'.$comment['id']. ' - ' .$comment['nick'].' - '.$comment['email'].'</dt>'.
 			'<dd>'.
 			'<div class="data">'.$comment['data'].'</div>'.
 			'<div class="message"><p>'.$comment['message'].'</p></div>'.
 			'<div class="ip">'.$comment['ip'].'</div>'.
 			'<form class="commentaction" action="commentaction.php" method="post">'.
 			'<div class="commentactionsformcontent">'.
-			'<label for="reasonform'.$inc.'">Motivo del ban</label>: <input id="reasonform'.$inc.'" type="text" maxlength="255" name="reason"/> '.
-			'<button name="ban" value="'.$comment['id'].'">Banna l\'utente ed elimina il commento</button>'.
-			' <button name="delete" value="'.$comment['id'].'">Elimina il commento</button>'.
+			'<label for="reasonform'.$inc.'">Motivo del ban a '.$comment['nick'].' per via del commento con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</label>: <input id="reasonform'.$inc.'" type="text" maxlength="255" name="reason"/> '.
+			'<button name="ban" value="'.$comment['id'].'">Banna l\'utente '.$comment['nick'].' ed elimina il commento con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</button><br/>'.
+			' <button name="delete" value="'.$comment['id'].'">Elimina il commento di '.$comment['nick'].' con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</button>'.
 			'</div>'.
 			'</form>'.
 			'</dd>';

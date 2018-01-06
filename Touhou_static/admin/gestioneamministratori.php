@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
+header('Content-type: application/xhtml+xml');
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
@@ -12,7 +13,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 }
 ?>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 	<meta name="description" content="Fan club italiano di Touhou"/>
 	<meta name="keywords" content="Touhou, Tou Hou, fan club, fanclub, italia, italiano, bullethell, bullet hell"/>
@@ -70,7 +71,7 @@ if($administrators != null)
 	echo '<form class="listadmins" action="gestioneamministratoriaction.php" method="post"><fieldset id="listadminsfield"><legend>Lista degli amministratori presenti:</legend>'.
 		'<ul>';
 	foreach($administrators as $administrator)
-		echo '<li>'.$administrator['username']." - ".$administrator['email'].' <button name="btnDelete" value="'.$administrator['username'].'">Elimina</button></li>';
+		echo '<li>'.$administrator['username'].' - '.$administrator['email'].' <button name="btnDelete" value="'.$administrator['username'].'">Elimina '.$administrator['username'].'</button></li>';
 	echo '</ul>'.
 		'</fieldset></form>';
 }
@@ -91,9 +92,12 @@ else
 		<form id="editaccountinfo" action="gestioneamministratoriaction.php" method="post">
 			<fieldset id="editaccountinfofield">
 			<legend>Dati del proprio account:</legend>
-			<label for="newemailinput">Email:</label> <input value="<?php echo $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput"/><br/>
-				<label for="newpasswordinput">Nuova password:</label> <input name="newpassword" type="text" id="newpasswordinput"/><br/>
-				<input type="submit" value="Modifica" name="submit"/> <input type="reset" value="Cancella i campi" name="reset"/>
+			<label for="newemailinput">Email:</label>
+				<input value="<?php echo $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput"/><br/>
+				<label for="newpasswordinput">Nuova password:</label>
+				<input name="newpassword" type="text" id="newpasswordinput"/><br/>
+				<input type="submit" value="Modifica" name="submit"/>
+				<input type="reset" value="Cancella i campi" name="reset"/>
 			</fieldset>
 		</form>
 <?php
