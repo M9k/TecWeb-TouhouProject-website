@@ -126,7 +126,7 @@
 	\section{Suddivisione di struttura, presentazione e comportamento}
 		\subsection{Parte utente}
 			\subsubsection{Struttura}
-			I file delle pagine della parte utente del sito sono collocate nella root del server, i file necessari alla formattazione dello stile del sito per i vari dispositivi sono collocati nella cartella style mentre le immagini necessarie al sito sono collocate nella cartella images la quale, presenta la suddivisione per le immagini delle news, i personaggi e per i capitoli. I file contenenti gli script necessari al sito sono collocati nella cartella script. 
+			I file delle pagine della parte utente del sito sono collocate nella root del server, i file necessari alla formattazione dello stile del sito per i vari dispositivi sono collocati nella cartella style mentre le immagini necessarie al sito sono collocate nella cartella images, la quale presenta la suddivisione per le immagini delle news, i personaggi e per i capitoli. I file contenenti gli script necessari al sito sono collocati nella cartella script.
 			\subsubsection{Presentazione}
 			stile ed immagini
 			\subsubsection{Comportamento}
@@ -170,6 +170,10 @@
 			\subsection{Web Accessibility Toolbar (WAT)}
 			
 			\subsection{Total Validator}
+			Per permettere la verifica delle pagine di amministrazione a Total Validator Basic è stata temporaneamente rimossa la verifica del login, questo ha portato ad alcuni errori nella pagina di gestione degli account, in quanto l'account correttamente in uso era invalido.\\
+			Un warning sollevato in ogni pagina è riguardante il link interno per saltare al contenuto, precisamente "W874 Add a skip navigation link as the first link on the page", che viene sollevato in quanto il testo non è "Skip to main content", bensì "Vai al contenuto", in quanto il sito è mirato ad utenti italiani.\\
+			Da precisare che oltre alla presenza del link per andare al contenuto è disponibile anche un link per tornare ad inizio pagina, inserito per facilitare la navigazione da dispositivi tascabili.\\
+			Altri warning presenti sono in riferimento ad immagini che presentano alt vuoti, in tutti i casi segnalati si tratta di immagini puramente decorative oppure che non veicolano una informazione che può essere descritta. Un esempio sono le copertine dei capitoli del videogioco, che presentano motivi e colori imprecisati oppure illustrazioni senza un  significato, utilizzate come riempitivo per la copertina.
 			
 		\section{Test su diversi dispositivi}
 			Il sito è stato testato su varie macchine e sistemi operativi. Nelle sezioni seguenti verranno elencati assieme ai browser e alle risoluzioni testate.
@@ -179,17 +183,17 @@
 					\item Firefox Quantum
 					\item Google Chrome
 					\item Firefox 56
-					\item Waterfox
+					\item Waterfox 57
 					\item Edge
 					\item Chromium 64
 					\item Mozilla Firefox 3
 					\item Internet Explorer 11
 				\end{itemize}
-				Mozilla Firefox 3 non visualizza correttamente lo sfondo nero in semitrasparenza del menu, di consegueza seleziona il precedente stile che ritiene valido che è uno sfondo nero opaco. Questo peggiora il rendimento grafico del sito ma non ne compromette l'uso.\\
-				Altri problemi riscontrati in Firefox 3 sono una dimensione errata dell'immagine nella testata e l'assenza di bordi arrotondati. Anche questi aspetti rovinano leggermente il rendimento grafico ma non compromettono le funzionalità, in quanto tutti i contenuti risultano perfettamente fruibili dall'utente.\\
-				Un ultimo appunto riguardante Firefox 3 è l'incompatibilità con parte del codice JavaScript: solamente il controllo della compilazione dei campi di testo funziona correttamente.\\
-				Internet Explorer 11, con la modalità Explorer 7, genera lo stesso problema relativo ai bordi e allo sfondo del menu di Firefox 3 ma renderizza correttamente l'immagine nella testata.\\
-				Non sono stati rilevati ulteriori problemi o incompatibilità con i browser sopra menzionati anche  dopo aver variato la grandezza del font, dello zoom della pagina, della dimensione della finestra e disattivando JavaScript.
+				Mozilla Firefox 3 utilizza una dimensione errata dell'immagine nella testata e non visualizza i bordi arrotondati. Questi aspetti rovinano leggermente il rendimento grafico ma non compromettono le funzionalità, in quanto tutti i contenuti risultano perfettamente fruibili dall'utente.\\
+				Un Secondo appunto riguardante Firefox 3 è l'incompatibilità con parte del codice JavaScript: solamente il controllo della compilazione dei campi di testo funziona correttamente.\\
+				Internet Explorer 11, con la modalità Explorer 7, genera lo stesso problema relativo ai bordi di Firefox 3 ma renderizza correttamente l'immagine nella testata.\\
+				Non sono stati rilevati ulteriori problemi o incompatibilità con i browser sopra menzionati, anche variando la grandezza del font, dello zoom della pagina, della dimensione della finestra e disattivando JavaScript.
+%TODO: come si comporta su EDGE? io non lo ho
 
 				\subsection{GNU/Linux Fedora 27}
 				Sono state testate le risoluzioni di 1800p e 2160p con i browsers:
