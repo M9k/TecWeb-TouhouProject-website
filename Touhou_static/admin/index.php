@@ -116,6 +116,7 @@ else
 			<p>Infine puoi ritornare al sito rimanendo loggato all’Area amministrativa o fare <span xml:lang="en">Logout</span>.</p>
 		<?php
 		} else { ?>
+		<h1>Pagina di login</h1>
 		<form action="index.php" method="post" id="loginform">
 			<fieldset id="loginfields">
 				<legend>Login</legend>
