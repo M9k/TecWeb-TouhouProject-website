@@ -108,7 +108,6 @@ function validateFormAddNews() {
 	var titolo = document.forms["addnewsform"]["titleform"].value;
 	var imgCopertina = document.forms["addnewsform"]["imageform"].value;
 	var imgUploadCopertina = document.getElementById("fileupload").files.length;
-	var descrizione = document.forms["addnewsform"]["imgdescrform"].value;
 	var testo = document.forms["addnewsform"]["textform"].value;
 	var validate = validateString("titolo", titolo) & validateStringImage(imgCopertina, imgUploadCopertina) & validateString("descrizione", descrizione) & validateString("testo", testo);
 	if(validate == false) {
