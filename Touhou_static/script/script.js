@@ -1,26 +1,29 @@
-var fixedHeader;
-
 window.onload = function() {
 	//immagini zoommabili
 	[].forEach.call(document.getElementById("contenuto").getElementsByTagName("img"), makezoomable);
+	
 	//menu per i dispositivi mobili, sostituisce il css hover se possibile
-	var menu = document.getElementById('menuvoice');
+	var menuvoice = document.getElementById('menuvoice');
+	//per il menu fixed
+	var menudiv = document.getElementById("menudiv");
+	var header = document.getElementById("header");
+	var menu = document.getElementById("menu");
+	
 	const mq = window.matchMedia('handheld, screen and (max-width: 680px), only screen and (max-device-width:600px)');
-	mq.addListener(MenuCheck);
-	MenuCheck();
+	mq.addListener(ChangeResolutionCheck);
 
-	function MenuCheck() {
+	function ChangeResolutionCheck() {
 		if(mq.matches) //solo su mobile
 		{
 			var menuopen = false;
 			//blocco il hover
-			var siblingstart = menu.nextElementSibling;
+			var siblingstart = menuvoice.nextElementSibling;
 			while(siblingstart != null) {
 				siblingstart.style.display = 'none';
 				siblingstart = siblingstart.nextElementSibling;
 			}
 			//setto attraverso il click
-			menu.onclick = function() {
+			menuvoice.onclick = function() {
 				var sibling = this.nextElementSibling;
 				if(menuopen) {
 					while(sibling != null) {
@@ -40,24 +43,19 @@ window.onload = function() {
 		}
 		else //su pc - se c'è necessità rimuovo lo stile precedentemente settato
 		{
-			var siblingstart = menu.nextElementSibling;
+			//sblocco il hover
+			var siblingstart = menuvoice.nextElementSibling;
 			while(siblingstart != null) {
-				siblingstart.style.removeProperty("display");
+				siblingstart.style.display = 'block';
 				siblingstart = siblingstart.nextElementSibling;
 			}
+			menuopen = true;
 		}
-	}
-
-	//per il menu fixed
-	var menudiv = document.getElementById("menudiv");
-	var header = document.getElementById("header");
-	var menu = document.getElementById("menu");
-	mq.addListener(CheckFixedHeader);
-	function CheckFixedHeader() {
 		fixedHeader = !mq.matches;
 		changeHeader();
 	}
-	fixedHeader = !mq.matches;
+
+	ChangeResolutionCheck();
 }
 
 function makezoomable(image) {
@@ -108,6 +106,7 @@ function validateFormAddNews() {
 	var titolo = document.forms["addnewsform"]["titleform"].value;
 	var imgCopertina = document.forms["addnewsform"]["imageform"].value;
 	var imgUploadCopertina = document.getElementById("fileupload").files.length;
+	var descrizione = document.forms["addnewsform"]["imgdescrform"].value;
 	var testo = document.forms["addnewsform"]["textform"].value;
 	var validate = validateString("titolo", titolo) & validateStringImage(imgCopertina, imgUploadCopertina) & validateString("descrizione", descrizione) & validateString("testo", testo);
 	if(validate == false) {
@@ -164,11 +163,12 @@ function validateEmail() {
 
 window.onscroll = changeHeader;
 
+var fixedHeader;
 var menuIsFixed = false;
 function changeHeader() {
-	if(fixedHeader) {
-		if (window.pageYOffset > 2 + header.clientHeight - menu.clientHeight ) {
-			if(!menuIsFixed)
+	if(fixedHeader) //se mi potrebbe servire l'header fissato perche' sono su pc
+		if (window.pageYOffset > 2 + header.clientHeight - menu.clientHeight ) //mi serve davvero impostarlo
+			if(!menuIsFixed) //e non e' ancora impostato -> imposto
 			{
 				header.style.borderWidth = "0";
 				menudiv.style.position = "fixed";
@@ -179,9 +179,8 @@ function changeHeader() {
 				menu.style.bottom = "auto";
 				menuIsFixed = true;
 			}
-		}
-		else {
-			if(menuIsFixed)
+		else //se invece non mi serve impostarlo
+			if(menuIsFixed) //ma e' impostato -> lo rimuovo
 			{
 				header.style.borderWidth = "2pt";
 				menudiv.style.position = "absolute";
@@ -192,6 +191,4 @@ function changeHeader() {
 				menu.style.bottom = "0";
 				menuIsFixed = false;
 			}
-		}
-	}
 }
