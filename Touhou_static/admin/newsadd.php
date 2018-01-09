@@ -90,7 +90,7 @@ echo('<input name="id" style="position: absolute; visibility: hidden;" id="idfor
 					<label for="fileupload">Carica nuova immagine, ignorando il box di input precedente</label>: <br/>
 					<input type="file" name="fileupload" id="fileupload" onchange="validateStringImage(document.getElementById('imageform').value, document.getElementById('fileupload').files.length)" /><br/>
 					<div id="erroredescrizione"></div>
-					<label for="imgdescrform">Descrizione breve dell'immagine</label>: <input name="imgdescr" type="text" id="imgdescrform" onchange="validateString('descrizione',document.getElementById('imgdescrform').value)" value="<?php if($edit) echo ($news['imgdescr'])?>"/><br/>
+					<label for="imgdescrform">Descrizione breve dell'immagine</label>: <input name="imgdescr" type="text" id="imgdescrform" value="<?php if($edit) echo ($news['imgdescr'])?>"/><br/>
 					Nota: utilizzare <a href="image.php">gestione immagini</a> per caricare nuove immagini<br/>
 					<input name="hidden" id="hiddenform" type="checkbox" <?php if($edit) if($news['hidden'] == true) echo('checked="checked"');?>/><label for="hiddenform"> Bozza</label><br/>
 					<div id="erroretesto"></div>
