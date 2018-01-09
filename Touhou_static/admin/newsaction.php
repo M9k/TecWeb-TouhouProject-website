@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 $returnpage = $_SERVER['HTTP_REFERER'];
 
-$error = 'Utente non loggato!';
+$error = null;
 if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 {
 	$dbConnection = new DBAccess();
@@ -14,28 +14,41 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 	//Inserimento o modfica da effettuare
 	if(isset($_POST['title']) && isset($_POST['text']))
 	{
-		$returnpage = "news.php";
-
-		if(isset($_POST['hidden']) && $_POST['hidden'] == true)
-			$hidden = 1;
-		else
-			$hidden = 0;
-		
-		$image = $_POST['image'];
-		if(isset($_FILES["fileupload"])) //se c'è una immagine provo a caricarla e a impostarla
+		if(strcmp($_POST['title'],"") != 0 && (isset($_FILES["fileupload"]) || (isset($_POST['image']) && strcmp($_POST['image'],"") != 0)) && strcmp($_POST['text'],"") != 0)
 		{
-			require('imageuploadfunction.php');
-			$ris = imageupload("../images/news/", $_FILES["fileupload"]);
-			if($ris['result'])
-				$image = $ris['text'];
-		}
+			$returnpage = "news.php";
 
-		//Modifica
-		if(isset($_POST['id']))
-			$risp = $dbConnection->updateNews($_POST['title'], $image, $hidden,  $_POST['text'], $_POST['imgdescr'], $_POST['id']);
-		//Inserimento		
+			if(isset($_POST['hidden']) && $_POST['hidden'] == true)
+				$hidden = 1;
+			else
+				$hidden = 0;
+			
+			$image = $_POST['image'];
+			if($_FILES["fileupload"]['size'] != 0) //se c'è una immagine provo a caricarla e a impostarla
+			{
+				require('imageuploadfunction.php');
+				$ris = imageupload("../images/news/", $_FILES["fileupload"]);
+				if($ris['result'])
+					$image = $ris['text'];
+			}
+
+			//Modifica
+			if(isset($_POST['id']))
+				$risp = $dbConnection->updateNews($_POST['title'], $image, $hidden,  $_POST['text'], $_POST['imgdescr'], $_POST['id']);
+			//Inserimento		
+			else
+				$risp = $dbConnection->insertNews($_POST['title'], $image, $hidden,  $_POST['text'], $_POST['imgdescr']);
+		}
 		else
-			$risp = $dbConnection->insertNews($_POST['title'], $image, $hidden,  $_POST['text'], $_POST['imgdescr']);
+		{
+			$error = "Alcuni campi inseriti non sono corretti! ";
+			if(strcmp($_POST['title'],"") == 0)
+				$error .= "Il titolo non può essere lasciato vuoto! ";
+			if(strcmp($_POST['text'],"") == 0)
+				$error .= "Il testo non può essere lasciato vuoto! ";
+			if($_FILES["fileupload"]['size'] == 0 && (!isset($_POST['image']) || strcmp($_POST['image'],"") == 0))
+				$error .= "Non è stata indicata nessuna immagine da utilizzare o da caricare!";
+		}
 	}
 	//Vai alla pagina di edit
 	if(isset($_POST['btnEdit']))
@@ -56,9 +69,12 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 	
 	$dbConnection->closeDBConnection();
 
-	//Se è avvenuto un errore
+	//Se ènon ho avuto nessuna risposta e non ho ancora l'errore
 	if($risp != true)
-		$error ='Errore durante lo svolgimento dell\'operatione!';
+	{
+		if($error == null)
+			$error ='Errore durante lo svolgimento dell\'operatione!';
+	}
 	//Altrimenti ridireziono verso la prossima pagina
 	else
 	{
@@ -66,6 +82,9 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 		die();
 	}
 }
+else
+	$error ='Utente non loggato!';
+
 
 //Trasferisco alla pagina di errore
 $_SESSION['error'] = $error;
