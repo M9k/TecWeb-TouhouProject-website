@@ -1,3 +1,5 @@
+const mq = window.matchMedia('handheld, screen and (max-width: 680px), only screen and (max-device-width:600px)');
+	
 window.onload = function() {
 	//immagini zoommabili
 	[].forEach.call(document.getElementById("contenuto").getElementsByTagName("img"), makezoomable);
@@ -8,14 +10,12 @@ window.onload = function() {
 	var menudiv = document.getElementById("menudiv");
 	var header = document.getElementById("header");
 	var menu = document.getElementById("menu");
-	
-	const mq = window.matchMedia('handheld, screen and (max-width: 680px), only screen and (max-device-width:600px)');
+
 	mq.addListener(ChangeResolutionCheck);
 
 	function ChangeResolutionCheck() {
 		if(mq.matches) //solo su mobile
 		{
-			var menuopen = false;
 			//blocco il hover
 			var siblingstart = menuvoice.nextElementSibling;
 			while(siblingstart != null) {
@@ -162,12 +162,12 @@ function validateEmail() {
 }
 
 window.onscroll = changeHeader;
-
-var fixedHeader;
 var menuIsFixed = false;
+
 function changeHeader() {
-	if(fixedHeader) //se mi potrebbe servire l'header fissato perche' sono su pc
+	if(!mq.matches)
 		if (window.pageYOffset > 2 + header.clientHeight - menu.clientHeight ) //mi serve davvero impostarlo
+		{
 			if(!menuIsFixed) //e non e' ancora impostato -> imposto
 			{
 				header.style.borderWidth = "0";
@@ -179,6 +179,7 @@ function changeHeader() {
 				menu.style.bottom = "auto";
 				menuIsFixed = true;
 			}
+		}
 		else //se invece non mi serve impostarlo
 			if(menuIsFixed) //ma e' impostato -> lo rimuovo
 			{
