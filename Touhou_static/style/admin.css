@@ -22,6 +22,9 @@
 #erroreAdd {
 	color: red;
 }
+#textform {
+	width: 100%;
+}
 
 @media handheld, screen and (max-width: 680px), only screen and (max-device-width:680px) {
 	#contenuto {
