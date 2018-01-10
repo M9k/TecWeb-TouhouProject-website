@@ -18,6 +18,9 @@ body {
 	max-width: 1200px; 
 	min-width: 65%; 
 }
+a {
+	color: #004D99;
+}
 #header {
 	background-color: #fff;
 	background-image: url("../images/head.jpg");
@@ -56,7 +59,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 	font-size: 5em;
 	padding: 2% 3.5% 0% 3.5%;
-}
+}#004D99
 h2 {
 	margin-top: 2.5%;
 	margin-bottom: 1.5%;
@@ -137,7 +140,7 @@ legend {
 	text-decoration: none;
 }
 #menu a:hover, #menu a:visited:hover {
-	background-color: #FF2400; /* scarlatto - riferimento a Scarlet */
+	background-color: #FF6050;
 }
 #menu a:visited {
 	background-color: #BDBDBD;
@@ -265,7 +268,7 @@ div.data {
 }
 
 #imgrss {
-	width: 8%;
+	width: 2em;
 	margin-bottom: -2%;
 }
 #titlerss {

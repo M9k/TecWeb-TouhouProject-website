@@ -1,5 +1,8 @@
 const mq = window.matchMedia('handheld, screen and (max-width: 680px), only screen and (max-device-width:600px)');
-	
+var menuIsOpen = false;
+var menuIsFixed = false;
+window.onscroll = changeHeader;
+
 window.onload = function() {
 	//immagini zoommabili
 	[].forEach.call(document.getElementById("contenuto").getElementsByTagName("img"), makezoomable);
@@ -16,6 +19,8 @@ window.onload = function() {
 	function ChangeResolutionCheck() {
 		if(mq.matches) //solo su mobile
 		{
+			if(menuIsFixed)
+				unFixMenu();
 			//blocco il hover
 			var siblingstart = menuvoice.nextElementSibling;
 			while(siblingstart != null) {
@@ -25,19 +30,19 @@ window.onload = function() {
 			//setto attraverso il click
 			menuvoice.onclick = function() {
 				var sibling = this.nextElementSibling;
-				if(menuopen) {
+				if(menuIsOpen) {
 					while(sibling != null) {
 						sibling.style.display = 'none';
 						sibling = sibling.nextElementSibling;
 					}
-					menuopen = false;
+					menuIsOpen = false;
 				}
 				else {
 					while(sibling != null) {
 						sibling.style.display = 'block';
 						sibling = sibling.nextElementSibling;
 					}
-					menuopen = true;
+					menuIsOpen = true;
 				}
 			}
 		}
@@ -50,9 +55,8 @@ window.onload = function() {
 				siblingstart = siblingstart.nextElementSibling;
 			}
 			menuopen = true;
+			changeHeader();
 		}
-		fixedHeader = !mq.matches;
-		changeHeader();
 	}
 
 	ChangeResolutionCheck();
@@ -161,35 +165,35 @@ function validateEmail() {
 	}
 }
 
-window.onscroll = changeHeader;
-var menuIsFixed = false;
-
 function changeHeader() {
 	if(!mq.matches)
 		if (window.pageYOffset > 2 + header.clientHeight - menu.clientHeight ) //mi serve davvero impostarlo
 		{
 			if(!menuIsFixed) //e non e' ancora impostato -> imposto
-			{
-				header.style.borderWidth = "0";
-				menudiv.style.position = "fixed";
-				menudiv.style.top = "0";
-				menudiv.style.bottom = "auto";
-				menudiv.style.width = header.clientWidth + "px";
-				menu.style.top = "0";
-				menu.style.bottom = "auto";
-				menuIsFixed = true;
-			}
+				fixMenu();
 		}
 		else //se invece non mi serve impostarlo
 			if(menuIsFixed) //ma e' impostato -> lo rimuovo
-			{
-				header.style.borderWidth = "2pt";
-				menudiv.style.position = "absolute";
-				menudiv.style.top = "auto";
-				menudiv.style.bottom = "0";
-				menudiv.style.width = "100%";
-				menu.style.top = "auto";
-				menu.style.bottom = "0";
-				menuIsFixed = false;
-			}
+				unFixMenu();
+}
+
+function fixMenu() {
+	header.style.borderWidth = "0";
+	menudiv.style.position = "fixed";
+	menudiv.style.top = "0";
+	menudiv.style.bottom = "auto";
+	menudiv.style.width = header.clientWidth + "px";
+	menu.style.top = "0";
+	menu.style.bottom = "auto";
+	menuIsFixed = true;
+}
+function unFixMenu() {
+	header.style.borderWidth = "2pt";
+	menudiv.style.position = "initial";
+	menudiv.style.top = "auto";
+	menudiv.style.bottom = "0";
+	menudiv.style.width = "100%";
+	menu.style.top = "auto";
+	menu.style.bottom = "0";
+	menuIsFixed = false;
 }
