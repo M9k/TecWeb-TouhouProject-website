@@ -128,21 +128,21 @@
 			\subsubsection{Struttura}
 			I file delle pagine della parte utente del sito sono collocate nella root del server, i file necessari alla formattazione dello stile del sito per i vari dispositivi sono collocati nella cartella style mentre le immagini necessarie al sito sono collocate nella cartella images, la quale presenta la suddivisione per le immagini delle news, i personaggi e per i capitoli. I file contenenti gli script necessari al sito sono collocati nella cartella script.
 			\subsubsection{Presentazione}
-			stile ed immagini
+			La presentazione della pagina è realizzata tramite file css, il principale sono style, che viene utilizzata per ogni pagina.\\
+			In caso di dispositivo mobile o tablet vengono utilizzati due stili extra, tablet e mobile, che hanno il compito di far cambiare la presentazione della pagina per meglio adattarla a schermi di dimensioni inferiori.\\
+			Per quanto riguarda la stampa è stato creato un foglio stile, chiamato print, che rimuove tutti i contenuti non necessari e impagina le informazioni per meglio adattarle a un foglio A4.\\
+			Si è scelto di rimuovere il menu, ma di lasciare il titolo e la breadcrumb, in modo tale da aiutare l'utente a ritrovare il sito web e la pagina nel caso non si ricordasse la fonte.\\
+			Le immagini sono state rimosse, ad eccezione delle immagini dei personaggi, che sono stati valutate come molto utili per una veloce consultazione.
+			
 			\subsubsection{Comportamento}
 			Il comportamento della pagina è stato gestito tramite JavaScript per il controllo delle form, per i commenti e per fornire la possibilità di ingrandire le immagini all'interno della pagina. Sono presenti anche controlli tramite codice PHP per garantire che il sito continui a funzionare corretamente anche in caso di assenza dell'interprete JavaScript.
 			Tutto il codice PHP relativo all'esecuzioni di azioni, come l'aggiunta dei commenti, è stato completamente diviso da quello utilizzato per la visualizzazione dei contenuti.\\
-			\subsubsection{Caching}
-			L'elenco delle notizie presenti sulla sidebar, limitate a 3 e con un breve inizio del relativo testo, vengono gestite attraverso un semplice sistema di cache.\\
-			Il codice HTML generato attraverso la query al database viene salvato su un file per essere riutilizzato alle successive richieste, mentre se la versione salvata risulta troppo poco recente viene rigenerata.\\
-			Questo sistema è stato implementato per ridurre l'accesso al database, in quanto ogni pagina mostra la sidebar. Questo comporterebbe un elevato numero di richieste inutili, e fornire un'informazioni datata di qualche minuto non compromette le funzionalità.\\
-			In aggiunta, nella parte di amministrazione è possibili richiedere la pulizia della cache per forzare il sito a rigenerarla alla successiva richiesta.  Può essere utilizzata ad esempio all'aggiunta di una nuova notizia se si desidera farla apparire subito.
 
 	\subsection{Parte amministratore}
 		\subsubsection{Struttura}
 		generazione di visualizzazione dei dati nel db
 		\subsubsection{Presentazione}
-		Lo stile delle pagine per l'amministrazione differisce rispetto alla parte utente: lato amministratore sono stati rimossi elementi inutili ({\color{red}io qualcuno lo elencherei per completezza}) in modo da renderla più veloce e fare spazio alle utilità necessarie all'amministrazione della pagina.
+		Lo stile delle pagine per l'amministrazione differisce rispetto alla parte utente, in quanto dal lato amministratore sono stati rimossi alcuni elementi inutili, come il footer e la sidebar, in modo da renderla più veloce e fare spazio alle utilità necessarie all'amministrazione del sito.
 		\subsubsection{Comportamento}
 		La parte admin si caratterizza per un minor utilizzo dei controlli da parte di JavaScript e PHP sui form, in quanto l'amministratore ha la possibilità di inserire tag html o se lo desidera di lasciare dei campi vuoti.\\
 		Questo per fare fronte ad una mancanza di un editor di test integrato che consenta una scrittura semplificata dei file HTML, in quanto svilupparlo sarebbe stato troppo oneroso per il progetto.\\
@@ -168,6 +168,9 @@
 				Il plugin ha segnalato alcuni warning riguardanti gli alt, che richiedevano un controllo manuale, e alcuni warning relativi ai furigana rappresentati con una font non molto grande, ma che secondo una nostra analisi manuale è ritenuto sufficientemente grande in quanto supplementare alla lettura.\\
 				Un errore segnalato riguarda una label mancante per un input nella pagina di aggiunta delle news, ma in quel caso l'input è nascosto dall'utente essendo l'indicazione di quale articolo si sta modificando, quindi anche nel caso di uno screen reader non verrebbe visualizzato, per queste motivazioni una label risulterebbe inappropriata.
 			\subsection{Web Accessibility Toolbar (WAT)}
+				Il sito è stato testato su Internet Explorer 11 utilizzato WAT.\\
+				Purtroppo il plugin non è aggiornato e presenta molti strumenti inutilizzabili, la versione corrente è stata scaricata da:\\ \url{https://github.com/ThePacielloGroup/WebAccessibilityToolbar}.\\
+				Uno strumento funzionante molto utile è Juicy Studio Luminosity Analyzer, che ha analizzato il contrasto dei colori, fornendo come indice minimo 7.07, sufficiente per avere la certificazione WCAG 2.0 AAA.\\
 			
 			\subsection{Total Validator}
 			Per permettere la verifica delle pagine di amministrazione a Total Validator Basic è stata temporaneamente rimossa la verifica del login, questo ha portato ad alcuni errori nella pagina di gestione degli account, in quanto l'account correttamente in uso era invalido.\\
