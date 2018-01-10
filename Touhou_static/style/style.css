@@ -21,6 +21,9 @@ body {
   max-width: 1200px;
   min-width: 65%;
 }
+a {
+  color: #004D99;
+}
 
 #header {
   background-color: #fff;
@@ -152,8 +155,7 @@ h3, dt {
 }
 
 #menu a:hover, #menu a:visited:hover {
-  background-color: #FF2400;
-  /* scarlatto - riferimento a Scarlet */
+  background-color: #FF6050;
 }
 
 #menu a:visited {
@@ -211,7 +213,9 @@ div.data {
   font-size: 0.8em;
 }
 
-#contenuto div.newsimage img {
+a { 
+  color: #004D99; 
+} #contenuto div.newsimage img {
   width: 30%;
   display: inline;
   float: left;
