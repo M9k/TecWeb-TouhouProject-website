@@ -1,4 +1,4 @@
-<?php require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php";
+<?php require_once "dbConnection.php";
 
 $closeConnection = false;
 if(!isset($dbConnection))
