@@ -29,7 +29,6 @@ body {
   background-position: right bottom;
   background-size: auto 20em;
   height: 20em;
-  border-radius: 10pt;
   position: relative;
   border-style: solid;
   border-width: 2pt;
@@ -129,7 +128,6 @@ h3, dt {
   position: absolute;
   bottom: 0;
   left: 0;
-  border-radius: inherit;
   width: 100%;
   list-style-type: none;
   margin: 0;
@@ -184,7 +182,6 @@ h3, dt {
   margin: 1%;
   background-color: #f8f8f8;
   border: 1pt solid #bbb;
-  border-radius: 4pt;
 }
 
 #contenuto img {
@@ -271,19 +268,16 @@ div.data {
   margin-left: 0;
   background-color: #ffe7e7;
   border: 1pt solid #bbb;
-  border-radius: 4pt;
 }
 
 #subheader {
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
+  
   background-color: #480000;
 }
 
 #locationbar {
   background-color: #480000;
-  border-bottom-left-radius: 10pt;
-  border-bottom-right-radius: 10pt;
+  
   color: white;
   padding: 0.4em 0 0.4em 3%;
   font-size: 1.1em;
