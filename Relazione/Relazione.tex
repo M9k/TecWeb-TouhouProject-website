@@ -142,7 +142,8 @@
 		\subsubsection{Struttura}
 		generazione di visualizzazione dei dati nel db
 		\subsubsection{Presentazione}
-		Lo stile delle pagine per l'amministrazione differisce rispetto alla parte utente, in quanto dal lato amministratore sono stati rimossi alcuni elementi inutili, come il footer e la sidebar, in modo da renderla più veloce e fare spazio alle utilità necessarie all'amministrazione del sito.
+		Lo stile delle pagine per l'amministrazione differisce rispetto alla parte utente, in quanto dal lato amministratore sono stati rimossi alcuni elementi inutili, come il footer e la sidebar, in modo da renderla più veloce e fare spazio alle utilità necessarie all'amministrazione del sito.\\
+		Ulteriormente si è presa la decisione di rimuovere anche la breadcrumb, in quanto la parte di amministrazione non presenta una profondità significativa dei contenuti e quindi occuperebbe spazio inutilmente, soprattutto considerando che l'utilizzatore può notare dove si trova semplicemente guardando la voce evidenziata nel menu.
 		\subsubsection{Comportamento}
 		La parte admin si caratterizza per un minor utilizzo dei controlli da parte di JavaScript e PHP sui form, in quanto l'amministratore ha la possibilità di inserire tag html o se lo desidera di lasciare dei campi vuoti.\\
 		Questo per fare fronte ad una mancanza di un editor di test integrato che consenta una scrittura semplificata dei file HTML, in quanto svilupparlo sarebbe stato troppo oneroso per il progetto.\\
@@ -192,9 +193,9 @@
 					\item Mozilla Firefox 3
 					\item Internet Explorer 11
 				\end{itemize}
-				Mozilla Firefox 3 utilizza una dimensione errata dell'immagine nella testata e non visualizza i bordi arrotondati. Questi aspetti rovinano leggermente il rendimento grafico ma non compromettono le funzionalità, in quanto tutti i contenuti risultano perfettamente fruibili dall'utente.\\
+				Mozilla Firefox 3 utilizza una dimensione errata dell'immagine nella testata. Questo aspetti rovinano leggermente il rendimento grafico ma non compromettono le funzionalità, in quanto tutti i contenuti risultano perfettamente fruibili dall'utente.\\
 				Un Secondo appunto riguardante Firefox 3 è l'incompatibilità con parte del codice JavaScript: solamente il controllo della compilazione dei campi di testo funziona correttamente.\\
-				Internet Explorer 11, con la modalità Explorer 7, genera lo stesso problema relativo ai bordi di Firefox 3 ma renderizza correttamente l'immagine nella testata.\\
+				Internet Explorer 11, con la modalità Explorer 7, non genera nessun problema, ed anche il problema della dimensione della testata riscontrato su Firefox 3  è assente.\\
 				Non sono stati rilevati ulteriori problemi o incompatibilità con i browser sopra menzionati, anche variando la grandezza del font, dello zoom della pagina, della dimensione della finestra e disattivando JavaScript.
 %TODO: come si comporta su EDGE? io non lo ho
 
