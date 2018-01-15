@@ -3,6 +3,13 @@
 \usepackage{color}
 \usepackage{hyperref}
 
+\hypersetup {
+	linkcolor = {black},
+	urlcolor = {blue},
+	menucolor = {black},
+	colorlinks = true,
+}
+
 \begin{document}
 
 	\begin{titlepage}
@@ -52,7 +59,9 @@
 	Gli obiettivi precedentemente riportati sono da considerarsi puramente teorici e finalizzati alla realizzazione di un sito web con tali caratteristiche, in quanto attualmente non c'è l'intenzione di pubblicare il sito web.
 
 	\chapter{Installazione}
-	configurare DB, link pagina di errore e percorso nel file degli rss
+	Il sito richiede un database MySql, per la creazione delle tabelle utilizzate si possono usare i due file .sql allegati, "database.sql" e "database vuoto.sql", che generano rispettivamente il database con tutti i dati inseriti nel sito web consegnato e un database con le tabelle vuote, con solo l'amministratore presente, le cui credenziali sono admin:admin.\\
+	Successivamente si dovrà modificare il file dbConnection.php, presente nella root del sito, indicando i dati per l'accesso al database (HOST\_DB, USER, PASSWD, DATABASE) e la pagina di errore dove ridirigere l'utente in caso di errore nel database  (\$connectionErrorPage).\\
+	La pagina di errore del database è stata lasciata configurabile in quanto nel caso di problemi al database che richiedono una lunga manutenzione, ad esempio uno spostamento del database o una dimenticanza del rinnovo dell'account del database, si può ridirigere l'utente a un secondo host temporaneo dove sono presenti i contenuti richiesti.\\ 
 	
 	\chapter{Progettazione}
 
