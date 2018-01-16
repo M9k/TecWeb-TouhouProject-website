@@ -37,8 +37,8 @@ h1 {
 }
 #menu #menuvoice {
 	display: block;
-	background-color: #FF6050;
-	color: #000;
+	background-color: #DDDDDD;
+	color: #000000;
 	padding: 10pt 15pt;
 }
 #menu .menuitem {
@@ -77,7 +77,7 @@ h1 {
 	width: 80%;
 	display: block;
 	float: none;
-	border: 2pt solid #260101;
+	border: 2pt solid #000D40;
 	margin: auto;
 }
 #contenuto img.total2images {

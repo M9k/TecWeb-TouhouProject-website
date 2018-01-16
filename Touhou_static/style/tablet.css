@@ -19,9 +19,9 @@ h1 {
 }
 #jumptotop a {
 	display: block;
-	color: #000;
 	text-decoration: none;
-	background-color: #FF6050;
+	background-color: #DDDDDD;
+	color: #000000;
 	border: 2pt solid #838383;
 	padding: 10pt 15pt;
 	text-align: center;

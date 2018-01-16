@@ -50,13 +50,18 @@ input[type="text"], textarea {
 }
 
 input[type="submit"], input[type="reset"], button[type="submit"], button {
-  background-color: #ffbebe;
+  background-color: #DDDDDD;
+  color: #000000;
   padding: 0.5pt;
   text-align: center;
   min-width: 5em;
-  http: //localhost/tecweb/index.php
   border: 1pt #2c2c2c solid;
   font-size: 1.0em;
+  box-shadow: 2pt 1pt 2pt grey;
+}
+input[type="submit"]:hover, input[type="reset"]:hover, button[type="submit"]:hover, button:hover {
+  background-color: #0D47A1;
+  color: #FFFFFF;
 }
 
 h1 {
@@ -135,7 +140,7 @@ h3, dt {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #0009;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #menu li {
@@ -154,8 +159,8 @@ h3, dt {
   text-decoration: none;
 }
 
-#menu a:hover, #menu a:visited:hover {
-  background-color: #FF6050;
+#menu a:hover, #menu a:visited:hover, #jumptotop a:hover, #menu #menuvoice:hover {
+  background-color: #42A5FF;
 }
 
 #menu a:visited {
@@ -165,12 +170,13 @@ h3, dt {
 #menu .disable {
   display: block;
   padding: 10pt 15pt;
-  background-color: #980000;
-  color: #eee;
+  background-color: #0D47A1;
+  color: #FFFFFF;
 }
 
 #menu li.disable:hover {
-  background-color: #980000;
+  background-color: #0D47A1;
+  color: #FFFFFF;
 }
 
 #input {
@@ -198,7 +204,7 @@ h3, dt {
   font-size: 1em;
   border-style: solid;
   border-bottom-width: 3pt;
-  border-color: #b39494;
+  border-color: #AFE0F3;
   margin-bottom: 1.5%;
   padding-bottom: 0.5%;
 }
@@ -219,7 +225,7 @@ a {
   width: 30%;
   display: inline;
   float: left;
-  border: 2pt solid #260101;
+  border: 2pt solid #000D40;
   margin: 2%;
 }
 
@@ -270,7 +276,7 @@ a {
   padding: 1%;
   margin: 1%;
   margin-left: 0;
-  background-color: #ffe7e7;
+  background-color: #E3F2FD;
   border: 1pt solid #bbb;
 }
 
@@ -280,9 +286,8 @@ a {
 }
 
 #locationbar {
-  background-color: #480000;
-  
-  color: white;
+  background-color: #1565C0;
+  color: #FFFFFF;
   padding: 0.4em 0 0.4em 3%;
   font-size: 1.1em;
 }
@@ -314,7 +319,7 @@ a {
   font-size: 0.8em;
   border-bottom-style: solid;
   border-bottom-width: 3pt;
-  border-bottom-color: #b01414;
+  border-bottom-color: #006f9b;
   margin-bottom: 2%;
   padding-bottom: 2%;
 }
@@ -351,7 +356,7 @@ a {
   font-size: 0.9em;
   border-bottom-style: solid;
   border-bottom-width: 2pt;
-  border-bottom-color: #cb8080;
+  border-bottom-color: #AFE0F3;
   overflow: auto;
   margin-bottom: 5%;
   padding-bottom: 4%;
