@@ -8,6 +8,7 @@ $error = null;
 if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 {
 	$dbConnection = new DBAccess();
+
 	$dbConnection->openDBConnection();
 	$risp = false;
 
@@ -50,26 +51,29 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 				$error .= "Non è stata indicata nessuna immagine da utilizzare o da caricare!";
 		}
 	}
-	//Vai alla pagina di edit
-	if(isset($_POST['btnEdit']))
+	//Specificata una azione
+	if(isset($_GET['action']))
 	{
-		$returnpage = 'newsadd.php?id='.$_POST['btnEdit'];
-		$risp = 1;
+		//modifica
+		if(strcmp($_GET['action'],"edit") == 0)
+		{
+			$returnpage = 'newsadd.php?id='.$_GET['id'];
+			$risp = 1;
+		}
+		//elimina
+		if(strcmp($_GET['action'],"delete") == 0)
+			$risp = $dbConnection->removeNews($_GET['id']);
+		//rendi visibile
+		if(strcmp($_GET['action'],"visible") == 0)
+			$risp = $dbConnection->updateNewsVisibility($_GET['id'], false);
+		//sposta in bozze
+		if(strcmp($_GET['action'],"hide") == 0)
+			$risp = $dbConnection->updateNewsVisibility($_GET['id'], true);
 	}
-	//Elimina
-	if(isset($_POST['btnDelete']))
-		$risp = $dbConnection->removeNews($_POST['btnDelete']);
-	//Rendi visibile
-	if(isset($_POST['btnShow']))
-		$risp = $dbConnection->updateNewsVisibility($_POST['btnShow'], false);
-	//Sposta in bozze
-	if(isset($_POST['btnHide']))
-		$risp = $dbConnection->updateNewsVisibility($_POST['btnHide'], true);
-
 	
 	$dbConnection->closeDBConnection();
 
-	//Se ènon ho avuto nessuna risposta e non ho ancora l'errore
+	//Se non ho avuto nessuna risposta e non ho ancora l'errore
 	if($risp != true)
 	{
 		if($error == null)

@@ -50,7 +50,8 @@ input[type="text"], textarea {
   margin: 1pt 0pt;
 }
 
-input[type="submit"], input[type="reset"], button[type="submit"], button {
+input[type="submit"], input[type="reset"], button[type="submit"], button, .button {
+  text-decoration: none;
   background-color: #DDDDDD;
   color: #000000;
   text-align: center;
@@ -61,7 +62,7 @@ input[type="submit"], input[type="reset"], button[type="submit"], button {
   padding: 2pt;
   margin: 2pt;
 }
-input[type="submit"]:hover, input[type="reset"]:hover, button[type="submit"]:hover, button:hover {
+input[type="submit"]:hover, input[type="reset"]:hover, button[type="submit"]:hover, button:hover, .button:hover {
   background-color: #0D47A1;
   color: #FFFFFF;
 }
@@ -94,6 +95,9 @@ h3, dt {
   position: relative;
   font-size: 1.4em;
   clear: both;
+}
+.optionsnewsdiv {
+  padding: 4pt;
 }
 
 #contenuto dt {

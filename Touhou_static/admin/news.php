@@ -63,9 +63,6 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 		<div id="newsadd">
 			<a href="newsadd.php">Aggiungi news</a>
 		</div>
-		<div id="newssiderefresh">
-			<a href="cleancache.php">Cancella le cache delle news per la sidebar</a>
-		</div>
 		<h3>News presenti nel sito:</h3>
 <?php
 	$dbConnection = new DBAccess();
@@ -78,12 +75,14 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 		{
 			echo '<dt><a href="../article?id='.$notizia['id'].'">'.$notizia['title'].'</a></dt>'.
 				'<dd>'.
-				'<div class="optionsnewsdiv"><form class="optionsnewsform" action="newsaction.php" method="post"><div class="optionsnewsformcontent"><button name="btnEdit" value="'.$notizia['id'].'">Modifica "'.$notizia['title'].'"</button><br/><button name="btnDelete" value="'.$notizia['id'].'">Elimina "'.$notizia['title'].'"</button><br/>';
+				'<div class="optionsnewsdiv">
+				<a title="Modifica notizia: '.$notizia['title'].'" class="button" href="newsaction.php?action=edit&amp;id='.$notizia['id'].'">Modifica</a> 
+				<a title="Elimina notizia: '.$notizia['title'].'" class="button" href="newsaction.php?action=delete&amp;id='.$notizia['id'].'">Elimina</a>';
 			if($notizia['hidden'])
-				echo ' <button name="btnShow" value="'.$notizia['id'].'">Pubblica "'.$notizia['title'].'"</button>';
+				echo ' <a title="Pubblica notizia: '.$notizia['title'].'" class="button" href="newsaction.php?action=visible&amp;id='.$notizia['id'].'">Pubblica</a>';
 			else
-				echo ' <button name="btnHide" value="'.$notizia['id'].'">Imposta "'.$notizia['title'].'" come bozza</button>';
-			echo '</div></form></div>';
+				echo ' <a title="Imposta come bozza la notizia: '.$notizia['title'].'" class="button" href="newsaction.php?action=hide&amp;id='.$notizia['id'].'">Imposta come bozza</a>';
+			echo '</div>';
 			if(isset($notizia['image']) && strcmp($notizia['image'], "") != 0)
 				echo '<div class="newsimage"><img src="../images/news/'.$notizia['image'].'" alt="'.$notizia['imgdescr'].'"/></div>';
 			echo '<div class="data">'.strftime('%e %B %Y',strtotime($notizia['data'])).'</div><div class="testo">'.$notizia['text'].'</div></dd>';
