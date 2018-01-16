@@ -20,6 +20,7 @@ body {
   background-color: #fff;
   max-width: 1200px;
   min-width: 65%;
+  box-shadow: 0.1pt 1pt 3pt black;
 }
 a {
   color: #004D99;
@@ -34,7 +35,7 @@ a {
   height: 20em;
   position: relative;
   border-style: solid;
-  border-width: 2pt;
+  border-width: 1pt;
   overflow: hidden;
   min-height: 10em;
 }
