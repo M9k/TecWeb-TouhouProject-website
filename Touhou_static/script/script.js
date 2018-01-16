@@ -188,7 +188,7 @@ function fixMenu() {
 	menuIsFixed = true;
 }
 function unFixMenu() {
-	header.style.borderWidth = "2pt";
+	header.style.borderWidth = "1pt";
 	menudiv.style.position = "initial";
 	menudiv.style.top = "auto";
 	menudiv.style.bottom = "0";
