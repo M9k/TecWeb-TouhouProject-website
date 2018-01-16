@@ -46,7 +46,7 @@
 	</div>
 	</div>
 	<div id="locationbar">
-		Home &gt;&gt;&gt; Popolarità
+		<span xml:lang="eng">Home</span> &gt;&gt;&gt; Popolarità
 	</div>
 	<div id="contenitore">
 		<div id="contenuto">

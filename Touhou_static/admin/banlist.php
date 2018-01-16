@@ -44,27 +44,30 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 				<ul id="menu">
 					<li id="menuvoice">Menu</li>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="news.php">News</a></li>
+					<li><a href="news.php" xml:lang="en">News</a></li>
 					<li><a href="image.php">Immagini</a></li>
 					<li><a href="comments.php">Commenti</a></li>
-					<li class="disable">Lista ban</li>
+					<li class="disable">Utenti bloccati</li>
 					<li><a href="chapters.php">Capitoli</a></li>
 					<li><a href="gestioneamministratori.php">Amministratori</a></li>
 					<li><a href="../">Torna al sito</a></li>
-					<li><a href="index.php?logout=true">Logout</a></li>
+					<li><a href="index.php?logout=true" xml:lang="en">Logout</a></li>
 				</ul> 
 			</div>
 		</div>
 	</div>
+	<div id="locationbar">
+		<span xml:lang="en">Home</span> di amministrazione &gt;&gt;&gt; Utenti bloccati
+	</div>
 	<div id="contenuto">
-		<h2>Lista dei ban</h2>
+		<h2>Utenti bloccati</h2>
 <?php
 
 $dbConnection = new DBAccess();
 $dbConnection->openDBConnection();
 $banList = $dbConnection->getListBan();
 if($banList == null)
-	echo('<div id="nocomment">Nessun ban applicato</div>');
+	echo('<div id="nocomment">Nessun blocco applicato</div>');
 else
 {
 	echo '<dl>';
@@ -74,7 +77,7 @@ else
 		echo '<dd>';
 		if(strcmp($ban['motivo'], '') != 0)
 			echo '<div class="data">Motivazione: '.$ban['motivo'].'</div>';
-		echo '<form class="commentaction" action="banremove.php" method="post"><div id="banform"><button name="banremove" value="'.$ban['id'].'">Rimuovi il ban a '.$ban['ip'].'</button></div></form>';
+		echo '<form class="commentaction" action="banremove.php" method="post"><div id="banform"><button name="banremove" value="'.$ban['id'].'">Rimuovi il blocco a '.$ban['ip'].'</button></div></form>';
 		echo '</dd>';
 	}
 	echo '</dl>';

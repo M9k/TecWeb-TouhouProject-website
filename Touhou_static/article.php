@@ -17,9 +17,9 @@ else
 	else
 		$title = trim(substr($notizia['title'],0,20)).'... - Touhou Italia';
 	if(strlen($notizia['title']) < 36)
-		$location = 'Home &gt;&gt;&gt; News &gt;&gt;&gt; '.$notizia['title'];
+		$location = '<span xml:lang="eng">Home</span> &gt;&gt;&gt; <span xml:lang="eng">News</span> &gt;&gt;&gt; '.$notizia['title'];
 	else
-		$location = 'Home &gt;&gt;&gt; News &gt;&gt;&gt; '.trim(substr($notizia['title'],0,35)).'...';
+		$location = '<span xml:lang="eng">Home</span> &gt;&gt;&gt; <span xml:lang="eng">News</span> &gt;&gt;&gt; '.trim(substr($notizia['title'],0,35)).'...';
 }
 ?>
 

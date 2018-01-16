@@ -67,19 +67,22 @@ else
 				<ul id="menu">
 					<li id="menuvoice">Menu</li>
 					<li class="disable">Home</li>
-					<li><a href="news.php">News</a></li>
+					<li><a href="news.php" xml:lang="en">News</a></li>
 					<li><a href="image.php">Immagini</a></li>
 					<li><a href="comments.php">Commenti</a></li>
-					<li><a href="banlist.php">Lista ban</a></li>
+					<li><a href="banlist.php">Utenti bloccati</a></li>
 					<li><a href="chapters.php">Capitoli</a></li>
 					<li><a href="gestioneamministratori.php">Amministratori</a></li>
 					<li><a href="../">Torna al sito</a></li>
-					<li><a href="index.php?logout=true">Logout</a></li>
+					<li><a href="index.php?logout=true" xml:lang="en">Logout</a></li>
 				</ul> 
 			</div>
 	</div>
 	</div>
 	<?php } ?>
+	<div id="locationbar">
+		<span xml:lang="en">Home</span> di amministrazione
+	</div>
 	<div id="contenuto">
 		<?php
 		if($wronglogin)
@@ -102,9 +105,9 @@ else
 			<h3>Immagini</h3>
 			<p>In questa sezione è possibile fare l’<span lang="en">upload</span> di nuove immagini o rimuoverle dal sito.</p>
 
-			<h3>Commenti e Lista Ban</h3>
-			<p>Nella sezione commenti è presente una lista di tutti i commenti presenti nel sito. E’ possibile bannare un utente, specificandone il motivo (se desiderato) e conseguentemente eliminare il commento oppure eliminare solo il commento.</p>
-			<p>Nella pagina Lista Ban invece troviamo un elenco di tutti i Ban e la possibilità di eliminarli</p>
+			<h3>Commenti e utenti bloccati</h3>
+			<p>Nella sezione commenti è presente una lista di tutti i commenti presenti nel sito. E’ possibile bloccare un utente, specificandone il motivo (se desiderato) e conseguentemente eliminare il commento oppure eliminare solo il commento.</p>
+			<p>Nella pagina utenti bloccati invece troviamo un elenco di tutti gli utenti ai quali è impedito l'inserimento dei commenti e c'è la funzione per sbloccarli.</p>
 
 			<h3>Capitoli</h3>
 			<p>Questa sezione elenca tutti i capitoli presenti, permettendo di aggiungerne di nuovi o di eliminarne.</p>

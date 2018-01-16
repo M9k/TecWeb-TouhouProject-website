@@ -47,7 +47,7 @@ header('Content-type: application/xhtml+xml'); ?>
 		</div>
 	</div>
 	<div id="locationbar">
-		Home &gt;&gt;&gt; Capitoli
+		<span xml:lang="eng">Home</span> &gt;&gt;&gt; Capitoli
 	</div>
 	<div id="contenitore">
 		<div id="contenuto">

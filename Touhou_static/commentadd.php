@@ -32,7 +32,7 @@
 				$error = 'Il tuo indirizzo IP risulta bloccato a causa di precedenti messaggi inopportuni, se ritieni che questo messaggio sia un errore contattare un amministratore.';
 			else
 				$risp = $dbConnection->insertComment($_POST['name'], $email, $_POST['message'], $id, $ip);
-			if(!$risp)
+			if(!$risp && $error == null)
 				$error = 'Errore nell\'inserimento del commento, per favore contattare un amministratore.';
 			$dbConnection->closeDBConnection();
 			if($error == null)

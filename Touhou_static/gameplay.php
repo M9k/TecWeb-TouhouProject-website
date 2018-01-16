@@ -46,11 +46,11 @@
 	</div>
 	</div>
 	<div id="locationbar">
-		Home &gt;&gt;&gt; Gameplay
+		<span xml:lang="eng">Home</span> &gt;&gt;&gt; <span xml:lang="eng">Gameplay</span>
 	</div>
 	<div id="contenitore">
 		<div id="contenuto">
-			<h2>Gameplay</h2>
+			<h2 xml:lang="eng">Gameplay</h2>
 
 			<p>Il <span xml:lang="en">gameplay</span> di Touhou rientra nella categoria dei "<strong xml:lang="en">Shoot'em up</strong>" a scorrimento verticale, più precisamente nella sottocategoria "<strong xml:lang="en">Bullet Hell</strong>".<br/>
 			<img class="even" src="images/spaceinvaders.jpg" alt=""/>

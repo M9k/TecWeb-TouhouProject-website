@@ -2,7 +2,6 @@
 <?php header('Content-type: application/xhtml+xml'); ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
-$location = 'Home';
 $title = 'Home - Touhou Italia';
 ?>
 <head>
@@ -59,7 +58,7 @@ else
 		</div>
 	</div>
 	<div id="locationbar">
-		<?php echo $location; ?>
+		<span xml:lang="eng">Home</span>
 	</div>
 	<div id="contenitore">
 		<div id="contenuto">

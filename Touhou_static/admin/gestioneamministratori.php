@@ -44,17 +44,20 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 				<ul id="menu">
 					<li id="menuvoice">Menu</li>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="news.php">News</a></li>
+					<li><a href="news.php" xml:lang="en">News</a></li>
 					<li><a href="image.php">Immagini</a></li>
 					<li><a href="comments.php">Commenti</a></li>
 					<li><a href="banlist.php">Lista ban</a></li>
 					<li><a href="chapters.php">Capitoli</a></li>
 					<li class="disable">Amministratori</li>
 					<li><a href="../">Torna al sito</a></li>
-					<li><a href="index.php?logout=true">Logout</a></li>
+					<li><a href="index.php?logout=true" xml:lang="en">Logout</a></li>
 				</ul> 
 			</div>
 		</div>
+	</div>
+	<div id="locationbar">
+		<span xml:lang="en">Home</span> di amministrazione &gt;&gt;&gt; Amministratori
 	</div>
 	<div id="contenuto">
 		<h2>Gestione amministratori</h2>

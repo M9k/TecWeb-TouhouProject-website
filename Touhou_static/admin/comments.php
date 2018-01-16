@@ -43,17 +43,20 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 				<ul id="menu">
 					<li id="menuvoice">Menu</li>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="news.php">News</a></li>
+					<li><a href="news.php" xml:lang="en">News</a></li>
 					<li><a href="image.php">Immagini</a></li>
 					<li class="disable">Commenti</li>
-					<li><a href="banlist.php">Lista ban</a></li>
+					<li><a href="banlist.php">Utenti bloccati</a></li>
 					<li><a href="chapters.php">Capitoli</a></li>
 					<li><a href="gestioneamministratori.php">Amministratori</a></li>
 					<li><a href="../">Torna al sito</a></li>
-					<li><a href="index.php?logout=true">Logout</a></li>
+					<li><a href="index.php?logout=true" xml:lang="en">Logout</a></li>
 				</ul> 
 			</div>
 		</div>
+	</div>
+	<div id="locationbar">
+		<span xml:lang="en">Home</span> di amministrazione &gt;&gt;&gt; Commenti
 	</div>
 	<div id="contenuto">
 		<h2>Moderazione commenti</h2>
@@ -75,8 +78,8 @@ if($comments != null)
 			'<div class="ip">'.$comment['ip'].'</div>'.
 			'<form class="commentaction" action="commentaction.php" method="post">'.
 			'<div class="commentactionsformcontent">'.
-			'<label for="reasonform'.$inc.'">Motivo del ban a '.$comment['nick'].' per via del commento con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</label>: <input id="reasonform'.$inc.'" type="text" maxlength="255" name="reason"/> '.
-			'<button name="ban" value="'.$comment['id'].'">Banna l\'utente '.$comment['nick'].' ed elimina il commento con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</button><br/>'.
+			'<label for="reasonform'.$inc.'">Motivo del blocco a '.$comment['nick'].' per via del commento con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</label>: <input id="reasonform'.$inc.'" type="text" maxlength="255" name="reason"/><br/>'.
+			'<button name="ban" value="'.$comment['id'].'">Blocca l\'utente '.$comment['nick'].' ed elimina il commento con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</button><br/>'.
 			' <button name="delete" value="'.$comment['id'].'">Elimina il commento di '.$comment['nick'].' con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</button>'.
 			'</div>'.
 			'</form>'.

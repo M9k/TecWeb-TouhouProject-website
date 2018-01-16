@@ -47,7 +47,7 @@
 		</div>
 	</div>
 	<div id="locationbar">
-		Home &gt;&gt;&gt; Personaggi
+		<span xml:lang="eng">Home</span> &gt;&gt;&gt; Personaggi
 	</div>
 	<div id="contenitore">
 		<div id="contenuto">

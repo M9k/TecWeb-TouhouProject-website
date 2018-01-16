@@ -47,11 +47,11 @@ header('Content-type: application/xhtml+xml'); ?>
 		</div>
 	</div>
 	<div id="locationbar">
-		Home &gt;&gt;&gt; News
+		<span xml:lang="eng">Home</span> &gt;&gt;&gt; <span xml:lang="eng">News</span>
 	</div>
 		<div id="contenitore">
 			<div id="contenuto">
-				<h2>News</h2>
+				<h2 xml:lang="en">News</h2>
 <?php
 	$dbConnection = new DBAccess();
 	$dbConnection->openDBConnection();
