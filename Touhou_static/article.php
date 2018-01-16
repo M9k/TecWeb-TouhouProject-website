@@ -12,14 +12,14 @@ else
 {
 	$notizia = $dbConnection->getArticle($_GET['id']);
 
-	if(strlen($notizia['title']) < 20)
+	if(strlen($notizia['title']) < 21)
 		$title = $notizia['title'].' - Touhou Italia';
 	else
 		$title = trim(substr($notizia['title'],0,20)).'... - Touhou Italia';
-	if(strlen($notizia['title']) < 30)
+	if(strlen($notizia['title']) < 36)
 		$location = 'Home &gt;&gt;&gt; News &gt;&gt;&gt; '.$notizia['title'];
 	else
-		$location = 'Home &gt;&gt;&gt; News &gt;&gt;&gt; '.trim(substr($notizia['title'],0,30)).'...';
+		$location = 'Home &gt;&gt;&gt; News &gt;&gt;&gt; '.trim(substr($notizia['title'],0,35)).'...';
 }
 ?>
 
