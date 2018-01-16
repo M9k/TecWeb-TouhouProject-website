@@ -25,6 +25,9 @@
 #textform {
 	width: 100%;
 }
+#contenuto {
+	float: none;
+}
 
 @media handheld, screen and (max-width: 680px), only screen and (max-device-width:680px) {
 	#contenuto {

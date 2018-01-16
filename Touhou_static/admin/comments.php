@@ -2,8 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <?php 
-header('Content-type: application/xhtml+xml');
-if (session_status() == PHP_SESSION_NONE) { session_start(); }
+header('Content-type: application/xhtml+xml'); if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 {
@@ -55,8 +54,9 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 				</ul> 
 			</div>
 		</div>
-		<div id="contenuto">
-			<h2>Moderazione commenti</h2>
+	</div>
+	<div id="contenuto">
+		<h2>Moderazione commenti</h2>
 <?php
 
 $dbConnection = new DBAccess();
@@ -89,7 +89,6 @@ else
 	echo('<div id="nodata">Nessun commento inserito</div>');
 $dbConnection->closeDBConnection();
 ?>
-		</div>
 	</div>
 </body>
 </html>
