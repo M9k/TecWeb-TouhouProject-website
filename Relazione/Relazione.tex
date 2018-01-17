@@ -61,8 +61,8 @@
 	\chapter{Installazione}
 	Il sito richiede un database MySql, per la creazione delle tabelle utilizzate si possono usare i due file .sql allegati, "database.sql" e "database vuoto.sql", che generano rispettivamente il database con tutti i dati inseriti nel sito web consegnato e un database con le tabelle vuote, con solo l'amministratore presente, le cui credenziali sono admin:admin.\\
 	Successivamente si dovrà modificare il file dbConnection.php, presente nella root del sito, indicando i dati per l'accesso al database (HOST\_DB, USER, PASSWD, DATABASE) e la pagina di errore dove ridirigere l'utente in caso di errore nel database  (\$connectionErrorPage).\\
-	La pagina di errore del database è stata lasciata configurabile in quanto nel caso di problemi al database che richiedono una lunga manutenzione, ad esempio uno spostamento del database o una dimenticanza del rinnovo dell'account del database, si può ridirigere l'utente a un secondo host temporaneo dove sono presenti i contenuti richiesti.\\ 
-	
+	La pagina di errore del database è stata lasciata configurabile in quanto nel caso di problemi al database che richiedono una lunga manutenzione, ad esempio uno spostamento del database o una dimenticanza del rinnovo dell'account del database, si può ridirigere l'utente a un secondo host temporaneo dove sono presenti i contenuti richiesti.\\
+
 	\chapter{Progettazione}
 
 	\section{Descrizione della sessione}
@@ -142,7 +142,7 @@
 			Per quanto riguarda la stampa è stato creato un foglio stile, chiamato print, che rimuove tutti i contenuti non necessari e impagina le informazioni per meglio adattarle a un foglio A4.\\
 			Si è scelto di rimuovere il menu, ma di lasciare il titolo e la breadcrumb, in modo tale da aiutare l'utente a ritrovare il sito web e la pagina nel caso non si ricordasse la fonte.\\
 			Le immagini sono state rimosse, ad eccezione delle immagini dei personaggi, che sono stati valutate come molto utili per una veloce consultazione.
-			
+
 			\subsubsection{Comportamento}
 			Il comportamento della pagina è stato gestito tramite JavaScript per il controllo delle form, per i commenti e per fornire la possibilità di ingrandire le immagini all'interno della pagina. Sono presenti anche controlli tramite codice PHP per garantire che il sito continui a funzionare corretamente anche in caso di assenza dell'interprete JavaScript.
 			Tutto il codice PHP relativo all'esecuzioni di azioni, come l'aggiunta dei commenti, è stato completamente diviso da quello utilizzato per la visualizzazione dei contenuti.\\
@@ -180,13 +180,13 @@
 				Il sito è stato testato su Internet Explorer 11 utilizzato WAT.\\
 				Purtroppo il plugin non è aggiornato e presenta molti strumenti inutilizzabili, la versione corrente è stata scaricata da:\\ \url{https://github.com/ThePacielloGroup/WebAccessibilityToolbar}.\\
 				Uno strumento funzionante molto utile è Juicy Studio Luminosity Analyzer, che ha analizzato il contrasto dei colori, fornendo come indice minimo 7.07, sufficiente per avere la certificazione WCAG 2.0 AAA.\\
-			
+
 			\subsection{Total Validator}
 			Per permettere la verifica delle pagine di amministrazione a Total Validator Basic è stata temporaneamente rimossa la verifica del login, questo ha portato ad alcuni errori nella pagina di gestione degli account, in quanto l'account correttamente in uso era invalido.\\
 			Un warning sollevato in ogni pagina è riguardante il link interno per saltare al contenuto, precisamente "W874 Add a skip navigation link as the first link on the page", che viene sollevato in quanto il testo non è "Skip to main content", bensì "Vai al contenuto", in quanto il sito è mirato ad utenti italiani.\\
 			Da precisare che oltre alla presenza del link per andare al contenuto è disponibile anche un link per tornare ad inizio pagina, inserito per facilitare la navigazione da dispositivi tascabili.\\
 			Altri warning presenti sono in riferimento ad immagini che presentano alt vuoti, in tutti i casi segnalati si tratta di immagini puramente decorative oppure che non veicolano una informazione che può essere descritta. Un esempio sono le copertine dei capitoli del videogioco, che presentano motivi e colori imprecisati oppure illustrazioni senza un  significato, utilizzate come riempitivo per la copertina.
-			
+
 		\section{Test su diversi dispositivi}
 			Il sito è stato testato su varie macchine e sistemi operativi. Nelle sezioni seguenti verranno elencati assieme ai browser e alle risoluzioni testate.
 				\subsection{Windows 10}
@@ -203,7 +203,7 @@
 				\end{itemize}
 				Mozilla Firefox 3 utilizza una dimensione errata dell'immagine nella testata. Questo aspetti rovinano leggermente il rendimento grafico ma non compromettono le funzionalità, in quanto tutti i contenuti risultano perfettamente fruibili dall'utente.\\
 				Un Secondo appunto riguardante Firefox 3 è l'incompatibilità con parte del codice JavaScript: solamente il controllo della compilazione dei campi di testo funziona correttamente.\\
-				Internet Explorer 11, con la modalità Explorer 7, non genera nessun problema, ed anche il problema della dimensione della testata riscontrato su Firefox 3  è assente.\\
+				Internet Explorer 11, con la modalità Explorer 7, non genera nessun problema, ed anche il problema della dimensione della testata riscontrato su Firefox 3  è assente; anche con Microsoft Edge 16 (ultima versione) non sono stati riscontrati problemi. \\
 				Non sono stati rilevati ulteriori problemi o incompatibilità con i browser sopra menzionati, anche variando la grandezza del font, dello zoom della pagina, della dimensione della finestra e disattivando JavaScript.
 %TODO: come si comporta su EDGE? io non lo ho
 
@@ -266,12 +266,12 @@
 	\subsection{Bisello Samuele}
 	\begin{itemize}
 		\item Scrittura contenuti per la pagina capitoli
-		\item 
-		\item 
-		\item 
-		\item 
-		\item 
-		\item 
+		\item	Stile login
+		\item Controllo form lato admin
+		\item	Parte dello sticky header
+		\item Test su  MacOS High Sierra (v10.13.2)
+		\item
+		\item
 	\end{itemize}
 	\subsection{Cailotto Mirco}
 	\begin{itemize}
@@ -287,7 +287,7 @@
 		\item Controllo dei valori inseriti dagli utenti generici
 		\item Stesura dello scheletro della relazione
 		\item Stesura parte abstract, di analisi dell'utenza e di ambiguità linguistica della relazione
-		\item 
+		\item
 	\end{itemize}
 	\subsection{Todescato Matteo}
 	\begin{itemize}
@@ -297,9 +297,9 @@
 		\item Script per la validazione delle form lato utente
 		\item Inserimento notizie
 		\item Test su sistema Linux
-		\item 
-		\item 
-		\item 
+		\item
+		\item
+		\item
 	\end{itemize}
 
 \end{document}

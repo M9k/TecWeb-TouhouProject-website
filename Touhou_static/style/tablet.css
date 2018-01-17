@@ -27,3 +27,8 @@ h1 {
 	text-align: center;
 	font-size: 1.2em;
 }
+
+#loginform {
+	width: 40%;
+	margin: 5% auto;
+}
