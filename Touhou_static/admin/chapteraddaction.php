@@ -9,7 +9,12 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 	$risp = false;
 
 	if(isset($_POST['number']) && strcmp($_POST['number'], "") != 0 &&
-		isset($_POST['year']) && isset($_POST['title']) && isset($_POST['titleeng']) && isset($_POST['titleita']) && isset($_POST['plot']))
+		isset($_POST['year']) && strcmp($_POST['year'], "") != 0 &&
+		isset($_POST['title']) && strcmp($_POST['title'], "") != 0 &&
+		isset($_POST['titleeng']) && strcmp($_POST['titleeng'], "") != 0 &&
+		isset($_POST['titleita']) && strcmp($_POST['titleita'], "") != 0 &&
+		isset($_POST['plot']) && strcmp($_POST['plot'], "") != 0
+		)
 	{		//INSERT
 		$image = false;
 		$ris = false;
@@ -45,15 +50,15 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 		$error = "Errore durante l'inserimento! ";
 		if(!isset($_POST['number']) || strcmp($_POST['number'], "") == 0)
 			$error.= "Il numero del capitolo è stato lasciato vuoto! ";
-		if(!isset($_POST['year']))
+		if(!isset($_POST['year']) || strcmp($_POST['year'], "") == 0)
 			$error.= "L'anno è stato lasciato vuoto! ";
-		if(!isset($_POST['title']))
+		if(!isset($_POST['title']) || strcmp($_POST['title'], "") == 0)
 			$error.= "Il titolo in giapponese è stato lasciato vuoto! ";
-		if(!isset($_POST['titleeng']))
+		if(!isset($_POST['titleeng']) || strcmp($_POST['titleeng'], "") == 0)
 			$error.= "Il titolo in inglese è stato lasciato vuoto! ";
-		if(!isset($_POST['titleita']))
+		if(!isset($_POST['titleita']) || strcmp($_POST['titleita'], "") == 0)
 			$error.= "Il titolo in italiano è stato lasciato vuoto! ";
-		if(!isset($_POST['plot']))
+		if(!isset($_POST['plot']) || strcmp($_POST['plot'], "") == 0)
 			$error.= "La trama è stata lasciata vuota!";
 	}
 	
