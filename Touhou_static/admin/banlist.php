@@ -76,8 +76,8 @@ else
 		echo '<dt>'.$ban['ip'].' - '.strftime('%e %B %Y',strtotime($ban['date'])).'</dt>';
 		echo '<dd>';
 		if(strcmp($ban['motivo'], '') != 0)
-			echo '<div class="data">Motivazione: '.$ban['motivo'].'</div>';
-		echo '<form class="commentaction" action="banremove.php" method="post"><div id="banform"><button name="banremove" value="'.$ban['id'].'">Rimuovi il blocco a '.$ban['ip'].'</button></div></form>';
+			echo '<p class="data">Motivazione: '.$ban['motivo'].'</p>';
+		echo '<a class="button" href="banremove.php?ip='.$ban['ip'].'" title="Rimuovi il blocco a '.$ban['ip'].'">Rimuovi il blocco</a>';
 		echo '</dd>';
 	}
 	echo '</dl>';

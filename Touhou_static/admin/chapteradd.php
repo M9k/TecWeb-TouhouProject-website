@@ -69,7 +69,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 					<label for="fileupload">Immagine della copertina</label>: <br/>
 					<input type="file" name="fileupload" id="fileupload"/><br/>
 					<label for="imagedescr">Descrizione breve dell'immagine</label>: <input name="imagedescr" type="text" id="imagedescr"/><br/>
-					<label for="number">Numero</label>: <input type="text" name="text" id="number"/><br/>
+					<label for="number">Numero</label>: <input type="text" name="number" id="number"/><br/>
 					<label for="year">Anno</label>: <input name="year" type="text" id="year"/><br/>
 					<label for="plot">Trama</label>: <br/><textarea name="plot" id="plot" cols="100" rows="10"></textarea><br/>	
 					<input type="submit" value="Aggiungi" name="submit"/>

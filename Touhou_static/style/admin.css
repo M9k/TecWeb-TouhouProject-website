@@ -28,7 +28,12 @@
 #contenuto {
 	float: none;
 }
-
+.newsimage {
+	clear: both;
+}
+.listelementwithbuttons {
+	margin: 0.5em;
+}
 @media handheld, screen and (max-width: 680px), only screen and (max-device-width:680px) {
 	#contenuto {
 		width: 100%;

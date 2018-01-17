@@ -7,14 +7,14 @@ $error = '';
 
 if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 {
-	if(!isset($_POST['banremove']))
+	if(!isset($_GET['ip']))
 		$error = 'Non è stato indicato l\'ip';
 	else
 	{
 		$dbConnection = new DBAccess();
 		$dbConnection->openDBConnection();
 		//elimino il ban
-		$risp = $dbConnection->removeBan($_POST['banremove']);
+		$risp = $dbConnection->removeBan($_GET['ip']);
 		//se non è stata eliminata esattamente una riga
 		if($risp != 1)
 			$error ='Errore durante la richiesta al database';

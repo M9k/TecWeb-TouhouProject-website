@@ -75,7 +75,17 @@ foreach($immagini as $immagine)
 	if($immagine != '..' && $immagine != '.')
 	{
 		echo '<dt>'.$immagine.'</dt>';
-		echo '<dd><div class="imagediv"><form class="imagedivform" action="imagedelete.php" method="post"><div class="imagedescription"><div class="imageview"><img alt="immagine con nome'.$immagine.'" src="../images/news/'.$immagine.'"/></div><div class="linkimage">Per utilizzare questa immagine inserire: images/news/'.$immagine.'</div><button name="btnDelete" value="'.$immagine.'">Elimina '.$immagine.'</button></div></form></div></dd>';
+		echo '<dd>
+		<div class="imagediv">
+			<div class="imagedescription">
+				<div class="imageview">
+					<img alt="immagine con nome'.$immagine.'" src="../images/news/'.$immagine.'"/>
+				</div>
+				<p>Per utilizzare questa immagine inserire: images/news/'.$immagine.'</p>
+				<a class="button" title="Elimina l\'immagine '.$immagine.'" href="imagedelete.php?name='.$immagine.'">Elimina</a>
+			</div>
+		</div>
+		</dd>';
 	}
 }
 echo '</dl>';

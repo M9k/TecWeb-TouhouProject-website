@@ -82,7 +82,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 				echo ' <a title="Pubblica notizia: '.$notizia['title'].'" class="button" href="newsaction.php?action=visible&amp;id='.$notizia['id'].'">Pubblica</a>';
 			else
 				echo ' <a title="Imposta come bozza la notizia: '.$notizia['title'].'" class="button" href="newsaction.php?action=hide&amp;id='.$notizia['id'].'">Imposta come bozza</a>';
-			echo '</div>';
+			echo '</div><br/>';
 			if(isset($notizia['image']) && strcmp($notizia['image'], "") != 0)
 				echo '<div class="newsimage"><img src="../images/news/'.$notizia['image'].'" alt="'.$notizia['imgdescr'].'"/></div>';
 			echo '<div class="data">'.strftime('%e %B %Y',strtotime($notizia['data'])).'</div><div class="testo">'.$notizia['text'].'</div></dd>';

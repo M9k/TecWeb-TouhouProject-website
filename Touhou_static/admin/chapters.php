@@ -69,13 +69,11 @@ $dbConnection->openDBConnection();
 $chapters = $dbConnection->getListChapters();
 if($chapters != null)
 {
-	echo '<form class="optionsnewsform" action="chapterdelete.php" method="post"><fieldset id="chapterlist"><legend>Lista dei capitoli presenti:</legend>'.
-		'<ul>';
-	foreach($chapters as $capter)
-		echo '<li>'.$capter['number']." ".$capter['titleeng']." - ".
-			$capter['year'].' <button name="btnDelete" value="'.$capter['id'].'">Elimina il capitolo '.$capter['id'].'</button></li>';
-	echo '</ul>'.
-		'</fieldset></form>';
+	echo '<ul>';
+	foreach($chapters as $chapter)
+		echo '<li class="listelementwithbuttons">'.$chapter['number']." ".$chapter['titleeng']." - ".
+			$chapter['year'].' <a class="button" title="Elimina il capitolo '.$chapter['id'].'"  href="chapterdelete.php?id='.$chapter['id'].'">Elimina</a></li>';
+	echo '</ul>';
 }
 else
 	echo '<div id="nodata">Nessuna capitolo inserito</div>' ;

@@ -7,14 +7,14 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 	$ok = true;
 	$folder = "../images/news/";
 
-	// controllo il nome non sia già usato
-	if (!file_exists($folder.$_POST["btnDelete"]))
+	// controllo il file indicato esista
+	if (!file_exists($folder.$_GET["name"]))
 		$error = 'Il file non esiste';
 	// controllo non ci siano .. o /
-	if (strrpos($_POST["btnDelete"], '..') != false || strrpos($_POST["btnDelete"], '/') != false)
+	if (strrpos($_GET["name"], '..') != false || strrpos($_GET["name"], '/') != false)
 		$error = 'Il nome contiene caratteri non accettati per motivi di sicurezza, come .. o /';
 	if (strcmp("", $error) == 0)
-		if (unlink($folder.$_POST["btnDelete"]))
+		if (unlink($folder.$_GET["name"]))
 		{
 			header("Location: ".$returnpage);
 			die();
