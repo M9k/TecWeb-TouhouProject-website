@@ -1,7 +1,13 @@
-﻿-fixare la lista index admin, magari qualche immagine decorativa?
--notizie (MATTEO)
--news fake con commenti di test (MIRCO + MATTEO)
--js sui form parte admin dove utili
+﻿-notizie
+-js sui form Gestione amministratori > Inserimento amministratore:
+	-campi non vuoti
+	-nome con solo lettere e numeri, no caratteri
+	-email valida
+-js sui form Capitoli >>> Aggiunta capitolo 
+	-nessun campo vuoto
+	-numero OK ANCHE NON NUMERICO!
+	-anno numerico e maggiore di 1970
+-admin > moderazione commenti, ok i tasti così? a me fanno schifo sinceramente
 
 RELAZIONE!!!!!!
 

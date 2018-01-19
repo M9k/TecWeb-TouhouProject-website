@@ -71,12 +71,12 @@ $dbConnection->openDBConnection();
 $administrators = $dbConnection->getListAdminsData($_SESSION['username']);
 if($administrators != null)
 {
-	echo '<form class="listadmins" action="gestioneamministratoriaction.php" method="post"><fieldset id="listadminsfield"><legend>Lista degli amministratori presenti:</legend>'.
+	echo '<div id="deleteadmindiv"><p>Lista degli altri amministratori presenti:</p>'.
 		'<ul>';
 	foreach($administrators as $administrator)
-		echo '<li>'.$administrator['username'].' - '.$administrator['email'].' <button name="btnDelete" value="'.$administrator['username'].'">Elimina '.$administrator['username'].'</button></li>';
+		echo '<li class="listelementwithbuttons">'.$administrator['username'].' - '.$administrator['email'].' <a class="button" title="Elimina l\'utente'.$administrator['username'].'" href="gestioneamministratoriaction.php?delete='.$administrator['username'].'" >Elimina</a></li>';
 	echo '</ul>'.
-		'</fieldset></form>';
+		'</div>';
 }
 else
 	echo '<div id="nodata">Nessun amministratore aggiuntivo presente</div>';
@@ -85,7 +85,7 @@ else
 		<form id="addadmin" action="gestioneamministratoriaction.php" method="post">
 			<fieldset id="addadminfield">
 				<legend>Dati nuovo amministratore:</legend>
-				<label for="usernameinput">Nome utente:</label> <input name="username" type="text" id="usernameinput"/><br/>
+				<label for="usernameinput">Nome utente (può contenere solo lettere e numeri):</label> <input name="username" type="text" id="usernameinput"/><br/>
 				<label for="emailinput">Email:</label> <input name="email" type="text" id="emailinput"/><br/>
 				<label for="passwordinput">Password:</label> <input name="password" type="text" id="passwordinput"/><br/>
 				<input type="submit" value="Aggiungi" name="submit"/> <input type="reset" value="Cancella i campi" name="reset"/>

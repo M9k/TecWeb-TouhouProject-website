@@ -66,6 +66,13 @@ input[type="submit"]:hover, input[type="reset"]:hover, button[type="submit"]:hov
   background-color: #0D47A1;
   color: #FFFFFF;
 }
+.bigbutton {
+  min-width: 7em;
+  font-size: 1.2em;
+  box-shadow: 2pt 2pt 2pt grey;
+  padding: 4pt;
+  margin: 4pt;
+}
 
 h1 {
   color: #000;

@@ -60,7 +60,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	<div id="contenuto">
 		<h2>Gestione capitoli</h2>
 		<div id="chapteradd">
-			<a href="chapteradd.php">Aggiungi capitolo</a>
+			<a class="button bigbutton" href="chapteradd.php">Aggiungi un nuovo capitolo</a>
 		</div>
 <?php
 

@@ -61,7 +61,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	<div id="contenuto">
 		<h2>Gestione news</h2>
 		<div id="newsadd">
-			<a href="newsadd.php">Aggiungi news</a>
+			<a class="button bigbutton" href="newsadd.php">Aggiungi una nuova news</a>
 		</div>
 		<h3>News presenti nel sito:</h3>
 <?php
