@@ -53,7 +53,12 @@ h1 {
 	border-bottom-right-radius: 0;
 }
 
-
+#contenuto #personaggi img {
+	float: none;
+	display: block;
+	margin: auto;
+	width: 70%;
+}
 
 .ddsidebar {
 	font-size: 1em;

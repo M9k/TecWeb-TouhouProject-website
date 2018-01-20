@@ -1,6 +1,9 @@
 h1 {
 	font-size: 4em;
 }
+#menu a, #menu .disable {
+	padding: 6pt 5pt;
+}
 #contenuto {
 	float: none;
 	width: auto;
