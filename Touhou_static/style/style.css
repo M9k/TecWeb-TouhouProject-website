@@ -11,7 +11,7 @@ html, body {
 }
 
 html {
-  background: #7e7e7e url("../images/back.jpg") repeat;
+  background: #7e7e7e url("../images/back.jpg") fixed repeat;
 }
 
 body {

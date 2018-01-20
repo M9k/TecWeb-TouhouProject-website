@@ -85,8 +85,6 @@ else
 	</div>
 	<div id="contenuto">
 		<?php
-		if($wronglogin)
-			echo($wrongloginmessage);
 		if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 		{ ?>
 			<h2>Benvenuto nell’area di amministrazione</h2>
@@ -123,6 +121,10 @@ else
 		<form action="index.php" method="post" id="loginform">
 			<fieldset id="loginfields">
 				<legend>Login</legend>
+				<?php 
+				if($wronglogin)
+					echo($wrongloginmessage);
+				?>
 				<label for="username">Nome utente</label>: <input id="username" name="username" type="text"/><br/>
 				<label for="password">Password</label>: <input id="password" name="password" type="text"/><br/>
 				<input value="Login" type="submit"/>
