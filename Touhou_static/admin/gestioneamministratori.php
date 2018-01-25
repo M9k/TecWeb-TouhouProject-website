@@ -85,8 +85,8 @@ else
 		<form id="addadmin" action="gestioneamministratoriaction.php" method="post">
 			<fieldset id="addadminfield">
 				<legend>Dati nuovo amministratore:</legend>
-				<label for="usernameinput">Nome utente (può contenere solo lettere e numeri):</label> <input name="username" type="text" id="usernameinput"/><br/>
-				<label for="emailinput">Email:</label> <input name="email" type="text" id="emailinput"/><br/>
+				<label for="usernameinput">Nome utente (può contenere solo lettere e numeri):</label> <input name="username" type="text" id="usernameinput"/>
+				<label for="emailinput">Email:</label> <input name="email" type="text" id="emailinput"/>
 				<label for="passwordinput">Password:</label> <input name="password" type="text" id="passwordinput"/><br/>
 				<input type="submit" value="Aggiungi" name="submit"/> <input type="reset" value="Cancella i campi" name="reset"/>
 			</fieldset>
@@ -96,7 +96,7 @@ else
 			<fieldset id="editaccountinfofield">
 			<legend>Dati del proprio account:</legend>
 			<label for="newemailinput">Email:</label>
-				<input value="<?php echo $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput"/><br/>
+				<input value="<?php echo $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput"/>
 				<label for="newpasswordinput">Nuova password:</label>
 				<input name="newpassword" type="text" id="newpasswordinput"/><br/>
 				<input type="submit" value="Modifica" name="submit"/>
