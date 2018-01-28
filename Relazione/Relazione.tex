@@ -114,25 +114,25 @@
 		Questa parte sarà dinamica in quanto i capitoli escono relativamente di frequente, quindi si vuole lasciare all'amministratore la possibilità di inserirne di nuovi, o di cancellare quelli che presentano informazioni errate o non aggiornate.
 
 	\section{Strutturazione del sito}
-	\subsection{Impaginazione}
-	Il sito utlizza un layout a tre pannelli nella versione per dispositivi desktop.\\
-	La sidebar, contenente informazioni aggiuntive, è posizionata sul lato destro in quanto offre informazioni secondarie. Perciò nella lettura europea (da sinistra a destra) sarà notata dopo il contenuto, mentre nella versione tablet o mobile sarà posizionata sotto il contenuto.\\
-	Il menu del sito presenta una navigazione a schede, che nella versione per dispositivi mobili viene sostituita da un menu ad hamburger.\\
-	Nel footer del sito sono presenti i crediti, la licenza dei contenuti del sito e l'accesso all'area di amministrazione.
+		\subsection{Impaginazione}
+		Il sito utlizza un layout a tre pannelli nella versione per dispositivi desktop.\\
+		La sidebar, contenente informazioni aggiuntive, è posizionata sul lato destro in quanto offre informazioni secondarie. Perciò nella lettura europea (da sinistra a destra) sarà notata dopo il contenuto, mentre nella versione tablet o mobile sarà posizionata sotto il contenuto.\\
+		Il menu del sito presenta una navigazione a schede, che nella versione per dispositivi mobili viene sostituita da un menu ad hamburger.\\
+		Nel footer del sito sono presenti i crediti, la licenza dei contenuti del sito e l'accesso all'area di amministrazione.
 
 	\chapter{Realizzazione}
-	\section{Descrizione della sessione}
-	In questa parte del documento si andranno ad approfondire tutti gli aspetti legati alla realizzazione del sito web.
+		\section{Descrizione della sessione}
+		In questa parte del documento si andranno ad approfondire tutti gli aspetti legati alla realizzazione del sito web.
 
 	\section{Scelte tecniche}
-	\subsection{XHTML1.1}
-	Come linguaggio di marcatura si è scelto di utilizzare XHTML 1.1, tecnologia il cui uso è stato concesso dal professore Lamberto Ballan.\\
-	Si è preferito l'utilizzo di XHTML 1.1 per l'aggiunta del tag ruby, il quale consente l'utilizzo del furigana (per ulteriori approfondimenti fare riferimento all'ultima sezione di questo documento relativa all'utilizzo della lingua straniera).\\
-	In mancanza di supporto da parte di un browser di questa funzionalità il furigana viene semplicemente mostrato dopo la parola, in modo da non compromettere la fruizione dei contenuti.
+		\subsection{XHTML1.1}
+		Come linguaggio di marcatura si è scelto di utilizzare XHTML 1.1, tecnologia il cui uso è stato concesso dal professore Lamberto Ballan.\\
+		Si è preferito l'utilizzo di XHTML 1.1 per l'aggiunta del tag ruby, il quale consente l'utilizzo del furigana (per ulteriori approfondimenti fare riferimento all'ultima sezione di questo documento relativa all'utilizzo della lingua straniera).\\
+		In mancanza di supporto da parte di un browser di questa funzionalità il furigana viene semplicemente mostrato dopo la parola, in modo da non compromettere la fruizione dei contenuti.
 
-	\subsection{JavaScript}
-	Si è scelto di utilizzare JavaScript come componente marginale del sito garantendo, anche se disabilitato, che tutte le funzionalità rimangano accessibili e perfettamente funzionanti.\\
-	Non sono state utilizzate librerie esterne (come ad esempio jQuery) per non appesantire il sito web, dato che il suo uso sarebbe comunque stato marginale e non avrebbe migliorato di molto la qualità della navigazione.
+		\subsection{JavaScript}
+		Si è scelto di utilizzare JavaScript come componente marginale del sito garantendo, anche se disabilitato, che tutte le funzionalità rimangano accessibili e perfettamente funzionanti.\\
+		Non sono state utilizzate librerie esterne (come ad esempio jQuery) per non appesantire il sito web, dato che il suo uso sarebbe comunque stato marginale e non avrebbe migliorato di molto la qualità della navigazione.
 
 	\section{Suddivisione di struttura, presentazione e comportamento}
 		\subsection{Parte utente}
@@ -226,7 +226,7 @@
 				Un Secondo appunto riguardante Firefox 3 è l'incompatibilità con parte del codice JavaScript: solamente il controllo della compilazione dei campi di testo funziona correttamente.\\
 				Internet Explorer 11, con la modalità Explorer 7, non genera nessun problema, ed anche il problema della dimensione della testata riscontrato su Firefox 3  è assente; anche con Microsoft Edge 16 (ultima versione) non sono stati riscontrati problemi. \\
 				Non sono stati rilevati ulteriori problemi o incompatibilità con i browser sopra menzionati, anche variando la grandezza del font, dello zoom della pagina, della dimensione della finestra e disattivando JavaScript.
-%TODO: come si comporta su EDGE? io non lo ho
+				%TODO: come si comporta su EDGE? io non lo ho
 
 				\subsection{GNU/Linux Fedora 27}
 				Sono state testate le risoluzioni di 1800p e 2160p con i browsers:
@@ -258,8 +258,13 @@
         		\item Testato su Ipad Pro 10.5' su browser Safari (devo aggiungere la versione), con una risoluzione di 2224x1668
 				\end{itemize}
 		\section{Test con diverse impostazioni utente}
+			Il sito è stato testato con multiple impostazioni utente, come citato nella sezione riguardante le piattaforme di testing sono state testate risoluzioni che vanno dall 600p al 2160p senza presentare problemi di visualizzazione. Oltre al test per le varie risoluzioni e dispositivi si è testata la visualizzazione del sito con dimensioni del testo di che vanno 16pt a 44pt e con uno zoom elevato mantenendo comunque una buona fruibilità del sito.\\
+			\`{E} stata presa in considerazione anche la possibilità che un utente abbia bloccato, oppure non abbia la possibilita se pur remota di non poter eseguire Javascript, nonstante questo il sito rimane comunque egualemente navigabile in tutte le sue parti, senza far trasparire in modo palese la mancanza di Javascript.
+		\section{Colori vari etc etc}
 			\subsection{Nome Sottosezione}
 		\section{Lynx e come potrebbe essere se letto}
+			Il sito è stato testato con il browser lynx, nonostante la visualizzazione solo testuale il sito rimane comunque navigabile seppur non in modo agevole se non si è abituati al utilizzo dei browser testuali.
+		\section{Test automatici di accessibilità}
 			\subsection{Nome Sottosezione}
 
 	\chapter{Ambiguità incontrate e scelte intraprese}
