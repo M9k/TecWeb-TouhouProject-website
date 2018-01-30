@@ -62,7 +62,7 @@
 	</p></dd>
 				<dt>Seconda generazione - <span xml:lang="en">Windows</span> e <span xml:lang="en">Comitek</span></dt>
 				<dd>
-				<img src="images/kantaivstouhou.jpg" class="odd" alt="Immagine che mostra i personaggi di Touhou contrapposti a quelli di Kantai Collection"/>
+				<img src="images/kantaivstouhou.jpg" class="odd" alt="Immagine con i personaggi di Touhou e quelli di Kantai Collection"/>
 					<p>Nel 2002 uscì il primo gioco ad essere compatibile per <span xml:lang="en">Windows</span>, <strong xml:lang="en">the Embodiment of Scarlet Devil</strong> (<span xml:lang="ja">紅魔郷</span>), sesto titolo del <span xml:lang="fr">franchise</span>, che rappresentò quindi una nuova generazione per la serie, definita come "prima generazione <span xml:lang="en">Windows</span>".<br/>
 	Questo titolo riscosse un enorme successo, ancora oggi rappresenta l'intera serie ed i personaggi presentati sono i più diffusi su internet, con centinaia e centinaia di opere create dai <span xml:lang="en">fan</span> a riguardo.<br/>
 	La diffusione dei lavori derivati è data anche dal fatto che secondo la licenza del gioco unicamente i materiali del gioco sono protetti, mentre i personaggi, i design e la trama sono liberamente utilizzabili da chiunque, anche per scopi commerciali, questo ha portato a una enorme produzione di lavori indipendenti, molti dei quali venduti al <strong xml:lang="en">Comitek</strong>, o <em xml:lang="en">Comic Market</em>: consiste in una manifestazione che si svolge due volte l'anno, durante la quale si possono vendere gadget, fumetti o qualsiasi altro prodotto sviluppato indipendentemente a un vasto pubblico, anche i nuovi capitoli di Touhou vengono presentati e venduti durante queste manifestazioni.<br/>

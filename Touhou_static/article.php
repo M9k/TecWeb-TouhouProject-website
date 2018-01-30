@@ -96,7 +96,7 @@ else
 				<div id="leavecomment">
 					<h3>Lascia un commento</h3>
 					<form action="commentadd.php" method="post" id="leavecommentform" onsubmit="return validateForm()">
-						<fieldset id="leavecommentfields">
+						<div id="leavecommentfields">
 							<div id="errorenome"></div>
 							<label for="nameinput">Nome</label>: <input id="nameinput" name="name" type="text" onchange="validateString('nome',document.getElementById('nameinput').value)"/><br/>
 							<div id="erroreemail"></div>
@@ -106,7 +106,7 @@ else
 							<div id="erroreinvio"></div>
 							<input value="Invia" type="submit"/>
 							<input value="Cancella" type="reset"/>
-						</fieldset>
+						</div>
 					</form>
 				</div>
 				<div id="listacommenti">
