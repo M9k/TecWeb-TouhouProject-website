@@ -1,6 +1,9 @@
 <?php
 	require_once __DIR__.DIRECTORY_SEPARATOR."dbConnection.php";
-	$returnpage = $_SERVER['HTTP_REFERER'];
+	if(isset($_SERVER['HTTP_REFERER']))
+		$returnpage = $_SERVER['HTTP_REFERER'];
+	else
+		$returnpage = "/"; //evita Local Filesystem Paths Found
 	$addrarray = explode("=",$returnpage);
 	$id = end($addrarray);
 	$error = null;
