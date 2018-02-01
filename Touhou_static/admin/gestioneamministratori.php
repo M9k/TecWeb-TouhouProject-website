@@ -1,7 +1,7 @@
 <?php require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php"; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<?php 
+<?php
 header('Content-type: application/xhtml+xml');
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
@@ -52,7 +52,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 					<li class="disable">Amministratori</li>
 					<li><a href="../">Torna al sito</a></li>
 					<li><a href="index.php?logout=true" xml:lang="en">Logout</a></li>
-				</ul> 
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -82,25 +82,33 @@ else
 	echo '<div id="nodata">Nessun amministratore aggiuntivo presente</div>';
 ?>
 		<h3>Inserimento amministratore</h3>
-		<form id="addadmin" action="gestioneamministratoriaction.php" method="post">
+		<form id="addadmin" action="gestioneamministratoriaction.php" method="post" onsubmit="return validateFormInsertAdmin()">
 			<fieldset id="addadminfield">
 				<legend>Dati nuovo amministratore:</legend>
-				<label for="usernameinput">Nome utente (può contenere solo lettere e numeri):</label> <input name="username" type="text" id="usernameinput"/>
-				<label for="emailinput">Email:</label> <input name="email" type="text" id="emailinput"/>
-				<label for="passwordinput">Password:</label> <input name="password" type="text" id="passwordinput"/><br/>
+				<label for="usernameinput">Nome utente (può contenere solo lettere e numeri):</label> <input name="username" type="text" id="usernameinput" onchange="validateString('nome',document.getElementById('usernameinput').value)"/>
+                <div id="errorenome"></div>
+                <label for="emailinput">Email:</label> <input name="email" type="text" id="emailinput"  onchange="validateEmailAdmin('email',document.getElementById('emailinput').value)"/>
+                <div id="erroreemail"></div>
+                <label for="passwordinput">Password:</label> <input name="password" type="text" id="passwordinput" onchange="validateString('password',document.getElementById('passwordinput').value)"/>
+                <div id="errorepassword"></div>
 				<input type="submit" value="Aggiungi" name="submit"/> <input type="reset" value="Cancella i campi" name="reset"/>
+                <div id="erroreNewAdmin"></div>
 			</fieldset>
 		</form>
 		<h3>Modifica propri dati</h3>
-		<form id="editaccountinfo" action="gestioneamministratoriaction.php" method="post">
+		<form id="editaccountinfo" action="gestioneamministratoriaction.php" method="post" onsubmit="return validateFormModifyAdmin()">
 			<fieldset id="editaccountinfofield">
 			<legend>Dati del proprio account:</legend>
 			<label for="newemailinput">Email:</label>
-				<input value="<?php echo $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput"/>
-				<label for="newpasswordinput">Nuova password:</label>
-				<input name="newpassword" type="text" id="newpasswordinput"/><br/>
-				<input type="submit" value="Modifica" name="submit"/>
+
+				<input value="<?php echo $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput" onchange="validateEmailAdmin('nuova_email',document.getElementById('newemailinput').value)"/>
+                <div id="errorenuova_email"></div>
+                <label for="newpasswordinput">Nuova password:</label>
+                <input name="newpassword" type="text" id="newpasswordinput" onchange="validateString('nuova_password',document.getElementById('newpasswordinput').value)"/>
+                <div id="errorenuova_password"></div>
+                <input type="submit" value="Modifica" name="submit"/>
 				<input type="reset" value="Cancella i campi" name="reset"/>
+                <div id="erroreMod"></div>
 			</fieldset>
 		</form>
 <?php

@@ -16,6 +16,7 @@
     list-style: inside;
 }
 
+
 #loginform {
     width: 20%;
     margin: 5% auto;
@@ -35,7 +36,17 @@
     margin: 2px 6px 16px 0;
 }
 
-#addadmin input#usernameinput, input#emailinput, input#passwordinput, #editaccountinfo input#newemailinput, input#newpasswordinput {
+#addchapterform input#fileupload, #addnewsform input#fileupload {
+    margin-bottom: 2em;
+}
+
+#addnewsform input#hiddenform {
+    margin: 2.5em 0;
+}
+
+#addadmin input#usernameinput, input#emailinput, input#passwordinput, #editaccountinfo input#newemailinput, input#newpasswordinput,
+#addchapterform input#title, input#titleeng, input#titleita, input#imagedescr, input#number, input#year, textarea#plot,
+#addnewsform input#titleform, input#imageform, input#imgdescrform, #addnewsform textarea#textform {
 
     display: block;
     font-size: 1em;
@@ -44,7 +55,11 @@
     margin-bottom: 0.5em;
 }
 
-#addadmin label, legend, #editaccountinfo label, legend {
+#addchapterform input#number, input#year {
+    border: 1px solid #ccc;
+}
+
+#addadmin label, legend, #editaccountinfo label, legend, #addchapterform label, legend, #addnewsform label, legend {
     line-height: 2em;
 }
 
@@ -52,13 +67,15 @@
     color: red;
 }
 
-#errorecommento, #erroretitolo, #erroretitoloimmagine, #erroredescrizione, #erroretesto {
-    float: right;
+#errorecommento, #erroretitolo, #erroretitoloimmagine, #erroredescrizione, #erroretesto, #erroretitolo_inglese, #erroretitolo_italiano, #erroreimage_descr,
+#errorenumero, #erroreanno {
+    margin-bottom: 1.5em;
     color: red;
 }
 
-#erroreAdd {
+#erroreAdd, #erroreNewAdmin, #erroreMod, #erroreNewChapter {
     color: red;
+    line-height: 3em;
 }
 
 #textform {

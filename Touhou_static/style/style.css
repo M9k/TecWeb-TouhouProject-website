@@ -47,7 +47,7 @@ p {
 }
 
 input[type="text"], textarea {
-    border: 1pt #2c2c2c solid;
+    border: 1pt solid #ccc;
     margin: 1pt 0pt;
 }
 
@@ -348,9 +348,10 @@ a {
     clear: both;
 }
 
-#errorenome, #erroreemail, #errorecommento {
-    float: right;
+#errorenome, #erroreemail, #errorecommento, #errorepassword, #errorenuova_email, #errorenuova_password {
+    /*float: right;*/
     color: red;
+    margin-bottom:1.5em;
 }
 
 #erroreinvio {

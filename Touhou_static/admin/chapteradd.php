@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<?php 
+<?php
 header('Content-type: application/xhtml+xml');
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
@@ -51,7 +51,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 					<li><a href="gestioneamministratori.php">Amministratori</a></li>
 					<li><a href="../">Torna al sito</a></li>
 					<li><a href="index.php?logout=true" xml:lang="en">Logout</a></li>
-				</ul> 
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -61,18 +61,26 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	<div id="contenuto">
 		<h2>Aggiunta capitolo</h2>
 		<div id="newsadd">
-			<form id="addchapterform" action="chapteraddaction.php" method="post" enctype="multipart/form-data">
+			<form id="addchapterform" action="chapteraddaction.php" method="post" enctype="multipart/form-data" onsubmit="return validateFormAddChapter()">
 				<div id="addchapterdiv">
-					<label for="title">Titolo giapponese</label>: <input name="title" type="text" id="title"/><br/>
-					<label for="titleeng">Titolo inglese</label>: <input name="titleeng" type="text" id="titleeng"/><br/>
-					<label for="titleita">Titolo italiano</label>: <input name="titleita" type="text" id="titleita"/><br/>
-					<label for="fileupload">Immagine della copertina</label>: <br/>
+					<label for="title">Titolo giapponese</label>: <input name="title" type="text" id="title" onchange="validateString('titolo', document.getElementById('title').value)"/>
+                    <div id="erroretitolo"></div>
+					<label for="titleeng">Titolo inglese</label>: <input name="titleeng" type="text" id="titleeng" onchange="validateString('titolo_inglese', document.getElementById('titleeng').value)"/>
+                    <div id="erroretitolo_inglese"></div>
+                    <label for="titleita">Titolo italiano</label>: <input name="titleita" type="text" id="titleita" onchange="validateString('titolo_italiano', document.getElementById('titleita').value)"/>
+                    <div id="erroretitolo_italiano"></div>
+                    <label for="fileupload">Immagine della copertina</label>: <br/>
 					<input type="file" name="fileupload" id="fileupload"/><br/>
-					<label for="imagedescr">Descrizione breve dell'immagine</label>: <input name="imagedescr" type="text" id="imagedescr"/><br/>
-					<label for="number">Numero</label>: <input type="text" name="number" id="number"/><br/>
-					<label for="year">Anno</label>: <input name="year" type="text" id="year"/><br/>
-					<label for="plot">Trama</label>: <br/><textarea name="plot" id="plot" cols="100" rows="10"></textarea><br/>	
-					<input type="submit" value="Aggiungi" name="submit"/>
+                    <label for="imagedescr">Descrizione breve dell'immagine</label>: <input name="imagedescr" type="text" id="imagedescr" onchange="validateString('image_descr', document.getElementById('imagedescr').value)"/>
+                    <div id="erroreimage_descr"></div>
+                    <label for="number">Numero</label>: <input type="number" name="number" id="number" onchange="validateString('numero', document.getElementById('number').value)" />
+                    <div id="errorenumero"></div>
+                    <label for="year">Anno</label>: <input name="year" type="number" id="year" onchange="validateYear('anno', document.getElementById('year').value)" value="<?php echo date("Y");?>"/>
+                    <div id="erroreanno"></div>
+                    <label for="plot">Trama</label>: <br/><textarea name="plot" id="plot" onchange="validateString('testo', document.getElementById('plot').value)" cols="100" rows="10"></textarea>
+                    <div id="erroretesto"></div>
+                    <input type="submit" value="Aggiungi" name="submit"/>
+                    <div id="erroreNewChapter"></div>
 				</div>
 			</form>
 		</div>
