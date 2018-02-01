@@ -7,7 +7,11 @@ header('Content-type: application/xhtml+xml'); ?>
 $dbConnection = new DBAccess();
 $dbConnection->openDBConnection();
 if(!isset($_GET['id']) || !is_numeric($_GET['id']))
-	$errorInvalidArticle = '<div id="error_id" class="error">'."Non è stato indicato nessun articolo".'</div>';
+{
+	$errorInvalidArticle = '<div id="error_id" class="error">'."Non è stato trovato l'articolo indicato o non è stato indicato nessun articolo".'</div>';
+	$title = 'Articolo non trovato - Touhou Italia';
+	$location = '<span xml:lang="eng">Home</span> &gt;&gt;&gt; <span xml:lang="eng">News</span> &gt;&gt;&gt; Articolo non trovato';
+}
 else
 {
 	$notizia = $dbConnection->getArticle($_GET['id']);
@@ -89,7 +93,6 @@ else
 		echo '<div class="data">'.strftime('%e %B %Y',strtotime($notizia['data'])).'</div><div class="testo">'.$notizia['text'].'</div>';
 		$ok = true;
 	}
-}
 ?>
 			</div>
 			<div id="commenti">
@@ -112,24 +115,25 @@ else
 				<div id="listacommenti">
 					<h3>Commenti lasciati dagli utenti</h3>
 <?php
-if(isset($notizia) && $notizia != null)
-{
-	$comments = $dbConnection->getListComments($_GET['id'], 200);
-	if($comments != null)
+	if(isset($notizia) && $notizia != null)
 	{
-		echo '<dl>';
-		foreach($comments as $comment) 
+		$comments = $dbConnection->getListComments($_GET['id'], 200);
+		if($comments != null)
 		{
-			echo '<dt>'.$comment['nick'].'</dt>';
-			echo '<dd><div class="commenttext">'.$comment['message'].'</div></dd>';
+			echo '<dl>';
+			foreach($comments as $comment) 
+			{
+				echo '<dt>'.$comment['nick'].'</dt>';
+				echo '<dd><div class="commenttext">'.$comment['message'].'</div></dd>';
+			}
+			echo '</dl>';	
 		}
-		echo '</dl>';	
+		else
+			echo '<div id="nopostmessage">Nessun commento inserito</div>';
 	}
-	else
-		echo '<div id="nopostmessage">Nessun commento inserito</div>';
+	echo '</div>';
 }
 ?>
-				</div>
 			</div>
 			<div id="jumptotop">
 				<a href="#header">Torna in cima</a>

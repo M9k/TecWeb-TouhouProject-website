@@ -19,7 +19,7 @@
 		echo '<item>';
 		echo '	<title>'.$notizia['title'].'</title>';
 		echo '	<link>http://'.$website.'/article?id='.$notizia['id'].'</link>';
-		echo '	<description>'.$notizia['descr'].'</description>';
+		echo '	<text>'.$notizia['text'].'</text>';
 		echo '	<pubDate>'.date("D, d M Y H:i:s O", strtotime($notizia['data'])).'</pubDate>';
 		echo '</item>';
 	}
