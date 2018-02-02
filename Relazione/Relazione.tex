@@ -64,6 +64,7 @@
 	Il sito richiede un database MySql, per la creazione delle tabelle utilizzate si possono usare i due file .sql allegati, "database.sql" e "database vuoto.sql", che generano rispettivamente il database con tutti i dati inseriti nel sito web consegnato e un database con le tabelle vuote, con solo l'amministratore presente, le cui credenziali sono admin:admin.\\
 	Successivamente si dovrà modificare il file dbConnection.php, presente nella root del sito, indicando i dati per l'accesso al database (HOST\_DB, USER, PASSWD, DATABASE) e la pagina di errore dove ridirigere l'utente in caso di errore nel database  (\$connectionErrorPage).\\
 	La pagina di errore del database è stata lasciata configurabile in quanto nel caso di problemi al database che richiedono una lunga manutenzione, ad esempio uno spostamento del database o una dimenticanza del rinnovo dell'account del database, si può ridirigere l'utente a un secondo host temporaneo dove sono presenti i contenuti richiesti oppure a una pagina social (Facebook o Twitter ad esempio).\\
+	Per poter impostare correttamente e in modo sicuro i cookie è necessario indicare il dominio del sito web, per farlo si deve modificare il file "config.php" presente nella root, indicando il dominio sul quale andrà utilizzato il sito.
 
 	\chapter{Progettazione}
 
@@ -207,6 +208,17 @@
 				\caption{Risultati ottenuti su Vischeck}
 			\end{figure}
 			Ulteriormente anche su mobile sono state testata le stesse varianti di colorazione agendo sulle impostazioni di sviluppo di Android 7.1 presenti sulla rom MIUI versione China Dev, purtroppo gli screenshots effettuati in questa modalità di colore apparivano senza filtro, e per questo motivo non è stato possibile riportare i test effettuati in questo documento.
+			
+			\subsection{VEGA}
+			\`{E} stato utilizzato lo strumento VEGA scaricabile gratuitamente da \url{subgraph.com/vega} per controllare eventuali errori di sicurezza all'interno del sito.\\
+			Inizialmente sono state rilevate delle problematiche per quanto riguarda una sessione sicura del cookies, che sono state corrette utilizzando "session\_set\_cookie\_params".
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/VEGA}
+				\caption{Risultati ottenuti su VEGA}
+			\end{figure}
+			Dopo le correzioni sono ancora presente delle problematiche in locale, ma sono dettate dalla configurazione attuale di XAMPP configurato per essere utilizzato in un ambiente di sviluppo e non di produzione.
 
 		\section{Test su diversi dispositivi}
 			Il sito è stato testato su varie macchine e sistemi operativi. Nelle sezioni seguenti verranno elencati assieme ai browser e alle risoluzioni testate.
