@@ -23,12 +23,18 @@
 			\Large Università di Padova\\
 			\vfill
 			\Huge Touhou website\\
-			\Large Progetto per il corso di recnologie web\\
+			\Large Progetto per il corso di tecnologie web\\
 			\vfill
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.6\linewidth]{images/LogoPadova}
+			\end{figure}
 			\large Bisello Samuele - 1122438 \\ Cailotto Mirco - 1123521 \\ Todescato Matteo - 1121857 \\
 			\vfill
-			Sito web hostato all'indirizzo: www.TODO.com\\ %TODO inserire il sito
-			Credenziali per l'amministrazione:\\username: admin, password: admin\\
+			Sito web hostato all'indirizzo: \url{http://tecweb1617.studenti.math.unipd.it/mcailott}\\
+			{\small Credenziali per l'amministrazione:\\username: admin, password: admin\\}
+			\vfill
 			Indirizzo email del referente: mirco.cailotto.1@studenti.unipd.it\\
 			\vfill
 		}
@@ -54,10 +60,10 @@
 
 	\chapter{Abstract}
 	Il progetto sviluppato propone la realizzazione di un sito web che fornisce informazioni riguardo al videogioco Touhou.\\
-	Il primo obiettivo è attirare utenti che cercano delle informazioni in merito al media, probabilmente perchè lo hanno conosciuto attraverso qualche immagine satirica sui social network (come ad esempio Facebook, Reddit e 4chan) o filmati ironici su piattaforme di streaming(come ad esempio YouTube).\\
+	Il primo obiettivo è attirare utenti che cercano delle informazioni in merito al media, probabilmente perché lo hanno conosciuto attraverso qualche immagine satirica sui social network (come ad esempio Facebook, Reddit e 4chan) o filmati ironici su piattaforme di streaming (come ad esempio YouTube).\\
 	Il secondo obiettivo è di fornire informazioni più approfondite a coloro che hanno già una conoscenza base del videogioco, fornendo notizie di attualità e consentendogli di commentare per poter creare un senso di community.\\
 	Un obiettivo desiderabile è quello di raccogliere abbastanza utenza per permettere la collaborazione con manifestazioni legate ad ambiti giovani per la realizzazione di conferenze ed eventi dedicati al media.\\
-	Gli obiettivi prefissati si basano sull'operato del sito web Distopia Evangelion (http://distopia.altervista.org, realizzato con Wordpress), che tratta notizie relative ad una serie animata giapponese (Neon Genesis Evangelion) e collabora con altri portali web e con organizzatori di alcune manifestazioni per la realizzazione di conferenze.\\
+	Gli obiettivi prefissati si basano sull'operato del sito web Distopia Evangelion (\url{http://distopia.altervista.org}, realizzato con Wordpress), che tratta notizie relative ad una serie animata giapponese (Neon Genesis Evangelion) e collabora con altri portali web e con organizzatori di alcune manifestazioni per la realizzazione di conferenze.\\
 	Gli obiettivi precedentemente riportati sono da considerarsi puramente teorici e finalizzati alla realizzazione di un sito web con tali caratteristiche, in quanto attualmente non c'è l'intenzione di pubblicare il sito web.
 
 	\chapter{Installazione}
@@ -68,28 +74,25 @@
 
 	\chapter{Progettazione}
 
-	\section{Descrizione della sessione}
-		In questa sezione del documento si andranno ad approfondire tutti gli aspetti legati alla progettazione del sito web.
-
 	\section{Analisi della classe di utenza}
 
-		\section{Descrizione della sessione}
+		\subsection{Descrizione della sessione}
 		Questa sezione si pone come obiettivo l'analisi di tutte le tipologie di utenti che potrebbero navigare sul sito web, ponendo particolare attenzione alle informazioni che cercano.
-		\section{Analisi dell'utenza}
-		\subsection{Utente che cerca informazioni riguardanti il videogioco}
+		\subsection{Analisi dell'utenza}
+		\subsubsection{Utente che cerca informazioni riguardanti il videogioco}
 		La prima tipologia di utenti del sito sono coloro che conoscono il videogioco Touhou per fama, ma non lo hanno mai giocato. Per consentire loro di avere un'idea immediata sulla tipologia di gioco vengono presentati in home page alcuni screenshot del videogioco.\\
 		Per trasmettere un'informazione più dettagliata è stata creata la pagina gameplay, che solitamente è il primo termine che viene ricercato dai videogiocatori quando desiderano comprendere le meccaniche di un determinato titolo.\\
-		Usualmente questi utenti utilizzano come dispositivi pc potenti e con risoluzioni elevate, di solito uguali o superiori 1080p, ed una connessione internet veloce.
-		\subsection{Utente che cerca informazioni riguardanti un singolo contenuto}
+		Usualmente questi utenti utilizzano come dispositivi pc potenti e con risoluzioni elevate, di solito uguali o superiori a 1080p, ed una connessione internet veloce.
+		\subsubsection{Utente che cerca informazioni riguardanti un singolo contenuto}
 		Questa categoria di utenti è sicuramente la meno omogenea. Si tratta di utenti che vengono a conoscenza di alcune caratteristiche del videogioco attraverso immagini o filmati satirici (definiti anche "memi") presenti in rete e desiderano conoscerne la fonte.\\
 		Questi utenti troveranno nella home page, appena sotto agli screenshot del gioco, alcune immagini che faranno capire subito, anche senza guardare il menu, che nel sito sono trattati anche questi aspetti.\\
 		L'accesso non sarà eseguito unicamente dalla home page del sito, ma probabilmente potrebbero accedere direttamente alla pagina "Popolarità" attraverso una ricerca effettuata su motori di richerca come Google o Bing. Per tale motivo sono state inserite nella sidebar alcune notizie relative al videogioco che potrebbero attirare l'attenzione e allungare la permanenza nel sito.\\
 		Questa tipologia di utenza è probabile abbia una buona conoscenza dell'inglese ed usi una vasta gamma di dispositivi recenti, come ad esempio smartphone, tablet o notebook.\\
-		\subsection{Utente che cerca approfondimenti}
+		\subsubsection{Utente che cerca approfondimenti}
 		Gli utenti che ricercano approfondimenti riguardo al franchise solitamente conoscono e giocano già a Touhou, quindi si presume navighino utilizzando un pc. Tuttavia Touhou è un videogioco 2D che non richiede un hardware potente e quindi non si può presumere che venga utilizzato un pc di ultima generazione.\\
 		Di solito questi utenti hanno una buona conoscenza della lingua inglese e una conoscenza basilare del giapponese. Per esempio riescono a leggere i caratteri hiragana e riconoscono alcuni termini.\\
 		Questi utenti cercheranno soprattutto degli approfondimenti riguardanti i molteplici personaggi oppure delle informazioni recenti riguardanti i capitoli del franchise.\\
-		A questa tipologia di utenti è dedicata anche l'ultima parte della home del sito, in quanto sicuramente saranno interessati ad eventi riguardanti Touhou e quindi li si informa di questa intenzione.
+		A questa tipologia di utenti è dedicata anche l'ultima parte della home del sito, in quanto sicuramente saranno interessati ad eventi riguardanti Touhou e quindi li si informa di questa futura intenzione, ancora da definire alla pubblicazione del sito.
 
 	\section{Progettazione della base informativa}
 		Il sito web si pone l'obiettivo di veicolare diversi contenuti, alcuni statici ed altri dinamici.
@@ -126,7 +129,7 @@
 		Il sito utlizza un layout a tre pannelli nella versione per dispositivi desktop.\\
 		La sidebar, contenente informazioni aggiuntive, è posizionata sul lato destro in quanto offre informazioni secondarie. Perciò nella lettura europea (da sinistra a destra) sarà notata dopo il contenuto, mentre nella versione tablet o mobile sarà posizionata sotto il contenuto.\\
 		Il menu del sito presenta una navigazione a schede, che nella versione per dispositivi mobili viene sostituita da un menu ad hamburger.\\
-		Nel footer del sito sono presenti i crediti, la licenza dei contenuti del sito e l'accesso all'area di amministrazione.
+		Nel footer del sito sono presenti i crediti, la licenza dei contenuti, un'e-mail per contattare gli amministratori del sito e l'accesso all'area di amministrazione.
 
 	\chapter{Realizzazione}
 		\section{Descrizione della sessione}
@@ -136,22 +139,23 @@
 		\subsection{XHTML1.1}
 		Come linguaggio di marcatura si è scelto di utilizzare XHTML 1.1, tecnologia il cui uso è stato concesso dal professore Lamberto Ballan.\\
 		Si è preferito l'utilizzo di XHTML 1.1 per l'aggiunta del tag ruby, il quale consente l'utilizzo del furigana (per ulteriori approfondimenti fare riferimento all'ultima sezione di questo documento relativa all'utilizzo della lingua straniera).\\
-		In mancanza di supporto da parte di un browser di questa funzionalità il furigana viene semplicemente mostrato dopo la parola, in modo da non compromettere la fruizione dei contenuti.
+		In mancanza di supporto da parte di un browser di questa funzionalità il furigana viene semplicemente mostrato dopo la parola all'interno delle parentesi, in modo da non compromettere la fruizione dei contenuti.
 
 		\subsection{JavaScript}
 		Si è scelto di utilizzare JavaScript come componente marginale del sito garantendo, anche se disabilitato, che tutte le funzionalità rimangano accessibili e perfettamente funzionanti.\\
 		Non sono state utilizzate librerie esterne (come ad esempio jQuery) per non appesantire il sito web, dato che il suo uso sarebbe comunque stato marginale e non avrebbe migliorato di molto la qualità della navigazione.
+		
+		\subsection{RSS}
+		Il sito presenta anche uno feed RSS, utilizzabile per consultare le news presenti sul sito.
 
 	\section{Suddivisione di struttura, presentazione e comportamento}
 		\subsection{Parte utente}
 			\subsubsection{Struttura}
 			I file delle pagine della parte utente del sito sono collocate nella root del server, i file necessari alla formattazione dello stile del sito per i vari dispositivi sono collocati nella cartella style mentre le immagini necessarie al sito sono collocate nella cartella images, la quale presenta la suddivisione per le immagini delle news, i personaggi e per i capitoli. I file contenenti gli script necessari al sito sono collocati nella cartella script.
 			\subsubsection{Presentazione}
-			La presentazione della pagina è realizzata tramite file css, il principale sono style, che viene utilizzata per ogni pagina.\\
-			In caso di dispositivo mobile o tablet vengono utilizzati due stili extra, tablet e mobile, che hanno il compito di far cambiare la presentazione della pagina per meglio adattarla a schermi di dimensioni inferiori.\\
-			Per quanto riguarda la stampa è stato creato un foglio stile, chiamato print, che rimuove tutti i contenuti non necessari e impagina le informazioni per meglio adattarle a un foglio A4.\\
-			Si è scelto di rimuovere il menu, ma di lasciare il titolo e la breadcrumb, in modo tale da aiutare l'utente a ritrovare il sito web e la pagina nel caso non si ricordasse la fonte.\\
-			Le immagini sono state rimosse, ad eccezione delle immagini dei personaggi, che sono stati valutate come molto utili per una veloce consultazione.
+			La presentazione della pagina è realizzata tramite file css, il principale è "style", che viene utilizzata per ogni pagina.\\
+			In caso di dispositivo mobile o tablet vengono utilizzati due stili extra, "tablet" e "mobile", che hanno il compito di far cambiare la presentazione della pagina per meglio adattarla a schermi di dimensioni inferiori.\\
+			Per quanto riguarda la stampa è stato creato un nuovo foglio di stile, chiamato "print", che rimuove tutti i contenuti non necessari e impagina le informazioni per meglio adattarle a un foglio A4. 			Si è scelto di rimuovere il menu, ma di lasciare il titolo e la breadcrumb, in modo tale da aiutare l'utente a ritrovare il sito web e la pagina nel caso non si ricordasse la fonte. Le immagini sono state rimosse, ad eccezione delle immagini dei personaggi, che sono stati valutate come molto utili per una veloce consultazione.
 
 			\subsubsection{Comportamento}
 			Il comportamento della pagina è stato gestito tramite JavaScript per il controllo delle form, per i commenti e per fornire la possibilità di ingrandire le immagini all'interno della pagina. Sono presenti anche controlli tramite codice PHP per garantire che il sito continui a funzionare corretamente anche in caso di assenza dell'interprete JavaScript.
@@ -166,15 +170,13 @@
 
 	\subsection{Parte amministratore}
 		\subsubsection{Struttura}
-		generazione di visualizzazione dei dati nel db
+		Il pannello di amministrazione si suddivide secondo tutti gli aspetti gestibili, in modo da risultare chiaro e facilmente consultabile, mentre la pagina di index riassumerà brevemente i contenuti delle sezioni per fornire all'utente un aiuto nel caso non riesca ad orientarsi bene.
 		\subsubsection{Presentazione}
 		Lo stile delle pagine per l'amministrazione differisce rispetto alla parte utente, in quanto dal lato amministratore sono stati rimossi alcuni elementi inutili, come il footer e la sidebar, in modo da renderla più veloce e fare spazio alle utilità necessarie all'amministrazione del sito.
 		\subsubsection{Comportamento}
-		La parte admin si caratterizza per un minor utilizzo dei controlli da parte di JavaScript e PHP sui form, in quanto l'amministratore ha la possibilità di inserire tag html o se lo desidera di lasciare dei campi vuoti.\\
-		Questo per fare fronte ad una mancanza di un editor di test integrato che consenta una scrittura semplificata dei file HTML, in quanto svilupparlo sarebbe stato troppo oneroso per il progetto.\\
+		La parte admin si caratterizza per un minor utilizzo dei controlli da parte di JavaScript e PHP sui form, in quanto l'amministratore ha la possibilità di inserire tag html o se lo desidera di lasciare alcuni campi vuoti, questo per sopperire alla mancanza di un editor HTML.\\
 		Sono inoltre presenti tutti i controlli relativi all'SQLInjection per evitare che l'amministratore inconsapevolmente generi errori all'interno del database.\\
-		Tutto il codice PHP relativo all'esecuzione di azioni è stato completamente diviso da quello utilizzato per la visualizzazione dei contenuti, ad eccezione dell'index della pagina di amministrazione.\\
-		La pagina che richiede il login della parte di amministrazione e la visualizzazione della pagina introduttiva è la medesima. Si è scelta questa soluzione per consentire il salvataggio di un segnalibro da parte degli amministratori, i quali verranno portati alla pagina di login qualora non siano stati autenticati. In caso contrario, verranno direttamente trasferiti alla pagina principale di amministrazione, senza ulteriori redirect.
+		Tutto il codice PHP relativo all'esecuzione di azioni è stato completamente diviso da quello utilizzato per la visualizzazione dei contenuti, ad eccezione dell'index della pagina di amministrazione, in quanto la pagina che richiede il login della parte di amministrazione e la visualizzazione della pagina introduttiva è la medesima. Si è scelta questa soluzione per consentire il salvataggio di un segnalibro da parte degli amministratori, i quali verranno portati alla pagina di login qualora non siano stati autenticati, mentre in caso contrario verranno direttamente trasferiti alla pagina principale di amministrazione, senza ulteriori redirect.
 
 	\chapter{Validazione e test}
 		\section{Descrizione della sessione}
@@ -201,10 +203,10 @@
 				Uno strumento funzionante molto utile è Juicy Studio Luminosity Analyzer, che ha analizzato il contrasto dei colori, fornendo come indice minimo 7.07, sufficiente per avere la certificazione WCAG 2.0 AAA.\\
 
 			\subsection{Total Validator}
-			Per permettere la verifica delle pagine di amministrazione a Total Validator Basic è stata temporaneamente rimossa la verifica del login, questo ha portato ad alcuni errori nella pagina di gestione degli account, in quanto l'account correttamente in uso era invalido.\\
+			Per permettere la verifica delle pagine di amministrazione a Total Validator Basic è stata temporaneamente rimossa la verifica del login.\\
 			Un warning sollevato in ogni pagina è riguardante il link interno per saltare al contenuto, precisamente "W874 Add a skip navigation link as the first link on the page", che viene sollevato in quanto il testo non è "Skip to main content", bensì "Vai al contenuto", in quanto il sito è mirato ad utenti italiani.\\
 			Da precisare che oltre alla presenza del link per andare al contenuto è disponibile anche un link per tornare ad inizio pagina, inserito per facilitare la navigazione da dispositivi tascabili.\\
-			Altri warning presenti sono in riferimento ad immagini che presentano alt vuoti, in tutti i casi segnalati si tratta di immagini puramente decorative oppure che non veicolano una informazione che può essere descritta. Un esempio sono le copertine dei capitoli del videogioco, che presentano motivi e colori imprecisati oppure illustrazioni senza un  significato, utilizzate come riempitivo per la copertina.
+			Altri warning presenti sono in riferimento ad immagini che presentano alt vuoti, in tutti i casi segnalati si tratta di immagini puramente decorative oppure che non veicolano una informazione che può essere descritta. Un esempio sono alcune copertine dei capitoli del videogioco, che presentano motivi e colori imprecisati oppure illustrazioni senza un  significato, utilizzate come riempitivo per la copertina.
 
 			\subsection{Vischeck}
 			\`{E} stato utilizzato il sito web \url{vischeck.com} per controllare i colori in caso di daltonismo, che non ha evidenziato particolari problemi alla individuazione della suddivisione del sito o dei contenuti.
@@ -225,7 +227,7 @@
 				\includegraphics[width=0.8\linewidth]{images/VEGA}
 				\caption{Risultati ottenuti su VEGA}
 			\end{figure}
-			Dopo le correzioni sono ancora presente delle problematiche in locale, ma sono dettate dalla configurazione attuale di XAMPP configurato per essere utilizzato in un ambiente di sviluppo e non di produzione.
+			Dopo le correzioni sono ancora presenti delle problematiche in locale, ma sono dettate dalla configurazione attuale di XAMPP configurato per essere utilizzato in un ambiente di sviluppo e non di produzione.
 
 		\section{Test su diversi dispositivi}
 			Il sito è stato testato su varie macchine e sistemi operativi. Nelle sezioni seguenti verranno elencati assieme ai browser e alle risoluzioni testate.
@@ -240,13 +242,16 @@
 					\item Chromium 64
 					\item Mozilla Firefox 3
 					\item Internet Explorer 11
+					\item Netscape 7
 				\end{itemize}
-				Mozilla Firefox 3 utilizza una dimensione errata dell'immagine nella testata. Questo aspetti rovinano leggermente il rendimento grafico ma non compromettono le funzionalità, in quanto tutti i contenuti risultano perfettamente fruibili dall'utente.\\
+				Si è notato che Mozilla Firefox 3 utilizza una dimensione errata dell'immagine nella testata. Questo aspetto rovina leggermente il rendimento grafico ma non ne compromette le funzionalità, in quanto tutti i contenuti risultano perfettamente fruibili dall'utente.\\
 				Un Secondo appunto riguardante Firefox 3 è l'incompatibilità con parte del codice JavaScript: solamente il controllo della compilazione dei campi di testo funziona correttamente.\\
-				Internet Explorer 11, con la modalità Explorer 7, non genera nessun problema, ed anche il problema della dimensione della testata riscontrato su Firefox 3  è assente; anche con Microsoft Edge 16 (ultima versione) non sono stati riscontrati problemi. \\
-				Non sono stati rilevati ulteriori problemi o incompatibilità con i browser sopra menzionati, anche variando la grandezza del font, dello zoom della pagina, della dimensione della finestra e disattivando JavaScript.
-				%TODO: come si comporta su EDGE? io non lo ho
-
+				Internet Explorer 11, con la modalità Explorer 7, non genera nessun problema, ed anche il problema della dimensione della testata riscontrato su Firefox 3  è assente.\\
+				Anche con Microsoft Edge 16 (ultima versione) non sono stati riscontrati problemi. \\
+				Non sono stati rilevati ulteriori problemi o incompatibilità con i browser sopra menzionati, anche variando la grandezza del font, dello zoom della pagina, della dimensione della finestra e disattivando JavaScript.\\
+				Il sito è stato provato anche su Netscape 7, soprattutto per soddisfare una curiosità personale e per comprendere meglio l'evoluzione dello sviluppo dei siti web negli anni. Il risultato è ovviamente insoddisfacente, i tag div e p sono visualizzati erroneamente, moltissime proprietà css non sono correttamente riconosciute dal browser e soprattutto le mediaquery non sono supportate, facendo caricare al sito la versione mobile.\\
+				Ovviamente non sono stati presi provvedimenti per migliorare la situazione con Netscape, in quanto il software è datato al 2002 e non è più in uso in nessun ambito.
+				
 				\subsection{GNU/Linux Fedora 27}
 				Sono state testate le risoluzioni di 1800p e 2160p con i browsers:
 				\begin{itemize}
@@ -255,7 +260,7 @@
 					\item Firefox 56
 					\item Lynx
 				\end{itemize}
-				Durante la fase di test su questa piattaforma non sono emerse problematiche a livello di compatibilità o visibilità nonstante le alte risoluzioni. In oltre su questa piattaforma è sata testa la leggibilità del sito con l'utilizzo del browser cli Lynx.
+				Durante la fase di test su questa piattaforma non sono emerse problematiche a livello di compatibilità o visibilità nonstante le alte risoluzioni. Inoltre su questa piattaforma è stata testata la leggibilità del sito con l'utilizzo del browser cli Lynx.
 
 				\subsection{MacOS High Sierra}
 				Sono state testate le risoluzioni di 1800p, 2160p e 2880x1800p con i browsers:
@@ -267,14 +272,15 @@
 				\end{itemize}
 
 				\subsection{FreeBSD 11}
-				\`{E} stata testata con il browser Lynx utilizzando la console senza x11, quindi da terminale, e con x11, quindi da una finestra di emulazione del terminale di dimensione variabile.
+				Il sito è stato testato con il browser Lynx utilizzando la console senza x11 o Wayland, quindi da terminale, e con x11, quindi da una finestra di emulazione del terminale di dimensione variabile.\\
+				In entrambi i casi il contenuto era fruibile.
 
 				\subsection{Dispositivi mobili}
 				Di seguito sono elencati i vari dispositivi mobili sui quali il sito è stato testato
 				\begin{itemize}
 				\item Xiaomi Redmi 4X (Chinese Dev) con Miui browser, Firefox Rocket e Waterfox con una risoluzione di 720p
 				\item Amazon Kindle Touch 2 (7' generazione) con schermo e-ink in bianco e nero, con una risoluzione di 800x600 e con il browser sperimentale fornito di default.
-        		\item Testato su Ipad Pro 10.5' su browser Safari (devo aggiungere la versione), con una risoluzione di 2224x1668
+        		\item Testato su Ipad Pro 10.5' su browser Safari con una risoluzione di 2224x1668 %TODO: la versione
 				\end{itemize}
 			
 				In tutti i dispositivi testati il sito si adatta perfettamente alla risoluzione dello schermo e non sono presenti problemi di compatibilità, neppure con JavaScript.\\
@@ -289,10 +295,10 @@
 			
 		\section{Test con diverse impostazioni utente}
 			Il sito è stato testato con multiple impostazioni utente, come citato nella sezione riguardante le piattaforme di testing sono state testate risoluzioni che vanno dall 600p al 2160p senza presentare problemi di visualizzazione. Oltre al test per le varie risoluzioni e dispositivi si è testata la visualizzazione del sito con dimensioni del testo di che vanno 16pt a 44pt e con uno zoom elevato mantenendo comunque una buona fruibilità del sito.\\
-			\`{E} stata presa in considerazione anche la possibilità che un utente abbia bloccato, oppure non abbia la possibilita se pur remota di non poter eseguire Javascript, nonstante questo il sito rimane comunque egualemente navigabile in tutte le sue parti, senza far trasparire in modo palese la mancanza di Javascript.\\
+			\`{E} stata presa in considerazione anche la possibilità che un utente abbia bloccato, oppure non abbia la possibilita se pur remota di non poter eseguire Javascript, e nonostante questo il sito rimane comunque egualmente navigabile in tutte le sue parti, senza far trasparire in modo palese la mancanza di Javascript.\\
 
 		\section{Lynx e come potrebbe essere se letto}
-			Il sito è stato testato con il browser lynx, nonostante la visualizzazione solo testuale il sito rimane comunque navigabile seppur non in modo agevole se non si è abituati al utilizzo dei browser testuali.
+			Il sito è stato testato con il browser Lynx, nonostante la visualizzazione solo testuale il sito rimane comunque navigabile seppur non in modo agevole se non si è abituati al utilizzo dei browser testuali.
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=1.2\linewidth]{images/Lynx2}
@@ -331,45 +337,48 @@
 
 
 	\chapter{Suddivisione del lavoro}
-	\section{Descrizione della sessione}
 	\section{Suddivisione per membro del gruppo}
 	\subsection{Bisello Samuele - Matricola 1122438}
 	\begin{itemize}
 		\item Scrittura contenuti per la pagina capitoli
-		\item Stile login e form lato admin
-		\item Controllo javascript form  lato admin
-		\item Parte dello sticky header
-		\item Test su MacOS High Sierra (v10.13.2) e ios 11.2.5
-		\item
-		\item
+		\item Definizione stile del login e di svariati elementi, soprattutto nella parte di amministrazione
+		\item Script JS per la validazione delle form lato admin
+		\item Raffinamento e verifica delle form
+		\item Inserimento dello sticky header
+		\item Test su MacOS High Sierra e iOS
 	\end{itemize}
 	\subsection{Cailotto Mirco - Matricola 1123521}
 	\begin{itemize}
 		\item Creazione struttura base del sito
+		\item Raccolta e stesura nella relazione di tutti gli aspetti relativi alla lingua giapponese
+		\item Raccolta di riferimenti per il contenuto del sito
 		\item Scrittura contenuti per pagina di home page, gameplay, realizzazione, popolarità
-		\item Creazione php per le pagine dinamiche, compresa la parte di amministrazione
-		\item Creazione stile per le pagine home page, news, articoli, gameplay, realizzazione, popolarità e capitoli
+		\item Creazione php per le news e svariate pagine di amministrazione
+		\item Creazione bozza dello stile per le pagine utente e amministrazione
 		\item Scrittura della funzione php per l'upload delle immagini
-		\item Scrittura del sistema di errori forniti all'utente
-		\item Parsing degli input per evitare SQLInjection
-		\item Creazione sistema di caching per la sidebar
+		\item Scrittura del sistema di errori in PHP forniti all'utente
 		\item Creazione della struttura del database
-		\item Controllo dei valori inseriti dagli utenti generici
+		\item Controllo dei valori inseriti all'interno del database
+		\item Parsing degli input per evitare SQLInjection
+		\item Svolgimento di test automatici
 		\item Stesura dello scheletro della relazione
 		\item Stesura parte abstract, di analisi dell'utenza e di ambiguità linguistica della relazione
-		\item
+		\item Creazione dello script per lo zoom delle immagini
+		\item Raffinamento dello sticky header
+		\item Test su sistema Windows e Android
+		\item Creazione RSS
 	\end{itemize}
 	\subsection{Todescato Matteo - Matricola 1121857}
 	\begin{itemize}
-		\item Scrittura contenuti per pagina dei personaggi
-		\item Gestione degli amministratori nella parte php e relativa parte del database
-		\item Controllo per il login
-		\item Script per la validazione delle form lato utente
+		\item Scrittura contenuti per la pagina dei personaggi
+		\item Gestione degli amministratori nella parte PHP e relativa parte del database
+		\item Stesura del login
+		\item Definizione dello stile grafico adottato
+		\item Creazione dello sfondo
+		\item Script JS per la validazione delle form lato utente
 		\item Inserimento notizie
 		\item Test su sistema Linux
-		\item
-		\item
-		\item
+		\item Stesura della parte di realizzazione della relazione
 	\end{itemize}
 
 \end{document}
