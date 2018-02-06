@@ -83,9 +83,9 @@ header('Content-type: application/xhtml+xml'); ?>
 			<div id="navbutton">
 <?php	//genero o meno i tasti per le altre news
 if($index+1 < $number/$newsnumber)
-	echo('<a id="precnews" class="othernews button" href="news.php?index='.($index+1).'">News precedenti</a>');
+	echo('<a id="precnews" class="othernews button" href="news.php?index='.($index+1).'">Notizie precedenti</a>');
 if($index > 0)
-	echo('<a id="nextnews" class="othernews button" href="news.php?index='.($index-1).'">News successive</a>');
+	echo('<a id="nextnews" class="othernews button" href="news.php?index='.($index-1).'">Notizie successive</a>');
 ?>
 			</div>
 		</div>

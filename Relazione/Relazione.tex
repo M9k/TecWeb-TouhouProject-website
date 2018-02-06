@@ -105,7 +105,14 @@
 
 	\subsection{Contenuti dinamici}
 		\subsubsection{News}
-		L'area news tratterà le ultime notizie riguardanti la serie di videogiochi, come ad esempio la pubblicazione di demo dei futuri capitoli da parte di ZUN, curiosità o articoli speciali sulla serie o anticipazioni.
+		L'area news tratterà le ultime notizie riguardanti la serie di videogiochi, come ad esempio la pubblicazione di demo dei futuri capitoli da parte di ZUN, curiosità o articoli speciali sulla serie o anticipazioni.\\
+		Il numero di notizie sarà limitato a 10 per pagina, nel caso ne siano presenti un numero superiore verranno visualizzati in fondo alla pagina dei controlli per scorrere le successive o le precedenti notizie, nel caso siano presenti rispettivamente notizie successive e precedenti.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\linewidth]{images/precsuccnews}
+			\caption{Esempio di controlli per scorrere le pagine delle notizie}
+		\end{figure}
+		Le news, oltre all'immagine di copertina, potranno contenere immagini anche al loro interno utilizzando il corretto tag html nella parte di amministrazione, quindi è stata fornita anche la possibilità di caricare immagini sul dominio senza la necessità di legarle ad una specifica notizia, similarmente a quanto avviene su WordPress.
 
 		\subsubsection{Commenti degli utenti}
 		Gli utenti avranno la possibilità di lasciare dei commenti sotto ogni articolo e leggere quelli altrui, in modo tale da fornire un minimo di iterazione con l'utenza.
@@ -317,6 +324,9 @@
 
 		\section{Editor HTML per gli amministratori}
 		La possibilità della realizzazione di un editor HTML come quelli presenti all'interno dei CMS è stata esclusa visto il tempo che sarebbe stato necessario per realizzarlo che sarebbe stato eccessivo. Comunque nonstante non sia stato sviluppato si ritiene che l'implementazione di un editor di questo per la parte di amministrazione renderebbe molto più efficace la gestione delle funzionalità che richiedono di manipolare testo che poi verra inserito nel database come blocchi di codice html.   
+		
+		\section{Image picker}
+		Una ultima funzione avanzata che migliorerebbe l'utilizzo del sito da parte dell'amministratore, che si collega all'editor HTML, sarebbe quella di poter selezionare una immagine da inserire in un articolo direttamente dalla galleria delle immagini, o caricarla al momento all'interno della galleria, senza la necessità di spostarsi sulla sezione immagini, caricarla, copiare il link, tornare alla notizia che stava inserendo e compilando il tag html per l'inserimento dell'immagine.
 
 
 
