@@ -128,7 +128,7 @@ else
 					echo($wrongloginmessage);
 				?>
 				<label for="username">Nome utente</label>: <input id="username" name="username" type="text"/><br/>
-				<label for="password">Password</label>: <input id="password" name="password" type="text"/><br/>
+				<label for="password">Password</label>: <input id="password" name="password" type="password"/><br/>
 				<input value="Login" type="submit"/>
 				<input value="Cancella" type="reset"/> 
 			</fieldset>
