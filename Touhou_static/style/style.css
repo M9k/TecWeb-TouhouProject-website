@@ -432,6 +432,13 @@ a {
     margin-left: 2%;
 }
 
+#nextnews {
+	float: right;
+}
+#precnews {
+	float: left
+}
+
 @media screen and (max-width: 900px) {
     #header {
         /* riduco la dimensione della testata*/
