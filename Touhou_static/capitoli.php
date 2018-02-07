@@ -26,7 +26,7 @@ header('Content-type: application/xhtml+xml'); ?>
 	<div id="subheader">
 		<div id="header">
 			<div id="titolo">
-				<h1>Touhou Project</h1>
+				<h1>Touhou <span xml:lang="en">Project</span></h1>
 				<div id="titoletto">Sito di informazione italiano</div>
 			</div>
 			<div id="skipmenu">
@@ -92,7 +92,7 @@ else
 			<dl title="barra laterale">
 				<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
 				<dd class="ddsidebar"><?php include('sidebarnews.php'); ?></dd>
-				<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
+				<dt class="dtsidebar" id="feedRSS"><span xml:lang="en">Feed RSS</span></dt>
 				<dd class="ddsidebar">
 					<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
 					<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>
