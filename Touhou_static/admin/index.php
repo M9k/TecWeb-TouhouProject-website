@@ -111,7 +111,6 @@ else
 			<p>Questa sezione elenca tutti i capitoli presenti, permettendo di aggiungerne di nuovi o di eliminarne.</p>
 
 			<h3>Amministratori</h3>
-			<!-- TODO -->
 			<p>In questa sezione è possibile aggiungere e rimuovere amministratori, cambiare la propria password ed aggiornare la propria <span xml:lang="it">e-mail</span>.</p>
 
 			<p>Infine puoi ritornare al sito rimanendo loggato all’Area amministrativa o fare <span xml:lang="en">Logout</span>.</p>
