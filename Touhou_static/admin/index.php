@@ -57,7 +57,7 @@ else
 	<div id="subheader">
 		<div id="header">
 			<div id="titolo">
-				<h1>Touhou Project</h1>
+				<h1>Touhou <span xml:lang="en">Project</span></h1>
 				<div id="titoletto">Pannello di amministrazione</div>
 			</div>
 			<div id="skipmenu">
@@ -66,7 +66,7 @@ else
 			<div id="menudiv">
 				<ul id="menu">
 					<li id="menuvoice">Menu</li>
-					<li class="disable">Home</li>
+					<li class="disable" xml:lang="en">Home</li>
 					<li><a href="news.php" xml:lang="en">News</a></li>
 					<li><a href="image.php">Immagini</a></li>
 					<li><a href="comments.php">Commenti</a></li>
@@ -117,16 +117,16 @@ else
 			<p>Infine puoi ritornare al sito rimanendo loggato all’Area amministrativa o fare <span xml:lang="en">Logout</span>.</p>
 		<?php
 		} else { ?>
-		<h1>Pagina di login</h1>
+		<h1>Pagina di <span xml:lang="en">login</span></h1>
 		<form action="index.php" method="post" id="loginform">
 			<fieldset id="loginfields">
-				<legend>Login</legend>
+				<legend> <span xml:lang="en">Login</span></legend>
 				<?php 
 				if($wronglogin)
 					echo($wrongloginmessage);
 				?>
 				<label for="username">Nome utente</label>: <input id="username" name="username" type="text"/><br/>
-				<label for="password">Password</label>: <input id="password" name="password" type="password"/><br/>
+				<label for="password"><span xml:lang="en">Password</span></label>: <input id="password" name="password" type="password"/><br/>
 				<input value="Login" type="submit"/>
 				<input value="Cancella" type="reset"/> 
 			</fieldset>

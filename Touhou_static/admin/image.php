@@ -32,7 +32,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	<div id="subheader">
 		<div id="header">
 			<div id="titolo">
-				<h1>Touhou Project</h1>
+				<h1>Touhou <span xml:lang="en">Project</span></h1>
 				<div id="titoletto">Pannello di amministrazione</div>
 			</div>
 			<div id="skipmenu">
@@ -41,7 +41,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 			<div id="menudiv">
 				<ul id="menu">
 					<li id="menuvoice">Menu</li>
-					<li><a href="index.php">Home</a></li>
+					<li><a href="index.php" xml:lang="en">Home</a></li>
 					<li><a href="news.php" xml:lang="en">News</a></li>
 					<li class="disable">Immagini</li>
 					<li><a href="comments.php">Commenti</a></li>
@@ -61,8 +61,8 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 		<h2>Gestione immagini</h2>
 		<form action="imageupload.php" method="post" enctype="multipart/form-data">
 			<fieldset>
-				<legend>Upload nuova immagine</legend>
-				<p>Seleziona l'immagine da caricare (Massimo 5Mb, in formato comune):</p>
+				<legend><span xml:lang="en">Upload</span> nuova immagine</legend>
+				<p>Seleziona l'immagine da caricare (Massimo 5<acronym title="mega byte">MB</acronym>, in formato comune):</p>
 				<label for="fileupload" xml:lang="en">File:</label> <input type="file" name="fileupload" id="fileupload"/><br/>
 				<input type="submit" value="Carica" name="submit"/>
 			</fieldset>

@@ -52,7 +52,7 @@ else
 	<div id="subheader">
 		<div id="header">
 			<div id="titolo">
-				<h1>Touhou Project</h1>
+				<h1>Touhou <span xml:lang="en">Project</span></h1>
 				<div id="titoletto">Pannello di amministrazione</div>
 			</div>
 			<div id="skipmenu">
@@ -61,7 +61,7 @@ else
 			<div id="menudiv">
 				<ul id="menu">
 					<li id="menuvoice">Menu</li>
-					<li><a href="index.php">Home</a></li>
+					<li><a href="index.php" xml:lang="en">Home</a></li>
 					<li><a href="news.php" xml:lang="en">News</a></li>
 					<li><a href="image.php">Immagini</a></li>
 					<li><a href="comments.php">Commenti</a></li>

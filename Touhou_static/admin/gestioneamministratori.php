@@ -34,7 +34,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	<div id="subheader">
 		<div id="header">
 			<div id="titolo">
-				<h1>Touhou Project</h1>
+				<h1>Touhou <span xml:lang="en">Project</span></h1>
 				<div id="titoletto">Pannello di amministrazione</div>
 			</div>
 			<div id="skipmenu">
@@ -43,7 +43,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 			<div id="menudiv">
 				<ul id="menu">
 					<li id="menuvoice">Menu</li>
-					<li><a href="index.php">Home</a></li>
+					<li><a href="index.php" xml:lang="en">Home</a></li>
 					<li><a href="news.php" xml:lang="en">News</a></li>
 					<li><a href="image.php">Immagini</a></li>
 					<li><a href="comments.php">Commenti</a></li>
@@ -87,9 +87,9 @@ else
 				<legend>Dati nuovo amministratore:</legend>
 				<label for="usernameinput">Nome utente (può contenere solo lettere e numeri):</label> <input name="username" type="text" id="usernameinput" size="20" maxlength="25" onchange="validateString('nome',document.getElementById('usernameinput').value)"/>
                 <div id="errorenome"></div>
-                <label for="emailinput">Email:</label> <input name="email" type="text" id="emailinput" size="20" maxlength="40" onchange="validateEmailAdmin('email',document.getElementById('emailinput').value)"/>
+                <label for="emailinput"><span xml:lang="en">E-mail</span>:</label> <input name="email" type="text" id="emailinput" size="20" maxlength="40" onchange="validateEmailAdmin('email',document.getElementById('emailinput').value)"/>
                 <div id="erroreemail"></div>
-                <label for="passwordinput">Password:</label> <input name="password" type="text" id="passwordinput" size="10" maxlength="12" onchange="validateString('password',document.getElementById('passwordinput').value)"/>
+                <label for="passwordinput"><spam xml:lang="en">Password</span>:</label> <input name="password" type="text" id="passwordinput" size="10" maxlength="12" onchange="validateString('password',document.getElementById('passwordinput').value)"/>
                 <div id="errorepassword"></div>
 				<input type="submit" value="Aggiungi" name="submit"/> <input type="reset" value="Cancella i campi" name="reset"/>
                 <div id="erroreNewAdmin"></div>
@@ -99,11 +99,11 @@ else
 		<form id="editaccountinfo" action="gestioneamministratoriaction.php" method="post" onsubmit="return validateFormModifyAdmin()">
 			<fieldset id="editaccountinfofield">
 			<legend>Dati del proprio account:</legend>
-			<label for="newemailinput">Email:</label>
+			<label for="newemailinput">Nuova <span xml:lang="en">E-mail</span>:</label>
 
 				<input value="<?php echo $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput" size="20" maxlength="40" onchange="validateEmailAdmin('nuova_email',document.getElementById('newemailinput').value)"/>
                 <div id="errorenuova_email"></div>
-                <label for="newpasswordinput">Nuova password:</label>
+                <label for="newpasswordinput">Nuova <span xml:lang="en">password</span>:</label>
                 <input name="newpassword" type="text" id="newpasswordinput" size="10" maxlength="12" onchange="validateString('nuova_password',document.getElementById('newpasswordinput').value)"/>
                 <div id="errorenuova_password"></div>
                 <input type="submit" value="Modifica" name="submit"/>

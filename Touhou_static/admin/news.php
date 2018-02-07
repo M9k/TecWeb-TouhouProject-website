@@ -33,7 +33,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 <body>	<div id="subheader">
 		<div id="header">
 			<div id="titolo">
-				<h1>Touhou Project</h1>
+				<h1>Touhou <span xml:lang="en">Project</span></h1>
 				<div id="titoletto">Pannello di amministrazione</div>
 			</div>
 			<div id="skipmenu">
@@ -42,7 +42,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 			<div id="menudiv">
 				<ul id="menu">
 					<li id="menuvoice">Menu</li>
-					<li><a href="index.php">Home</a></li>
+					<li><a href="index.php" xml:lang="en">Home</a></li>
 					<li class="disable" xml:lang="en">News</li>
 					<li><a href="image.php">Immagini</a></li>
 					<li><a href="comments.php">Commenti</a></li>
@@ -61,9 +61,9 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	<div id="contenuto">
 		<h2>Gestione news</h2>
 		<div id="newsadd">
-			<a class="button bigbutton" href="newsadd.php">Aggiungi una nuova news</a>
+			<a class="button bigbutton" href="newsadd.php">Aggiungi una nuova <span xml:lang="en">news</span></a>
 		</div>
-		<h3>News presenti nel sito:</h3>
+		<h3><span xml:lang="en">News</span> presenti nel sito:</h3>
 <?php
 	$dbConnection = new DBAccess();
 	$dbConnection->openDBConnection();
