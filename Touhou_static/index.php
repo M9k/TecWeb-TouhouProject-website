@@ -7,11 +7,7 @@ $title = 'Home - Touhou Italia';
 <head>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
-		<meta name="title" content="<?php
-if(isset($title))
-	echo $title;
-else
-	echo "Touhou fan club italiano"?>"/>
+		<meta name="title" content="Touhou fan club italiano"/>
 		<meta name="description" content="Fan club italiano di Touhou"/>
 		<meta name="keywords" content="Touhou, Tou Hou, fan club, fanclub, italia, italiano, bullethell, bullet hell"/>
 		<meta name="language" content="ïtalian it"/>
@@ -26,11 +22,7 @@ else
 		<link rel="alternate" href="rss.php" title="Ricevi le notizie tramite RSS" type="application/rss+xml"/>
 
 		<script type="text/javascript" src="script/script.js"></script>
-	<title><?php
-	if(isset($title))
-		echo $title;
-	else
-		echo "Touhou fan club italiano"?></title>
+	<title>Touhou fan club italiano</title>
 	<?php if(isset($head_extra))	echo $head_extra;?>
 </head>
 <body>
