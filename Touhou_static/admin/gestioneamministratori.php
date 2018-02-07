@@ -85,11 +85,11 @@ else
 		<form id="addadmin" action="gestioneamministratoriaction.php" method="post" onsubmit="return validateFormInsertAdmin()">
 			<fieldset id="addadminfield">
 				<legend>Dati nuovo amministratore:</legend>
-				<label for="usernameinput">Nome utente (può contenere solo lettere e numeri):</label> <input name="username" type="text" id="usernameinput" onchange="validateString('nome',document.getElementById('usernameinput').value)"/>
+				<label for="usernameinput">Nome utente (può contenere solo lettere e numeri):</label> <input name="username" type="text" id="usernameinput" size="20" maxlength="25" onchange="validateString('nome',document.getElementById('usernameinput').value)"/>
                 <div id="errorenome"></div>
-                <label for="emailinput">Email:</label> <input name="email" type="text" id="emailinput"  onchange="validateEmailAdmin('email',document.getElementById('emailinput').value)"/>
+                <label for="emailinput">Email:</label> <input name="email" type="text" id="emailinput" size="20" maxlength="40" onchange="validateEmailAdmin('email',document.getElementById('emailinput').value)"/>
                 <div id="erroreemail"></div>
-                <label for="passwordinput">Password:</label> <input name="password" type="text" id="passwordinput" onchange="validateString('password',document.getElementById('passwordinput').value)"/>
+                <label for="passwordinput">Password:</label> <input name="password" type="text" id="passwordinput" size="10" maxlength="12" onchange="validateString('password',document.getElementById('passwordinput').value)"/>
                 <div id="errorepassword"></div>
 				<input type="submit" value="Aggiungi" name="submit"/> <input type="reset" value="Cancella i campi" name="reset"/>
                 <div id="erroreNewAdmin"></div>
@@ -101,10 +101,10 @@ else
 			<legend>Dati del proprio account:</legend>
 			<label for="newemailinput">Email:</label>
 
-				<input value="<?php echo $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput" onchange="validateEmailAdmin('nuova_email',document.getElementById('newemailinput').value)"/>
+				<input value="<?php echo $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput" size="20" maxlength="40" onchange="validateEmailAdmin('nuova_email',document.getElementById('newemailinput').value)"/>
                 <div id="errorenuova_email"></div>
                 <label for="newpasswordinput">Nuova password:</label>
-                <input name="newpassword" type="text" id="newpasswordinput" onchange="validateString('nuova_password',document.getElementById('newpasswordinput').value)"/>
+                <input name="newpassword" type="text" id="newpasswordinput" size="10" maxlength="12" onchange="validateString('nuova_password',document.getElementById('newpasswordinput').value)"/>
                 <div id="errorenuova_password"></div>
                 <input type="submit" value="Modifica" name="submit"/>
 				<input type="reset" value="Cancella i campi" name="reset"/>

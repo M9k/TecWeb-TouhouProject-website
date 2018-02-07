@@ -1,7 +1,7 @@
 <?php require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR."dbConnection.php"; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<?php 
+<?php
 header('Content-type: application/xhtml+xml');
 if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
@@ -70,7 +70,7 @@ else
 					<li><a href="gestioneamministratori.php">Amministratori</a></li>
 					<li><a href="../">Torna al sito</a></li>
 					<li><a href="index.php?logout=true" xml:lang="en">Logout</a></li>
-				</ul> 
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -81,18 +81,19 @@ else
 	<h2><?php echo $titleh2;?></h2>
 		<div id="newsadd">
 			<form id="addnewsform" action="newsaction.php" method="post" enctype="multipart/form-data" onsubmit="return validateFormAddNews()">
+                <fieldset>
 				<br id="addnewsdiv">
 					<legend>Inserimento dei dati della notizia:</legend>
 <?php if($edit)
 echo('<input name="id" style="position: absolute; visibility: hidden;" id="idform" type="text" value="'.$news['id'].'"/>'); ?>
-                    <label for="titleform">Titolo</label>: <input name="title" id="titleform" type="text" onchange="validateString('titolo',document.getElementById('titleform').value)" value="<?php if($edit) echo($news['title'])?>"/>
+                    <label for="titleform">Titolo</label>: <input name="title" id="titleform" type="text"  size="20" maxlength="40" onchange="validateString('titolo',document.getElementById('titleform').value)" value="<?php if($edit) echo($news['title'])?>"/>
                     <div id="erroretitolo"></div>
-                    <label for="imageform">Titolo con relativa estensione dell'immagine da usare in copertina</label>: <input name="image" id="imageform" type="text" onchange="validateStringImage(document.getElementById('imageform').value, document.getElementById('fileupload').files.length)" value="<?php if($edit) echo($news['image'])?>"/>
+                    <label for="imageform">Titolo con relativa estensione dell'immagine da usare in copertina</label>: <input name="image" id="imageform" type="text"  size="20" maxlength="25" onchange="validateStringImage(document.getElementById('imageform').value, document.getElementById('fileupload').files.length)" value="<?php if($edit) echo($news['image'])?>"/>
                     <div id="erroretitoloimmagine"></div>
                     Oppure<br/>
 					<label for="fileupload">Carica nuova immagine, ignorando il box di input precedente</label>: <br/>
                     <input type="file" name="fileupload" id="fileupload" onchange="validateStringImage(document.getElementById('imageform').value, document.getElementById('fileupload').files.length)" /></br>
-                    <label for="imgdescrform">Descrizione breve dell'immagine</label>: <input name="imgdescr" type="text" id="imgdescrform" value="<?php if($edit) echo ($news['imgdescr'])?>"/>
+                    <label for="imgdescrform">Descrizione breve dell'immagine</label>: <input name="imgdescr" type="text" id="imgdescrform"  size="20" maxlength="40" value="<?php if($edit) echo ($news['imgdescr'])?>"/>
                     <div id="erroredescrizione"></div>
                     Nota: utilizzare <a href="image.php">gestione immagini</a> per caricare nuove immagini<br/>
 					<input name="hidden" id="hiddenform" type="checkbox" <?php if($edit) if($news['hidden'] == true) echo('checked="checked"');?>/><label for="hiddenform"> Bozza</label><br/>

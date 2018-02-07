@@ -1,8 +1,8 @@
-<?php require_once __DIR__.DIRECTORY_SEPARATOR."dbConnection.php"; 
+<?php require_once __DIR__.DIRECTORY_SEPARATOR."dbConnection.php";
 header('Content-type: application/xhtml+xml'); ?>
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<?php 
+<?php
 
 $dbConnection = new DBAccess();
 $dbConnection->openDBConnection();
@@ -68,7 +68,7 @@ else
 					<li><a href="popolarita.php">Popolarità</a></li>
 					<li><a href="personaggi.php">Personaggi</a></li>
 					<li><a href="capitoli.php">Capitoli</a></li>
-				</ul> 
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -100,15 +100,15 @@ else
 					<h3>Lascia un commento</h3>
 					<form action="commentadd.php" method="post" id="leavecommentform" onsubmit="return validateForm()">
 						<div id="leavecommentfields">
-							<div id="errorenome"></div>
-							<label for="nameinput">Nome</label>: <input id="nameinput" name="name" type="text" onchange="validateString('nome',document.getElementById('nameinput').value)"/><br/>
-							<div id="erroreemail"></div>
-							<label for="emailinput"><span xml:lang="en">E-mail</span> (non sarà pubblicata)</label>: <input id="emailinput" name="email" type="text" onchange="validateEmail()" /><br/>
-							<div id="errorecommento"></div>
-							<label for="commentoinput">Commento</label>: <textarea id="commentoinput" name="message" onchange="validateString('commento',document.getElementById('commentoinput').value)" cols="48" rows="4"></textarea><br/>
-							<div id="erroreinvio"></div>
-							<input value="Invia" type="submit"/>
-							<input value="Cancella" type="reset"/>
+                                <label for="nameinput">Nome</label>: <input id="nameinput" name="name" type="text" size="20" maxlength="30" onchange="validateString('nome',document.getElementById('nameinput').value)"/>
+                                <div id="errorenome"></div>
+                                <label for="emailinput"><span xml:lang="en">E-mail</span> (non sarà pubblicata)</label>: <input id="emailinput" name="email" type="text" size="20" maxlength="40" onchange="validateEmail()" />
+                                <div id="erroreemail"></div>
+                                <label for="commentoinput">Commento</label>: <textarea id="commentoinput" name="message" onchange="validateString('commento',document.getElementById('commentoinput').value)" cols="48" rows="4"></textarea><br/>
+                                <div id="errorecommento"></div>
+                                <input value="Invia" type="submit"/>
+                                <input value="Cancella" type="reset"/>
+                                <div id="erroreinvio"></div>
 						</div>
 					</form>
 				</div>
@@ -121,12 +121,12 @@ else
 		if($comments != null)
 		{
 			echo '<dl>';
-			foreach($comments as $comment) 
+			foreach($comments as $comment)
 			{
 				echo '<dt>'.$comment['nick'].'</dt>';
 				echo '<dd><div class="commenttext">'.$comment['message'].'</div></dd>';
 			}
-			echo '</dl>';	
+			echo '</dl>';
 		}
 		else
 			echo '<div id="nopostmessage">Nessun commento inserito</div>';

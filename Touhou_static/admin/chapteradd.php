@@ -63,19 +63,19 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 		<div id="newsadd">
 			<form id="addchapterform" action="chapteraddaction.php" method="post" enctype="multipart/form-data" onsubmit="return validateFormAddChapter()">
 				<div id="addchapterdiv">
-					<label for="title">Titolo giapponese</label>: <input name="title" type="text" id="title" onchange="validateString('titolo', document.getElementById('title').value)"/>
+					<label for="title">Titolo giapponese</label>: <input name="title" type="text" id="title" size="20" maxlength="40" onchange="validateString('titolo', document.getElementById('title').value)"/>
                     <div id="erroretitolo"></div>
-					<label for="titleeng">Titolo inglese</label>: <input name="titleeng" type="text" id="titleeng" onchange="validateString('titolo_inglese', document.getElementById('titleeng').value)"/>
+					<label for="titleeng">Titolo inglese</label>: <input name="titleeng" type="text" id="titleeng" size="20" maxlength="40" onchange="validateString('titolo_inglese', document.getElementById('titleeng').value)"/>
                     <div id="erroretitolo_inglese"></div>
-                    <label for="titleita">Titolo italiano</label>: <input name="titleita" type="text" id="titleita" onchange="validateString('titolo_italiano', document.getElementById('titleita').value)"/>
+                    <label for="titleita">Titolo italiano</label>: <input name="titleita" type="text" id="titleita" size="20" maxlength="40" onchange="validateString('titolo_italiano', document.getElementById('titleita').value)"/>
                     <div id="erroretitolo_italiano"></div>
                     <label for="fileupload">Immagine della copertina</label>: <br/>
 					<input type="file" name="fileupload" id="fileupload"/><br/>
-                    <label for="imagedescr">Descrizione breve dell'immagine</label>: <input name="imagedescr" type="text" id="imagedescr" onchange="validateString('image_descr', document.getElementById('imagedescr').value)"/>
+                    <label for="imagedescr">Descrizione breve dell'immagine</label>: <input name="imagedescr" type="text" id="imagedescr" size="20" maxlength="40" onchange="validateString('image_descr', document.getElementById('imagedescr').value)"/>
                     <div id="erroreimage_descr"></div>
-                    <label for="number">Numero</label>: <input type="number" name="number" id="number" onchange="validateString('numero', document.getElementById('number').value)" />
+                    <label for="number">Numero</label>: <input type="text" name="number" id="number" size="8" maxlength="10" onchange="validateString('numero', document.getElementById('number').value)" />
                     <div id="errorenumero"></div>
-                    <label for="year">Anno</label>: <input name="year" type="number" id="year" onchange="validateYear('anno', document.getElementById('year').value)" value="<?php echo date("Y");?>"/>
+                    <label for="year">Anno</label>: <input name="year" type="number" id="year" size="4" onchange="validateYear('anno', document.getElementById('year').value)" value="<?php echo date("Y");?>"/>
                     <div id="erroreanno"></div>
                     <label for="plot">Trama</label>: <br/><textarea name="plot" id="plot" onchange="validateString('testo', document.getElementById('plot').value)" cols="100" rows="10"></textarea>
                     <div id="erroretesto"></div>

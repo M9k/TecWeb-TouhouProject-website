@@ -36,6 +36,8 @@
     margin: 2px 6px 16px 0;
 }
 
+
+
 #addchapterform input#fileupload, #addnewsform input#fileupload {
     margin-bottom: 2em;
 }
@@ -44,9 +46,19 @@
     margin: 2.5em 0;
 }
 
+textarea#textform, textarea#plot, textarea#commentoinput {
+    width:97%;
+    display: block;
+    font-size: 1em;
+    /*width: 100%;*/
+    padding: 3px;
+    margin-bottom: 0.5em;
+
+}
+
 #addadmin input#usernameinput, input#emailinput, input#passwordinput, #editaccountinfo input#newemailinput, input#newpasswordinput,
-#addchapterform input#title, input#titleeng, input#titleita, input#imagedescr, input#number, input#year, textarea#plot,
-#addnewsform input#titleform, input#imageform, input#imgdescrform, #addnewsform textarea#textform {
+#addchapterform input#title, input#titleeng, input#titleita, input#imagedescr, input#number, input#year,
+#addnewsform input#titleform, input#imageform, input#imgdescrform {
 
     display: block;
     font-size: 1em;
@@ -80,6 +92,16 @@
 
 #textform {
     width: 100%;
+}
+
+div.commentactionsformcontent input[type="text"]{
+    font-size: 1em;
+    padding: 3px;
+    margin-bottom: 0.5em;
+}
+
+form#addchapterform input[type="number"] {
+    width:4em;
 }
 
 #contenuto {

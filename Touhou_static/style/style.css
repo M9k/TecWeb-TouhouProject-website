@@ -46,7 +46,7 @@ p {
     overflow: auto;
 }
 
-input[type="text"], textarea {
+input[type="text"], input[type="password"], textarea {
     border: 1pt solid #ccc;
     margin: 1pt 0pt;
 }
@@ -65,7 +65,8 @@ input[type="submit"], input[type="reset"], button[type="submit"], button, .butto
     padding: 4pt;
     margin: 2pt;
     cursor: pointer;
-
+    margin: 0.3em 0 0.3em 0;
+    display: inline-block;
 }
 
 input[type="submit"]:hover, input[type="reset"]:hover, button[type="submit"]:hover, button:hover, .button:hover {
@@ -236,7 +237,9 @@ h3, dt {
 }
 
 div.data {
+    line-height:2em;
     font-size: 0.8em;
+    color:#1565C0;
 }
 
 a {
@@ -343,6 +346,13 @@ a {
     padding-bottom: 2%;
 }
 
+form#leavecommentform input#nameinput, input#emailinput, textarea#commentoinput {
+    display: block;
+    font-size: 1em;
+    padding: 3px;
+    margin-bottom: 0.5em;
+}
+
 #articleside dt {
     font-size: 1.5em;
     clear: both;
@@ -412,10 +422,16 @@ a {
     cursor: zoom-out;
 }
 
+#commenti {
+    margin-top: 2em;
+    padding: 1em;
+}
+
+
 #leavecomment {
     clear: both;
     border: 2pt #bdbdbd solid;
-    padding: 1%;
+    padding: 2%;
     border-radius: 4pt;
 }
 
@@ -438,6 +454,7 @@ a {
 #precnews {
 	float: left
 }
+
 
 @media screen and (max-width: 900px) {
     #header {
