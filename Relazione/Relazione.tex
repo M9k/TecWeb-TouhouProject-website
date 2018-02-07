@@ -90,7 +90,7 @@
 		Gli utenti che ricercano approfondimenti riguardo al franchise solitamente conoscono e giocano già a Touhou, quindi si presume navighino utilizzando un pc. Tuttavia Touhou è un videogioco 2D che non richiede un hardware potente e quindi non si può presumere che venga utilizzato un pc di ultima generazione.\\
 		Di solito questi utenti hanno una buona conoscenza della lingua inglese e una conoscenza basilare del giapponese. Per esempio riescono a leggere i caratteri hiragana e riconoscono alcuni termini.\\
 		Questi utenti cercheranno soprattutto degli approfondimenti riguardanti i molteplici personaggi oppure delle informazioni recenti riguardanti i capitoli del franchise.\\
-		A questa tipologia di utenti è dedicata anche l'ultima parte della home del sito, in quanto sicuramente saranno interessati ad eventi riguardanti Touhou e quindi li si informa di questa futura intenzione, ancora da definire alla pubblicazione del sito.
+		A questa tipologia di utenti è dedicata anche l'ultima parte della home del sito, in quanto sicuramente saranno interessati ad eventi riguardanti Touhou e quindi li si informa di questa futura intenzione, ancora da definire al momento pubblicazione del sito.
 
 	\section{Progettazione della base informativa}
 		Il sito web si pone l'obiettivo di veicolare diversi contenuti, alcuni statici ed altri dinamici.
@@ -113,10 +113,10 @@
 			\includegraphics[width=0.8\linewidth]{images/precsuccnews}
 			\caption{Esempio di controlli per scorrere le pagine delle notizie}
 		\end{figure}
-		Le news, oltre all'immagine di copertina, potranno contenere immagini anche al loro interno utilizzando il corretto tag html nella parte di amministrazione, quindi è stata fornita anche la possibilità di caricare immagini sul dominio senza la necessità di legarle ad una specifica notizia, similarmente a quanto avviene su WordPress.
+		Le news, oltre all'immagine di copertina, potranno contenere immagini anche al loro interno utilizzando il corretto tag html ed indicando una immagine presente su altre piattaforme o sul sito stesso, quindi è stata fornita anche la possibilità di caricare immagini sul dominio senza la necessità di legarle ad una specifica notizia, similarmente a quanto avviene su WordPress.
 
 		\subsubsection{Commenti degli utenti}
-		Gli utenti avranno la possibilità di lasciare dei commenti sotto ogni articolo e leggere quelli altrui, in modo tale da fornire un minimo di iterazione con l'utenza.
+		Gli utenti avranno la possibilità di lasciare dei commenti sotto ogni articolo e leggere quelli altrui, in modo tale da fornire una iterazione con l'utenza.
 
 		\subsubsection{Capitoli}
 		L'ultima parte del sito elencherà i capitoli ufficiali del videogioco, correlati dall'immagine di copertina, il titolo tradotto in inglese, in italiano ed altre informazioni che possono risultare interessanti agli utenti del sito.\\
@@ -156,7 +156,7 @@
 			Per quanto riguarda la stampa è stato creato un nuovo foglio di stile, chiamato "print", che rimuove tutti i contenuti non necessari e impagina le informazioni per meglio adattarle a un foglio A4. 			Si è scelto di rimuovere il menu, ma di lasciare il titolo e la breadcrumb, in modo tale da aiutare l'utente a ritrovare il sito web e la pagina nel caso non si ricordasse la fonte. Le immagini sono state rimosse, ad eccezione delle immagini dei personaggi, che sono stati valutate come molto utili per una veloce consultazione.
 
 			\subsubsection{Comportamento}
-			Il comportamento della pagina è stato gestito tramite JavaScript per il controllo delle form, per i commenti e per fornire la possibilità di ingrandire le immagini all'interno della pagina. Sono presenti anche controlli tramite codice PHP per garantire che il sito continui a funzionare corretamente anche in caso di assenza dell'interprete JavaScript.
+			Il comportamento della pagina è stato gestito tramite JavaScript per il controllo delle form, per fissare il menu in alto e per fornire la possibilità di ingrandire le immagini all'interno della pagina. Sono presenti anche controlli tramite codice PHP per garantire che il sito continui a funzionare corretamente anche in caso di assenza dell'interprete JavaScript.
 			
 			\begin{figure}[H]
 				\centering
@@ -164,17 +164,19 @@
 				\caption{Funzione di zoom implementata in JavaScript}
 			\end{figure}
 			
+			Ulteriormente il JavaScript, se possibile, gestisce il menu nella versione mobile del sito, sostituendo la stessa funzionalità implementata in CSS, questo per evitare che sui dispositivi touch, alla selezione o al click sul testo, il contenuto possa scivolare leggermente in alto a causa della perdita dell'hover sul menu precedentemente aperto.\\
 			Tutto il codice PHP relativo all'esecuzioni di azioni, come l'aggiunta dei commenti, è stato completamente diviso da quello utilizzato per la visualizzazione dei contenuti.\\
 
 	\subsection{Parte amministratore}
 		\subsubsection{Struttura}
-		Il pannello di amministrazione si suddivide secondo tutti gli aspetti gestibili, in modo da risultare chiaro e facilmente consultabile, mentre la pagina di index riassumerà brevemente i contenuti delle sezioni per fornire all'utente un aiuto nel caso non riesca ad orientarsi bene.
+		Il pannello di amministrazione si suddivide secondo tutti gli aspetti gestibili, in modo da risultare chiaro e facilmente consultabile, mentre la pagina di index riassumerà brevemente i contenuti delle sezioni per fornire all'amministratore un aiuto nel caso non riesca ad orientarsi bene.
 		\subsubsection{Presentazione}
 		Lo stile delle pagine per l'amministrazione differisce rispetto alla parte utente, in quanto dal lato amministratore sono stati rimossi alcuni elementi inutili, come il footer e la sidebar, in modo da renderla più veloce e fare spazio alle utilità necessarie all'amministrazione del sito.
 		\subsubsection{Comportamento}
 		La parte admin si caratterizza per un minor utilizzo dei controlli da parte di JavaScript e PHP sui form, in quanto l'amministratore ha la possibilità di inserire tag html o se lo desidera di lasciare alcuni campi vuoti, questo per sopperire alla mancanza di un editor HTML.\\
 		Sono inoltre presenti tutti i controlli relativi all'SQLInjection per evitare che l'amministratore inconsapevolmente generi errori all'interno del database.\\
-		Tutto il codice PHP relativo all'esecuzione di azioni è stato completamente diviso da quello utilizzato per la visualizzazione dei contenuti, ad eccezione dell'index della pagina di amministrazione, in quanto la pagina che richiede il login della parte di amministrazione e la visualizzazione della pagina introduttiva è la medesima. Si è scelta questa soluzione per consentire il salvataggio di un segnalibro da parte degli amministratori, i quali verranno portati alla pagina di login qualora non siano stati autenticati, mentre in caso contrario verranno direttamente trasferiti alla pagina principale di amministrazione, senza ulteriori redirect.
+		Tutto il codice PHP relativo all'esecuzione di azioni è stato completamente diviso da quello utilizzato per la visualizzazione dei contenuti, ad eccezione dell'index della pagina di amministrazione, in quanto la pagina che richiede il login della parte di amministrazione e la visualizzazione della pagina introduttiva è la medesima.\\
+		Si è scelta questa soluzione per consentire il salvataggio di un segnalibro da parte degli amministratori, i quali verranno portati alla pagina di login qualora non siano stati autenticati, mentre in caso contrario verranno direttamente trasferiti alla pagina principale di amministrazione, senza ulteriori redirect.
 
 	\chapter{Validazione e test}
 		\section{Descrizione della sessione}
@@ -190,21 +192,22 @@
 			\subsection{Vamola validator}
 				Uno strumento utilizzato per la verifica automatica dell'accessibilità è stato Vamola, presente all'indirizzo \url{www.validatore.it/vamola_validator/checker/index.php}.\\
 				Come impostazione è stato utilizzato "WCAG 2.0 (Level AAA)", tutti i potenziali problemi che vengono segnalati raccolgono tutti elementi che il validatore non sa come controllare e quindi viene richiesta una supervisione umana, come ad esempio ogni alt.\\
-				Nessun errore è stato segnalato.
+				Nessun errore è stato rilevato.
 			\subsection{WAVE Accessibility Extension}
-				Un altro strumento utilizzato per la verifica dell'accessibilità è stato WAVE, disponibile per il browser Firefox all'indirizzo \url{https://addons.mozilla.org/it/firefox/addon/wave-accessibility-tool/}, del quale esiste anche una versione per Google Chrome sul relativo store.\\
+				Un altro strumento utilizzato per la verifica dell'accessibilità è stato WAVE, disponibile per il browser Firefox all'indirizzo \url{https://addons.mozilla.org/it/firefox/addon/wave-accessibility-tool}, del quale esiste anche una versione per Google Chrome sul relativo store.\\
 				Il plugin ha segnalato alcuni warning riguardanti gli alt, che richiedevano un controllo manuale, e alcuni warning relativi ai furigana rappresentati con una font non molto grande, ma che secondo una nostra analisi manuale è ritenuto sufficientemente grande in quanto supplementare alla lettura.\\
-				Un errore segnalato riguarda una label mancante per un input nella pagina di aggiunta delle news, ma in quel caso l'input è nascosto dall'utente essendo l'indicazione di quale articolo si sta modificando, quindi anche nel caso di uno screen reader non verrebbe visualizzato, per queste motivazioni una label risulterebbe inappropriata.
+				Un errore segnalato riguarda una label mancante per un input nella pagina di modifica delle news, ma in quel caso l'input è nascosto dall'utente essendo l'indicazione di quale articolo si sta modificando, quindi anche nel caso di uno screen reader non verrebbe visualizzato, per queste motivazioni una label risulterebbe inappropriata.
 			\subsection{Web Accessibility Toolbar (WAT)}
 				Il sito è stato testato su Internet Explorer 11 utilizzato WAT.\\
 				Purtroppo il plugin non è aggiornato e presenta molti strumenti inutilizzabili, la versione corrente è stata scaricata da:\\ \url{https://github.com/ThePacielloGroup/WebAccessibilityToolbar}.\\
 				Uno strumento funzionante molto utile è Juicy Studio Luminosity Analyzer, che ha analizzato il contrasto dei colori, fornendo come indice minimo 7.07, sufficiente per avere la certificazione WCAG 2.0 AAA.\\
 
 			\subsection{Total Validator}
-			Per permettere la verifica delle pagine di amministrazione a Total Validator Basic è stata temporaneamente rimossa la verifica del login.\\
-			Un warning sollevato in ogni pagina è riguardante il link interno per saltare al contenuto, precisamente "W874 Add a skip navigation link as the first link on the page", che viene sollevato in quanto il testo non è "Skip to main content", bensì "Vai al contenuto", in quanto il sito è mirato ad utenti italiani.\\
-			Da precisare che oltre alla presenza del link per andare al contenuto è disponibile anche un link per tornare ad inizio pagina, inserito per facilitare la navigazione da dispositivi tascabili.\\
-			Altri warning presenti sono in riferimento ad immagini che presentano alt vuoti, in tutti i casi segnalati si tratta di immagini puramente decorative oppure che non veicolano una informazione che può essere descritta. Un esempio sono alcune copertine dei capitoli del videogioco, che presentano motivi e colori imprecisati oppure illustrazioni senza un  significato, utilizzate come riempitivo per la copertina.
+				Per permettere la verifica delle pagine di amministrazione a Total Validator Basic è stata temporaneamente rimossa la verifica del login.\\
+				Un warning sollevato in ogni pagina è riguardante il link interno per saltare al contenuto, precisamente "W874 Add a skip navigation link as the first link on the page", che viene sollevato in quanto il testo non è "Skip to main content", bensì "Vai al contenuto", in quanto il sito è mirato ad utenti italiani.\\
+				Da precisare che oltre alla presenza del link per andare al contenuto è disponibile anche un link per tornare ad inizio pagina, inserito per facilitare la navigazione da dispositivi tascabili.\\
+				Altri warning presenti sono in riferimento ad immagini che presentano alt vuoti, in tutti i casi segnalati si tratta di immagini puramente decorative oppure che non veicolano una informazione che può essere descritta. Un esempio sono alcune copertine dei capitoli del videogioco, che presentano motivi e colori imprecisati oppure illustrazioni senza un  significato, utilizzate come riempitivo per la copertina.\\
+				Per finire è stato sollevato lo stesso errore riguardante la label sottolineato da WAVE, ma essendo il campo nascosto e quindi non prevedendo una iterazione da parte dell'utente non c'è motivo per indicarlo.\\
 
 			\subsection{Vischeck}
 			\`{E} stato utilizzato il sito web \url{vischeck.com} per controllare i colori in caso di daltonismo, che non ha evidenziato particolari problemi alla individuazione della suddivisione del sito o dei contenuti.
@@ -218,35 +221,34 @@
 			
 			\subsection{VEGA}
 			\`{E} stato utilizzato lo strumento VEGA scaricabile gratuitamente da \url{subgraph.com/vega} per controllare eventuali errori di sicurezza all'interno del sito.\\
-			Inizialmente sono state rilevate delle problematiche per quanto riguarda una sessione sicura del cookies, che sono state corrette utilizzando "session\_set\_cookie\_params".
 			
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=0.8\linewidth]{images/VEGA}
 				\caption{Risultati ottenuti su VEGA}
 			\end{figure}
-			Dopo le correzioni sono ancora presenti delle problematiche in locale, ma sono dettate dalla configurazione attuale di XAMPP configurato per essere utilizzato in un ambiente di sviluppo e non di produzione.
+			Dopo alcune correzioni apportate sono rimaste presenti delle problematiche, ma sono dettate dalla configurazione attuale di XAMPP configurato per essere utilizzato in un ambiente di sviluppo e non di produzione.
 
 		\section{Test su diversi dispositivi}
 			Il sito è stato testato su varie macchine e sistemi operativi. Nelle sezioni seguenti verranno elencati assieme ai browser e alle risoluzioni testate.
 				\subsection{Windows 10}
 				Sono state testate le risoluzioni di 1080p e 2160p con i browsers:
 				\begin{itemize}
-					\item Firefox Quantum
-					\item Google Chrome
-					\item Firefox 56
-					\item Waterfox 57
-					\item Edge
 					\item Chromium 64
-					\item Mozilla Firefox 3
+					\item Google Chrome
+					\item Edge
 					\item Internet Explorer 11
+					\item Firefox Quantum
+					\item Waterfox 57
+					\item Firefox Nightly 60a1
+					\item Mozilla Firefox 3
 					\item Netscape 7
 				\end{itemize}
 				Si è notato che Mozilla Firefox 3 utilizza una dimensione errata dell'immagine nella testata. Questo aspetto rovina leggermente il rendimento grafico ma non ne compromette le funzionalità, in quanto tutti i contenuti risultano perfettamente fruibili dall'utente.\\
 				Un Secondo appunto riguardante Firefox 3 è l'incompatibilità con parte del codice JavaScript: solamente il controllo della compilazione dei campi di testo funziona correttamente.\\
 				Internet Explorer 11, con la modalità Explorer 7, non genera nessun problema, ed anche il problema della dimensione della testata riscontrato su Firefox 3  è assente.\\
 				Anche con Microsoft Edge 16 (ultima versione) non sono stati riscontrati problemi. \\
-				Non sono stati rilevati ulteriori problemi o incompatibilità con i browser sopra menzionati, anche variando la grandezza del font, dello zoom della pagina, della dimensione della finestra e disattivando JavaScript.\\
+				Non sono stati rilevati ulteriori problemi o incompatibilità con i browser sopra menzionati ad esclusione di Netscape, anche variando la grandezza del font, dello zoom della pagina, della dimensione della finestra e disattivando JavaScript.\\
 				Il sito è stato provato anche su Netscape 7, soprattutto per soddisfare una curiosità personale e per comprendere meglio l'evoluzione dello sviluppo dei siti web negli anni. Il risultato è ovviamente insoddisfacente, i tag div e p sono visualizzati erroneamente, moltissime proprietà css non sono correttamente riconosciute dal browser e soprattutto le mediaquery non sono supportate, facendo caricare al sito la versione mobile.\\
 				Ovviamente non sono stati presi provvedimenti per migliorare la situazione con Netscape, in quanto il software è datato al 2002 e non è più in uso in nessun ambito.
 				
@@ -266,11 +268,16 @@
 					\item Safari
 					\item Firefox Quantum
 					\item Google Chrome
-					\item Firefox 56
 				\end{itemize}
 
 				\subsection{FreeBSD 11}
-				Il sito è stato testato con il browser Lynx utilizzando la console senza x11 o Wayland, quindi da terminale, e con x11, quindi da una finestra di emulazione del terminale di dimensione variabile.\\
+				\`{E} stata testata la risoluzione 1080p sui seguenti browsers:
+				\begin{itemize}
+					\item Firefox Quantum
+					\item Lynx
+					\item Lynx da CLI
+				\end{itemize}
+				Il sito è stato testato con il browser Lynx utilizzando la console senza x11 o Wayland, quindi da terminale/CLI, e con x11, quindi da una finestra di emulazione del terminale di dimensione variabile.\\
 				In entrambi i casi il contenuto era fruibile.
 
 				\subsection{Dispositivi mobili}
@@ -283,7 +290,7 @@
 			
 				In tutti i dispositivi testati il sito si adatta perfettamente alla risoluzione dello schermo e non sono presenti problemi di compatibilità, neppure con JavaScript.\\
 				L'unico appunto da fare è la mancanza di supporto degli RSS, che vengono letti come file di testo normali, ad eccezione di Waterfox che invece ne propone il download.\\
-				Anche su schermo in bianco e nero i link rimangono sufficientemente marcati rispetto al resto del testo e tutte le sezioni rimangono distinguibili.
+				Anche su schermo e-ink in bianco e nero i link rimangono sufficientemente marcati rispetto al resto del testo e tutte le sezioni rimangono distinguibili.
 			
 				\begin{figure}[H]
 					\centering
