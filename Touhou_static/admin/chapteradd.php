@@ -27,6 +27,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	<link type="text/css" rel="stylesheet" href="../style/print.css" media="print"/>
 
 	<script type="text/javascript" src="../script/script.js"></script>
+	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
 	<title>Aggiunta capitolo - Touhou Italia</title>
 </head>
 <body>
@@ -75,7 +76,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
                     <div id="erroreimage_descr"></div>
                     <label for="number">Numero</label>: <input type="text" name="number" id="number" size="8" maxlength="10" onchange="validateString('numero', document.getElementById('number').value)" />
                     <div id="errorenumero"></div>
-                    <label for="year">Anno</label>: <input name="year" type="number" id="year" size="4" onchange="validateYear('anno', document.getElementById('year').value)" value="<?php echo date("Y");?>"/>
+                    <label for="year">Anno</label>: <input name="year" type="text" id="year" size="4" onchange="validateYear('anno', document.getElementById('year').value)" value="<?php echo date("Y");?>"/>
                     <div id="erroreanno"></div>
                     <label for="plot">Trama</label>: <br/><textarea name="plot" id="plot" onchange="validateString('testo', document.getElementById('plot').value)" cols="100" rows="10"></textarea>
                     <div id="erroretesto"></div>

@@ -84,7 +84,7 @@ else
                 <fieldset>
 					<legend>Inserimento dei dati della notizia:</legend>
 <?php if($edit)
-echo('<input name="id" style="position: absolute; visibility: hidden;" id="idform" type="text" value="'.$news['id'].'"/>'); ?>
+echo('<input name="id" class="hidden" id="idform" type="text" value="'.$news['id'].'"/>'); ?>
                     <label for="titleform">Titolo</label>: <input name="title" id="titleform" type="text"  size="20" maxlength="40" onchange="validateString('titolo',document.getElementById('titleform').value)" value="<?php if($edit) echo($news['title'])?>"/>
                     <div id="erroretitolo"></div>
                     <label for="imageform">Titolo con relativa estensione dell'immagine da usare in copertina</label>: <input name="image" id="imageform" type="text"  size="20" maxlength="25" onchange="validateStringImage(document.getElementById('imageform').value, document.getElementById('fileupload').files.length)" value="<?php if($edit) echo($news['image'])?>"/>
@@ -96,7 +96,7 @@ echo('<input name="id" style="position: absolute; visibility: hidden;" id="idfor
                     <div id="erroredescrizione"></div>
                     Nota: utilizzare <a href="image.php">gestione immagini</a> per caricare nuove immagini da inserire all'intero del testo usando il <span xml:lang="en">tag</span> &lt;a&gt;<br/>
 					<input name="hidden" id="hiddenform" type="checkbox" <?php if($edit) if($news['hidden'] == true) echo('checked="checked"');?>/><label for="hiddenform"> Bozza</label><br/>
-					<label for="textform">Testo</label>: <br/><textarea name="text" id="textform" cols="100" rows="10" onchange="validateString('testo',document.getElementById('textform').value)" ><?php if($edit) echo($news['text']);?></textarea>
+					<label for="textform">Testo</label>: <br/><textarea name="text" id="textform" cols="100" rows="10" onchange="validateString('testo',document.getElementById('textform').value)" ><?php if($edit) echo(htmlentities($news['text']));?></textarea>
                     <div id="erroretesto"></div>
 					<input type="submit" value="Salva" name="submit"/>
                     <div id="erroreAdd"></div>

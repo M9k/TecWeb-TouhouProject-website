@@ -122,7 +122,10 @@ form#addchapterform input[type="number"] {
     display: block;
     margin-top: 0.7em;
 }
-
+.hidden {
+	position: absolute;
+	visibility: hidden;
+}
 @media handheld, screen and (max-width: 680px), only screen and (max-device-width: 680px) {
     #contenuto {
         width: 100%;

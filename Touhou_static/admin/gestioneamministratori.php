@@ -28,6 +28,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	<link type="text/css" rel="stylesheet" href="../style/print.css" media="print"/>
 
 	<script type="text/javascript" src="../script/script.js"></script>
+	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
 	<title>Gestione amministratori - Touhou Italia</title>
 </head>
 <body>
