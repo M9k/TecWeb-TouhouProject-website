@@ -1,3 +1,0 @@
-<?php
-	$domain = "localhost/tecwebs";
-?>

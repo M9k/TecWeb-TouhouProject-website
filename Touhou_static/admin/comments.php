@@ -78,7 +78,7 @@ if($comments != null)
 			'<div class="ip">'.$comment['ip'].'</div>'.
 			'<form class="commentaction" action="commentaction.php" method="post">'.
 			'<div class="commentactionsformcontent">'.
-			'<label for="reasonform'.$inc.'">Motivo del blocco a '.$comment['nick'].' per via del commento con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</label>: <input id="reasonform'.$inc.'" type="text"size="25" maxlength="255" name="reason"/><br/>'.
+			'<label for="reasonform'.$inc.'">Motivo del blocco a '.$comment['nick'].' per via del commento con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</label>: <input id="reasonform'.$inc.'" type="text" size="25" maxlength="255" name="reason"/><br/>'.
 			'<button name="ban" value="'.$comment['id'].'">Blocca l\'utente '.$comment['nick'].' ed elimina il commento con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</button><br/>'.
 			' <button name="delete" value="'.$comment['id'].'">Elimina il commento di '.$comment['nick'].' con <acronym title="Identificativo">ID</acronym> '.$comment['id'].'</button>'.
 			'</div>'.

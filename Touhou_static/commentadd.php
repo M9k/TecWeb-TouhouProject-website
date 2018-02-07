@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__.DIRECTORY_SEPARATOR.'dbConnection.php';
-require_once __DIR__.DIRECTORY_SEPARATOR.'config.php';
 	if(isset($_SERVER['HTTP_REFERER']))
 		$returnpage = $_SERVER['HTTP_REFERER'];
 	else
@@ -49,7 +48,6 @@ require_once __DIR__.DIRECTORY_SEPARATOR.'config.php';
 	else
 		$error ="Alcuni campi sono stati lasciati vuoti, per favore compilare tutti i campi.";
 
-	session_set_cookie_params(0, "/", $domain, true, true);	
 	header('Content-type: application/xhtml+xml'); if (session_status() == PHP_SESSION_NONE) { session_start(); }
 	//trasferisco alla pagina di errore
 	$_SESSION['error'] = $error;

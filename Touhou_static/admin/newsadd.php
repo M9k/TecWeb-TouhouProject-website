@@ -82,7 +82,6 @@ else
 		<div id="newsadd">
 			<form id="addnewsform" action="newsaction.php" method="post" enctype="multipart/form-data" onsubmit="return validateFormAddNews()">
                 <fieldset>
-				<br id="addnewsdiv">
 					<legend>Inserimento dei dati della notizia:</legend>
 <?php if($edit)
 echo('<input name="id" style="position: absolute; visibility: hidden;" id="idform" type="text" value="'.$news['id'].'"/>'); ?>
@@ -91,11 +90,11 @@ echo('<input name="id" style="position: absolute; visibility: hidden;" id="idfor
                     <label for="imageform">Titolo con relativa estensione dell'immagine da usare in copertina</label>: <input name="image" id="imageform" type="text"  size="20" maxlength="25" onchange="validateStringImage(document.getElementById('imageform').value, document.getElementById('fileupload').files.length)" value="<?php if($edit) echo($news['image'])?>"/>
                     <div id="erroretitoloimmagine"></div>
                     Oppure<br/>
-					<label for="fileupload">Carica nuova immagine, ignorando il box di input precedente</label>: <br/>
-                    <input type="file" name="fileupload" id="fileupload" onchange="validateStringImage(document.getElementById('imageform').value, document.getElementById('fileupload').files.length)" /></br>
+					<label for="fileupload">Carica nuova immagine, ignorando il box di input precedente</label>:
+                    <input type="file" name="fileupload" id="fileupload" onchange="validateStringImage(document.getElementById('imageform').value, document.getElementById('fileupload').files.length)" /><br/>
                     <label for="imgdescrform">Descrizione breve dell'immagine</label>: <input name="imgdescr" type="text" id="imgdescrform"  size="20" maxlength="40" value="<?php if($edit) echo ($news['imgdescr'])?>"/>
                     <div id="erroredescrizione"></div>
-                    Nota: utilizzare <a href="image.php">gestione immagini</a> per caricare nuove immagini<br/>
+                    Nota: utilizzare <a href="image.php">gestione immagini</a> per caricare nuove immagini da inserire all'intero del testo usando il <span xml:lang="en">tag</span> &lt;a&gt;<br/>
 					<input name="hidden" id="hiddenform" type="checkbox" <?php if($edit) if($news['hidden'] == true) echo('checked="checked"');?>/><label for="hiddenform"> Bozza</label><br/>
 					<label for="textform">Testo</label>: <br/><textarea name="text" id="textform" cols="100" rows="10" onchange="validateString('testo',document.getElementById('textform').value)" ><?php if($edit) echo($news['text']);?></textarea>
                     <div id="erroretesto"></div>

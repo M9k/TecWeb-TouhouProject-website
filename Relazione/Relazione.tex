@@ -44,7 +44,6 @@
 	\newpage
 	\pagenumbering{arabic}
 
-
 	% Il progetto deve essere accompagnato da una relazione che ne illustri le fasi di progettazione, realizzazione e test ed evidenzi chiaramente il ruolo svolto dai singoli componenti del gruppo. Ricordo che il numero “ideale” di componenti per gruppo è di 3-4 persone. In casi particolari (da concordare col responsabile del corso, Prof. Lamberto Ballan) possono essere costituiti gruppi di 2 persone.
 
 	% Nella relazione deve essere riportata una analisi iniziale delle caratteristiche degli utenti che il sito si propone di raggiungere. Le pagine web devono essere accessibili indipendentemente dal browser e dalle dimensioni dello schermo del dispositivo degli utenti. Considerazioni riguardanti diversi dispositivi (laddove possibile) verranno valutate positivamente.
@@ -69,8 +68,7 @@
 	\chapter{Installazione}
 	Il sito richiede un database MySql, per la creazione delle tabelle utilizzate si possono usare i due file .sql allegati, "database.sql" e "database vuoto.sql", che generano rispettivamente il database con tutti i dati inseriti nel sito web consegnato e un database con le tabelle vuote, con solo l'amministratore presente, le cui credenziali sono admin:admin.\\
 	Successivamente si dovrà modificare il file dbConnection.php, presente nella root del sito, indicando i dati per l'accesso al database (HOST\_DB, USER, PASSWD, DATABASE) e la pagina di errore dove ridirigere l'utente in caso di errore nel database  (\$connectionErrorPage).\\
-	La pagina di errore del database è stata lasciata configurabile in quanto nel caso di problemi al database che richiedono una lunga manutenzione, ad esempio uno spostamento del database o una dimenticanza del rinnovo dell'account del database, si può ridirigere l'utente a un secondo host temporaneo dove sono presenti i contenuti richiesti oppure a una pagina social (Facebook o Twitter ad esempio).\\
-	Per poter impostare correttamente e in modo sicuro i cookie è necessario indicare il dominio del sito web, per farlo si deve modificare il file "config.php" presente nella root, indicando il dominio sul quale andrà utilizzato il sito.
+	La pagina di errore del database è stata lasciata configurabile in quanto nel caso di problemi al database che richiedono una lunga manutenzione, ad esempio uno spostamento del database o una dimenticanza del rinnovo dell'account del database, si può ridirigere l'utente a un secondo host temporaneo dove sono presenti i contenuti richiesti oppure a una pagina social (Facebook o Twitter ad esempio).
 
 	\chapter{Progettazione}
 

@@ -7,7 +7,7 @@ class DBAccess {
 	const USER = 'root';
 	const PASSWD = '';
 	const DATABASE = 'touhou';
-	public $connectionErrorPage = 'tecweb/errordb.xhtml';
+	public $connectionErrorPage = 'tecwebs/errordb.xhtml';
 
 	public $connectionOpen = false;
 	public $failedConnection = false;
