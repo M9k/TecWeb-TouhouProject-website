@@ -25,7 +25,7 @@
 	<div id="subheader">
 		<div id="header">
 			<div id="titolo">
-				<h1>Touhou Project</h1>
+				<h1>Touhou <span xml:lang="en">Project</span></h1>
 				<div id="titoletto">Sito di informazione italiano</div>
 			</div>
 			<div id="skipmenu">
@@ -51,9 +51,9 @@
 	<div id="contenitore">
 		<div id="contenuto">
 			<h2 xml:lang="eng">Home page</h2>
-			<h3>Touhou Project</h3>
+			<h3>Touhou <span xml:lang="en">Project</span></h3>
 	<!-- introduzione -->
-			<p>Touhou Project (<ruby xml:lang="ja"><rb>東方</rb><rp>(</rp><rt>とうほう</rt><rp>)</rp></ruby><span xml:lang="en">Project</span>) è una <strong>serie di videogiochi</strong> per <span xml:lang="en">PC-98</span> e <span xml:lang="en">Windows</span>, sviluppata a partire dal 1996 dalla casa produttrice giapponese <strong xml:lang="en">Team Shanghai Alice</strong>, il cui unico membro è <strong>ZUN</strong>.</p>
+			<p>Touhou <span xml:lang="en">Project</span> (<ruby xml:lang="ja"><rb>東方</rb><rp>(</rp><rt>とうほう</rt><rp>)</rp></ruby><span xml:lang="en">Project</span>) è una <strong>serie di videogiochi</strong> per <span xml:lang="en">PC-98</span> e <span xml:lang="en">Windows</span>, sviluppata a partire dal 1996 dalla casa produttrice giapponese <strong xml:lang="en">Team Shanghai Alice</strong>, il cui unico membro è <strong>ZUN</strong>.</p>
 	<!-- breve descrizione di touhou -->
 			<div class="withtotal2images">
 				<img src="images/gameplay1.jpg" alt="Immagine di una schermata di gioco, con una enorme quantità di proiettili" class="total2images"/>
@@ -66,12 +66,12 @@
 			<img src="images/meme3.jpg" alt="Immagine con ZUN che sfida il giocatore a giocare a difficoltà massima" class="total3images"/>
 			<img src="images/meme1.jpg" alt="Immagine di un gruppo di lettori di floppy che suonano Bad Apple" class="total3images"/>
 			<img src="images/meme2.jpg" alt="Immagine con caricatura di Marisa Kirisame" class="total3images"/>
-			<p>Touhou ha avuto un enorme successo anche al dì fuori del Giappone, soprattutto grazie ad internet e a svariati tormentoni ricorrenti, come i <strong><span xml:lang="en">remix</span> di alcune canzoni</strong> presenti nel gioco (<a title="colonna sonora Bad Apple suonata con dei floppy drive, su YouTube" href="https://www.youtube.com/watch?v=hkZbAJHeu9w">alcuni fatti persino usando dei lettori di floppy disk, visibile su YouTube</a>), le <strong>caricature</strong> dei personaggi o le <strong>battute riguardandi la difficoltà</strong>, come ad esempio "<em>finendo Touhou a <span xml:lang="en">lunatic</span> si impara come correre sotto la pioggia senza bagnarsi</em>".
+			<p>Touhou ha avuto un enorme successo anche al dì fuori del Giappone, soprattutto grazie ad <span xml:lang="en">internet</span> e a svariati tormentoni ricorrenti, come i <strong><span xml:lang="en">remix</span> di alcune canzoni</strong> presenti nel gioco (<a title="colonna sonora Bad Apple suonata con dei floppy drive, su YouTube" href="https://www.youtube.com/watch?v=hkZbAJHeu9w">alcuni fatti persino usando dei lettori di <span xml:lang="en">floppy disk</span>, visibile su <span xml:lang="en">YouTube</span></a>), le <strong>caricature</strong> dei personaggi o le <strong>battute riguardandi la difficoltà</strong>, come ad esempio "<em>finendo Touhou a <span xml:lang="en">lunatic</span> si impara come correre sotto la pioggia senza bagnarsi</em>".
 			</p>
 	<!-- obbiettivo del sito -->
 			<h3>Conferenze e raduni in Italia</h3>
 			<img src="images/cosplay.jpg" alt="Gruppo di cosplay vestiti come i personaggi di Touhou"/>
-			<p>Questo sito si pone l'obbiettivo di riuscire a collaborare con portali e fiere per la creazione di <strong>eventi, conferenze e raduni</strong> riguardanti Touhou, in modo da far incontrare i fan e magari realizzare qualche <strong>evento cosplay a tema!</strong><br/>
+			<p>Questo sito si pone l'obbiettivo di riuscire a collaborare con portali e fiere per la creazione di <strong>eventi, conferenze e raduni</strong> riguardanti Touhou, in modo da far incontrare i <span xml:lang="en">fan</span> e magari realizzare qualche <strong>evento <span xml:lang="en">cosplay</span> a tema!</strong><br/>
 	Rimanete sintonizzati sulla sezione <em xml:lang="en">News</em> per ricevere aggiornamenti a riguardo.
 			</p>
 		</div>
@@ -79,7 +79,7 @@
 			<dl title="barra laterale">
 				<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
 				<dd class="ddsidebar"><?php include('sidebarnews.php'); ?></dd>
-				<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
+				<dt class="dtsidebar" id="feedRSS"><span xml:lang="en">Feed RSS</span></dt>
 				<dd class="ddsidebar">
 					<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
 					<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>
