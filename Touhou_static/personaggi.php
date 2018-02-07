@@ -33,7 +33,6 @@
 			</div>
 			<div id="menudiv">
 				<ul id="menu">
-				<!-- DA MODIFICARE PER OGNI PAGINA -->
 					<li id="menuvoice">Menu</li>
 					<li><a href="index.php"><span xml:lang="en">Home</span></a></li>
 					<li><a href="news.php"><span xml:lang="en">News</span></a></li>
