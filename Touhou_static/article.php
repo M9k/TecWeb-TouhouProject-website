@@ -52,7 +52,7 @@ else
 	<div id="subheader">
 		<div id="header">
 			<div id="titolo">
-				<h1>Touhou Project</h1>
+				<h1>Touhou <span xml:lang="en">Project</span></h1>
 				<div id="titoletto">Sito di informazione italiano</div>
 			</div>
 			<div id="skipmenu">
