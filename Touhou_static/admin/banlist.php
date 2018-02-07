@@ -28,7 +28,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	<link type="text/css" rel="stylesheet" href="../style/print.css" media="print"/>
 
 	<script type="text/javascript" src="../script/script.js"></script>
-	<title>Gestione ban - Touhou Italia</title>
+	<title>Utenti bloccati - Touhou Italia</title>
 </head>
 <body>
 	<div id="subheader">

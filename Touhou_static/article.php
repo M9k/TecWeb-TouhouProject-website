@@ -101,11 +101,11 @@ else
 					<form action="commentadd.php" method="post" id="leavecommentform" onsubmit="return validateForm()">
 						<div id="leavecommentfields">
                                 <label for="nameinput">Nome</label>: <input id="nameinput" name="name" type="text" size="20" maxlength="30" onchange="validateString('nome',document.getElementById('nameinput').value)"/>
-                                <div id="errorenome"></div>
+                                <div id="errorenome"></div><br/>
                                 <label for="emailinput"><span xml:lang="en">E-mail</span> (non sarà pubblicata)</label>: <input id="emailinput" name="email" type="text" size="20" maxlength="40" onchange="validateEmail()" />
-                                <div id="erroreemail"></div>
+                                <div id="erroreemail"></div><br/>
                                 <label for="commentoinput">Commento</label>: <textarea id="commentoinput" name="message" onchange="validateString('commento',document.getElementById('commentoinput').value)" cols="48" rows="4"></textarea><br/>
-                                <div id="errorecommento"></div>
+                                <div id="errorecommento"></div><br/>
                                 <input value="Invia" type="submit"/>
                                 <input value="Cancella" type="reset"/>
                                 <div id="erroreinvio"></div>

@@ -28,6 +28,7 @@ if(!isset($_SESSION['login']) || !$_SESSION['login'] == true)
 	<link type="text/css" rel="stylesheet" href="../style/print.css" media="print"/>
 
 	<script type="text/javascript" src="../script/script.js"></script>
+	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
 	<title>Gestione amministratori - Touhou Italia</title>
 </head>
 <body>
@@ -89,7 +90,7 @@ else
                 <div id="errorenome"></div>
                 <label for="emailinput"><span xml:lang="en">E-mail</span>:</label> <input name="email" type="text" id="emailinput" size="20" maxlength="40" onchange="validateEmailAdmin('email',document.getElementById('emailinput').value)"/>
                 <div id="erroreemail"></div>
-                <label for="passwordinput"><spam xml:lang="en">Password</span>:</label> <input name="password" type="text" id="passwordinput" size="10" maxlength="12" onchange="validateString('password',document.getElementById('passwordinput').value)"/>
+                <label for="passwordinput"><span xml:lang="en">Password</span>:</label> <input name="password" type="text" id="passwordinput" size="10" maxlength="12" onchange="validateString('password',document.getElementById('passwordinput').value)"/>
                 <div id="errorepassword"></div>
 				<input type="submit" value="Aggiungi" name="submit"/> <input type="reset" value="Cancella i campi" name="reset"/>
                 <div id="erroreNewAdmin"></div>
