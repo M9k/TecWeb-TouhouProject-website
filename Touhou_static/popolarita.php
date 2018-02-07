@@ -25,7 +25,7 @@
 	<div id="subheader">
 	<div id="header">
 		<div id="titolo">
-			<h1>Touhou Project</h1>
+			<h1>Touhou <span xml:lang="en">Project</span></h1>
 			<div id="titoletto">Sito di informazione italiano</div>
 		</div>
 		<div id="skipmenu">
@@ -60,7 +60,7 @@
 <img src="images/rain.jpg" alt="Schermate del gioco, con una moltitudine di proiettili"/>
 <p>Analogamente la difficoltà più elevata, denominata <em xml:lang="en">nightmare</em>, "incubo", viene considerata difficile tanto quanto "riuscire a correre sotto la piggia senza bagnarsi".</p>
 
-			<h3>U.N. Owen Was Her e Night of Nights</h3>
+			<h3><span xml:lang="en">U.N. Owen Was Her</span> e <span xml:lang="en">Night of Nights</span></h3>
 			<p>Di particolare successo sono le <strong>musiche</strong>, o <acronym title="Original SoundTrack">OST</acronym>, presenti nel gioco, tra le quali le più diffuse sono certamente <strong xml:lang="en">U.N. Owen Was Her</strong> e <strong xml:lang="en">Night of Nights</strong>, entrambe appartenenti al sesto gioco della serie, <em xml:lang="en">Embodiment of Scarlet Devil</em>.<br/></p>
 <p><strong xml:lang="en">U.N. Owen Was Her</strong> è la colonna sonora del boss extra del gioco, <em xml:lang="en">Flandre Scarlet</em>, accessibile solamente riuscendo a finire il gioco senza mai finire il primo gruppo di vite a disposizione.<br/>
 Al momento la versione originale ha oltre 10 milioni visualizzazioni su <span xml:lang="en">Youtube</span>, dove solitamente viene accompagnato da immagini o <span xml:lang="en">slideshow</span> riferite a <span xml:lang="en">Flandre</span> Scarlet.<br/>
@@ -71,11 +71,11 @@ Nel 2008 apparve su NicoNicoVideo, e poi caricato anche su <span xml:lang="en">Y
 
 			<h3 xml:lang="en">Bad Apple</h3>
 			<p>Musica originaria da un gioco arcade di Touhou, a differenza delle altre canzoni, originarie dalla serie ufficiali, <strong>presenta un testo</strong> e non unicamente una melodia.<br/>
-Diventò popolare nel 2009, quando venne diffuso su NicoNicoVideo e successivamente su <span xml:lang="en">Youtube</span> in abbinamento a un filmato realizzato da un fan.</p>
+Diventò popolare nel 2009, quando venne diffuso su NicoNicoVideo e successivamente su <span xml:lang="en">Youtube</span> in abbinamento a un filmato realizzato da un <span xml:lang="en">fan</span>.</p>
 <img src="images/badapple.jpg" alt="Screenshot del filmato, con sagoma di Flandre"/>
 <p>Il filmato è completamente realizzato utilizzando unicamente il bianco ed il nero e mostra svatiare sagome dei personaggi della serie, iniziando dalle due protagoniste, <em>Reimu e Marisa</em>, la seconda in procinto ad arrivare alla magione esplorata durante il gioco.
 Successivamente si mostrano personaggi principali del sesto videogioco, in ordine di apparizione: <em>Patchouli, Remilia, Sakuya, <span xml:lang="en">Flandre</span></em>, e poi prosegue mostrando in ordine sparso altri personaggi caratteristici del franchise.</p>
-<p>Questo filmato ha raggiunto le 24 milioni di visualizzazioni su NicoNicoVideo e 23 milioni sommando i tre caricamenti da parte di account diversi su <span xml:lang="en">Youtube</span>.<br/>Di particolare successo è anche la <a href="https://www.youtube.com/watch?v=240Vq6tIxio" title="video su Youtube di Bad Apple realizzato in stop motion"><strong>versione di Bad Apple realizzata in <span xml:lang="en">stop motion</span></strong></a>, visibile su YouTube, realizzato stampando i frame del filmato, utilizzando ben 6565 pezzettini di carta stampati, che ha superato le 4 milioni di visualizzazioni complessive.</p>
+<p>Questo filmato ha raggiunto le 24 milioni di visualizzazioni su NicoNicoVideo e 23 milioni sommando i tre caricamenti da parte di account diversi su <span xml:lang="en">Youtube</span>.<br/>Di particolare successo è anche la <a href="https://www.youtube.com/watch?v=240Vq6tIxio" title="video su Youtube di Bad Apple realizzato in stop motion"><strong>versione di <span xml:lang="en">Bad Apple</span> realizzata in <span xml:lang="en">stop motion</span></strong></a>, visibile su <span xml:lang="en">YouTube</span>, realizzato stampando i <span xml:lang="en">frame</span> del filmato, utilizzando ben 6565 pezzettini di carta stampati, che ha superato le 4 milioni di visualizzazioni complessive.</p>
 			<h3><span xml:lang="en">9 ball</span> ⑨ - baka</h3>
 			<p><em xml:lang="en">Nine ball</em>, letteralmente "<strong>palla numero 9</strong>", a volte indicato con <strong>9</strong>, <strong>(9)</strong> o <strong>⑨</strong>, è un simbolo che viene utilizzato per indicare il personaggio di <strong>Cirno</strong>, ha avuto origine nel manuale del nono gioco della serie, dove ZUN, in uno <span xml:lang="en">screenshot</span>, la ha etichettata con un numero 9 cerchiato che nella leggenda annessa corrisponde a <em><span xml:lang="ja">ばか</span>, baka</em>, cioè "idiota".<br/>
 <img src="images/Cirno9_Windows.jpg" alt="Cirno quasi in lacrime perchè Windows ha saltato il numero 9"/>
@@ -90,7 +90,7 @@ Uno dei più popolari è sicuramente <strong>Koumajou Densetsu <span xml:lang="e
 			<dl title="barra laterale">
 				<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
 				<dd class="ddsidebar"><?php include('sidebarnews.php'); ?></dd>
-				<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
+				<dt class="dtsidebar" id="feedRSS"><span xml:lang="en">Feed RSS</span></dt>
 				<dd class="ddsidebar">
 					<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
 					<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>

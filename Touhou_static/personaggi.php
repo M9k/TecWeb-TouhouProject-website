@@ -25,7 +25,7 @@
 	<div id="subheader">
 		<div id="header">
 			<div id="titolo">
-				<h1>Touhou Project</h1>
+				<h1>Touhou <span xml:lang="en">Project</span></h1>
 				<div id="titoletto">Sito di informazione italiano</div>
 			</div>
 			<div id="skipmenu">
@@ -61,7 +61,7 @@
 						<li><span class="charactervoice">Età</span>: Almeno 15 anni</li>
 						<li><span class="charactervoice">Occupazione</span>: Sacerdotessa del tempio</li>
 						<li><span class="charactervoice">Luogo</span>: Tempio Hakurei</li>
-						<li><p>Reimu Hakurei è il personaggio principale della serie di Touhou Project, essendo apparsa in tutti i capitoli principali della saga e in quasi tutti gli <span xml:lang="en">spin-off</span>. Dovendosi occupare da sola del tempio spesso è chiamata ad investigare sugli strani avvenimenti di Gensokyo.
+						<li><p>Reimu Hakurei è il personaggio principale della serie di Touhou <span xml:lang="en">Project</span>, essendo apparsa in tutti i capitoli principali della saga e in quasi tutti gli <span xml:lang="en">spin-off</span>. Dovendosi occupare da sola del tempio spesso è chiamata ad investigare sugli strani avvenimenti di Gensokyo.
 	<br/>All'inizio i suoi poteri erano limitati, ma con il passare del tempo ha sviluppato l'abilità di manipolare la sfera dello <em>Hakurei Yin-Yang</em>, è la sua forza spirituale è aumentata.
 	<br/>Reimu è ottimista, curiosa e diligente, la sua personalità la rendono ben voluta dalla maggior parte delle persone, ma ci sono comunque alcuni personaggi che rimangono suoi rivali.</p></li>
 					</ul>
@@ -174,7 +174,7 @@
 			<dl title="barra laterale">
 				<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
 				<dd class="ddsidebar"><?php include('sidebarnews.php'); ?></dd>
-				<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
+				<dt class="dtsidebar" id="feedRSS"><span xml:lang="en">Feed RSS</span></dt>
 				<dd class="ddsidebar">
 					<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
 					<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>

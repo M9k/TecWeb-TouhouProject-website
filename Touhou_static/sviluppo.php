@@ -25,7 +25,7 @@
 	<div id="subheader">
 		<div id="header">
 			<div id="titolo">
-				<h1>Touhou Project</h1>
+				<h1>Touhou <span xml:lang="en">Project</span></h1>
 				<div id="titoletto">Sito di informazione italiano</div>
 			</div>
 			<div id="skipmenu">
@@ -58,14 +58,14 @@
 				<p>Il primo gioco di Touhou, <span xml:lang="en"><strong>Highly Responsive to Prayers</strong></span> (<span xml:lang="ja">靈異伝</span>), distribuito nel 1997, è stato realizzato unicamente per NEC <em>PC-98</em>, programmato per Intel 8086 ed era a 16bit. Questo gioco è molto diverso dai Touhou attuali, lo scopo era quello di sparare a una pallina su schermo per muoverla verso dei blocchetti, in modo da distruggerli, simile ad <span xml:lang="en">Arkanoid</span> del 1976.<br/>
 	Il titolo è stato sviluppato da <em xml:lang="en">ZUN soft</em>, successivamente rinominata in <strong xml:lang="en">Team Shanghai Alice</strong>, o <span xml:lang="ja">Shanhai Arisu Gengakudan</span>, composta unicamente da un unico membro: ZUN, nome reale <span xml:lang="ja">Jun'ya Ota (太田順也)</span>.<br/>
 	<strong>ZUN</strong> si occupa di qualsiasi compito nella produzione dei titoli, dalla programmazione alla realizzazione delle musiche, molto apprezzare, a differenza dei disegni, che sono spesso criticati per essere più simili a bozze.<br/>
-	Con i successivi giochi si iniziarono a delimitarsi pian piano gli aspetti che caratterizzano il brand, già iniziando dal secondo gioco, <em xml:lang="en">Story of Eastern Wonderland</em> (<span xml:lang="ja">封魔録</span>) si può notare una maggiore aderenza alla categoria Bullet Hell.<br/>
+	Con i successivi giochi si iniziarono a delimitarsi pian piano gli aspetti che caratterizzano il <span xml:lang="en">brand</span>, già iniziando dal secondo gioco, <em xml:lang="en">Story of Eastern Wonderland</em> (<span xml:lang="ja">封魔録</span>) si può notare una maggiore aderenza alla categoria <span xml:lang="en">Bullet Hell</span>.<br/>
 	</p></dd>
 				<dt>Seconda generazione - <span xml:lang="en">Windows</span> e <span xml:lang="en">Comitek</span></dt>
 				<dd>
 				<img src="images/kantaivstouhou.jpg" class="odd" alt="Personaggi di Touhou assieme a quelli di Kantai Collection"/>
 					<p>Nel 2002 uscì il primo gioco ad essere compatibile per <span xml:lang="en">Windows</span>, <strong xml:lang="en">the Embodiment of Scarlet Devil</strong> (<span xml:lang="ja">紅魔郷</span>), sesto titolo del <span xml:lang="fr">franchise</span>, che rappresentò quindi una nuova generazione per la serie, definita come "prima generazione <span xml:lang="en">Windows</span>".<br/>
 	Questo titolo riscosse un enorme successo, ancora oggi rappresenta l'intera serie ed i personaggi presentati sono i più diffusi su internet, con centinaia e centinaia di opere create dai <span xml:lang="en">fan</span> a riguardo.<br/>
-	La diffusione dei lavori derivati è data anche dal fatto che secondo la licenza del gioco unicamente i materiali del gioco sono protetti, mentre i personaggi, i design e la trama sono liberamente utilizzabili da chiunque, anche per scopi commerciali, questo ha portato a una enorme produzione di lavori indipendenti, molti dei quali venduti al <strong xml:lang="en">Comitek</strong>, o <em xml:lang="en">Comic Market</em>: consiste in una manifestazione che si svolge due volte l'anno, durante la quale si possono vendere gadget, fumetti o qualsiasi altro prodotto sviluppato indipendentemente a un vasto pubblico, anche i nuovi capitoli di Touhou vengono presentati e venduti durante queste manifestazioni.<br/>
+	La diffusione dei lavori derivati è data anche dal fatto che secondo la licenza del gioco unicamente i materiali del gioco sono protetti, mentre i personaggi, i <span xml:lang="en">design</span> e la trama sono liberamente utilizzabili da chiunque, anche per scopi commerciali, questo ha portato a una enorme produzione di lavori indipendenti, molti dei quali venduti al <strong xml:lang="en">Comitek</strong>, o <em xml:lang="en">Comic Market</em>: consiste in una manifestazione che si svolge due volte l'anno, durante la quale si possono vendere <span xml:lang="en">gadget</span>, fumetti o qualsiasi altro prodotto sviluppato indipendentemente a un vasto pubblico, anche i nuovi capitoli di Touhou vengono presentati e venduti durante queste manifestazioni.<br/>
 	I giochi successivi apportarono molti miglioramenti grafici al gioco, mantenendo una qualità in linea con il sesto capitolo.
 	</p></dd>
 				<dt>Terza e quarta generazione</dt>
@@ -79,7 +79,7 @@
 			<dl title="barra laterale">
 				<dt class="dtsidebar"  id="lastnews">Ultime notizie</dt>
 				<dd class="ddsidebar"><?php include('sidebarnews.php'); ?></dd>
-				<dt class="dtsidebar" id="feedRSS">Feed RSS</dt>
+				<dt class="dtsidebar" id="feedRSS"><span xml:lang="en">Feed RSS</span></dt>
 				<dd class="ddsidebar">
 					<a href="rss.php"><img id="imgrss" src="images/rss-icon.png" alt="Logo RSS"/>Clicka qui per iscriverti ai <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym>!</a>
 					<p>Rimani sempre aggiornato attraverso le notifiche <acronym xml:lang="en" title="RDS (Resource Description Framework) Site Summary">RSS</acronym> iscrivendoti al <span xml:lang="en">feed</span>!<br/>
