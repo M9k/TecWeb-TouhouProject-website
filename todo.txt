@@ -1,18 +1,6 @@
-﻿-notizie
--js sui form Gestione amministratori > Inserimento amministratore:
-	-campi non vuoti
-	-nome con solo lettere e numeri, no caratteri
-	-email valida
--js sui form Capitoli >>> Aggiunta capitolo 
-	-nessun campo vuoto
-	-numero OK ANCHE NON NUMERICO!
-	-anno numerico e maggiore di 1970
--admin > moderazione commenti, ok i tasti così? a me fanno schifo sinceramente
+﻿-admin > moderazione commenti, ok i tasti così? a me fanno schifo sinceramente
 
-RELAZIONE!!!!!!
-
--tabindex e title
--validazione xhtml 1.1, css e di usabilità + colori etc etc
+-validazione css e di usabilità
 -ricontrollare tutti i form per l'accessibilità, i colori, etc etc (vedere accessibilita punti da controllare.txt)
 -controllare abbreviazioni (es: RSS)
 
@@ -20,4 +8,3 @@ RELAZIONE!!!!!!
 -----QUANDO CARICATO SUL SITO-----
 -configurare i file di errore/connessione
 -permessi sui file
--controllare i mesi siano in italiano, essendo dipendenti dai "locale" presenti - NON FUNZIONANTE!
