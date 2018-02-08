@@ -1,6 +1,11 @@
 const mq = window.matchMedia('handheld, screen and (max-width: 680px), only screen and (max-device-width:600px)');
 var menuIsOpen = false;
 var menuIsFixed = false;
+var menuvoice;
+var menudiv;
+var header;
+var menu;
+
 window.onscroll = changeHeader;
 
 window.onload = function () {
@@ -8,11 +13,11 @@ window.onload = function () {
     [].forEach.call(document.getElementById("contenuto").getElementsByTagName("img"), makezoomable);
 
     //menu per i dispositivi mobili, sostituisce il css hover se possibile
-    var menuvoice = document.getElementById('menuvoice');
+    menuvoice = document.getElementById('menuvoice');
     //per il menu fixed
-    var menudiv = document.getElementById("menudiv");
-    var header = document.getElementById("header");
-    var menu = document.getElementById("menu");
+    menudiv = document.getElementById("menudiv");
+    header = document.getElementById("header");
+    menu = document.getElementById("menu");
 
     mq.addListener(ChangeResolutionCheck);
 
