@@ -184,9 +184,20 @@ function validateFormAddChapter() {
 
 function validateString(tipo, stringa) {
     var errore = "errore".concat(tipo);
+    var messageTitle = tipo;
+    if((tipo === "titolo") || (tipo === "titolo_italiano") || (tipo === "titolo_inglese")) {
+        messageTitle = "titolo";
+    }
+    if((tipo == "image_descr")) {
+        messageTitle = "immagine valida"
+    }
     document.getElementById(errore).innerHTML = '';
-    if (stringa == "") {
-        document.getElementById(errore).innerHTML = "*inserire un ".concat(tipo);
+    if ((stringa == "") && (messageTitle == "immagine valida")) {
+        document.getElementById(errore).innerHTML = "*inserire una " + messageTitle;
+        return false;
+    }
+    else if ((stringa == "")) {
+        document.getElementById(errore).innerHTML = "*inserire un " + messageTitle;
         return false;
     }
     else
