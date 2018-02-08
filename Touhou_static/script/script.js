@@ -243,7 +243,7 @@ function validateEmail() {
     if (email.match(regExpMail))
         return true;
     else {
-        document.getElementById("erroreemail").innerHTML = "*inserire un <span xml:lang="en">e-mail</span> valida";
+        document.getElementById("erroreemail").innerHTML = '*inserire un <span xml:lang="en">e-mail</span> valida';
         return false;
     }
 }
