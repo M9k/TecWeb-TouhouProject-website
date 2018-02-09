@@ -120,7 +120,7 @@
 
 		\subsubsection{Capitoli}
 		L'ultima parte del sito elencherà i capitoli ufficiali del videogioco, correlati dall'immagine di copertina, il titolo tradotto in inglese, in italiano ed altre informazioni che possono risultare interessanti agli utenti del sito.\\
-		Questa parte sarà dinamica in quanto i capitoli escono relativamente di frequente, quindi si vuole lasciare all'amministratore la possibilità di inserirne di nuovi, o di cancellare quelli che presentano informazioni errate o non aggiornate.
+		Questa parte sarà dinamica in quanto i capitoli escono relativamente di frequente, quindi si vuole lasciare all'amministratore la possibilità di inserirne di nuovi o di cancellarne.
 
 	\section{Strutturazione del sito}
 		\subsection{Impaginazione}
@@ -186,10 +186,8 @@
 				Tutte le pagine sono state testate con il validatore fornito da w3.org, la verifica non ha segnalato nessun problema in nessuna pagina, con l'eccezione di un warning "Using Direct Input mode: UTF-8 character encoding assumed" a causa dell'utilizzo della modalità di input diretto del codice HTML.\\
 				Sono state testate anche la pagina di login, la pagina di database non raggiungibile e la pagina di errore di input, tutte con esito positivo.
 			\subsection{W3C CSS Validator w3.org}
-				Tutti gli stili css sono stati testati con il validatore fornito da w3.org, compreso quelli di stampa, e non sono stati rilevati errori.
-				Tutti gli stili css sono stati testati con il validatore fornito da w3.org, compreso quelli di stampa, e non sono stati rilevati errori. Validando il file \textit{style.css} viene generato un warning in linea 55, relativamente alla proprità \textit{-webkit-appearance:none;}. È stata inserita in quanto su dispositivi mobile Apple e browser safari, gli input di tipo submit non accettano lo stile assegnato tramite css ma utilizzano lo stile nativo. Tale proprità è ignorata da tutti i browser eccetto safari ed è per questo motivo che viene segnalato il warning dal validatore.
-				
-				
+				Tutti gli stili css sono stati testati con il validatore fornito da w3.org, compreso quelli di stampa, e non sono stati rilevati errori.\\
+				Validando il file \textit{style.css} viene generato un warning in linea 55, relativamente alla proprità \textit{-webkit-appearance:none;}. È stata inserita in quanto su dispositivi mobile Apple e browser safari, gli input di tipo submit non accettano lo stile assegnato tramite CSS ma utilizzano lo stile nativo. Tale proprità è ignorata da tutti i browser eccetto safari ed è per questo motivo che viene segnalato il warning dal validatore.
 			\subsection{Vamola validator}
 				Uno strumento utilizzato per la verifica automatica dell'accessibilità è stato Vamola, presente all'indirizzo \url{www.validatore.it/vamola_validator/checker/index.php}.\\
 				Come impostazione è stato utilizzato "WCAG 2.0 (Level AAA)", tutti i potenziali problemi che vengono segnalati raccolgono tutti elementi che il validatore non sa come controllare e quindi viene richiesta una supervisione umana, come ad esempio ogni alt.\\
