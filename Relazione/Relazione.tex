@@ -58,7 +58,7 @@
 	%il sito deve utilizzare link relativi in modo da poter essere facilmente installato anche su server o cartelle diverse (se l'installazione necessita di operazioni particolari queste devono essere indicate chiaramente in relazione).
 
 	\chapter{Abstract}
-	Il progetto sviluppato propone la realizzazione di un sito web che fornisce informazioni riguardo al videogioco Touhou.\\
+	Il progetto sviluppato propone la realizzazione di un sito web che fornisce informazioni riguardanti il videogioco Touhou.\\
 	Il primo obiettivo è attirare utenti che cercano delle informazioni in merito al media, probabilmente perché lo hanno conosciuto attraverso qualche immagine satirica sui social network (come ad esempio Facebook, Reddit e 4chan) o filmati ironici su piattaforme di streaming (come ad esempio YouTube).\\
 	Il secondo obiettivo è di fornire informazioni più approfondite a coloro che hanno già una conoscenza base del videogioco, fornendo notizie di attualità e consentendogli di commentare per poter creare un senso di community.\\
 	Un obiettivo desiderabile è quello di raccogliere abbastanza utenza per permettere la collaborazione con manifestazioni legate ad ambiti giovani per la realizzazione di conferenze ed eventi dedicati al media.\\
@@ -74,8 +74,8 @@
 
 	\section{Analisi della classe di utenza}
 
-		\subsection{Descrizione della sessione}
-		Questa sezione si pone come obiettivo l'analisi di tutte le tipologie di utenti che potrebbero navigare sul sito web, ponendo particolare attenzione alle informazioni che cercano.
+		\subsection{Descrizione della sezione}
+		Questa sezione si pone come obiettivo l'analisi di tutte le tipologie di utenti che potrebbero essere interessate alla navigazione sul sito web, ponendo particolare attenzione alle informazioni che questi sono interessati a trovare.
 		\subsection{Analisi dell'utenza}
 		\subsubsection{Utente che cerca informazioni riguardanti il videogioco}
 		La prima tipologia di utenti del sito sono coloro che conoscono il videogioco Touhou per fama, ma non lo hanno mai giocato. Per consentire loro di avere un'idea immediata sulla tipologia di gioco vengono presentati in home page alcuni screenshot del videogioco.\\
@@ -98,7 +98,7 @@
 		\subsubsection{Gameplay}
 		Il primo contenuto sarà una panoramica del gioco, analizzando gli aspetti relativi all'usufruizione di uno dei capitoli della serie di videogioco, indicando a coloro che non lo conoscono di quale genere videoludico stiamo parlando e sottolineando le particolarità che hanno reso celebre il franchise.
 		\subsubsection{Sviluppo}
-		In questa pagina si parlerà dell' evoluzione di Touhou nel tempo, analizzando le "generazioni" che ha percorso dal primo videogioco, uscito nel 1996, fino all'ultimo.
+		In questa pagina si parlerà dell' evoluzione di Touhou nel tempo, analizzando le "generazioni" che ha percorso dal primo videogioco, uscito nel 1996, fino ad oggi.
 		\subsubsection{Popolarità}
 		Questa parte del sito tratterà i contenuti che hanno riscosso una notevole popolarità su internet e che sono legati al franchise (come ad esempio le colonne sonore, le parodie o i "meme"), cioè contenuti divertenti e molto riconoscibili, proposti e riproposti moltissime volte adattandoli ad ambiti anche molto diversificati.
 		\subsubsection{Personaggi}
@@ -149,11 +149,11 @@
 	\section{Suddivisione di struttura, presentazione e comportamento}
 		\subsection{Parte utente}
 			\subsubsection{Struttura}
-			I file delle pagine della parte utente del sito sono collocate nella root del server, i file necessari alla formattazione dello stile del sito per i vari dispositivi sono collocati nella cartella style mentre le immagini necessarie al sito sono collocate nella cartella images, la quale presenta la suddivisione per le immagini delle news, i personaggi e per i capitoli. I file contenenti gli script necessari al sito sono collocati nella cartella script.
+			I file delle pagine della parte utente del sito sono collocate nella cartella di root del server, i file necessari alla formattazione dello stile del sito per i vari dispositivi sono collocati nella cartella style mentre le immagini necessarie al sito sono collocate nella cartella images, la quale presenta la suddivisione per le immagini delle news, i personaggi e per i capitoli. I file contenenti gli script necessari al sito sono collocati nella cartella script.
 			\subsubsection{Presentazione}
 			La presentazione della pagina è realizzata tramite file css, il principale è "style", che viene utilizzata per ogni pagina.\\
 			In caso di dispositivo mobile o tablet vengono utilizzati due stili extra, "tablet" e "mobile", che hanno il compito di far cambiare la presentazione della pagina per meglio adattarla a schermi di dimensioni inferiori.\\
-			Per quanto riguarda la stampa è stato creato un nuovo foglio di stile, chiamato "print", che rimuove tutti i contenuti non necessari e impagina le informazioni per meglio adattarle a un foglio A4. 			Si è scelto di rimuovere il menu, ma di lasciare il titolo e la breadcrumb, in modo tale da aiutare l'utente a ritrovare il sito web e la pagina nel caso non si ricordasse la fonte. Le immagini sono state rimosse, ad eccezione delle immagini dei personaggi, che sono stati valutate come molto utili per una veloce consultazione.
+			Per quanto riguarda la stampa è stato creato un nuovo foglio di stile, chiamato "print", che rimuove tutti i contenuti non necessari e impagina le informazioni per meglio adattarle a un foglio A4. Si è scelto di rimuovere il menu, ma di lasciare il titolo e la breadcrumb, in modo tale da aiutare l'utente a ritrovare il sito web e la pagina nel caso non si ricordasse la fonte. Le immagini sono state rimosse, ad eccezione delle immagini dei personaggi, che sono stati valutate come molto utili per una veloce consultazione.
 
 			\subsubsection{Comportamento}
 			Il comportamento della pagina è stato gestito tramite JavaScript per il controllo delle form, per fissare il menu in alto e per fornire la possibilità di ingrandire le immagini all'interno della pagina. Sono presenti anche controlli tramite codice PHP per garantire che il sito continui a funzionare corretamente anche in caso di assenza dell'interprete JavaScript.
@@ -163,8 +163,8 @@
 				\includegraphics[width=0.8\linewidth]{images/zomm}
 				\caption{Funzione di zoom implementata in JavaScript}
 			\end{figure}
-			
-			Ulteriormente il JavaScript, se possibile, gestisce il menu nella versione mobile del sito, sostituendo la stessa funzionalità implementata in CSS, questo per evitare che sui dispositivi touch, alla selezione o al click sul testo, il contenuto possa scivolare leggermente in alto a causa della perdita dell'hover sul menu precedentemente aperto.\\
+
+			JavaScript, se possibile, gestisce il menu nella versione mobile del sito, sostituendo la stessa funzionalità implementata in CSS, questo per evitare che sui dispositivi touch, alla selezione o al click sul testo, il contenuto possa scivolare leggermente in alto a causa della perdita dell'hover sul menu precedentemente aperto.\\
 			Tutto il codice PHP relativo all'esecuzioni di azioni, come l'aggiunta dei commenti, è stato completamente diviso da quello utilizzato per la visualizzazione dei contenuti.\\
 
 	\subsection{Parte amministratore}
@@ -270,6 +270,7 @@
 					\item Firefox Quantum
 					\item Google Chrome
 				\end{itemize}
+				%TODO-mancano le considerazioni del testing su macOs
 
 				\subsection{FreeBSD 11}
 				\`{E} stata testata la risoluzione 1080p sui seguenti browsers:
