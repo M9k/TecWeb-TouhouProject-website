@@ -187,7 +187,8 @@
 				Sono state testate anche la pagina di login, la pagina di database non raggiungibile e la pagina di errore di input, tutte con esito positivo.
 			\subsection{W3C CSS Validator w3.org}
 				Tutti gli stili css sono stati testati con il validatore fornito da w3.org, compreso quelli di stampa, e non sono stati rilevati errori.
-				%TODO - Samu e i Warning per Apple
+				Tutti gli stili css sono stati testati con il validatore fornito da w3.org, compreso quelli di stampa, e non sono stati rilevati errori. Validando il file \textit{style.css} viene generato un warning in linea 55, relativamente alla proprità \textit{-webkit-appearance:none;}. È stata inserita in quanto su dispositivi mobile Apple e browser safari, gli input di tipo submit non accettano lo stile assegnato tramite css ma utilizzano lo stile nativo. Tale proprità è ignorata da tutti i browser eccetto safari ed è per questo motivo che viene segnalato il warning dal validatore.
+				
 				
 			\subsection{Vamola validator}
 				Uno strumento utilizzato per la verifica automatica dell'accessibilità è stato Vamola, presente all'indirizzo \url{www.validatore.it/vamola_validator/checker/index.php}.\\
@@ -266,11 +267,11 @@
 				\subsection{MacOS High Sierra}
 				Sono state testate le risoluzioni di 1800p, 2160p e 2880x1800p con i browsers:
 				\begin{itemize}
-					\item Safari
+					\item Safari 11.0.2
 					\item Firefox Quantum
 					\item Google Chrome
 				\end{itemize}
-				%TODO-mancano le considerazioni del testing su macOs
+				Durante la fase di test su piattaforma MacOS non è emersa alcuna problematica per quanto riguarda visibilità e compatibilità. Il sito viene visualizzato correttamente in tutti e tre i browser provati, nonostante le alte risoluzioni dei display utilizzati.
 
 				\subsection{FreeBSD 11}
 				\`{E} stata testata la risoluzione 1080p sui seguenti browsers:
@@ -287,7 +288,7 @@
 				\begin{itemize}
 				\item Xiaomi Redmi 4X (Chinese Dev) con Miui browser, Firefox Rocket e Waterfox con una risoluzione di 720p
 				\item Amazon Kindle Touch 2 (7' generazione) con schermo e-ink in bianco e nero, con una risoluzione di 800x600 e con il browser sperimentale fornito di default.
-        		\item Testato su Ipad Pro 10.5' su browser Safari con una risoluzione di 2224x1668 %TODO: la versione
+        		\item Testato su Ipad Pro 10.5' su browser Safari versione 11.2.5 con una risoluzione di 2224x1668 
 				\end{itemize}
 			
 				In tutti i dispositivi testati il sito si adatta perfettamente alla risoluzione dello schermo e non sono presenti problemi di compatibilità, neppure con JavaScript.\\
