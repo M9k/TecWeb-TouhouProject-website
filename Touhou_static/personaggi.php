@@ -75,7 +75,7 @@
 						<li><span class="charactervoice">Età</span>: Almeno 16 anni</li>
 						<li><span class="charactervoice">Occupazione</span>: Proprietaria del Kirisame Magic Shop </li>
 						<li><span class="charactervoice">Luogo</span>: Gensokyo, Foresta della magia (<ruby xml:lang="ja"><rb>魔法の森</rb><rp>(</rp><rt>げんそきょ</rt><rp>)</rp></ruby>)</li>
-						<li><p>Marisa è una maga umana, è uno dei personaggi più importanti(secondo le parole del produttore della serie ZUN).
+						<li><p>Marisa è una maga umana, uno dei personaggi più importanti, secondo il produttore della serie ZUN.
 	<br/>La sua personalità è a volte descritta come sgradevole, passa la maggior parte del tempo a gestire il suo negozio di magia e come lavoro <span xml:lang="en">part-time</span> va a caccia di spiriti, detti <em>Youkai</em>.
 	<br/>È conosciuta per essere una gran lavoratrice, è sta cercando di raggiungere l'abiblità di Reimu allenandosi e e preseguendo lo studio della magia. Questo crea un contrasto rispetto agli altri umani che appaiono nella serie, visto che la maggior parte di loro ha un talento innata (Reimu) o una abilità speciale (Sakuya).</p></li>
 					</ul>
