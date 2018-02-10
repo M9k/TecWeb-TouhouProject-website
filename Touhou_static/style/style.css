@@ -221,7 +221,7 @@ h3, dt {
 }
 
 #contenuto dd {
-    overflow: auto;
+    overflow: hidden;
     font-size: 1em;
     border-style: solid;
     border-bottom-width: 3pt;
