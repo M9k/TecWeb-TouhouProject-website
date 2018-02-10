@@ -162,10 +162,10 @@
 						<li><span class="charactervoice">Età</span>: Almeno 1200 anni</li>
 						<li><span class="charactervoice">Occupazione</span>: Controlla i confini di Gensokyo</li>
 						<li><span class="charactervoice">Luogo</span>: Da qualche parte ai confini di Gensokyo</li>
-						<li>Spesso vista e nominata, Yukari Yakumo è la Youkai del confine.
+						<li><p>Spesso vista e nominata, Yukari Yakumo è la Youkai del confine.
 	<br/>&Eacute; conosciuta per essere lo stereotipo degli Youkai, che dormono tutto il giorno e vivono per godersi la vita.
 	<br/>Nonostante non lasci mai la sua casa è constantemente in contatto con i più potenti Youkai ed è potenzialmente la più potente di tutta Gensokyo, ma ha la tendenza di giocare con i suoi avversari, invece di usare tutto il suo potere. 
-	<br/>Anche se Yukari sembra inaffidabile per la maggior parte del tempo, non esiterebbe ad entrare in combattimento nel caso Gensokyo fosse in pericolo.</li>
+	<br/>Anche se Yukari sembra inaffidabile per la maggior parte del tempo, non esiterebbe ad entrare in combattimento nel caso Gensokyo fosse in pericolo.</p></li>
 					</ul>
 				</dd>
 			</dl>
