@@ -353,6 +353,10 @@ form#leavecommentform input#nameinput, input#emailinput, textarea#commentoinput 
     margin-bottom: 0.5em;
 }
 
+textarea#commentoinput {
+    width:97%;
+  }
+
 #articleside dt {
     font-size: 1.5em;
     clear: both;
