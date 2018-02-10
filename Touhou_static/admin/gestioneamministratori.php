@@ -105,8 +105,7 @@ else
 				<input value="<?php echo $dbConnection->getAdminEmail($_SESSION['username']); ?>" name="newemail" type="text" id="newemailinput" size="20" maxlength="40" onchange="validateEmailAdmin('nuova_email',document.getElementById('newemailinput').value)"/>
                 <div id="errorenuova_email"></div>
                 <label for="newpasswordinput">Nuova <span xml:lang="en">password</span>:</label>
-                <input name="newpassword" type="text" id="newpasswordinput" size="10" maxlength="12" onchange="validateString('nuova_password',document.getElementById('newpasswordinput').value)"/>
-                <div id="errorenuova_password"></div>
+                <input name="newpassword" type="text" id="newpasswordinput" size="10" maxlength="12"/>
                 <input type="submit" value="Modifica" name="submit"/>
 				<input type="reset" value="Cancella i campi" name="reset"/>
                 <div id="erroreMod"></div>

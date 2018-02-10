@@ -151,10 +151,8 @@ function validateFormInsertAdmin() {
 }
 
 function validateFormModifyAdmin() {
-    var password = document.forms["editaccountinfo"]["newpasswordinput"].value;
     var email = document.forms["editaccountinfo"]["newemailinput"].value;
-    var validate = validateString("nuova_email", email) & validateEmailAdmin("nuova_password", password);
-    if (validate == false) {
+    if (validateEmailAdmin("nuova_email", email)===false) {
         document.getElementById("erroreMod").innerHTML = "*impossibile inviare";
         return false;
     }
@@ -247,7 +245,7 @@ function validateEmailAdmin(tipo, email) {
     if (email.match(regExpMail))
         return true;
     else {
-        document.getElementById(errore).innerHTML = "*inserire un ".concat(tipo);
+        document.getElementById(errore).innerHTML = "*inserire un' e-mail valida";
         return false;
     }
 }

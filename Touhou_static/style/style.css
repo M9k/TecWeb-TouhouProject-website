@@ -362,7 +362,7 @@ textarea#commentoinput {
     clear: both;
 }
 
-#errorenome, #erroreemail, #errorecommento, #errorepassword, #errorenuova_email, #errorenuova_password {
+#errorenome, #erroreemail, #errorecommento, #errorepassword, #errorenuova_email {
     /*float: right;*/
     color: red;
     margin-bottom:1.5em;
