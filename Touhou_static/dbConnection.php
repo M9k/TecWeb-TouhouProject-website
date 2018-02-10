@@ -146,7 +146,7 @@ class DBAccess {
 	}
 	
 	public function removeBan($id) {
-		$query = 'delete from ban where id='.$this->removeSQLI($id);
+		$query = 'delete from ban where ip="'.$this->removeSQLI($id).'"';
 		return mysqli_query($this->connection, $query) or $this->showError();
 	}
 	public function removeChapter($id) {

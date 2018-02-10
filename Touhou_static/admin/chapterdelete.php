@@ -9,15 +9,15 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == true)
 {
 	$risp = false;
 
-	if(isset($_POST['btnDelete']))
+	if(isset($_GET['id']))
 	{
 		$dbConnection = new DBAccess();
 		$dbConnection->openDBConnection();
-		$risp = $dbConnection->removeChapter($_POST['btnDelete']);
+		$risp = $dbConnection->removeChapter($_GET['id']);
 		if(!$risp)
 			$error ='Errore nella eliminazione del capitolo, contattare una amministratore!';
 
-		unlink("../images/chapters/".$dbConnection->getChapterImage($_POST['btnDelete'])['image']);
+		unlink("../images/chapters/".$dbConnection->getChapterImage($_GET['id'])['image']);
 
 		$dbConnection->closeDBConnection();
 		header("Location: ".$returnpage);
