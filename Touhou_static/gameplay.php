@@ -55,7 +55,7 @@
 			<p>Il <span xml:lang="en">gameplay</span> di Touhou rientra nella categoria dei "<strong xml:lang="en">Shoot'em up</strong>", a scorrimento verticale, più precisamente nella sottocategoria "<strong xml:lang="en">Bullet Hell</strong>".<br/>
 			<img class="even" src="images/spaceinvaders.jpg" alt="Immagine di Space Invaders, famoso gioco Shot'em up"/>
 			I giochi <em xml:lang="en">Shoot'em up</em> sono caratterizzati da una navicella controllata dal giocatore che deve sparare ai nemici ed avanzare nel livello, fino al raggiungimento di un boss finale, solitamente con una quantità di vita ed una dimensione superiore ai nemici normali.<br/>
-			Molti titoli consento anche il raccoglimento di <span xml:lang="en">bonus</span>, lasciati cadere dai nemici sconfitti, che permettono di incrementare la potenza delle proprie armi oppure l'aumento del punteggio.<br/>
+			Molti titoli consentono anche il raccoglimento di <span xml:lang="en">bonus</span>, lasciati cadere dai nemici sconfitti, che permettono di incrementare la potenza delle proprie armi oppure l'aumento del punteggio.<br/>
 			Pietre miliari di questo genere sono <span xml:lang="en">Space Invaders</span> e <span xml:lang="en">Space Impact</span>, rispettivamente a schermata fissa ed a scorrimento orizzontale.<br/>
 			</p>
 			<p>

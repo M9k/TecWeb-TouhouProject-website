@@ -119,7 +119,7 @@
 						<li><span class="charactervoice">Occupazione</span>: Sconosciuta</li>
 						<li><span class="charactervoice">Luogo</span>: <span xml:lang="en">Scarlet Devil Mansion</span></li>
 						<li><p>Flandre è la sorella minore di Remilia Scarlet e vive da oltre 495 anni nella <span xml:lang="en">Scarlet Devil Mansion</span> assieme alla sorella. Flandre non ha praticamente mai lasciato i confini della villa, e non ha mi provato ad uscire da essa per il rispetto che prova verso la sorella.
-	<br/>È stata cresciuta non conoscendo nulla al dì fuori del confini della villa, ma nonstante questo lei ha il desiderio di esplorare il mondo.<br/> Normalmente Flandre è cortese e tranquilla, raramente si arrabbia, ma è abbastanza strana, cosa che rende difficile agli atri comprenderla.<br/>Possiede abilità sovraumane come che le permettono ad esempio di utilizzare un enorme spada, la <strong xml:lang="is">Lævateinn</strong>, menzionata nella Edda Poetica di <em xml:lang="is">Snorri Sturluson</em> appartente a <em>Loki</em>, ed è inoltre capace di clonare se stessa.</p></li>
+	<br/>È stata cresciuta non conoscendo nulla al dì fuori del confini della villa, ma nonstante questo ha il desiderio di esplorare il mondo.<br/> Normalmente Flandre è cortese e tranquilla, raramente si arrabbia, ma è abbastanza strana, cosa che rende difficile agli atri comprenderla.<br/>Possiede abilità sovraumane come che le permettono ad esempio di utilizzare un enorme spada, la <strong xml:lang="is">Lævateinn</strong>, menzionata nella Edda Poetica di <em xml:lang="is">Snorri Sturluson</em> appartente a <em>Loki</em>, ed è inoltre capace di clonare se stessa.</p></li>
 					</ul>
 				</dd>
 
@@ -162,10 +162,10 @@
 						<li><span class="charactervoice">Età</span>: Almeno 1200 anni</li>
 						<li><span class="charactervoice">Occupazione</span>: Controlla i confini di Gensokyo</li>
 						<li><span class="charactervoice">Luogo</span>: Da qualche parte ai confini di Gensokyo</li>
-						<li>Spesso vista e nominata, Yukari Yakumo è la Youkai dell confine.
+						<li>Spesso vista e nominata, Yukari Yakumo è la Youkai del confine.
 	<br/>&Eacute; conosciuta per essere lo stereotipo degli Youkai, che dormono tutto il giorno e vivono per godersi la vita.
 	<br/>Nonostante non lasci mai la sua casa è constantemente in contatto con i più potenti Youkai ed è potenzialmente la più potente di tutta Gensokyo, ma ha la tendenza di giocare con i suoi avversari, invece di usare tutto il suo potere. 
-	<br/>Anche se Yukari sembra inaffidabile per la maggior parte del tempo, non esiterebbe ad entrare in combattimento nel caso la sicurezza di Gensokyo fosse in pericolo.</li>
+	<br/>Anche se Yukari sembra inaffidabile per la maggior parte del tempo, non esiterebbe ad entrare in combattimento nel caso Gensokyo fosse in pericolo.</li>
 					</ul>
 				</dd>
 			</dl>
@@ -197,3 +197,4 @@
 	</div>
 </body>
 </html>
+
